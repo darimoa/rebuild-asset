@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moorestown Auto &amp; Boat Upholstery — Redesign Concept by Dari Group</title>
+<style>
+  :root{
+    --espresso:#241812; --leather:#3a271c; --cognac:#b5732e; --tan:#d8a866; --cream:#f6f1e9; --paper:#fffdf9; --ink:#211812; --muted:#7c6b5d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .serif{font-family:Georgia,'Times New Roman',serif}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .stitch{border-top:2px dashed var(--tan);opacity:.6}
+
+  /* concept notice */
+  .notice{background:var(--espresso);color:#f0e6d8;text-align:center;font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:9px 14px}
+  .notice b{color:var(--tan)}
+
+  /* before strip */
+  .before{background:#efe7db;border-bottom:1px solid #e3d7c4;padding:16px 0}
+  .before .row{display:flex;align-items:center;gap:18px}
+  .before .thumb{width:190px;flex:0 0 190px;border:1px solid #cdbfa8;border-radius:8px;overflow:hidden;background:#fff}
+  .before .thumb img{width:100%;height:auto;display:block}
+  .before .txt small{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#a4582a;background:#f6e4cf;border-radius:99px;padding:3px 10px;margin-bottom:6px}
+  .before .txt p{font-size:14px;color:#6a5748;max-width:560px}
+  @media(max-width:640px){.before .row{flex-direction:column;align-items:flex-start}.before .thumb{width:100%;flex:none}}
+
+  /* nav */
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brandmark{width:46px;height:46px;border-radius:10px;background:linear-gradient(145deg,#3a271c,#241812);display:flex;align-items:center;justify-content:center;color:var(--tan);font-family:Georgia,serif;font-weight:700;font-size:20px;border:1px solid #4d3a2b}
+  .brand .bt{font-family:Georgia,serif;font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--leather);line-height:1.15}
+  .brand .bt span{display:block;font-family:-apple-system,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cognac)}
+  .navlinks{display:flex;gap:26px;font-size:14px;font-weight:600;color:#5f4d3f}
+  .navlinks a{text-decoration:none}
+  .navcta{background:var(--cognac);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 18px;border-radius:8px;box-shadow:0 8px 18px -8px rgba(181,115,46,.7)}
+  @media(max-width:820px){.navlinks{display:none}}
+
+  /* hero */
+  .hero{position:relative;border-radius:20px;overflow:hidden;margin-top:6px;min-height:520px;display:flex;align-items:flex-end;background:linear-gradient(180deg,#2c1d14,#4a3018)}
+  .hero .heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.15),rgba(20,12,8,.86))}
+  .hero .inner{position:relative;padding:46px 44px 42px;color:#fdf7ee;max-width:760px}
+  .hero .kick{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tan);margin-bottom:14px}
+  .hero h1{font-family:Georgia,serif;font-size:52px;line-height:1.05;font-weight:700;letter-spacing:-.01em}
+  .hero h1 em{color:var(--tan);font-style:italic}
+  .hero p{font-size:18px;color:#efe2d2;margin:18px 0 26px;max-width:560px}
+  .hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-primary{background:var(--cognac);color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:9px;font-size:15px}
+  .btn-ghost{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:9px;font-size:15px;backdrop-filter:blur(2px)}
+  @media(max-width:720px){.hero{min-height:440px}.hero h1{font-size:34px}.hero .inner{padding:30px 22px}}
+
+  /* trust band */
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:26px 0;border:1px solid #e2d5c1;border-radius:14px;overflow:hidden;background:var(--paper)}
+  .trust div{padding:20px 18px;text-align:center;border-right:1px dashed #e2d5c1}
+  .trust div:last-child{border-right:none}
+  .trust b{display:block;font-family:Georgia,serif;font-size:26px;color:var(--leather)}
+  .trust small{font-size:12px;color:var(--muted);letter-spacing:.03em}
+  @media(max-width:720px){.trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:none}}
+
+  /* section heading */
+  .sec{padding:56px 0}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cognac);margin-bottom:10px}
+  .h2{font-family:Georgia,serif;font-size:34px;color:var(--leather);line-height:1.15;letter-spacing:-.01em;max-width:640px}
+  .lead{color:#6a5748;font-size:16px;max-width:620px;margin-top:12px}
+
+  /* services */
+  .svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+  .card{background:var(--paper);border:1px solid #e6dac6;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px -34px rgba(58,39,28,.6)}
+  .card .ph{aspect-ratio:4/3;background:#e7dcc9;position:relative;overflow:hidden}
+  .card .ph img{width:100%;height:100%;object-fit:cover}
+  .card .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a48b6f;font-size:13px;font-weight:600;background:repeating-linear-gradient(45deg,#ece1cd,#ece1cd 10px,#e5d8c1 10px,#e5d8c1 20px)}
+  .card .body{padding:20px 20px 22px}
+  .card h3{font-family:Georgia,serif;font-size:20px;color:var(--leather);margin-bottom:7px}
+  .card p{font-size:14.5px;color:#6d5c4e}
+  @media(max-width:840px){.svcs{grid-template-columns:1fr}}
+
+  /* gallery (signature section) */
+  .gallery{background:var(--leather);color:#f4e8d8}
+  .gallery .h2{color:#fbeedd}
+  .gallery .lead{color:#d9c6b1}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  .grid4 .g{aspect-ratio:1/1;border-radius:12px;overflow:hidden;position:relative;background:#5a3f2c}
+  .grid4 .g img{width:100%;height:100%;object-fit:cover}
+  .grid4 .g .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#c9ad8f;font-size:12px;font-weight:600}
+  @media(max-width:720px){.grid4{grid-template-columns:1fr 1fr}}
+
+  /* story split */
+  .story{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .story .photo{border-radius:16px;overflow:hidden;border:1px solid #e0d3bf;min-height:300px;background:#e7dcc9;position:relative}
+  .story .photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+  .story blockquote{font-family:Georgia,serif;font-size:19px;font-style:italic;color:var(--leather);border-left:3px solid var(--tan);padding-left:16px;margin:18px 0}
+  @media(max-width:840px){.story{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact{background:var(--paper);border:1px solid #e6dac6;border-radius:18px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .contact h3{font-family:Georgia,serif;font-size:24px;color:var(--leather);margin-bottom:14px}
+  .info li{list-style:none;display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed #e6dac6;font-size:15px;color:#5f4d3f}
+  .info li b{color:var(--leather);min-width:74px;display:inline-block}
+  .form label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 5px}
+  .form input,.form textarea{width:100%;border:1px solid #d9cbb4;border-radius:9px;padding:11px 12px;font-size:14px;background:#fff;font-family:inherit}
+  .form button{margin-top:16px;width:100%;background:var(--cognac);color:#fff;border:none;border-radius:9px;padding:13px;font-weight:700;font-size:15px;cursor:pointer}
+  @media(max-width:820px){.contact{grid-template-columns:1fr;padding:24px}}
+
+  footer{background:var(--espresso);color:#d9c9b6;padding:34px 0 26px;margin-top:56px}
+  footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer .legal{font-size:11px;color:#9c8a76;max-width:640px;line-height:1.6;margin-top:18px}
+</style></head>
+<body>
+
+  <div class="notice">🎨 Redesign concept · not the live site · © Dari Group — <b>Unauthorized use prohibited</b></div>
+
+  <!-- BEFORE reference -->
+  <div class="before"><div class="wrap"><div class="row">
+    <div class="thumb"><img src="https://image.thum.io/get/width/500/https://www.moorestownautoupholster.com/" alt="Current Moorestown Auto & Boat Upholstery website"></div>
+    <div class="txt">
+      <small>Your website today</small>
+      <p>Your current site tells the story — 40 years of craftsmanship — but a fresher, mobile-first design would let it shine and make it effortless for customers to request a quote. Here's a concept, built from your real services and story.</p>
+    </div>
+  </div></div></div>
+
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="brandmark">M</div>
+        <div class="bt">Moorestown Auto &amp; Boat Upholstery<span>Custom Interiors · Since 1982</span></div>
+      </div>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#story">Our Story</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="navcta" href="#contact">Request a Quote</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img class="heroimg" src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/706-400w.jpg" alt="Vintage car interior upholstery" onerror="this.style.display='none'">
+      <div class="veil"></div>
+      <div class="inner">
+        <div class="kick">Moorestown, NJ · Auto · Boat · Restoration</div>
+        <h1 class="serif">Four decades of craftsmanship, <em>stitched into every seat.</em></h1>
+        <p>Cruise around town in style. From vintage restorations to modern auto and boat interiors, our family shop has transformed the way South Jersey rides since 1982.</p>
+        <div class="btns">
+          <a class="btn-primary" href="#contact">Request a free quote →</a>
+          <a class="btn-ghost" href="tel:8562351313">Call 856-235-1313</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <div class="trust">
+      <div><b>1982</b><small>Family-owned since</small></div>
+      <div><b>50+ yrs</b><small>Hands-on experience</small></div>
+      <div><b>Auto + Boat</b><small>Cars, trucks &amp; boats</small></div>
+      <div><b>Moorestown</b><small>154-B W Camden Ave</small></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="wrap" id="services"><section class="sec">
+    <div class="eyebrow">What we do</div>
+    <h2 class="h2">Interiors rebuilt by hand — for the road and the water.</h2>
+    <p class="lead">Every job is cut, sewn, and fitted in-house. Contemporary or vintage, car or boat, we bring 50 years of craft to your interior.</p>
+    <div class="svcs">
+      <div class="card">
+        <div class="ph"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/706-400w.jpg" alt="Vintage auto upholstery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Vintage auto interior</div></div>
+        <div class="body"><h3>Auto Upholstery</h3><p>Contemporary and vintage restoration — seats, headliners, door panels and full interiors made to look and feel like new.</p></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/707-400w.jpg" alt="Boat upholstery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Boat seating</div></div>
+        <div class="body"><h3>Boat Upholstery</h3><p>Marine-grade boat seats, cushions and accessories built to handle sun, spray and everyday wear on the water.</p></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/708-400w.jpg" alt="Restoration work" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Restoration work</div></div>
+        <div class="body"><h3>Restoration &amp; Extras</h3><p>Sunroofs, seat heaters and complete restorations — the finishing touches that make an interior yours.</p></div>
+      </div>
+    </div>
+  </section></div>
+
+  <!-- SIGNATURE: WORK GALLERY -->
+  <div class="gallery" id="work"><div class="wrap"><section class="sec">
+    <div class="eyebrow" style="color:var(--tan)">Our work</div>
+    <h2 class="h2">A look inside the shop.</h2>
+    <p class="lead">Real interiors, rebuilt by our team. Bring us a photo of what you have — we'll show you what it can become.</p>
+    <div class="grid4">
+      <div class="g"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/706-400w.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Vintage car</div></div>
+      <div class="g"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/707-400w.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Back seat</div></div>
+      <div class="g"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/708-400w.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Detail work</div></div>
+      <div class="g"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/337-592h.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="fallback" style="display:none">Award</div></div>
+    </div>
+  </section></div></div>
+
+  <!-- STORY -->
+  <div class="wrap" id="story"><section class="sec"><div class="story">
+    <div>
+      <div class="eyebrow">Our story</div>
+      <h2 class="h2">A family trade, passed down and perfected.</h2>
+      <blockquote>"Established in 1982 with 16 years of upholstery already behind us — today that's more than 50 years in the craft."</blockquote>
+      <p class="lead" style="max-width:none">Founder Sam started the shop with his wife Alice on the books and his brother Issa cutting and sewing. Cousin Ayman and Mohammed joined as the shop grew. Four decades later, Moorestown Auto &amp; Boat Upholstery is still a family business — and still doing every job by hand.</p>
+    </div>
+    <div class="photo"><img src="https://irp.cdn-website.com//bf10d8b12d9f46968b838bc27c28434a/dms3rep/multi/opt/337-592h.jpg" alt="Moorestown Auto & Boat Upholstery" onerror="this.parentElement.innerHTML='<div style=&quot;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a48b6f;font-weight:600&quot;>Since 1982 · Moorestown, NJ</div>'"></div>
+  </div></section></div>
+
+  <!-- CONTACT -->
+  <div class="wrap" id="contact"><section class="sec" style="padding-top:10px">
+    <div class="contact">
+      <div>
+        <h3 class="serif">Request a quote</h3>
+        <p style="font-size:14.5px;color:#6d5c4e;margin-bottom:6px">Tell us about your car, truck or boat and we'll get right back to you.</p>
+        <ul class="info" style="margin-top:8px">
+          <li><b>Call</b> <a href="tel:8562351313" style="text-decoration:none;color:var(--cognac);font-weight:700">856-235-1313</a></li>
+          <li><b>Email</b> <a href="mailto:sam.muaddi@yahoo.com" style="text-decoration:none;color:var(--cognac);font-weight:700">sam.muaddi@yahoo.com</a></li>
+          <li><b>Visit</b> 154-B W Camden Ave, Moorestown, NJ 08057</li>
+          <li><b>Hours</b> Mon–Fri 8–5 · Sat 8–12 · Sun closed</li>
+        </ul>
+      </div>
+      <form class="form" onsubmit="return false">
+        <label>Name</label><input type="text" placeholder="Your name">
+        <label>Phone or email</label><input type="text" placeholder="How we reach you">
+        <label>What do you need?</label><textarea rows="3" placeholder="e.g. Reupholster two boat seats"></textarea>
+        <button type="submit">Send request</button>
+      </form>
+    </div>
+  </section></div>
+
+  <footer><div class="wrap">
+    <div class="row">
+      <div class="bt" style="font-family:Georgia,serif;font-weight:700;font-size:18px;color:#f3e6d4">Moorestown Auto &amp; Boat Upholstery</div>
+      <div style="font-size:13px;color:#c9b8a4">154-B W Camden Ave, Moorestown, NJ · 856-235-1313</div>
+    </div>
+    <div class="legal">This design concept is the exclusive property of Dari Group. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © Dari Group. All rights reserved. This is a proposed redesign concept and is not the business's live website.</div>
+  </div></footer>
+
+</body></html>
