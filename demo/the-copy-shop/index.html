@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Copy Shop — Redesign Concept</title>
+<meta name="description" content="Copies, color prints, large format, business cards, binding and design — The Copy Shop, Traverse City. More than copies since 1982.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "The Copy Shop",
+  "description": "Printing, copying and design in Traverse City, Michigan since 1982. Color prints, high-speed copies, large format, business cards, brochures, binding and design services.",
+  "foundingDate": "1982-06",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "713 E. 8th Street",
+    "addressLocality": "Traverse City",
+    "addressRegion": "MI",
+    "postalCode": "49686",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-231-947-2080",
+  "faxNumber": "+1-231-947-2085",
+  "email": "print@tccopyshop.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "founder": [
+    { "@type": "Person", "name": "Jim Rickard" },
+    { "@type": "Person", "name": "Kay Rickard" }
+  ],
+  "sameAs": ["https://www.facebook.com/tccopyshop/"]
+}
+</script>
+<style>
+  @font-face{font-family:'Outfit';src:url('assets/fonts/outfit-var-latin.woff2') format('woff2-variations');font-weight:100 900;font-display:swap}
+  @font-face{font-family:'Plex Mono';src:url('assets/fonts/ibm-plex-mono-latin.woff2') format('woff2');font-weight:400;font-display:swap}
+
+  :root{--sheet:#ffffff;--sheet2:#f0f0ee;--ink:#16161a;--cyan:#3ddcff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--sheet);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .mono{font-family:'Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+  .chk{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+
+  .skip-link{position:absolute;left:8px;top:-70px;z-index:100;background:var(--ink);color:var(--sheet);padding:11px 18px;font-family:'Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:top .2s}
+  .skip-link:focus{top:8px}
+
+  /* 천공 상단 장식 */
+  .perf{height:14px;background:radial-gradient(circle 4px at 12px 50%,var(--sheet2) 97%,transparent 100%);background-size:24px 14px;background-repeat:repeat-x;border-bottom:1.5px solid var(--ink)}
+
+  /* DariMoa 고지 */
+  .reg{border-bottom:1.5px solid var(--ink);background:var(--sheet)}
+  .reg .in{max-width:1240px;margin:0 auto;padding:8px 28px;display:flex;justify-content:space-between;gap:16px;font-family:'Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+  .reg .dot{width:11px;height:11px;border-radius:50%;background:var(--cyan);border:1.5px solid var(--ink);flex:none;align-self:center}
+
+  /* 헤더 */
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--ink)}
+  nav{max-width:1240px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .word{font-weight:900;font-size:21px;letter-spacing:-.01em;line-height:1;display:flex;flex-direction:column;gap:3px;text-decoration:none}
+  .word small{font-family:'Plex Mono',monospace;font-weight:400;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase}
+  .nl{display:flex;gap:26px;font-size:14px;font-weight:600}
+  .nl a{position:relative;padding:3px 0;text-decoration:none}
+  .nl a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:3px;background:var(--cyan);transition:width .25s}
+  .nl a:hover::after,.nl a:focus-visible::after{width:100%}
+  .order-btn{font-family:'Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--sheet);padding:12px 20px;border:1.5px solid var(--ink);cursor:pointer;display:inline-block;transition:transform .2s;text-decoration:none}
+  .order-btn:hover,.order-btn:focus-visible{transform:rotate(-2deg)}
+  .burger{display:none;font-size:24px;cursor:pointer;user-select:none}
+  #mtoggle:checked ~ .nl{display:flex}
+
+  /* 히어로 */
+  .hero{position:relative;border-bottom:1.5px solid var(--ink);overflow:hidden}
+  .hero .in{max-width:1240px;margin:0 auto;padding:84px 28px 64px}
+  .marks i{position:absolute;width:18px;height:18px;border:0 solid var(--ink)}
+  .marks i:nth-child(1){top:10px;left:10px;border-left-width:1.5px;border-top-width:1.5px}
+  .marks i:nth-child(2){top:10px;right:10px;border-right-width:1.5px;border-top-width:1.5px}
+  .marks i:nth-child(3){bottom:10px;left:10px;border-left-width:1.5px;border-bottom-width:1.5px}
+  .marks i:nth-child(4){bottom:10px;right:10px;border-right-width:1.5px;border-bottom-width:1.5px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .ink-stage{position:relative}
+  .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .eyebrow .bar{height:1.5px;background:var(--ink);flex:1;max-width:140px}
+  h1{font-weight:900;font-size:clamp(44px,6.6vw,96px);line-height:.95;letter-spacing:-.03em}
+  h1 .hl{position:relative;display:inline-block}
+  h1 .hl::after{content:"";position:absolute;left:-1%;bottom:6%;width:102%;height:34%;background:var(--cyan);z-index:-1}
+  .lede{font-size:clamp(17px,2vw,21px);max-width:640px;margin-top:26px;font-weight:500}
+  .hero-meta{margin-top:30px;padding-top:18px;border-top:1.5px solid var(--ink);display:flex;gap:24px;flex-wrap:wrap}
+  .hero-meta a{text-decoration:none}
+  .hero-meta a:hover{text-decoration:underline}
+
+  /* 잉크 와이프 (Task 3에서 캔버스가 붙는다) */
+  .ink-stage canvas.ink{position:absolute;inset:0;z-index:5;cursor:crosshair;touch-action:pan-y;transition:opacity .8s}
+  .ink-stage .wipe-label{display:none;position:absolute;left:50%;top:56%;transform:translateX(-50%);z-index:6;pointer-events:none;color:var(--ink)}
+  .ink-stage[data-ink="on"] .wipe-label{display:block}
+  .ink-stage.revealed canvas.ink,.ink-stage.revealed .wipe-label{opacity:0}
+
+  /* 교정쇄 플레이트 (사진 프레임) */
+  .plate{position:relative;border:1.5px solid var(--ink);background:var(--sheet);padding:12px 12px 42px;margin:0}
+  .plate img{display:block;width:100%;height:auto}
+  .plate .tab{position:absolute;top:-14px;right:18px;background:var(--cyan);border:1.5px solid var(--ink);padding:2px 10px;font-family:'Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+  .plate .cap{position:absolute;left:14px;bottom:12px;right:14px;font-family:'Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px}
+  .tilt-r{transform:rotate(1.6deg)}
+  .tilt-l{transform:rotate(-1.8deg)}
+  .plate:hover{transform:rotate(0)}
+  .plate{transition:transform .3s cubic-bezier(.2,1,.4,1)}
+  .hero-plate img{aspect-ratio:3/4;object-fit:cover}
+  .press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:34px}
+  .press-grid .plate img{aspect-ratio:3/2;object-fit:cover;filter:saturate(1.12)}
+
+  /* 롤러 마퀴 */
+  .roller{background:var(--cyan);border-bottom:1.5px solid var(--ink);overflow:hidden;white-space:nowrap;padding:13px 0}
+  .roller .track{display:inline-block;animation:roll 30s linear infinite;font-weight:800;font-size:22px;letter-spacing:-.01em}
+  .roller .track span{margin:0 18px}
+  @keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){.roller .track{animation:none}}
+
+  /* 섹션 공통 */
+  .section{padding:80px 0}
+  .shead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1.5px solid var(--ink);padding-bottom:14px;margin-bottom:10px}
+  .shead h2{font-weight:900;font-size:clamp(30px,4.6vw,52px);letter-spacing:-.02em;line-height:1}
+
+  /* 서비스 행 */
+  .svc{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;padding:24px 12px;border-bottom:1.5px solid var(--ink);font-weight:800;font-size:clamp(24px,3.4vw,42px);letter-spacing:-.015em;text-decoration:none}
+  .svc::before{content:"";position:absolute;inset:0;background:var(--cyan);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.65,0,.35,1)}
+  .svc:hover::before,.svc:focus-visible::before{transform:scaleX(1)}
+  .svc .no{font-family:'Plex Mono',monospace;font-size:13px;font-weight:400}
+  .svc .de{font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;max-width:300px;text-align:right}
+
+  /* 작업지시서 그리드 */
+  .tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1.5px solid var(--ink);background:var(--sheet)}
+  .ticket{padding:24px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);position:relative}
+  .ticket:nth-child(3n){border-right:0}
+  .ticket:nth-child(n+4){border-bottom:0}
+  .ticket .lab{display:inline-block;background:var(--cyan);border:1.5px solid var(--ink);padding:3px 10px;font-family:'Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  .ticket p{font-size:15px;font-weight:500}
+  .ticket .tno{position:absolute;top:12px;right:14px;font-family:'Plex Mono',monospace;font-size:10px}
+
+  /* 스토리 */
+  .story{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+  .estamp{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:150px;height:150px;border:3px solid var(--ink);border-radius:50%;font-family:'Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;font-size:11px;text-align:center;gap:4px;transform:rotate(-8deg);margin-bottom:24px}
+  .estamp b{font-family:'Outfit',sans-serif;font-size:36px;font-weight:900;letter-spacing:0}
+  @keyframes stamp{0%{opacity:0;transform:rotate(-8deg) scale(2.2)}70%{opacity:1;transform:rotate(-8deg) scale(.94)}100%{opacity:1;transform:rotate(-8deg) scale(1)}}
+  @supports (animation-timeline: view()){.estamp{animation:stamp .5s cubic-bezier(.2,1.2,.4,1) both;animation-timeline:view();animation-range:entry 10% entry 50%}}
+  .story .pull{font-weight:800;font-size:clamp(24px,3.2vw,36px);line-height:1.15;letter-spacing:-.015em}
+  .story .body p{font-size:16px;margin-bottom:14px;font-weight:500}
+
+  /* 신뢰 띠 */
+  .trust{display:flex;gap:14px 28px;flex-wrap:wrap;align-items:center;justify-content:center;padding:24px;border:1.5px dashed var(--ink);background:var(--sheet2);margin-bottom:80px}
+  .trust .t{font-family:'Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+  .trust .d{width:10px;height:10px;border-radius:50%;background:var(--cyan);border:1.5px solid var(--ink)}
+
+  /* 방문/연락 — 시안 블록 */
+  .visit{background:var(--cyan);border-top:1.5px solid var(--ink)}
+  .visit .in{max-width:1240px;margin:0 auto;padding:84px 28px}
+  .visit h2{font-weight:900;font-size:clamp(38px,6.4vw,84px);line-height:.95;letter-spacing:-.025em}
+  .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;border-top:1.5px solid var(--ink);padding-top:34px}
+  .cgrid .lab{font-family:'Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+  .cgrid .val{font-size:17px;font-weight:600}
+  .cgrid .val + .lab{margin-top:22px}
+  .visit .order-btn{margin-top:30px;background:var(--ink);color:var(--sheet)}
+
+  /* 푸터 */
+  footer{background:var(--ink);color:var(--sheet)}
+  footer .in{max-width:1240px;margin:0 auto;padding:36px 28px}
+  footer .fword{font-weight:900;font-size:clamp(38px,11vw,140px);line-height:.9;letter-spacing:-.02em}
+  footer .fbar{height:10px;background:var(--cyan);border:1.5px solid var(--sheet);margin:22px 0}
+  footer .legal{font-family:'Plex Mono',monospace;font-size:10.5px;line-height:1.8;letter-spacing:.04em}
+
+  /* 주문 슬립 */
+  .scrim{position:fixed;inset:0;background:rgba(22,22,26,.5);z-index:60;display:none}
+  #ord:checked ~ .scrim{display:block}
+  .slip{position:fixed;top:0;right:0;height:100%;width:420px;max-width:92vw;background:var(--sheet);z-index:65;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.1,1);border-left:2px solid var(--ink);display:flex;flex-direction:column}
+  #ord:checked ~ .slip{transform:translateX(0)}
+  .slip .sh{padding:18px 22px;border-bottom:1.5px solid var(--ink);display:flex;justify-content:space-between;align-items:center;background:var(--cyan)}
+  .slip .sh .t{font-family:'Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .slip .sh .t b{display:block;font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;letter-spacing:-.01em;text-transform:none}
+  .slip .x{font-size:22px;cursor:pointer;line-height:1}
+  .slip .body{padding:22px;overflow:auto;flex:1}
+  .flab{font-family:'Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin:14px 0 5px}
+  .slip input,.slip select,.slip textarea{width:100%;padding:11px 12px;border:1.5px solid var(--ink);background:var(--sheet);font-family:'Outfit',sans-serif;font-size:14px;border-radius:0}
+  .submit{width:100%;margin-top:20px;background:var(--ink);color:var(--sheet);border:1.5px solid var(--ink);padding:14px;font-family:'Plex Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;display:block;text-align:center}
+  .submit:hover{transform:rotate(-1deg)}
+  .thanks{display:none;text-align:center;padding:20px 4px}
+  #osent:checked ~ .formwrap{display:none}
+  #osent:checked ~ .thanks{display:block}
+  .thanks .big{font-weight:900;font-size:38px;line-height:1}
+  .thanks .big .hl{background:var(--cyan);padding:0 8px}
+
+  /* 모바일 */
+  @media(max-width:880px){
+    .story,.cgrid,.hero-grid,.press-grid{grid-template-columns:1fr}
+    .tickets{grid-template-columns:1fr}
+    .ticket{border-right:0}
+    .ticket:nth-child(n+4){border-bottom:1.5px solid var(--ink)}
+    .ticket:last-child{border-bottom:0}
+    .nl{position:absolute;top:62px;left:0;right:0;background:var(--sheet);border-bottom:1.5px solid var(--ink);flex-direction:column;gap:0;display:none;padding:6px 0}
+    .nl a{padding:12px 28px}
+    .burger{display:block}
+    .svc{grid-template-columns:44px 1fr;gap:12px}
+    .svc .de{display:none}
+    .reg .in{font-size:9.5px}
+  }
+</style>
+<link rel="canonical" href="https://tccopyshop.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Copy Shop">
+<meta property="og:title" content="The Copy Shop — Redesign Concept">
+<meta property="og:description" content="Copies, color prints, large format, business cards, binding and design — The Copy Shop, Traverse City. More than copies since 1982.">
+<meta property="og:url" content="https://tccopyshop.com/">
+<meta property="og:image" content="https://tccopyshop.com/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tccopyshop.com/assets/img/og.jpg">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <input type="checkbox" id="ord" class="chk">
+
+  <div class="perf" aria-hidden="true"></div>
+
+  <div class="reg"><div class="in">
+    <span>© DariMoa — redesign concept · not the live site</span>
+    <span class="dot" aria-hidden="true"></span>
+  </div></div>
+
+  <header><nav>
+    <a class="word" href="#top">THE COPY SHOP<small>Est. 1982 — Traverse City, MI</small></a>
+    <input type="checkbox" id="mtoggle" class="chk">
+    <label for="mtoggle" class="burger">☰</label>
+    <div class="nl"><a href="#work">Services</a><a href="#menu">Full Menu</a><a href="#story">Since 1982</a><a href="#visit">Visit</a></div>
+    <label for="ord" class="order-btn">Start an order</label>
+  </nav></header>
+
+  <main id="main">
+
+  <!-- 히어로 -->
+  <section class="hero" id="hero">
+    <div class="marks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="in"><div class="hero-grid">
+      <div class="ink-stage" id="ink-stage">
+        <p class="mono eyebrow"><span>Print · Copy · Design</span><span class="bar"></span><span>№ 713 E. 8th St.</span></p>
+        <h1>This is a <br><span class="hl">copy shop.</span></h1>
+        <p class="lede">More than copies. Solutions. High-speed copies, large format, business cards, binding and design — under one roof in Traverse City since 1982.</p>
+        <p class="mono hero-meta"><span>Mon–Fri · 8–6</span><a href="tel:+12319472080">231-947-2080</a><a href="mailto:print@tccopyshop.com">print@tccopyshop.com</a></p>
+      </div>
+      <figure class="plate tilt-r">
+        <span class="tab">Proof № 001</span>
+        <img src="assets/img/hero-prism.webp" alt="Streams of saturated pink, teal, orange and red color fanning out from one point" width="1340" height="1786" fetchpriority="high" decoding="async">
+        <figcaption class="cap"><span>True color</span><span>Full bleed</span></figcaption>
+      </figure>
+    </div></div>
+  </section>
+
+  <!-- 롤러 마퀴 -->
+  <div class="roller" aria-hidden="true"><div class="track">
+    <span>Color Prints</span><span>✳</span><span>Large Format</span><span>✳</span><span>Business Cards</span><span>✳</span><span>Binding &amp; Finishing</span><span>✳</span><span>Design</span><span>✳</span><span>Banners &amp; Signs</span><span>✳</span>
+    <span>Color Prints</span><span>✳</span><span>Large Format</span><span>✳</span><span>Business Cards</span><span>✳</span><span>Binding &amp; Finishing</span><span>✳</span><span>Design</span><span>✳</span><span>Banners &amp; Signs</span><span>✳</span>
+  </div></div>
+
+  <!-- 서비스 -->
+  <section class="section" id="work"><div class="wrap">
+    <div class="shead"><h2>What we print</h2><span class="mono">Index / 01–08</span></div>
+    <div>
+      <a class="svc" href="#visit"><span class="no">01</span><span>High-Speed Copies</span><span class="de">B&amp;W at 40 cpm — the fastest turnaround in town.</span></a>
+      <a class="svc" href="#visit"><span class="no">02</span><span>Color &amp; Laser</span><span class="de">Color laser copying &amp; scanning, rich and true.</span></a>
+      <a class="svc" href="#visit"><span class="no">03</span><span>Large Format</span><span class="de">Posters, banners &amp; signs at any scale.</span></a>
+      <a class="svc" href="#visit"><span class="no">04</span><span>Business Cards</span><span class="de">Cards, letterhead, forms &amp; menus.</span></a>
+      <a class="svc" href="#visit"><span class="no">05</span><span>Brochures</span><span class="de">Tri-folds, bookmarks &amp; marketing pieces.</span></a>
+      <a class="svc" href="#visit"><span class="no">06</span><span>Binding &amp; Finishing</span><span class="de">Coil, comb &amp; professional finishing.</span></a>
+      <a class="svc" href="#visit"><span class="no">07</span><span>Design Services</span><span class="de">Logo &amp; creative design, print-ready.</span></a>
+      <a class="svc" href="#visit"><span class="no">08</span><span>Specialty Stocks</span><span class="de">Carbonless &amp; waterproof papers.</span></a>
+    </div>
+  </div></section>
+
+  <!-- 풀 메뉴 -->
+  <section class="section" id="menu" style="background:var(--sheet2);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)"><div class="wrap">
+    <div class="shead"><h2>The full menu</h2><span class="mono">Job tickets / spec</span></div>
+    <div class="tickets" style="margin-top:8px">
+      <div class="ticket"><span class="tno">JT-01</span><span class="lab">Copies</span><p>Black &amp; white · high-speed 40 cpm · color laser copying · color scanning</p></div>
+      <div class="ticket"><span class="tno">JT-02</span><span class="lab">Print</span><p>Color prints · large format posters · banners · signs</p></div>
+      <div class="ticket"><span class="tno">JT-03</span><span class="lab">Marketing</span><p>Business cards · letterhead · forms · menus · brochures · bookmarks</p></div>
+      <div class="ticket"><span class="tno">JT-04</span><span class="lab">Finishing</span><p>Binding · trimming · professional finishing services</p></div>
+      <div class="ticket"><span class="tno">JT-05</span><span class="lab">Design</span><p>Logo design · creative &amp; layout · print-ready files</p></div>
+      <div class="ticket"><span class="tno">JT-06</span><span class="lab">Specialty</span><p>Carbonless paper · waterproof paper · FedEx &amp; UPS shipping</p></div>
+    </div>
+  </div></section>
+
+  <!-- 교정쇄 갤러리 -->
+  <section class="section" id="press"><div class="wrap">
+    <div class="shead"><h2>Fresh off the press</h2><span class="mono">Proof plates / 01–03</span></div>
+    <div class="press-grid">
+      <figure class="plate tilt-l">
+        <span class="tab">Plate 01</span>
+        <img src="assets/img/plate-01.webp" alt="Stack of card stock with colored edges in yellow, black, blue and red" width="880" height="587" loading="lazy" decoding="async">
+        <figcaption class="cap"><span>Card stock</span><span>Every color</span></figcaption>
+      </figure>
+      <figure class="plate tilt-r">
+        <span class="tab">Plate 02</span>
+        <img src="assets/img/plate-02.webp" alt="Thick block of colored paper in red, blue, green, pink and yellow on a black background" width="880" height="587" loading="lazy" decoding="async">
+        <figcaption class="cap"><span>Color runs</span><span>Cut to size</span></figcaption>
+      </figure>
+      <figure class="plate tilt-l">
+        <span class="tab">Plate 03</span>
+        <img src="assets/img/plate-03.webp" alt="Open jars of magenta and dark blue printing ink with mixing tools" width="880" height="587" loading="lazy" decoding="async">
+        <figcaption class="cap"><span>Ink on hand</span><span>Mixed fresh</span></figcaption>
+      </figure>
+    </div>
+  </div></section>
+
+  <!-- 스토리 -->
+  <section class="section" id="story"><div class="wrap">
+    <div class="shead"><h2>Since 1982</h2><span class="mono">The Rickard family</span></div>
+    <div class="story" style="margin-top:30px">
+      <div>
+        <div class="estamp"><span>Est.</span><b>1982</b><span>Traverse City</span></div>
+        <p class="pull">Three copiers, one family, and a whole lot of ink. Forty-plus years of getting it right.</p>
+        <figure class="plate tilt-r" style="margin-top:30px;max-width:360px">
+          <span class="tab">Archive</span>
+          <img src="assets/img/story-press.webp" alt="Hand rolling ink over rows of red and blue letterpress type blocks" width="870" height="1088" loading="lazy" decoding="async" style="aspect-ratio:4/5;object-fit:cover">
+          <figcaption class="cap"><span>Ink · type · care</span><span>Every job</span></figcaption>
+        </figure>
+      </div>
+      <div class="body">
+        <p>The Copy Shop opened in June 1982 — Jim Rickard brought the Xerox know-how, Kay Rickard brought the care for every customer who walked in. Together they were first in Traverse City to offer high-speed black &amp; white and the area's first color laser copier.</p>
+        <p>In 1999 their son Dan took the reins, and the shop has kept the same promise ever since: more than copies — real solutions, printed to look exactly how you imagined them.</p>
+        <p class="mono">Kay &amp; Jim Rickard, founders · Dan Rickard, owner since 1999</p>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- 신뢰 띠 -->
+  <div class="wrap"><div class="trust">
+    <span class="t"><span class="d"></span> BBB Accredited</span>
+    <span class="t"><span class="d"></span> Free customer Wi-Fi</span>
+    <span class="t"><span class="d"></span> Locally owned since 1982</span>
+  </div></div>
+
+  <!-- 방문/연락 -->
+  <section class="visit" id="visit"><div class="in">
+    <h2>Bring us your next print job.</h2>
+    <div class="cgrid">
+      <div>
+        <div class="lab">The Shop</div>
+        <div class="val">713 E. 8th Street<br>Traverse City, MI 49686</div>
+        <div class="lab">Hours</div>
+        <div class="val">Monday – Friday · 8 AM – 6 PM<br>Sat &amp; Sun · Closed</div>
+      </div>
+      <div>
+        <div class="lab">Talk to us</div>
+        <div class="val">Phone · <a href="tel:+12319472080">231-947-2080</a><br>Fax · 231-947-2085<br>Email · <a href="mailto:print@tccopyshop.com">print@tccopyshop.com</a></div>
+        <div class="lab">Follow</div>
+        <div class="val"><a href="https://www.facebook.com/tccopyshop/" target="_blank" rel="noopener">facebook.com/tccopyshop</a></div>
+      </div>
+    </div>
+    <label for="ord" class="order-btn">Start an order</label>
+  </div></section>
+
+  </main>
+
+  <footer><div class="in">
+    <div class="fword">COPY SHOP</div>
+    <div class="fbar" aria-hidden="true"></div>
+    <div class="legal">
+      © The Copy Shop · 713 E. 8th Street, Traverse City, MI 49686 · 231-947-2080 · print@tccopyshop.com<br><br>
+      Redesign concept — not the live site. © 2026 DariMoa. Marks belong to their respective owner (The Copy Shop). Photos are placeholder stock images via Unsplash — not actual shop work.
+    </div>
+  </div></footer>
+
+  <!-- 주문 슬립 -->
+  <label class="scrim" for="ord"></label>
+  <div class="slip">
+    <div class="sh">
+      <div class="t">Order slip №<b>New print order</b></div>
+      <label class="x" for="ord">✕</label>
+    </div>
+    <div class="body">
+      <input type="checkbox" id="osent" class="chk">
+      <div class="formwrap">
+        <span class="flab">Name</span><input placeholder="Your name">
+        <span class="flab">Email or phone</span><input placeholder="Best way to reach you">
+        <span class="flab">What do you need printed?</span>
+        <select><option>Color prints</option><option>High-speed copies</option><option>Large format / banner</option><option>Business cards</option><option>Brochures</option><option>Binding &amp; finishing</option><option>Design services</option><option>Something else</option></select>
+        <span class="flab">Quantity</span><input placeholder="e.g. 250">
+        <span class="flab">Details / deadline</span><textarea rows="3" placeholder="Size, paper, color, when you need it…"></textarea>
+        <label class="submit" for="osent">Send my order request →</label>
+        <p class="mono" style="font-size:10.5px;margin-top:12px;text-align:center">Demo form — nothing is actually submitted.</p>
+      </div>
+      <div class="thanks">
+        <div class="big"><span class="hl">Thanks!</span></div>
+        <p style="margin:12px 0;font-weight:500">Your print order request is in. We'll email you a quick quote and timeline.</p>
+        <p class="mono" style="font-size:10.5px">(Redesign demo — no real order was placed.)</p>
+        <label class="submit" for="ord" style="margin-top:16px">Close</label>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var stage = document.getElementById('ink-stage');
+    if (!stage) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var canvas = document.createElement('canvas');
+    canvas.className = 'ink';
+    canvas.setAttribute('aria-hidden', 'true');
+    var label = document.createElement('span');
+    label.className = 'wipe-label mono';
+    label.setAttribute('aria-hidden', 'true');
+    label.textContent = '(wipe to read)';
+    stage.appendChild(canvas);
+    stage.appendChild(label);
+    stage.dataset.ink = 'on';
+
+    var ctx = canvas.getContext('2d');
+    var brush = 60, cleared = false, idle;
+
+    function paint() {
+      var r = stage.getBoundingClientRect();
+      canvas.width = r.width; canvas.height = r.height;
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = '#3ddcff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      brush = Math.max(48, r.width / 14);
+    }
+
+    function erase(e) {
+      var r = canvas.getBoundingClientRect();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(e.clientX - r.left, e.clientY - r.top, brush, 0, Math.PI * 2);
+      ctx.fill();
+      resetIdle();
+    }
+
+    function clearInk() {
+      if (cleared) return;
+      cleared = true;
+      stage.classList.add('revealed');
+      setTimeout(function () { canvas.remove(); label.remove(); }, 900);
+    }
+
+    function resetIdle() {
+      clearTimeout(idle);
+      idle = setTimeout(clearInk, 4000);
+    }
+
+    paint();
+    resetIdle();
+    canvas.addEventListener('pointermove', erase);
+    canvas.addEventListener('pointerdown', erase);
+    window.addEventListener('resize', function () { if (!cleared) paint(); });
+    window.addEventListener('scroll', clearInk, { once: true, passive: true });
+  })();
+  </script>
+</body>
+</html>
