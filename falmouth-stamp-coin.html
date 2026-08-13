@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Falmouth Stamp & Coin — website redesign concept by DariMoa</title>
+<style>
+:root{--navy:#1f2b52;--amber:#f0a021;--ink:#1b2230;--paper:#f6f5f1;--line:#e2ddd2;--muted:#6b7280}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Carlito","Liberation Sans",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.notice{background:var(--navy);color:#fff;text-align:center;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;padding:9px 16px}
+.notice b{color:var(--amber)}
+header{max-width:1120px;margin:0 auto;padding:38px 28px 8px}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.logo .mk{width:46px;height:46px;border-radius:13px;background:var(--navy);position:relative;flex:0 0 auto}
+.logo .mk::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:9px;height:9px;border-radius:50%;background:var(--amber)}
+.logo .mk::after{content:"";position:absolute;bottom:11px;left:50%;transform:translateX(-50%);width:20px;height:11px;border:3px solid #fff;border-bottom:none;border-radius:8px 8px 0 0}
+.logo .wm{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.logo .wm .a{color:var(--amber)}
+h1{font-size:30px;letter-spacing:-.5px;line-height:1.15;margin-bottom:6px}
+.sub{color:var(--muted);font-size:16px;max-width:660px}
+.tag{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--navy);border:1px solid var(--navy);border-radius:20px;padding:5px 14px}
+.panel{max-width:1120px;margin:24px auto;padding:0 28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 12px 34px rgba(31,43,82,.07)}
+.caphead{display:flex;align-items:center;gap:12px;padding:15px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.chip{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:6px}
+.chip.after{background:var(--navy);color:#fff}
+.chip.before{background:#eee6d5;color:#8a6d2f}
+.caphead p{color:var(--muted);font-size:14px}
+.browser{background:#eef0f3;border-bottom:1px solid var(--line);padding:9px 14px;display:flex;align-items:center;gap:7px}
+.browser i{width:11px;height:11px;border-radius:50%;background:#cfd4da;display:inline-block}
+.browser .url{margin-left:10px;font-size:12px;color:#8a929c;background:#fff;border:1px solid #e0e4e9;border-radius:6px;padding:4px 12px}
+iframe.after{width:100%;border:0;display:block;background:#fff}
+.beforewrap{background:#f0ede6}
+.beforewrap img{display:block;width:100%}
+.fallback{padding:60px 22px;text-align:center;color:var(--muted);font-size:15px;background:repeating-linear-gradient(45deg,#efece4,#efece4 12px,#e9e5db 12px,#e9e5db 24px)}
+.fallback a{color:var(--navy);font-weight:700}
+.foot{max-width:1120px;margin:16px auto 60px;padding:26px 28px;color:var(--muted);font-size:12.5px;line-height:1.8;border-top:1px solid var(--line)}
+.foot b{color:var(--ink)} .foot a{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="notice">Redesign concept · not the live site · <b>© DariMoa</b></div>
+<header>
+  <div class="logo"><div class="mk"></div><div class="wm">Dari<span class="a">Moa</span></div></div>
+  <h1>A website concept for Falmouth Stamp & Coin</h1>
+  <p class="sub">A collector's shop on Town Hall Square deserves a site that's easy to read on a phone, loads securely, and makes it simple to browse what you carry — or ask about selling a collection. Here's a concept built from your real details.</p>
+  <span class="tag">Falmouth, Massachusetts</span>
+</header>
+
+<div class="panel">
+  <div class="card">
+    <div class="caphead"><span class="chip after">The new design</span><p>A fresh, mobile-first concept by DariMoa — your real services, hours &amp; contact details.</p></div>
+    <div class="browser"><i></i><i></i><i></i><span class="url">www.coinsandstamps.com · redesigned</span></div>
+    <iframe class="after" scrolling="no" srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;utf-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+<title>Falmouth Stamp &amp;amp; Coin — Cape Cod's Collector Shop</title>
+<style>
+  :root{
+    --navy:#14284b; --navy2:#1c355f; --gold:#b28a32; --gold2:#d8b55b; --goldsoft:#e9d9a8;
+    --cream:#f6f1e6; --cream2:#efe7d5; --ink:#22262e; --muted:#5c6470; --line:#ddd2ba;
+    --serif:&quot;GFS Baskerville&quot;,&quot;Lora&quot;,Georgia,&quot;Times New Roman&quot;,serif;
+    --body:&quot;Carlito&quot;,&quot;Liberation Sans&quot;,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.62}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
+  h1,h2,h3{font-family:var(--serif);font-weight:700}
+  a{color:inherit}
+  .perf{height:14px;background:radial-gradient(circle at 7px 50%, var(--cream) 4px, transparent 5px) repeat-x;background-size:14px 14px}
+  /* header */
+  header.site{background:var(--cream);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:80px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .coin{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold2),var(--gold));border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;color:var(--navy);font-family:var(--serif);font-weight:700;font-size:20px}
+  .brand b{font-family:var(--serif);font-size:21px;color:var(--navy);letter-spacing:.3px;display:block;line-height:1.1}
+  .brand span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+  nav.top{display:flex;align-items:center;gap:26px}
+  nav.top a{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--navy);text-decoration:none}
+  nav.top .ph{font-family:var(--serif);font-size:18px;color:var(--gold)}
+  /* hero split */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px}
+  .hero .left{background:
+     repeating-linear-gradient(135deg, rgba(216,181,91,.05) 0 2px, transparent 2px 9px),
+     radial-gradient(600px 300px at 20% 10%, rgba(216,181,91,.12), transparent),
+     var(--navy);color:var(--cream);padding:76px 60px;display:flex;flex-direction:column;justify-content:center;position:relative}
+  .hero .left::after{content:&quot;&quot;;position:absolute;right:0;top:0;bottom:0;width:5px;background:repeating-linear-gradient(var(--gold) 0 10px, transparent 10px 20px)}
+  .eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold2);margin-bottom:22px}
+  .hero h1{font-size:52px;line-height:1.05;color:#fff}
+  .hero h1 em{font-style:italic;color:var(--gold2)}
+  .hero .left p{margin-top:22px;font-size:18px;color:#d7dae2;max-width:440px}
+  .hcta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;padding:14px 24px;border-radius:3px;text-decoration:none;display:inline-block}
+  .btn-g{background:var(--gold2);color:var(--navy)}
+  .btn-o{border:1px solid rgba(233,217,168,.5);color:var(--cream)}
+  .estline{margin-top:34px;padding-top:20px;border-top:1px solid rgba(233,217,168,.22);font-size:13px;letter-spacing:1px;color:var(--goldsoft);text-transform:uppercase}
+  .hero .right{background:var(--cream2);padding:60px;display:flex;align-items:center}
+  .counter{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:0;width:100%;box-shadow:0 18px 40px rgba(20,40,75,.09);overflow:hidden}
+  .counter .cap{background:var(--navy);color:var(--goldsoft);font-family:var(--serif);font-size:15px;letter-spacing:1px;padding:14px 24px;text-align:center}
+  .counter .rows{padding:10px 24px 22px}
+  .counter .r{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .counter .r:last-child{border-bottom:none}
+  .counter .r b{font-family:var(--serif);color:var(--navy)}
+  .counter .r span{color:var(--muted)}
+  /* browse */
+  .browse{padding:82px 0}
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-k{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .sec-head h2{font-size:38px;color:var(--navy)}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:17px;max-width:600px;margin-left:auto;margin-right:auto}
+  .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .tile{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px 26px;position:relative;overflow:hidden}
+  .tile::before{content:&quot;&quot;;position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold)}
+  .tile h3{font-size:21px;color:var(--navy);margin-bottom:8px}
+  .tile p{font-size:14.5px;color:var(--muted)}
+  /* we buy */
+  .buy{background:var(--navy);color:var(--cream);padding:0}
+  .buy .inner{padding:82px 0}
+  .buy .sec-k{color:var(--gold2)}
+  .buy h2{font-size:40px;color:#fff;text-align:center}
+  .buy .lead{text-align:center;color:#cfd4de;max-width:640px;margin:14px auto 0;font-size:17px}
+  .buygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .bitem{border:1px solid rgba(233,217,168,.25);border-radius:8px;padding:26px}
+  .bitem .n{font-family:var(--serif);font-size:20px;color:var(--gold2)}
+  .bitem p{font-size:14px;color:#c7ccd6;margin-top:7px}
+  .buycta{margin-top:44px;text-align:center}
+  .buycta a{background:var(--gold2);color:var(--navy);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:14px;padding:16px 34px;border-radius:3px;text-decoration:none;display:inline-block}
+  .buycta small{display:block;color:#aab2c0;margin-top:14px;font-size:13px;letter-spacing:.5px}
+  /* trust */
+  .trust{padding:80px 0;background:var(--cream2)}
+  .trust .wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px}
+  .tcard{text-align:center;padding:0 10px}
+  .tcard .ic{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:var(--serif);font-size:24px;background:#fff}
+  .tcard h3{font-size:20px;color:var(--navy);margin-bottom:8px}
+  .tcard p{font-size:14.5px;color:var(--muted)}
+  /* visit */
+  .visit{padding:82px 0}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+  .visit h2{font-size:36px;color:var(--navy)}
+  .visit p.intro{color:var(--muted);font-size:17px;margin-top:14px}
+  .hours{margin-top:24px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .hours .row{display:flex;justify-content:space-between;padding:14px 20px;font-size:15px;border-bottom:1px solid var(--line)}
+  .hours .row:nth-child(odd){background:#fff}
+  .hours .row:last-child{border-bottom:none}
+  .hours .row b{color:var(--navy);font-family:var(--serif)}
+  .hours .row.cl b{color:#9a7d3a}
+  .infocard{background:var(--navy);color:var(--cream);border-radius:10px;padding:38px}
+  .infocard .k{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-top:22px}
+  .infocard .k:first-child{margin-top:0}
+  .infocard .v{font-family:var(--serif);font-size:20px;margin-top:5px;color:#fff}
+  .infocard a{color:var(--goldsoft);text-decoration:none}
+  .infocard .cta{margin-top:26px;display:block;text-align:center;background:var(--gold2);color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:15px;border-radius:4px;text-decoration:none;font-size:14px}
+  /* footer */
+  footer.site{background:#0e1d38;color:#9aa6bc;padding:46px 0 30px}
+  footer .top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #24365b;padding-bottom:22px;margin-bottom:20px;flex-wrap:wrap;gap:14px}
+  footer .top b{color:var(--goldsoft);font-family:var(--serif);font-size:18px}
+  footer .legal{font-size:11.5px;color:#63718c;line-height:1.7}
+  @media(max-width:860px){
+    .wrap{padding:0 22px}
+    .hero{grid-template-columns:1fr}
+    .hero .left{padding:54px 30px}.hero h1{font-size:38px}
+    .hero .right{padding:34px 30px}
+    nav.top a:not(.ph){display:none}
+    .grid6,.buygrid,.trust .wrap,.visit .wrap{grid-template-columns:1fr}
+    .sec-head h2,.buy h2{font-size:30px}
+  }
+</style>
+</head>
+<body>
+<header class=&quot;site&quot;>
+  <div class=&quot;wrap bar&quot;>
+    <div class=&quot;brand&quot;>
+      <div class=&quot;coin&quot;>FS</div>
+      <div><b>Falmouth Stamp &amp;amp; Coin</b><span>Cape Cod · Massachusetts</span></div>
+    </div>
+    <nav class=&quot;top&quot;>
+      <a href=&quot;#browse&quot;>Browse</a>
+      <a href=&quot;#buy&quot;>We Buy</a>
+      <a href=&quot;#visit&quot;>Visit</a>
+      <span class=&quot;ph&quot;>(508) 548-7075</span>
+    </nav>
+  </div>
+</header>
+
+<section class=&quot;hero&quot;>
+  <div class=&quot;left&quot;>
+    <div class=&quot;eyebrow&quot;>On Town Hall Square · Falmouth, MA</div>
+    <h1>Cape Cod's shop for <em>stamps, coins</em> &amp;amp; collections</h1>
+    <p>A real counter for collectors — U.S. and foreign stamps, coins, currency, tokens and medals — plus fair, in-person appraisals when it's time to sell.</p>
+    <div class=&quot;hcta&quot;>
+      <a class=&quot;btn btn-g&quot; href=&quot;#buy&quot;>Selling a collection?</a>
+      <a class=&quot;btn btn-o&quot; href=&quot;#browse&quot;>See what we carry</a>
+    </div>
+    <div class=&quot;estline&quot;>Buy · Sell · Appraise — right on Town Hall Square</div>
+  </div>
+  <div class=&quot;right&quot;>
+    <div class=&quot;counter&quot;>
+      <div class=&quot;cap&quot;>At the counter</div>
+      <div class=&quot;rows&quot;>
+        <div class=&quot;r&quot;><span>Stamps</span><b>U.S. &amp;amp; foreign</b></div>
+        <div class=&quot;r&quot;><span>Coins &amp;amp; currency</span><b>U.S. &amp;amp; world</b></div>
+        <div class=&quot;r&quot;><span>Tokens &amp;amp; medals</span><b>In stock</b></div>
+        <div class=&quot;r&quot;><span>Postcards &amp;amp; collectibles</span><b>Browse bins</b></div>
+        <div class=&quot;r&quot;><span>Appraisals</span><b>No obligation</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class=&quot;perf&quot; style=&quot;background-color:var(--navy)&quot;></div>
+
+<section class=&quot;browse&quot; id=&quot;browse&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;sec-head&quot;>
+      <div class=&quot;sec-k&quot;>What you'll find</div>
+      <h2>A collector's counter, not a catalog</h2>
+      <p>Bins to dig through, cases to study, and someone across the counter who knows the difference. Here's what's on hand.</p>
+    </div>
+    <div class=&quot;grid6&quot;>
+      <div class=&quot;tile&quot;><h3>U.S. Stamps</h3><p>Mint and used, singles to collections, classics through modern issues.</p></div>
+      <div class=&quot;tile&quot;><h3>Foreign Stamps</h3><p>Worldwide material by country and region for the topical and country collector.</p></div>
+      <div class=&quot;tile&quot;><h3>U.S. Coins</h3><p>Cents to dollars, key dates and type coins, circulated and better grades.</p></div>
+      <div class=&quot;tile&quot;><h3>World Coins &amp;amp; Currency</h3><p>Foreign coins, paper money and notes for the world collector.</p></div>
+      <div class=&quot;tile&quot;><h3>Tokens &amp;amp; Medals</h3><p>Trade tokens, commemoratives and medals — the corners of the hobby we love.</p></div>
+      <div class=&quot;tile&quot;><h3>Postcards &amp;amp; Collectibles</h3><p>Vintage postcards and paper collectibles worth an afternoon of browsing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class=&quot;buy&quot; id=&quot;buy&quot;>
+  <div class=&quot;wrap inner&quot;>
+    <div class=&quot;sec-head&quot; style=&quot;margin-bottom:0&quot;>
+      <div class=&quot;sec-k&quot;>Thinking of selling?</div>
+      <h2>We buy — and we'll tell you straight</h2>
+      <p class=&quot;lead&quot;>Inherited a collection or ready to part with one? Bring it in for a fair, no-obligation look. We buy a wide range, one piece or an entire estate.</p>
+    </div>
+    <div class=&quot;buygrid&quot;>
+      <div class=&quot;bitem&quot;><div class=&quot;n&quot;>Rare &amp;amp; U.S. coins</div><p>Key dates, type coins, better material and full collections.</p></div>
+      <div class=&quot;bitem&quot;><div class=&quot;n&quot;>Currency &amp;amp; paper money</div><p>U.S. and world notes, obsolete and collectible currency.</p></div>
+      <div class=&quot;bitem&quot;><div class=&quot;n&quot;>Precious metals</div><p>Gold and silver — coins, bullion and scrap, priced fairly.</p></div>
+      <div class=&quot;bitem&quot;><div class=&quot;n&quot;>Jewelry</div><p>Gold and silver jewelry, evaluated honestly at the counter.</p></div>
+      <div class=&quot;bitem&quot;><div class=&quot;n&quot;>Whole collections</div><p>Stamp and coin collections and accumulations, large or small.</p></div>
+      <div class=&quot;bitem&quot;><div class=&quot;n&quot;>Historical documents</div><p>Old paper, documents and ephemera with collector value.</p></div>
+    </div>
+    <div class=&quot;buycta&quot;>
+      <a href=&quot;mailto:fscorders@capecod.net&quot;>Ask about selling your collection →</a>
+      <small>Prefer to talk it through first? Call (508) 548-7075 or email — no obligation.</small>
+    </div>
+  </div>
+</section>
+
+<section class=&quot;trust&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;tcard&quot;><div class=&quot;ic&quot;>◆</div><h3>Fair &amp;amp; honest</h3><p>A straight opinion on what you have, whether you're buying, selling, or just curious.</p></div>
+    <div class=&quot;tcard&quot;><div class=&quot;ic&quot;>✦</div><h3>Real expertise</h3><p>Stamps and coins are a lifetime study. Ask questions — that's what the counter is for.</p></div>
+    <div class=&quot;tcard&quot;><div class=&quot;ic&quot;>❖</div><h3>Right on the Square</h3><p>Easy to find in the heart of Falmouth, on historic Town Hall Square.</p></div>
+  </div>
+</section>
+
+<section class=&quot;visit&quot; id=&quot;visit&quot;>
+  <div class=&quot;wrap&quot;>
+    <div>
+      <div class=&quot;sec-k&quot; style=&quot;color:var(--gold)&quot;>Plan your visit</div>
+      <h2>Come by the shop</h2>
+      <p class=&quot;intro&quot;>Open six days a week on Town Hall Square. Selling something? Give us a call first and we'll make time to go through it with you properly.</p>
+      <div class=&quot;hours&quot;>
+        <div class=&quot;row&quot;><span>Monday</span><b>10:00 – 5:00</b></div>
+        <div class=&quot;row&quot;><span>Tuesday</span><b>10:00 – 5:00</b></div>
+        <div class=&quot;row&quot;><span>Wednesday</span><b>10:00 – 5:00</b></div>
+        <div class=&quot;row&quot;><span>Thursday</span><b>10:00 – 5:00</b></div>
+        <div class=&quot;row&quot;><span>Friday</span><b>10:00 – 5:00</b></div>
+        <div class=&quot;row&quot;><span>Saturday</span><b>10:00 – 2:00</b></div>
+        <div class=&quot;row cl&quot;><span>Sunday</span><b>Closed</b></div>
+      </div>
+    </div>
+    <div class=&quot;infocard&quot;>
+      <div class=&quot;k&quot;>Address</div>
+      <div class=&quot;v&quot;>11 Town Hall Square<br>Falmouth, MA 02540</div>
+      <div class=&quot;k&quot;>Phone</div>
+      <div class=&quot;v&quot;><a href=&quot;tel:15085487075&quot;>(508) 548-7075</a></div>
+      <div class=&quot;k&quot;>Email</div>
+      <div class=&quot;v&quot;><a href=&quot;mailto:fscorders@capecod.net&quot;>fscorders@capecod.net</a></div>
+      <a class=&quot;cta&quot; href=&quot;mailto:fscorders@capecod.net&quot;>Email the shop →</a>
+    </div>
+  </div>
+</section>
+
+<footer class=&quot;site&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;top&quot;>
+      <b>Falmouth Stamp &amp;amp; Coin</b>
+      <div style=&quot;font-size:13px&quot;>11 Town Hall Square, Falmouth, MA · (508) 548-7075 · fscorders@capecod.net</div>
+    </div>
+    <div class=&quot;legal&quot;>This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
+" onload="try{this.style.height=(this.contentWindow.document.body.scrollHeight)+'px';}catch(e){this.style.height='2400px';}"></iframe>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="card">
+    <div class="caphead"><span class="chip before">Your current site</span><p>A live snapshot today — it has served the shop well; this is simply where the upgrade opportunity is.</p></div>
+    <div class="beforewrap">
+      <img src="https://image.thum.io/get/width/1200/http://www.coinsandstamps.com/" alt="Current Falmouth Stamp & Coin website" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <div class="fallback" style="display:none">Live snapshot unavailable right now — you can view the current site directly at <a href="http://www.coinsandstamps.com/">http://www.coinsandstamps.com/</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <p><b>DariMoa</b> — web design for local businesses · Englewood, New Jersey · <a href="mailto:Dari@darimoa.com">Dari@darimoa.com</a> · darimoa.com</p>
+  <p style="margin-top:10px">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved.</p>
+</div>
+</body>
+</html>

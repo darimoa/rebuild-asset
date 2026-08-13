@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Atlantic Trophy Company — Website Redesign Concept by DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#111d38;--brass:#b8892b;--brass2:#d9b871;--ivory:#f7f2e7;--cream:#fbf8f1;--muted:#5b6478;--line:rgba(17,29,56,.14)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.1}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)}
+  .notice{background:var(--ink);color:var(--ivory);text-align:center;font-size:13px;letter-spacing:.04em;padding:11px 16px}
+  .notice b{color:var(--brass2)}
+  header.top{background:linear-gradient(180deg,#0e1a33,#14244a);color:var(--ivory);padding:52px 0 46px}
+  header.top .brand{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+  header.top .brand .m{width:38px;height:38px;border:1.5px solid var(--brass2);border-radius:7px;display:flex;align-items:center;justify-content:center}
+  header.top .brand .m:before{content:"D";font-family:'Fraunces',serif;font-weight:600;color:var(--brass2);font-size:20px}
+  header.top .brand b{font-family:'Fraunces',serif;font-size:18px}
+  header.top .brand span{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass2);display:block}
+  header.top h1{font-size:clamp(30px,5vw,50px);max-width:20ch}
+  header.top h1 em{font-style:italic;color:var(--brass2)}
+  header.top p{margin-top:16px;color:rgba(247,242,231,.82);max-width:64ch;font-size:16.5px}
+  .meta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .chip{border:1px solid rgba(217,184,113,.4);border-radius:100px;padding:7px 15px;font-size:13px;color:var(--ivory)}
+  .chip b{color:var(--brass2)}
+  section{padding:56px 0}
+  .lead{max-width:64ch}
+  .lead h2{font-size:clamp(24px,3.4vw,34px);margin-top:12px}
+  .lead p{margin-top:14px;color:var(--muted);font-size:16px}
+  .compare{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:820px){.compare{grid-template-columns:1fr}}
+  .col .tag{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .col .tag .b{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:5px}
+  .before .b{background:#e7e0d0;color:#6a5f45}
+  .after .b{background:var(--brass);color:#fff}
+  .col .tag .t{font-size:14px;color:var(--muted)}
+  .frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 24px 50px -34px rgba(17,29,56,.5)}
+  .frame .bar{display:flex;gap:6px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);background:#efe7d4}
+  .frame .bar i{width:10px;height:10px;border-radius:50%;background:#c9bfa6;display:block}
+  .frame .bar .u{margin-left:10px;font-size:12px;color:var(--muted);font-family:ui-monospace,monospace}
+  .frame img{width:100%;display:block}
+  .shot-wrap{max-height:560px;overflow:auto}
+  .scroll-note{font-size:12.5px;color:var(--muted);text-align:center;padding:10px;background:var(--ivory)}
+  .band{background:var(--ink);color:var(--ivory);border-radius:16px;padding:44px 40px;margin-top:8px}
+  .band h2{font-size:clamp(22px,3vw,30px)}
+  .band p{color:rgba(247,242,231,.8);margin-top:12px;max-width:60ch}
+  .pts{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:760px){.pts{grid-template-columns:1fr}}
+  .pt{background:rgba(217,184,113,.07);border:1px solid rgba(217,184,113,.22);border-radius:11px;padding:20px}
+  .pt b{font-family:'Fraunces',serif;font-size:16px;color:var(--brass2);display:block;margin-bottom:6px}
+  .pt p{font-size:13.5px;color:rgba(247,242,231,.75);margin:0}
+  .cta{text-align:center;padding:60px 0 20px}
+  .cta a{display:inline-block;background:var(--brass);color:#fff;padding:15px 30px;border-radius:8px;font-weight:600;text-decoration:none}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:34px 0 60px;color:var(--muted);font-size:12.5px;text-align:center}
+  footer .legal{max-width:70ch;margin:10px auto 0;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="notice">Redesign concept &nbsp;&middot;&nbsp; <b>not the live site</b> &nbsp;&middot;&nbsp; &copy; DariMoa</div>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="m"></span><span><b>DariMoa</b><span>Web design for local businesses</span></span></div>
+    <div class="eyebrow">Website redesign concept</div>
+    <h1>A fresh website concept for <em>Atlantic Trophy Company</em></h1>
+    <p>A respectful look at how Atlantic Trophy&rsquo;s current website could be modernized &mdash; mobile-first, faster, and built to show off 40+ years of custom awards and in-house engraving. Below is your current site next to the new concept.</p>
+    <div class="meta">
+      <span class="chip">Custom awards &amp; engraving &middot; <b>New York, NY</b></span>
+      <span class="chip">Concept by <b>DariMoa</b></span>
+    </div>
+  </div>
+</header>
+<section>
+  <div class="wrap">
+    <div class="lead">
+      <div class="eyebrow">Before &amp; after</div>
+      <h2>Your current site, and where it could go.</h2>
+      <p>There&rsquo;s nothing wrong with a website that has served the shop for years &mdash; but a modern, mobile-friendly design can make it far easier for New York companies to find you, trust you, and request a quote.</p>
+    </div>
+    <div class="compare">
+      <div class="col before">
+        <div class="tag"><span class="b">Before</span><span class="t">Current live site</span></div>
+        <div class="frame">
+          <div class="bar"><i></i><i></i><i></i><span class="u">atlantictrophy.com</span></div>
+          <div class="shot-wrap"><img src="https://image.thum.io/get/width/1200/https://atlantictrophy.com/" alt="Current Atlantic Trophy website" loading="lazy" onerror="this.parentElement.innerHTML='&lt;div style=&quot;padding:60px 24px;text-align:center;color:#5b6478;font-size:14px&quot;&gt;Live preview of atlantictrophy.com&lt;/div&gt;'"></div>
+          <div class="scroll-note">Live screenshot of the current website</div>
+        </div>
+      </div>
+      <div class="col after">
+        <div class="tag"><span class="b">After</span><span class="t">DariMoa concept</span></div>
+        <div class="frame">
+          <div class="bar"><i></i><i></i><i></i><span class="u">the new concept</span></div>
+          <div class="shot-wrap"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAIdAIwDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAECAwQGBQf/xAA/EAABAwEDBwkHAwQDAAMAAAABAAIRAwQSIRMxUVRhkZIFFBYiQVJxk+EVMkJTgaHRI2JyM7HB8DRjgnOi8f/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAHxEBAQEBAAICAwEAAAAAAAAAABEBEgIhMUEDEyJR/9oADAMBAAIRAxEAPwD4TA0k3lZuTukOZJnPehc8nSknSurLpLqJwFKP/am9QicifMXLJ0pJ0oLoqSdKmTpRFkVZOlTJ0oqVf9PS/cFnKmVBY3JF0ujtkKSKcYOdPgqSkpRYXI6xdOwI67Iukx2yFEpKUbWYUTaWiof0+29gvp5LkvvM3+q+NKSufn4dba1nlPp9epS5NFM3HMLo0+q+OkpKvh48/dPLaopF3tldfJdClaK9VtZocG0XvEkiCBhmXTW5LpGs+KraDKdOmXlxlt52gn4dq3WXy+rtTq7V3ezQ2o+m6vDqdIVXw2cCBmxxzhav5HFK8KtpaHB5YABnN4NjPnxlLg+Z1f3ILsYzK+oeSm0mVSajXwx+JaRBa8NJGO1Wq8ksaKrGVOrSqvDnlvWhrZPbCXB8nq7VPV/cvpO5GLbwNcT146me60O04YFfMILTDgQdBT5BFCKosihFFSiiUlIJRRKSkEooRBeg6s15FnLw5wg3M5C1v21lMdasGBt3tgCc29Vs1o5uakNm+27IMEYz/hdFHlC69t5owa0S52gz9ypu79YZGQNubdg1xcGGfAfhbNtttp2TJ3HhpB65ntMz47VWvbGhopURLQGC9OeCSRvKP5Rlxu0sHX5BdMl0H7QFL5f4vpkaltLSC6uQ4lpGOJOcLZ4t5tApMrValQNypAccOrj9lX2gS1ocwkZMscL0TgRObPioZbrtsqVzTlr6Zp3Q7MC2M6udX4PSjqtsptD3vrNa8kgkkTIx+yvb7Paed1TUmqWgXntaYiBH2hTa+UDarOKWTuy5rnGZkht0RowXQeV2F9V/NQH1AWlwfjBaBnjYr7RwGyWgU3vNF4bTguJERKxX0avKbazKjKtC8Kl28Q4AuLSTjA2wuBxBcS0XWk4CZgK4iqKUVEIpRBCKUQQilEF6TbxPVDvF0LTJ4gZJu3rqlISTgw/zMK7robNyifAmVANPCMm0E9t9TcBmKTJj5iqALg6tHfipIAk3aG8oGTEQabJ05RTkx20meYogAkxROyUMd2jn0oFwHAU26ffS6C3CkzjQgAe7Q3lLo0UcP3Z0GZcwtgU4OmSqKz23XRIPgcFVUEREBERAREQEREHTY7IbW9zQ4Nuic0yuv2JVGd54CuGz2mpZnONOOsIMhdHtW0/s3Lj55+Xr+fh08eJ7bHkWoBJqQNrCuG0Wc0K5pTeOGYaV0e1bR+zcuatWdXqmo+JOhPx5+W/18J5cT0c3q4/pVMM/VUGhUDSTTeAM5u5lWT/pST/pXZhCIiAiIgIiICIiAiIgIiILMY55hjS46Aoc0tMOaQdqvSqupElrnNnQjnB5l7nkp7ozUuaWuIcII7EwBwzKznNe4ucXSc+AVFEVuppduUG78M/VBZtKo4AtYSDmKhzHM95sSrsqlgAD3CDOA7VDnB0Xi4wIzBT2M0UmOyfqoVBERAREQEREBERAREQVc1rveAPimTZEXGx4KXOuMc+JugmF8rkflp/KNpdSfRYwBl8Frp7YhXMqV9PJs7jdyZOn3G7lqigyybO43cgpsGZjdy1UHMgpk2dxu5Rk2dxu5cPK/Kj+TsiKdJrzUn3nRER+V2WK0c6sVGuW3TUaHRMwrCtAA0QBAUqyKQVRWUfEghF8ex8uVLTyoLK6g1rC5zQ4Ok4T+F9pXchVUVkUgqisVVFB2+C5KVM0HTRsVBhIxc1wE/ZdY7VldPcOP7AriNgcBMA+KmRpCxDCTF2NtwKwpYg9XhCDSRpCHMszRk/DwhXiGwTKDntVJtUMvWelWA7KkYeC0oFwYGupNpADqtDgVNQSG4T/wCZUCmS2cAdrRgg0kaQpkaQssjpu8AU5L+PCEGkjSo+JVbTumer9GwrfEg420snWNSnY6AfJ64IBP2WzqtcTdosP/tCDJNw8AVhTkHBonsLQqLU3ucwGo0MdovSrSNIVMltbwhBSEi9dI0XQoNOxVVoAGCqpoDYpxVXhxpvDcHFpjxXxeQrFyhZrU91rylw0461S9LpG1XM9D7mKYqUQRihmFKg5kATCYr5PLtltlpFDmYeQ29eDal3RH+V38n06tKwUGVyTVawB0mcfFJ6G+KYqUQRioxlWUfEgYpivg2CxcpU+WMrWymRvPJJqyCDMYSvvq7kEYpipRQRioViqqB2HwXOKYAMOq6f6m1dAVcl+7/6hXBkGAODr1TDsygha5X9v3CsGNAiAfoput0Dcgq2pJAIj6hXOZRdboG5DmQZV2B4b1ntjtY6FmaTSIvVZkR+p6rphpAkA+KXW6BuQZUzcbdF521zwSrZX9v3Cvdb3RuS6zujcghri74SBpkKfiUiAICj4kHMabbzutVxw/qeqZMS7r1ROP8AUXTdboG5Lre6NyDNj7rAIJ8XAlTlf2/cK91vdG5RdZ3W7kEtdebP+VCmABgAPBQpoIvIdKbd8uhwn8p0pt3y6HCfytcalx69F5DpTbvl0OE/lOlNu+XQ4T+U40uPXovIdKbd8uhwn8p0pt3y6HCfynGlx69F5DpTbvl0OE/lOlNu+XQ4T+U40uPXovIdKbd8uhwn8p0pt3y6HCfynGlx69F5DpTbvl0OE/lOlNu+XQ4T+U40uPXovIdKbd8uhwn8p0pt3y6HCfynGlx69F5DpTbvl0OE/lOlNu+XQ4T+U40uPXovIdKbd8uhwn8p0pt3y6HCfynGlx8QAnMpunZvWtkc9r33KRqy2IAmNq6HUpaHN5PeBfxEkmNHqutZcV0x2b0unZvXa0UyyRye844Ykzjm/uqtaDTaOYPcWuxcJxxzf4SjiRfQqPs1JpbVsd2rdBAk9unQsHV7OWkNsoBuwCXHA6Uo5kW1KqynUa/JAgZwTnW4tVmDXNFjAvCPelBxIi1bZ6rmhwZgcRJAlUZItubVu6OIflRzat3RxD8qXBki15vV7o4h+U5vV7o4h+UuEZItDQqD4RxBRkamgbwlwmqItMjU7s+BCzVtGlGpUplxp1cmYxxiVqbRaM3OpjH3lhTcGkyXDwC0yowl79wUFmVa9Joay03WjMA7MoZUqsEMtAaNAcqmrgbrnztAVDVefi+yC7y+qZqVg45pLlXJ/wDYzemWqH4vsgqvA95Ayf8A2M3qrhdjrA+CnKPvXpx8FOWqd4oKLetnpz8tv9lgSSSTnK6T/WoRdPUZ72bN2oMYHeCggaZXdk8T1LJjj7+Za3JjJ0rJJzi/KlI+YoXbF4SGWVl9sDrYjb4rkqMNN0FzThPVMq0VRQiDSh/XZ4rILWz/APIp/wAlkMyfYsyCccAtadNjnEFzoGYtbKxaVdrwOwHxCg2FBhJlz47CKfqpFCmfjqeOT9VjlR3W7kyg7rdyDbIU499+0ZP1WbqRDiGAub2G7Eqjnh3YB4BRIQWNNwiWkTsQ03ASWmPBVkJIQVdnW1X3qc/Lb/ZYuMla1vepzmybf7IEN2f79VEN2f79VXqT7x4U6nePCgtDdn+/VIbs/wB+qp1e0ncoJHZ/ZBYmOxu9UlJSUGlm/wCTT/ksxmWlm/5VP+QWQzJnyLsiccy1ZcLjIN3s60LAGFdtQtPVJCDe7RjFpn/5B+FWoxpcMngIzF4Kzyz+8UyztJRU3DpbxJcOlvEqF5cZMlReCDS4e83iUOF0xIPgVS8EvBEHZ1c1WOa2/TJIAEh0T9lmTJUIL36fy3cfol+n8t3H6KiJFq9+l8p3H6JfpfKdx+ioiQrS/S+U7j9Ev0flP8z0WaJErZlWkxwe2k68MRL5H9liilINuZWrVq3llOZWrVq3llfokpK59tcvzvmVq1at5ZTmVq1at5ZX6JKSnZy/O+ZWrVq3llOZWrVq3llfokpKdnL875latWreWU5latWreWV+hF7u44/UJfd3Hbwr2cvz3mVq1at5ZTmVq1at5ZX6Ffd3XfZL7u47eE7OX57zK1atW8spzK1atW8sr9CL3dx28KWuJGII8U7OX55zK1atW8spzK1atW8sr9ElJU7OX53zK1atW8spzK1atW8sr9ElJTs5fnfMrVq1byynMrVq1byyv0SUlOzkUGSCAYOlWgJAWGmNyrA/VH1YrMDweu8OGxsLSAkBBldqSf1BE5rqBtQETUBAz9XOtYCQEGb21Ceo8NGi7KmHXIvC9phXgJAQZXasGag4VLQ8MhzgXaQFpASAgyu1YP6o4UDat6TVBGi6tYCQEFHBx91136SoYHgm+8OGxsLSAkBBkW1ZwqCP4qWNqBxvPDh2C7C0gJAQQimAkBAJjT9Al4aDuWVoy008jmvdc4ZoP+YWLK1uL2tdZmNBzm9MBUdYMqVxZS3Cu/8AQaac4S7MJ/0qHVuUC8XbM0NB7XDEJEdyLjq1LaabRTotDjN43pu4qHWi2OrVGUqDbrDAc6cUg7UXz3WjlCmwudZmuiMx/G1dFJ9odXN9gFItBB7ZgeqQdCIiKIiICIiAiIgIiIMbTRy7A3KupjHMc+Eeq5KdgqXr9S1m9IzE4gGROK73tLgIu/USqZI/s4ERoDAEuBOlJGkLPJGPg4EFI/s4EVpI0hJGkb1QUscbhGi6rXGHO1u5BN4aRvS8NI3qMmzuN3JcZ3W7kFkUAQIClAREQEREBERAREQRIBxMCJJS/TmL7Z8UOf8A8lZBrMSKdOT+0/hMRqX0wCTUaIz4qbzJi8J8VjdZj+nS4T+FIAc6Qyne0x6KwanAjaov0++3ejs7Z0rItZeJNOnOm76KDW/T77d6kOY4w14J2FY3WfLp7Or6KWXGOkMpt2hp/CsGrsGyoLmAwXgHaVNT3FlVDXPIcym7+TZUGgfTOZ7d6lrmOMNcD4FY3aeY06XD6KWXWvvBlNpzSGmf7KwbEYKt5oAvOAJHaVN4OaS1Zui62WtJj4hKguH0yYD2zolWhYgNzinTw/bm+yvlDs3FWC8KFDHFwMxI0SpUEfFjmhRdZpdvKsiKgBgMgu+pKteChEqDsSCNKghul28qUQVusjO7eVYOAESURKD+s3BQ4NJkl30JUogrDNLt5VmlrRAJ+slESiSQQqQLoDiRA7CVZEVADQZl28q14KESom8CoREV+fe1uUddrcae1uUddrca40XaYw7Pa3KOu1uNPa3KOu1uNcaJMHZ7W5R12txp7W5R12txrjRJg7Pa3KOu1uNPa3KOu1uNc1NrXTedBGbatObsicuxT0Nfa3KOu1uNPa3KOu1uNYuosDC4V2E6B2qTQpz/AMhkJ6GvtblHXa3GntblHXa3GsjQpz/yGLE4EjOnodftblHXa3GntblHXa3GuNFZg7Pa3KOu1uNPa3KOu1uNcaJMHZ7W5R12txp7W5R12txrjRJgIiIgiIgIiILMIDwXNvAZxOdaZWleByAjReKyDiBH+FN87NyK1FWjecTQBEYCUFakDOQGzrLK+dm5L5iMNyC1R7XE3GBoOcLNWvnZuUEk50EIiIgiIgIiIPT9EBrp8v1TogNdPl+q9MokaVy61uPNdEBrp8v1TogNdPl+q9LKlOtJjzPRAa6fL9U6IDXT5fqvTInWkx5nogNdPl+qdEBrp8v1XpkTrSY8z0QGuny/VOiA10+X6r0yJ1pMeZ6IDXT5fqnRAa6fL9V6ZE60mPM9EBrp8v1TogNdPl+q9MidaTHmeiA10+X6p0QGuny/VemROtJjzPRAa6fL9U6IDXT5fqvTInWkxlXe9jQadLK44icyx5zVLSRZHC66CCRmj/8AF1OJAwElZ1Kha4AEjCfcJUVnlqorBosrrhjrAjBVNrrtJmx1ImAQQtm1RGN4nYwhTlm6H8BRFxiJUqrHh8xOGkQrIoiIgI3OiN94oMBXtGE0G7SKghWdWrACKAJOf9QYK7AHTfpNbuKtdZ3W7lURTe5zZqNDHaA6Va8NIUXKfdbuS4zut3IJvDSN6mRpVbjO63cpAaDIAlBJzKqk5iqjMpolUdTDzJLx4OhWcJGeFnUYXOENaRHaSipyLcOs/D9xTJN0v4io/WAzU/urHKYRd2ygjJCZl/EUFJo7X4aXFR+t2ZP7qzMpeN+5HZEoDKYYSQXGdJlXREBG+8fBEb7x8EFG3KhNypOm65XDYESqnKThEJ+p+37oi8JCjFMdqCYSFGO1MdqCYgFVGZWxgqozIIcSB1RJVKlQsdnwjuErRxDRJUFxB91x8EVTLs0P4CpFZhE9bhKvvUoCIiAiIgI33j4IjfePggyugYX6m8qWlrXTNQ7DMK95vfbvS83vt3pUMqNB3FMqNB3FLze+3el5vfbvSqZUaDuKkPvZgfqIUXm99u9Lze+3elFpkFVGZSCCDBB8FAzICq6kx5lzQTEK6IMzRploaW4DamRp4dQYbVoiDPI07obcEDsVmsaybrQJzwrIgIiICNznwRQUHyTyTaJONPeVHsm0aae/0X1C1x+J29Rcf33b1y/T4N9+T5zeS64GIpHxJQ8l1iIu0htvFfRuP77t6XH9929P0+Cd6+Z7JtGmnvP4T2TaNNPf6L6dx/fdvS4/vu3p+nwXvyY8n2SpZW1MoWm9EQV1DMoaD2klWXTMzxyYxu3a830vo6nU4wnS+jqdTjC8sxt7tV20mlpJqAGc10rrMYuvTdL6Op1OMJ0vo6nU4wvNGlTGasCZ7pU5GlrA4CkwuvSdL6Op1OMJ0vo6nU4wvKqE5wr1fS+jqdTjCdL6Op1OMLyisLsda9OxOcK9T0vo6nU4wnS+jqdTjC8t1O28oMThm2pzhXqul9HU6nGE6X0dTqcYXlETnCvV9L6Op1OMJ0vo6nU4wvLC72z9FCc4XXqul9HU6nGE6X0dTqcYXlVCc4V6vpfR1OpxhOl9HU6nGF5RE5wq9NpcTE/QSrikccX8Kza672A+Km/+xu5UXyR0unt6qZIxnfH8VS/+1u5VQS4BroBn6QqoiqC1pTBg1B/ESslowEtJDXHaDCCC17iTdcdpCqtHBzWyGvbtLlmghERBpTJDTBeP4q5LtNXDYs2OaPeDj4GFN9mh/Eoo6o6eq98bVRSS2OqCDtKqqgiIglEBjR9VN7YNyCEU3tjdyXtjdyCEQmdH0UIJRQiCUUIglFCIJRQrXsMw3IIRTe2Dcl7YNyCEU3jGYblVB//Z" alt="Atlantic Trophy redesign concept by DariMoa"></div>
+          <div class="scroll-note">Scroll to preview the full redesigned home page</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="band">
+      <div class="eyebrow" style="color:var(--brass2)">What the new design does for you</div>
+      <h2>Built for how customers actually find a trophy shop today.</h2>
+      <p>The concept keeps everything that makes Atlantic Trophy trustworthy &mdash; the 40-year history, the in-house engraving, the Midtown location &mdash; and puts it in a layout that works on a phone and loads fast.</p>
+      <div class="pts">
+        <div class="pt"><b>Mobile-first</b><p>Reads cleanly on the phone most people search on &mdash; no pinching or zooming.</p></div>
+        <div class="pt"><b>Clear path to a quote</b><p>Request-a-quote is front and center on every screen, so orders are easier to start.</p></div>
+        <div class="pt"><b>Your work, front and center</b><p>Awards, plaques, medals and engraving are organized so buyers find what they need.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="cta"><a href="mailto:Dari@darimoa.com?subject=Atlantic%20Trophy%20website%20concept">Talk to DariMoa about this concept &rarr;</a></div>
+<footer>
+  <div class="wrap">
+    <div>Atlantic Trophy Company &nbsp;&middot;&nbsp; concept prepared by DariMoa &nbsp;&middot;&nbsp; Englewood, New Jersey</div>
+    <div class="legal">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. &copy; DariMoa. All rights reserved. This is a design concept and is not affiliated with or endorsed by the business shown; the current-site image is used respectfully to illustrate potential improvements.</div>
+  </div>
+</footer>
+</body>
+</html>

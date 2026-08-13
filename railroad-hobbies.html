@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Railroad Hobbies — website redesign concept by DariMoa</title>
+<style>
+:root{--navy:#1f2b52;--amber:#f0a021;--ink:#1b2230;--paper:#f6f5f1;--line:#e2ddd2;--muted:#6b7280}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Carlito","Liberation Sans",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.notice{background:var(--navy);color:#fff;text-align:center;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;padding:9px 16px}
+.notice b{color:var(--amber)}
+header{max-width:1120px;margin:0 auto;padding:38px 28px 8px}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.logo .mk{width:46px;height:46px;border-radius:13px;background:var(--navy);position:relative;flex:0 0 auto}
+.logo .mk::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:9px;height:9px;border-radius:50%;background:var(--amber)}
+.logo .mk::after{content:"";position:absolute;bottom:11px;left:50%;transform:translateX(-50%);width:20px;height:11px;border:3px solid #fff;border-bottom:none;border-radius:8px 8px 0 0}
+.logo .wm{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.logo .wm .a{color:var(--amber)}
+h1{font-size:30px;letter-spacing:-.5px;line-height:1.15;margin-bottom:6px}
+.sub{color:var(--muted);font-size:16px;max-width:660px}
+.tag{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--navy);border:1px solid var(--navy);border-radius:20px;padding:5px 14px}
+.panel{max-width:1120px;margin:24px auto;padding:0 28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 12px 34px rgba(31,43,82,.07)}
+.caphead{display:flex;align-items:center;gap:12px;padding:15px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.chip{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:6px}
+.chip.after{background:var(--navy);color:#fff}
+.chip.before{background:#eee6d5;color:#8a6d2f}
+.caphead p{color:var(--muted);font-size:14px}
+.browser{background:#eef0f3;border-bottom:1px solid var(--line);padding:9px 14px;display:flex;align-items:center;gap:7px}
+.browser i{width:11px;height:11px;border-radius:50%;background:#cfd4da;display:inline-block}
+.browser .url{margin-left:10px;font-size:12px;color:#8a929c;background:#fff;border:1px solid #e0e4e9;border-radius:6px;padding:4px 12px}
+iframe.after{width:100%;border:0;display:block;background:#fff}
+.beforewrap{background:#f0ede6}
+.beforewrap img{display:block;width:100%}
+.fallback{padding:60px 22px;text-align:center;color:var(--muted);font-size:15px;background:repeating-linear-gradient(45deg,#efece4,#efece4 12px,#e9e5db 12px,#e9e5db 24px)}
+.fallback a{color:var(--navy);font-weight:700}
+.foot{max-width:1120px;margin:16px auto 60px;padding:26px 28px;color:var(--muted);font-size:12.5px;line-height:1.8;border-top:1px solid var(--line)}
+.foot b{color:var(--ink)} .foot a{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="notice">Redesign concept · not the live site · <b>© DariMoa</b></div>
+<header>
+  <div class="logo"><div class="mk"></div><div class="wm">Dari<span class="a">Moa</span></div></div>
+  <h1>A website concept for Railroad Hobbies</h1>
+  <p class="sub">A model train shop in a historic railroad town deserves a site that loads fast on a phone and shows off every scale you carry. Here is a concept built from your real address, hours, brands and contact — just modernized.</p>
+  <span class="tag">Roseville, California</span>
+</header>
+
+<div class="panel">
+  <div class="card">
+    <div class="caphead"><span class="chip after">The new design</span><p>A fresh, mobile-first concept by DariMoa — your real services, hours &amp; contact details.</p></div>
+    <div class="browser"><i></i><i></i><i></i><span class="url">www.rrhobbies.com · redesigned</span></div>
+    <iframe class="after" scrolling="no" srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;utf-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+<title>Railroad Hobbies — Roseville's Model Train Shop</title>
+<style>
+  :root{
+    --ink:#14171a; --panel:#1b2024; --green:#173e2f; --green2:#1f5240;
+    --brass:#d3a34a; --brass2:#e6bf74; --cream:#f4efe2; --cream2:#e7dfca;
+    --rust:#a9502b; --line:#333b40;
+    --sans:&quot;Liberation Sans&quot;,&quot;DejaVu Sans&quot;,Arial,sans-serif;
+    --mono:&quot;DejaVu Sans Mono&quot;,&quot;Courier New&quot;,monospace;
+    --body:&quot;Carlito&quot;,&quot;Liberation Sans&quot;,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  h1,h2,h3,.disp{font-family:var(--sans);font-weight:700}
+  a{color:inherit}
+  /* header */
+  header.site{background:var(--ink);color:var(--cream);border-bottom:3px solid var(--brass)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{width:44px;height:44px;border:2px solid var(--brass);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--brass2);font-size:18px;letter-spacing:1px;background:#0f1214}
+  .brand b{font-family:var(--sans);letter-spacing:2px;text-transform:uppercase;font-size:17px}
+  .brand span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--brass2);text-transform:uppercase}
+  nav.top a{font-family:var(--mono);text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-left:26px;color:var(--cream2);text-decoration:none;opacity:.85}
+  nav.top a:hover{color:var(--brass2)}
+  .callpill{margin-left:26px;font-family:var(--mono);font-size:13px;color:var(--ink);background:var(--brass);padding:9px 14px;border-radius:4px;font-weight:700;letter-spacing:1px}
+  /* hero */
+  .hero{background:
+     repeating-linear-gradient(90deg, transparent 0 46px, rgba(211,163,74,.05) 46px 48px),
+     radial-gradient(1200px 400px at 80% -10%, rgba(31,82,64,.55), transparent),
+     var(--panel);
+     color:var(--cream);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .tracks{position:absolute;left:0;right:0;bottom:0;height:26px;background:
+     linear-gradient(var(--ink),var(--ink)) center/100% 3px no-repeat,
+     repeating-linear-gradient(90deg,var(--brass) 0 5px, transparent 5px 26px) center/100% 14px no-repeat;
+     opacity:.5}
+  .hero .wrap{padding:74px 40px 96px;position:relative;z-index:2}
+  .kicker{font-family:var(--mono);letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--brass2);margin-bottom:22px;display:flex;align-items:center;gap:14px}
+  .kicker::before{content:&quot;&quot;;width:52px;height:2px;background:var(--brass)}
+  .hero h1{font-size:76px;line-height:.96;letter-spacing:-1px;text-transform:uppercase;color:var(--cream)}
+  .hero h1 em{font-style:normal;color:var(--brass2)}
+  .hero p.lede{max-width:620px;margin-top:26px;font-size:19px;color:var(--cream2);line-height:1.55}
+  .hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:var(--mono);text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700;padding:15px 26px;border-radius:4px;text-decoration:none;display:inline-block}
+  .btn-b{background:var(--brass);color:var(--ink)}
+  .btn-g{background:transparent;color:var(--cream);border:2px solid var(--line)}
+  .infostrip{display:flex;gap:0;margin-top:56px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:rgba(15,18,20,.55)}
+  .infostrip div{flex:1;padding:18px 22px;border-right:1px solid var(--line)}
+  .infostrip div:last-child{border-right:none}
+  .infostrip .k{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--brass2)}
+  .infostrip .v{font-family:var(--sans);font-size:20px;font-weight:700;color:var(--cream);margin-top:4px}
+  /* story */
+  .story{padding:82px 0}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .sec-k{font-family:var(--mono);letter-spacing:4px;text-transform:uppercase;font-size:12px;color:var(--rust);margin-bottom:16px}
+  .story h2{font-size:38px;line-height:1.08;text-transform:uppercase;letter-spacing:-.5px;color:var(--ink)}
+  .story p{margin-top:18px;font-size:17px;color:#40474c}
+  .heritage{background:var(--green);color:var(--cream);border-radius:10px;padding:38px;position:relative;overflow:hidden}
+  .heritage::after{content:&quot;&quot;;position:absolute;right:-40px;top:-40px;width:180px;height:180px;border:14px solid rgba(230,191,116,.16);border-radius:50%}
+  .heritage h3{font-family:var(--mono);font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--brass2)}
+  .heritage .big{font-family:var(--sans);font-size:52px;font-weight:700;margin:10px 0 6px;color:var(--cream)}
+  .heritage ul{list-style:none;margin-top:22px;border-top:1px solid rgba(255,255,255,.15)}
+  .heritage li{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);font-family:var(--mono);font-size:13px;letter-spacing:1px;display:flex;justify-content:space-between}
+  .heritage li b{color:var(--brass2)}
+  /* scales board */
+  .board{background:var(--ink);color:var(--cream);padding:80px 0}
+  .board .head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:34px;border-bottom:2px solid var(--brass);padding-bottom:18px}
+  .board h2{font-size:40px;text-transform:uppercase;letter-spacing:1px;color:var(--cream)}
+  .board .head .note{font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--brass2);text-transform:uppercase}
+  table.scales{width:100%;border-collapse:collapse;font-family:var(--mono)}
+  table.scales th{text-align:left;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a949a;padding:0 0 14px;font-weight:400}
+  table.scales td{padding:16px 0;border-top:1px solid var(--line);font-size:15px;color:var(--cream2)}
+  table.scales tr td:first-child{width:120px}
+  .scode{display:inline-block;background:var(--brass);color:var(--ink);font-weight:700;padding:6px 14px;border-radius:4px;letter-spacing:2px;font-size:15px}
+  table.scales tr td:last-child{text-align:right;color:var(--brass2)}
+  table.scales tr:hover td{color:#fff}
+  /* brands */
+  .brands{padding:80px 0;background:var(--cream2)}
+  .brands h2{font-size:34px;text-transform:uppercase;letter-spacing:.5px;text-align:center}
+  .brands p.sub{text-align:center;color:#565c5f;margin-top:12px;font-size:16px}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .bcard{background:var(--cream);border:1px solid #d4cbb2;border-radius:8px;padding:26px;text-align:center}
+  .bcard .n{font-family:var(--sans);font-weight:700;font-size:21px;letter-spacing:.5px}
+  .bcard .d{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);margin-top:8px}
+  /* value */
+  .value{padding:80px 0;background:var(--ink);color:var(--cream)}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .vitem{padding:34px 30px;border-right:1px solid var(--line)}
+  .vitem:last-child{border-right:none}
+  .vitem .num{font-family:var(--mono);color:var(--brass2);font-size:13px;letter-spacing:2px}
+  .vitem h3{font-family:var(--sans);text-transform:uppercase;font-size:20px;margin:14px 0 10px;color:var(--cream)}
+  .vitem p{color:var(--cream2);font-size:15px}
+  /* visit */
+  .visit{padding:82px 0}
+  .visit .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px}
+  .visit h2{font-size:40px;text-transform:uppercase;letter-spacing:-.5px}
+  .hours{margin-top:26px;border:1px solid #d8cfb6;border-radius:10px;overflow:hidden}
+  .hours .row{display:flex;justify-content:space-between;padding:14px 22px;font-family:var(--mono);font-size:14px;border-bottom:1px solid #e7ddc4}
+  .hours .row:nth-child(odd){background:#efe8d5}
+  .hours .row:last-child{border-bottom:none}
+  .hours .row.closed b{color:var(--rust)}
+  .hours .row b{color:var(--green2)}
+  .contactcard{background:var(--green);color:var(--cream);border-radius:12px;padding:38px}
+  .contactcard .k{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--brass2);margin-top:22px}
+  .contactcard .k:first-child{margin-top:0}
+  .contactcard .v{font-size:20px;font-weight:700;font-family:var(--sans);margin-top:5px}
+  .contactcard a{color:var(--brass2);text-decoration:none}
+  .bigcta{margin-top:26px;display:block;text-align:center;background:var(--brass);color:var(--ink);font-family:var(--mono);letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:16px;border-radius:6px;text-decoration:none}
+  /* footer */
+  footer.site{background:#0f1214;color:#9aa4a9;padding:50px 0 30px}
+  footer .top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:22px}
+  footer .brand b{color:var(--cream)}
+  footer .mono{font-family:var(--mono);font-size:12px;letter-spacing:1px}
+  footer .legal{font-size:11px;color:#5f686d;font-family:var(--mono);letter-spacing:.5px;line-height:1.7}
+  @media(max-width:820px){
+    .wrap{padding:0 22px}
+    nav.top{display:none}
+    .hero h1{font-size:44px}
+    .hero .wrap{padding:48px 22px 72px}
+    .infostrip{flex-wrap:wrap}.infostrip div{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--line)}
+    .story .wrap,.visit .wrap{grid-template-columns:1fr;gap:30px}
+    .bgrid{grid-template-columns:1fr 1fr}
+    .vgrid{grid-template-columns:1fr}.vitem{border-right:none;border-bottom:1px solid var(--line)}
+    .board h2,.story h2,.visit h2{font-size:28px}
+    .board .head{flex-direction:column;align-items:flex-start;gap:8px}
+    table.scales td,table.scales th{font-size:12px}
+  }
+</style>
+</head>
+<body>
+<header class=&quot;site&quot;>
+  <div class=&quot;wrap bar&quot;>
+    <div class=&quot;brand&quot;>
+      <div class=&quot;logo&quot;>RR</div>
+      <div><b>Railroad Hobbies</b><span>Roseville · California</span></div>
+    </div>
+    <div style=&quot;display:flex;align-items:center&quot;>
+      <nav class=&quot;top&quot;>
+        <a href=&quot;#scales&quot;>Scales</a>
+        <a href=&quot;#brands&quot;>Brands</a>
+        <a href=&quot;#visit&quot;>Visit</a>
+        <a href=&quot;#contact&quot;>Contact</a>
+      </nav>
+      <span class=&quot;callpill&quot;>(916) 782-6067</span>
+    </div>
+  </div>
+</header>
+
+<section class=&quot;hero&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;kicker&quot;>Downtown Roseville · Est. in a railroad town</div>
+    <h1>The model railroad<br>shop on <em>Vernon St.</em></h1>
+    <p class=&quot;lede&quot;>Every scale from Z to G, the brands you actually run, and shelves worth browsing in person — brass, used books, and the parts that keep a layout moving. Roseville has always been a railroad town. So are we.</p>
+    <div class=&quot;hero-cta&quot;>
+      <a class=&quot;btn btn-b&quot; href=&quot;#scales&quot;>Shop by scale</a>
+      <a class=&quot;btn btn-g&quot; href=&quot;#visit&quot;>Hours &amp;amp; directions</a>
+    </div>
+    <div class=&quot;infostrip&quot;>
+      <div><div class=&quot;k&quot;>Scales stocked</div><div class=&quot;v&quot;>Z · N · HO · O · S · G</div></div>
+      <div><div class=&quot;k&quot;>Location</div><div class=&quot;v&quot;>119 Vernon St.</div></div>
+      <div><div class=&quot;k&quot;>Open</div><div class=&quot;v&quot;>6 days a week</div></div>
+      <div><div class=&quot;k&quot;>Also on the shelf</div><div class=&quot;v&quot;>Brass &amp;amp; used books</div></div>
+    </div>
+  </div>
+  <div class=&quot;tracks&quot;></div>
+</section>
+
+<section class=&quot;story&quot;>
+  <div class=&quot;wrap&quot;>
+    <div>
+      <div class=&quot;sec-k&quot;>Who we are</div>
+      <h2>A real counter, real advice, and a back wall of parts</h2>
+      <p>Railroad Hobbies is a full-line model train store in the heart of old Roseville — one of the West's great rail hubs. We carry locomotives, rolling stock, track, structures, scenery and detail parts across every popular scale, plus the odd brass import and a used-book table collectors keep coming back for.</p>
+      <p>Ordering online is easy. Getting someone who can tell you why your loco is stalling on a turnout is not. That's what the counter is for — stop in, and bring the piece that's giving you trouble.</p>
+    </div>
+    <div class=&quot;heritage&quot;>
+      <h3>On the shelf</h3>
+      <div class=&quot;big&quot;>6 scales</div>
+      <p style=&quot;color:var(--cream2);font-size:15px&quot;>Z through G — starter sets to fine-scale brass.</p>
+      <ul>
+        <li><span>Locomotives &amp;amp; rolling stock</span> <b>In stock</b></li>
+        <li><span>Track, turnouts &amp;amp; DCC</span> <b>In stock</b></li>
+        <li><span>Structures &amp;amp; scenery</span> <b>In stock</b></li>
+        <li><span>Brass imports &amp;amp; used books</span> <b>Rotating</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class=&quot;board&quot; id=&quot;scales&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;head&quot;>
+      <h2>Shop by scale</h2>
+      <div class=&quot;note&quot;>Departures on every gauge</div>
+    </div>
+    <table class=&quot;scales&quot;>
+      <thead><tr><th>Gauge</th><th>Best for</th><th>What we stock</th></tr></thead>
+      <tbody>
+        <tr><td><span class=&quot;scode&quot;>Z</span></td><td>Tightest spaces, micro layouts</td><td>Märklin · Micro-Trains</td></tr>
+        <tr><td><span class=&quot;scode&quot;>N</span></td><td>Big scenery, small footprint</td><td>Kato · Atlas · Micro-Trains</td></tr>
+        <tr><td><span class=&quot;scode&quot;>HO</span></td><td>The most popular scale</td><td>Athearn · Kato · Atlas · Roundhouse</td></tr>
+        <tr><td><span class=&quot;scode&quot;>O</span></td><td>Three-rail &amp;amp; hi-rail running</td><td>Lionel · MTH · Atlas</td></tr>
+        <tr><td><span class=&quot;scode&quot;>S</span></td><td>Classic American tinplate</td><td>Select stock &amp;amp; special order</td></tr>
+        <tr><td><span class=&quot;scode&quot;>G</span></td><td>Garden &amp;amp; large-scale</td><td>LGB · large-scale accessories</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class=&quot;brands&quot; id=&quot;brands&quot;>
+  <div class=&quot;wrap&quot;>
+    <h2>Brands on the shelf</h2>
+    <p class=&quot;sub&quot;>The makers we stock and special-order — ask if you don't see it.</p>
+    <div class=&quot;bgrid&quot;>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Athearn</div><div class=&quot;d&quot;>HO locomotives</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Kato</div><div class=&quot;d&quot;>N &amp;amp; HO precision</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Lionel</div><div class=&quot;d&quot;>O-gauge classics</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>MTH</div><div class=&quot;d&quot;>O-gauge &amp;amp; DCS</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Atlas</div><div class=&quot;d&quot;>Track &amp;amp; rolling stock</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>LGB</div><div class=&quot;d&quot;>G-scale garden</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Märklin</div><div class=&quot;d&quot;>Z &amp;amp; European</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Micro-Trains</div><div class=&quot;d&quot;>Z &amp;amp; N couplers</div></div>
+      <div class=&quot;bcard&quot;><div class=&quot;n&quot;>Roundhouse</div><div class=&quot;d&quot;>HO kits &amp;amp; classics</div></div>
+    </div>
+  </div>
+</section>
+
+<section class=&quot;value&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;vgrid&quot;>
+      <div class=&quot;vitem&quot;><div class=&quot;num&quot;>01</div><h3>Every scale, one counter</h3><p>Z to G under one roof, so you can compare in person before you commit to a scale or a system.</p></div>
+      <div class=&quot;vitem&quot;><div class=&quot;num&quot;>02</div><h3>Brass &amp;amp; used books</h3><p>A rotating table of brass imports and out-of-print reference — the kind of stock you can't reliably find online.</p></div>
+      <div class=&quot;vitem&quot;><div class=&quot;num&quot;>03</div><h3>Advice that saves layouts</h3><p>Bring the loco, the turnout, the wiring problem. We'd rather solve it at the counter than sell you the wrong fix.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class=&quot;visit&quot; id=&quot;visit&quot;>
+  <div class=&quot;wrap&quot;>
+    <div>
+      <div class=&quot;sec-k&quot;>Plan your visit</div>
+      <h2>Open six days on Vernon Street</h2>
+      <p style=&quot;margin-top:16px;color:#40474c;font-size:17px&quot;>Free parking around historic downtown Roseville. Closed Tuesdays — call ahead if you're driving in for something specific and we'll set it aside.</p>
+      <div class=&quot;hours&quot;>
+        <div class=&quot;row&quot;><span>Monday</span><b>10:00 – 4:00</b></div>
+        <div class=&quot;row closed&quot;><span>Tuesday</span><b>Closed</b></div>
+        <div class=&quot;row&quot;><span>Wednesday</span><b>10:00 – 4:00</b></div>
+        <div class=&quot;row&quot;><span>Thursday</span><b>10:00 – 4:00</b></div>
+        <div class=&quot;row&quot;><span>Friday</span><b>10:00 – 4:00</b></div>
+        <div class=&quot;row&quot;><span>Saturday</span><b>10:00 – 4:00</b></div>
+        <div class=&quot;row&quot;><span>Sunday</span><b>12:00 – 4:00</b></div>
+      </div>
+    </div>
+    <div id=&quot;contact&quot;>
+      <div class=&quot;contactcard&quot;>
+        <div class=&quot;k&quot;>Address</div>
+        <div class=&quot;v&quot;>119 Vernon St.<br>Roseville, CA 95678</div>
+        <div class=&quot;k&quot;>Phone</div>
+        <div class=&quot;v&quot;><a href=&quot;tel:19167826067&quot;>(916) 782-6067</a></div>
+        <div class=&quot;k&quot;>Email</div>
+        <div class=&quot;v&quot;><a href=&quot;mailto:RRHOBBIES@surewest.net&quot;>RRHOBBIES@surewest.net</a></div>
+        <div class=&quot;k&quot;>Times listed</div>
+        <div class=&quot;v&quot;>Pacific</div>
+        <a class=&quot;bigcta&quot; href=&quot;mailto:RRHOBBIES@surewest.net&quot;>Ask about a scale or a special order →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class=&quot;site&quot;>
+  <div class=&quot;wrap&quot;>
+    <div class=&quot;top&quot;>
+      <div class=&quot;brand&quot; style=&quot;display:flex;align-items:center;gap:12px&quot;>
+        <div class=&quot;logo&quot;>RR</div>
+        <div><b style=&quot;font-family:var(--sans);letter-spacing:2px;text-transform:uppercase&quot;>Railroad Hobbies</b>
+        <div class=&quot;mono&quot; style=&quot;color:var(--brass2)&quot;>119 Vernon St · Roseville, CA</div></div>
+      </div>
+      <div class=&quot;mono&quot;>(916) 782-6067 · RRHOBBIES@surewest.net</div>
+    </div>
+    <div class=&quot;legal&quot;>
+      This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+" onload="try{this.style.height=(this.contentWindow.document.body.scrollHeight)+'px';}catch(e){this.style.height='2400px';}"></iframe>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="card">
+    <div class="caphead"><span class="chip before">Your current site</span><p>A live snapshot today — it has served the shop well; this is simply where the upgrade opportunity is.</p></div>
+    <div class="beforewrap">
+      <img src="https://image.thum.io/get/width/1200/http://www.rrhobbies.com/" alt="Current Railroad Hobbies website" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <div class="fallback" style="display:none">Live snapshot unavailable right now — you can view the current site directly at <a href="http://www.rrhobbies.com/">http://www.rrhobbies.com/</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <p><b>DariMoa</b> — web design for local businesses · Englewood, New Jersey · <a href="mailto:Dari@darimoa.com">Dari@darimoa.com</a> · darimoa.com</p>
+  <p style="margin-top:10px">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved.</p>
+</div>
+</body>
+</html>
