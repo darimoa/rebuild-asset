@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Peterson's Nursery — Website Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fraunces:opsz,wght@9..144,600;9..144,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;background:#0f1720;color:#0f1720}
+.notice{background:#1f2b52;color:#fff;text-align:center;font-size:13px;letter-spacing:.03em;padding:10px 16px}
+.hero{background:linear-gradient(160deg,#1f2b52,#0f1730);color:#fff;text-align:center;padding:54px 24px 62px}
+.hero .brand{font-weight:800;letter-spacing:.04em;color:#f0a021;font-size:14px;text-transform:uppercase}
+.hero h1{font-family:Fraunces,serif;font-weight:900;font-size:38px;margin:14px 0 10px;line-height:1.1}
+.hero p{opacity:.85;max-width:60ch;margin:0 auto;font-size:17px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:-34px auto 0;position:relative;z-index:2}
+.panel{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.panel .lab{display:flex;align-items:center;gap:10px;padding:14px 18px;font-weight:800;font-size:14px}
+.panel.before .lab{background:#eef0f4;color:#5b6472}
+.panel.after .lab{background:#1f2b52;color:#fff}
+.panel.after .lab .pill{margin-left:auto;background:#f0a021;color:#20160a;font-size:11px;padding:3px 10px;border-radius:20px;letter-spacing:.05em}
+.shot{height:600px;overflow:auto;background:#f3f4f7;border-top:1px solid #e6e8ee}
+.panel.before .shot{display:flex;align-items:flex-start;justify-content:center}
+.panel.before .shot img{width:100%;display:block}
+.scalebox{width:540px;height:1488px;overflow:hidden}
+.scalebox iframe{width:1280px;height:3528px;border:0;transform:scale(0.422);transform-origin:0 0}
+.hint{text-align:center;color:#8b95a6;font-size:12.5px;padding:12px 0 34px}
+.mid{background:#0f1720;color:#e7ebf2;padding:44px 0 18px}
+.mid h2{font-family:Fraunces,serif;font-size:28px;text-align:center;margin-bottom:10px}
+.mid p{text-align:center;max-width:64ch;margin:0 auto;opacity:.8;font-size:16px}
+.cta{background:#0f1720;text-align:center;padding:26px 20px 66px}
+.cta a{display:inline-block;background:#f0a021;color:#20160a;font-weight:800;font-size:17px;text-decoration:none;padding:16px 34px;border-radius:40px;box-shadow:0 10px 26px rgba(240,160,33,.3)}
+.cta .small{color:#8b95a6;font-size:13px;margin-top:16px}
+footer{background:#0b0f15;color:#6b7688;font-size:12px;text-align:center;padding:26px 22px;line-height:1.7}
+footer b{color:#9aa6ba}
+@media(max-width:800px){.compare{grid-template-columns:1fr}.hero h1{font-size:28px}}
+</style></head>
+<body>
+<div class="notice">Redesign concept · not the live site · © DariMoa</div>
+<div class="hero">
+  <div class="brand">DariMoa · Website Concept</div>
+  <h1>Peterson's Nursery</h1>
+  <p>Family-owned garden center, nursery & landscaping in Princeton since 1939. A free before-and-after concept — a look at what a modern, mobile-first site could do for Princeton, NJ.</p>
+</div>
+<div class="wrap">
+  <div class="compare">
+    <div class="panel before"><div class="lab">◀ Your current site</div><div class="shot"><img src="https://image.thum.io/get/width/1200/nowait/http://petersonsnursery.com/" alt="Current site of Peterson's Nursery" loading="lazy"></div></div>
+    <div class="panel after"><div class="lab">The new design <span class="pill">CONCEPT</span></div><div class="shot"><div class="scalebox"><iframe title="Redesign concept for Peterson's Nursery" scrolling="no" srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;><head>
+<meta charset=&quot;utf-8&quot;><meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+<title>Peterson's Nursery Garden Center &amp;amp; Landscaping — Princeton, NJ</title>
+<link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;><link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&amp;family=Nunito+Sans:wght@400;600;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+:root{--forest:#1f3d2b;--moss:#6b8f5e;--leaf:#3f6b3f;--cream:#f5f1e6;--sand:#e7dfc9;--terra:#c8683b;--ink:#23271f;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3,.disp{font-family:'Fraunces',serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+/* top bar */
+.top{background:var(--forest);color:#dfe8d8;font-size:13px;letter-spacing:.03em}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:44px}
+.top a{color:#fff;text-decoration:none;font-weight:800}
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 40px;max-width:1180px;margin:0 auto}
+.brand{font-family:'Fraunces',serif;font-weight:900;font-size:24px;color:var(--forest);display:flex;align-items:center;gap:12px}
+.brand .mk{width:34px;height:34px;flex:0 0 34px}
+.navlinks{display:flex;gap:30px;font-weight:800;font-size:15px}
+.navlinks a{color:var(--forest);text-decoration:none;opacity:.85}
+.btn{background:var(--terra);color:#fff;padding:13px 24px;border-radius:40px;text-decoration:none;font-weight:800;font-size:15px;display:inline-block;box-shadow:0 6px 18px rgba(200,104,59,.28)}
+.btn.ghost{background:transparent;color:var(--forest);border:2px solid var(--forest);box-shadow:none}
+/* HERO split */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch}
+.hero .l{padding:70px 40px 80px 0}
+.tagline{display:inline-block;background:#e7efe0;color:var(--leaf);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:30px}
+.hero h1{font-size:66px;line-height:1.02;color:var(--forest);margin:22px 0 20px;font-weight:900;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero p.lead{font-size:20px;max-width:30ch;color:#3a4436}
+.hero .cta{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
+.hero .r{position:relative;border-radius:26px 0 0 26px;overflow:hidden;min-height:520px;background:
+  radial-gradient(120% 90% at 80% 10%, #4c7a4a 0%, #2f5734 45%, #1f3d2b 100%)}
+.hero .r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.hero .r .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,61,43,.15),rgba(31,61,43,.55))}
+.leafsvg{position:absolute;right:-30px;bottom:-30px;width:260px;opacity:.25}
+.card-float{position:absolute;left:26px;bottom:26px;background:var(--cream);border-radius:16px;padding:16px 20px;box-shadow:0 14px 30px rgba(0,0,0,.25);max-width:230px}
+.card-float b{font-family:'Fraunces';color:var(--forest);font-size:19px}
+.card-float span{font-size:13.5px;color:#4a5347}
+/* wave */
+.wave{display:block;width:100%;height:60px}
+/* stats band */
+.band{background:var(--forest);color:#e9f0e2}
+.band .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;padding:46px 40px;align-items:center}
+.band .intro{font-family:'Fraunces';font-size:22px;line-height:1.35;color:#fff}
+.band .intro em{color:#f0b48c;font-style:italic}
+.stat b{font-family:'Fraunces';font-weight:900;font-size:40px;color:#fff;display:block;line-height:1}
+.stat span{font-size:13.5px;color:#bcd0b3;letter-spacing:.03em}
+/* seasons signature */
+.sec{padding:82px 0}
+.eyebrow{color:var(--terra);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;text-align:center}
+.sec h2{font-size:44px;color:var(--forest);text-align:center;margin:12px 0 8px;font-weight:900}
+.sec .sub{text-align:center;color:#4a5347;max-width:56ch;margin:0 auto 50px;font-size:17.5px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.timeline:before{content:&quot;&quot;;position:absolute;top:34px;left:8%;right:8%;height:3px;background:repeating-linear-gradient(90deg,var(--moss) 0 14px,transparent 14px 26px)}
+.season{padding:0 18px;text-align:center}
+.dot{width:68px;height:68px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;font-size:30px;background:var(--cream);border:3px solid var(--moss);position:relative;z-index:2}
+.season h3{font-size:22px;color:var(--forest);margin-bottom:8px}
+.season p{font-size:15px;color:#4a5347}
+.season .m{display:block;color:var(--terra);font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;margin-top:8px}
+/* two offer columns */
+.offer{background:#fff}
+.offer .grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.ocard{border-radius:22px;padding:44px 40px;position:relative;overflow:hidden}
+.ocard.gc{background:linear-gradient(160deg,#eef4e7,#e2ecd6)}
+.ocard.ls{background:linear-gradient(160deg,#22432e,#18301f);color:#e9f0e2}
+.ocard h3{font-size:30px;margin-bottom:6px}
+.ocard.gc h3{color:var(--forest)}.ocard.ls h3{color:#fff}
+.ocard .k{font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.ocard.gc .k{color:var(--terra)}.ocard.ls .k{color:#f0b48c}
+.ocard ul{list-style:none;margin-top:22px;display:grid;gap:12px}
+.ocard li{padding-left:28px;position:relative;font-size:16px}
+.ocard li:before{content:&quot;&quot;;position:absolute;left:0;top:8px;width:12px;height:12px;border-radius:50% 50% 50% 0;transform:rotate(45deg)}
+.ocard.gc li:before{background:var(--moss)}.ocard.ls li:before{background:#8fb47f}
+/* trust */
+.trust{background:var(--sand)}
+.trust .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tw{background:var(--cream);border-radius:18px;padding:30px 28px}
+.tw .ic{font-size:26px}.tw h4{font-family:'Fraunces';color:var(--forest);font-size:21px;margin:10px 0 6px}
+.tw p{font-size:15px;color:#4a5347}
+/* visit */
+.visit{background:var(--forest);color:#e9f0e2}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.visit h2{color:#fff;font-size:40px;margin-bottom:18px}
+.info{display:grid;gap:16px;font-size:17px}
+.info .row{display:flex;gap:14px;align-items:flex-start}
+.info .row b{color:#f0b48c;min-width:74px;font-family:'Fraunces'}
+.visit .btn{margin-top:6px}
+.mapcard{background:linear-gradient(160deg,#2f5734,#1f3d2b);border:1px solid #3c5e45;border-radius:22px;padding:40px;text-align:center}
+.mapcard .big{font-family:'Fraunces';font-size:30px;color:#fff}
+.mapcard .pin{font-size:40px}
+footer{background:#16281c;color:#9db495;font-size:13.5px;padding:40px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hero .l{padding:40px 0}.hero h1{font-size:44px}.hero .r{border-radius:20px;min-height:340px}.band .wrap,.offer .grid,.trust .grid,.visit .grid,.timeline{grid-template-columns:1fr}.timeline:before{display:none}.season{margin-bottom:26px}.navlinks{display:none}}
+</style></head>
+<body>
+<div class=&quot;top&quot;><div class=&quot;wrap&quot;><span>🌿 Family-owned in Princeton since 1939</span><span>Call for seasonal hours · <a href=&quot;#&quot;>(609) 924-5770</a></span></div></div>
+<nav>
+  <div class=&quot;brand&quot;><svg class=&quot;mk&quot; viewBox=&quot;0 0 34 34&quot;><circle cx=&quot;17&quot; cy=&quot;17&quot; r=&quot;17&quot; fill=&quot;#1f3d2b&quot;/><path d=&quot;M17 26c0-7 3-12 9-14-1 8-4 12-9 14z&quot; fill=&quot;#6b8f5e&quot;/><path d=&quot;M17 26c0-7-3-12-9-14 1 8 4 12 9 14z&quot; fill=&quot;#8fb47f&quot;/><rect x=&quot;16&quot; y=&quot;24&quot; width=&quot;2&quot; height=&quot;6&quot; fill=&quot;#c8683b&quot;/></svg>Peterson's</div>
+  <div class=&quot;navlinks&quot;><a href=&quot;#seasons&quot;>Seasons</a><a href=&quot;#offer&quot;>Garden &amp;amp; Landscape</a><a href=&quot;#trust&quot;>Why Peterson's</a><a href=&quot;#visit&quot;>Visit</a></div>
+  <a href=&quot;#visit&quot; class=&quot;btn&quot;>Plan a visit</a>
+</nav>
+
+<section class=&quot;wrap hero&quot;>
+  <div class=&quot;l&quot;>
+    <span class=&quot;tagline&quot;>Garden Center · Nursery · Landscaping</span>
+    <h1>Three generations of <em>growing</em> Princeton green.</h1>
+    <p class=&quot;lead&quot;>From a single flat of annuals to a full landscape design — the same family, the same soil, since 1939.</p>
+    <div class=&quot;cta&quot;><a href=&quot;#offer&quot; class=&quot;btn&quot;>Explore what we grow</a><a href=&quot;#visit&quot; class=&quot;btn ghost&quot;>Get directions</a></div>
+  </div>
+  <div class=&quot;r&quot;>
+    <img src=&quot;https://petersonsnursery.com/uploads/3/5/1/8/35184787/7055270.jpg&quot; alt=&quot;Peterson's Nursery grounds&quot; onerror=&quot;this.style.display='none'&quot;>
+    <div class=&quot;veil&quot;></div>
+    <svg class=&quot;leafsvg&quot; viewBox=&quot;0 0 200 200&quot;><path d=&quot;M100 10C60 60 40 120 100 190 160 120 140 60 100 10z&quot; fill=&quot;#8fb47f&quot;/><path d=&quot;M100 20v160&quot; stroke=&quot;#2f5734&quot; stroke-width=&quot;3&quot;/></svg>
+    <div class=&quot;card-float&quot;><b>3730 Lawrenceville Rd.</b><br><span>Princeton, NJ — 4 acres of greenhouse &amp;amp; growing yard</span></div>
+  </div>
+</section>
+<svg class=&quot;wave&quot; viewBox=&quot;0 0 1440 60&quot; preserveAspectRatio=&quot;none&quot;><path d=&quot;M0 30 C 240 60 480 0 720 24 C 960 48 1200 8 1440 30 L1440 60 L0 60Z&quot; fill=&quot;#1f3d2b&quot;/></svg>
+
+<section class=&quot;band&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;intro&quot;>A neighborhood institution — where staff still walk the yard with you and know every plant by name.</div>
+  <div class=&quot;stat&quot;><b>1939</b><span>ESTABLISHED</span></div>
+  <div class=&quot;stat&quot;><b>85+</b><span>YEARS ROOTED HERE</span></div>
+  <div class=&quot;stat&quot;><b>3rd</b><span>GENERATION FAMILY</span></div>
+</div></section>
+
+<section class=&quot;sec&quot; id=&quot;seasons&quot;><div class=&quot;wrap&quot;>
+  <p class=&quot;eyebrow&quot;>The Peterson's Year</p>
+  <h2>What we're doing, season by season</h2>
+  <p class=&quot;sub&quot;>A garden is never finished. Here's how we help your yard through all four — and when to come see us.</p>
+  <div class=&quot;timeline&quot;>
+    <div class=&quot;season&quot;><div class=&quot;dot&quot;>🌱</div><h3>Spring</h3><p>Annuals, vegetable starts, fresh mulch, and the first landscape installs of the year.</p><span class=&quot;m&quot;>Mar – May</span></div>
+    <div class=&quot;season&quot;><div class=&quot;dot&quot;>☀️</div><h3>Summer</h3><p>Perennials, patios &amp;amp; walkways, water features, and outdoor-lighting design.</p><span class=&quot;m&quot;>Jun – Aug</span></div>
+    <div class=&quot;season&quot;><div class=&quot;dot&quot;>🍂</div><h3>Fall</h3><p>Trees &amp;amp; shrubs (the best planting season), mums, and full-yard cleanups.</p><span class=&quot;m&quot;>Sep – Nov</span></div>
+    <div class=&quot;season&quot;><div class=&quot;dot&quot;>❄️</div><h3>Winter</h3><p>Greens, bulk stone &amp;amp; salt, and planning next year's landscape design.</p><span class=&quot;m&quot;>Dec – Feb</span></div>
+  </div>
+</div></section>
+
+<section class=&quot;sec offer&quot; id=&quot;offer&quot;><div class=&quot;wrap&quot;>
+  <p class=&quot;eyebrow&quot;>Two sides of the yard</p>
+  <h2>Grown here. Built by us.</h2>
+  <p class=&quot;sub&quot;>Everything comes out of the same yard on Lawrenceville Road — the plants you take home, and the crews who build the landscape around them.</p>
+  <div class=&quot;grid&quot;>
+    <div class=&quot;ocard gc&quot;><span class=&quot;k&quot;>The Garden Center</span><h3>What we grow</h3>
+      <ul><li>Annuals, perennials &amp;amp; hanging baskets</li><li>Trees, shrubs &amp;amp; evergreens</li><li>Vegetable &amp;amp; herb starts</li><li>Bulk soil, mulch, stone &amp;amp; decorative gravel</li><li>Pottery, seed &amp;amp; garden supply</li></ul>
+    </div>
+    <div class=&quot;ocard ls&quot;><span class=&quot;k&quot;>Landscaping &amp;amp; Hardscape</span><h3>What we build</h3>
+      <ul><li>Landscape design &amp;amp; installation</li><li>Patios, walkways &amp;amp; retaining walls</li><li>Ponds &amp;amp; water features</li><li>Outdoor &amp;amp; landscape lighting</li><li>Seasonal cleanups &amp;amp; plantings</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section class=&quot;sec trust&quot; id=&quot;trust&quot;><div class=&quot;wrap&quot;>
+  <p class=&quot;eyebrow&quot;>Why neighbors keep coming back</p>
+  <h2>The kind of nursery you can't build overnight</h2>
+  <div class=&quot;grid&quot; style=&quot;margin-top:44px&quot;>
+    <div class=&quot;tw&quot;><div class=&quot;ic&quot;>🌳</div><h4>Grown, not trucked in</h4><p>Much of what we sell is grown right here — healthier, hardier, and ready for New Jersey soil.</p></div>
+    <div class=&quot;tw&quot;><div class=&quot;ic&quot;>👐</div><h4>Real advice, every visit</h4><p>Bring a photo of your yard. Our staff has planted this town for three generations and will tell you the truth.</p></div>
+    <div class=&quot;tw&quot;><div class=&quot;ic&quot;>🚚</div><h4>Garden to landscape, one stop</h4><p>Buy the plant and have our crew install it. Design, delivery, and hardscape all under one name.</p></div>
+  </div>
+</div></section>
+
+<section class=&quot;sec visit&quot; id=&quot;visit&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;grid&quot;>
+    <div>
+      <p class=&quot;eyebrow&quot; style=&quot;color:#f0b48c;text-align:left&quot;>Come see the yard</p>
+      <h2>Visit Peterson's</h2>
+      <div class=&quot;info&quot;>
+        <div class=&quot;row&quot;><b>Address</b><span>3730 Lawrenceville Rd., Princeton, NJ 08540</span></div>
+        <div class=&quot;row&quot;><b>Phone</b><span>(609) 924-5770</span></div>
+        <div class=&quot;row&quot;><b>Email</b><span>info@petersonsnursery.com</span></div>
+        <div class=&quot;row&quot;><b>Hours</b><span>Open seasonally — please call ahead for current hours.</span></div>
+      </div>
+      <div style=&quot;margin-top:26px&quot;><a href=&quot;#&quot; class=&quot;btn&quot;>Ask us a question</a></div>
+    </div>
+    <div class=&quot;mapcard&quot;><div class=&quot;pin&quot;>📍</div><div class=&quot;big&quot;>On Route 206</div><p style=&quot;color:#bcd0b3;margin-top:8px&quot;>Between Princeton &amp;amp; Lawrenceville — the greenhouses you've driven past for years.</p></div>
+  </div>
+</div></section>
+
+<footer><div class=&quot;wrap&quot;><span><b style=&quot;color:#cfe0c6;font-family:Fraunces&quot;>Peterson's Nursery Garden Center &amp;amp; Landscaping</b> · Princeton, NJ</span><span>Growing with Princeton since 1939</span></div></footer>
+</body></html>
+"></iframe></div></div></div>
+  </div>
+  <div class="hint">↕ Scroll inside each panel to see the full page. Left is your live site today; right is the DariMoa concept (a live preview — try resizing your window).</div>
+</div>
+<div class="mid"><div class="wrap">
+  <h2>Built around your real business</h2>
+  <p>Your current site has served you — this concept simply carries your name, your services, and your story into a design that works on a phone and loads fast. Same business, brought up to date.</p>
+</div></div>
+<div class="cta">
+  <a href="mailto:Dari@darimoa.com?subject=About%20the%20Peterson%27s%20Nursery%20website%20concept&body=Hi%20Philip%2C%20I%20saw%20the%20concept%20for%20Peterson%27s%20Nursery%20and%20I%27d%20like%20to%20talk%20about%20it.">Talk to us about this concept →</a>
+  <div class="small">Opens your email to Dari@darimoa.com · no obligation, the preview is yours to keep.</div>
+</div>
+<footer>
+  <b>Peterson's Nursery</b> redesign concept, prepared by DariMoa.<br>
+  This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved.
+</footer>
+</body></html>
