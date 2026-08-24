@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Precision Barrel Work — Website Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0e0f12;color:#111}
+.concept-bar{position:sticky;top:0;z-index:9999;background:#101322;color:#e8ecf6;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.12)}
+.cmp-intro{max-width:1080px;margin:0 auto;padding:34px 22px 8px;color:#c9cfdd;font:400 16px/1.6 system-ui,sans-serif;text-align:center}
+.cmp-intro h1{font:700 clamp(22px,3vw,30px)/1.2 'Chakra Petch',sans-serif;color:#f2f5fb;margin:0 0 10px}
+.cmp-wrap{max-width:1180px;margin:0 auto;padding:22px}
+.cmp-block{margin:26px 0 40px}
+.cmp-label{display:flex;align-items:center;gap:10px;font:700 13px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#aeb6c8;margin:0 0 12px}
+.cmp-label .dot{width:9px;height:9px;border-radius:50%}
+.cmp-frame{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#1a1d24;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.cmp-chrome{display:flex;gap:7px;padding:11px 14px;background:#20242c;border-bottom:1px solid rgba(255,255,255,.08)}
+.cmp-chrome i{width:11px;height:11px;border-radius:50%;background:#3a4150;display:block}
+.cmp-shot{display:block;width:100%;height:auto;background:#fff;min-height:200px}
+.cmp-note{color:#8f97a8;font:400 13.5px/1.6 system-ui,sans-serif;margin:10px 2px 0}
+.cmp-after .cmp-frame{background:#fff}
+footer.legal{max-width:1180px;margin:0 auto;padding:26px 22px 60px;color:#7c8494;font:400 12.5px/1.7 system-ui,sans-serif;border-top:1px solid rgba(255,255,255,.08)}
+/* ===== REDESIGN — every selector prefixed .rd ===== */
+.rd{--gun:#16191f;--steel:#2a2f38;--blue:#4a86c5;--brass:#b98a3c;--lsteel:#d6dae0;--off:#f2f4f7;--line:rgba(255,255,255,.10);--linew:rgba(20,24,30,.10);font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1a1d22;background:var(--off);line-height:1.6;-webkit-font-smoothing:antialiased}
+.rd *{box-sizing:border-box}
+.rd img{display:block;max-width:100%}
+.rd a{color:inherit;text-decoration:none}
+.rd .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.rd h1,.rd h2,.rd h3{font-family:'Chakra Petch',sans-serif;margin:0;line-height:1.08;letter-spacing:.005em}
+
+/* fallback block for missing photos */
+.rd .ph{position:relative;overflow:hidden;background:
+  linear-gradient(135deg,#1c2027,#12151b)}
+.rd .ph img{width:100%;height:100%;object-fit:cover}
+.rd .ph .fb{position:absolute;inset:0;display:none;flex-direction:column;justify-content:flex-end;padding:16px;background:
+  repeating-linear-gradient(0deg,transparent,transparent 22px,rgba(255,255,255,.028) 22px,rgba(255,255,255,.028) 23px),
+  repeating-linear-gradient(90deg,transparent,transparent 22px,rgba(255,255,255,.028) 22px,rgba(255,255,255,.028) 23px),
+  linear-gradient(135deg,#1c2027,#101319)}
+.rd .ph.err img{display:none}
+.rd .ph.err .fb{display:flex}
+.rd .ph .fb:before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(74,134,197,.35)}
+.rd .ph .fb:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(74,134,197,.35)}
+.rd .ph .fbcap{position:relative;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#8fa6c4;text-transform:uppercase}
+.rd .ph .fbtol{position:relative;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--brass);margin-top:4px}
+
+/* nav */
+.rd .nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 30px;background:rgba(22,25,31,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.rd .brand{display:flex;align-items:center;gap:11px;color:var(--off)}
+.rd .brand .reticle{width:26px;height:26px;flex:0 0 auto;border:1px solid var(--blue);border-radius:50%;position:relative}
+.rd .brand .reticle:before,.rd .brand .reticle:after{content:"";position:absolute;background:var(--blue)}
+.rd .brand .reticle:before{left:50%;top:-4px;bottom:-4px;width:1px;transform:translateX(-.5px)}
+.rd .brand .reticle:after{top:50%;left:-4px;right:-4px;height:1px;transform:translateY(-.5px)}
+.rd .brand b{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;line-height:1}
+.rd .brand span{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.22em;color:#7f8a9c;text-transform:uppercase;display:block;margin-top:3px}
+.rd .navlinks{display:flex;gap:26px;align-items:center}
+.rd .navlinks a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#aeb6c8}
+.rd .navlinks a:hover{color:var(--blue)}
+.rd .navcta{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gun);background:var(--blue);padding:9px 16px;border-radius:3px;font-weight:600}
+.rd .navmob{display:none;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--blue);text-transform:uppercase}
+
+/* hero split */
+.rd .hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:560px;background:var(--gun)}
+.rd .hero-l{position:relative;padding:64px 56px;display:flex;flex-direction:column;justify-content:center;color:var(--off);
+  background:
+   radial-gradient(120% 90% at 0% 0%,rgba(74,134,197,.12),transparent 55%),
+   repeating-linear-gradient(90deg,transparent,transparent 46px,rgba(255,255,255,.02) 46px,rgba(255,255,255,.02) 47px),
+   var(--gun)}
+.rd .hero-l .kick{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.rd .hero-l .kick:before{content:"";width:34px;height:1px;background:var(--brass)}
+.rd .hero-l h1{font-size:clamp(30px,4.4vw,52px);font-weight:700;letter-spacing:.01em}
+.rd .hero-l h1 em{font-style:normal;color:var(--blue)}
+.rd .hero-l p{margin:22px 0 0;max-width:440px;color:#b9c1cf;font-size:16.5px}
+.rd .hero-l .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:34px}
+.rd .btn{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:14px 26px;border-radius:3px;font-weight:600;display:inline-flex;align-items:center;gap:9px;transition:transform .12s ease}
+.rd .btn-p{background:var(--blue);color:var(--gun)}
+.rd .btn-p:hover{transform:translateY(-2px)}
+.rd .btn-g{border:1px solid rgba(255,255,255,.24);color:var(--off)}
+.rd .btn-g:hover{border-color:var(--blue);color:var(--blue)}
+.rd .hero-stats{display:flex;gap:34px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.rd .hero-stats div{min-width:0}
+.rd .hero-stats .n{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;color:var(--off)}
+.rd .hero-stats .l{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7f8a9c;margin-top:4px}
+.rd .hero-r{position:relative}
+.rd .hero-r .ph{position:absolute;inset:0}
+.rd .hero-r .ph img{height:100%}
+.rd .hero-r .tag{position:absolute;left:22px;bottom:22px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--off);background:rgba(22,25,31,.82);border:1px solid var(--line);border-left:2px solid var(--blue);padding:9px 13px}
+.rd .hero-r .tag b{color:var(--brass);font-weight:600}
+
+/* section shell */
+.rd .sec{padding:76px 56px}
+.rd .sec-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:42px;flex-wrap:wrap}
+.rd .sec-hd .idx{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--blue);text-transform:uppercase;display:block;margin-bottom:12px}
+.rd .sec-hd h2{font-size:clamp(24px,3.1vw,36px);font-weight:700;color:var(--gun);letter-spacing:.01em}
+.rd .sec-hd .lead{max-width:400px;color:#525a66;font-size:15px}
+
+/* capabilities grid */
+.rd .cap{background:#fff;border-top:1px solid var(--linew)}
+.rd .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linew);border:1px solid var(--linew)}
+.rd .cap-cell{background:#fff;padding:30px 26px;position:relative;transition:background .15s ease}
+.rd .cap-cell:hover{background:#fafbfc}
+.rd .cap-cell .cn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass);letter-spacing:.1em}
+.rd .cap-cell h3{font-size:19px;font-weight:600;color:var(--gun);margin:12px 0 8px;letter-spacing:.01em}
+.rd .cap-cell p{margin:0;font-size:14px;color:#5a626e}
+.rd .cap-cell .tol{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:#9aa2ae;display:flex;align-items:center;gap:8px}
+.rd .cap-cell .tol:before{content:"";flex:1;height:1px;background:var(--linew)}
+
+/* proof */
+.rd .proof{background:var(--gun);color:var(--off);position:relative;overflow:hidden}
+.rd .proof:before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(0deg,transparent,transparent 47px,rgba(255,255,255,.018) 47px,rgba(255,255,255,.018) 48px),
+  repeating-linear-gradient(90deg,transparent,transparent 47px,rgba(255,255,255,.018) 47px,rgba(255,255,255,.018) 48px);pointer-events:none}
+.rd .proof .sec-hd h2{color:var(--off)}
+.rd .proof .sec-hd .lead{color:#9aa4b4}
+.rd .proof-inner{position:relative}
+.rd .results{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rd .res{background:var(--steel);border:1px solid var(--line);border-top:2px solid var(--blue);padding:26px 24px;display:flex;flex-direction:column}
+.rd .res .big{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--off);letter-spacing:-.01em;line-height:1}
+.rd .res .big small{font-size:15px;color:var(--brass);letter-spacing:.02em}
+.rd .res .cap{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#8f99a9;text-transform:uppercase;margin-top:14px}
+.rd .res .quote{margin-top:14px;font-size:14.5px;color:#cbd2dd;line-height:1.55;flex:1}
+.rd .res .by{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:#8f99a9}
+.rd .res .by b{color:var(--off);font-weight:600}
+.rd .flutes{margin-top:44px}
+.rd .flutes .fl-hd{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8f99a9;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.rd .flutes .fl-hd:before{content:"";width:22px;height:1px;background:var(--brass)}
+.rd .fl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rd .fl{border:1px solid var(--line);background:#0f1216}
+.rd .fl .ph{aspect-ratio:16/10}
+.rd .fl .cn{padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rd .fl .cn b{font-family:'Chakra Petch',sans-serif;font-size:14px;color:var(--off);font-weight:600}
+.rd .fl .cn span{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--brass);text-transform:uppercase}
+
+/* shop */
+.rd .shop{background:var(--off)}
+.rd .shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linew);background:#fff}
+.rd .shop-ph .ph{height:100%;min-height:340px}
+.rd .shop-txt{padding:44px 42px;display:flex;flex-direction:column;justify-content:center}
+.rd .shop-txt .eq{display:flex;flex-direction:column;gap:0;margin:6px 0 26px}
+.rd .shop-txt .eq .row{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--linew)}
+.rd .shop-txt .eq .row:last-child{border-bottom:0}
+.rd .shop-txt .eq .row .mch{font-family:'Chakra Petch',sans-serif;font-size:17px;font-weight:600;color:var(--gun)}
+.rd .shop-txt .eq .row .desc{font-size:13.5px;color:#5a626e;flex:1}
+.rd .shop-txt .eq .row .tg{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--blue);text-transform:uppercase;white-space:nowrap}
+.rd .shop-txt p{margin:0;font-size:14.5px;color:#525a66}
+
+/* about */
+.rd .about{background:#fff;border-top:1px solid var(--linew)}
+.rd .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}
+.rd .about-ph .ph{aspect-ratio:4/5;border:1px solid var(--linew)}
+.rd .about-txt .idx{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--blue);text-transform:uppercase;display:block;margin-bottom:12px}
+.rd .about-txt h2{font-size:clamp(24px,3vw,34px);font-weight:700;color:var(--gun);margin-bottom:18px}
+.rd .about-txt p{margin:0 0 16px;font-size:15px;color:#4b5361;max-width:560px}
+.rd .quote-blk{border-left:2px solid var(--blue);background:#f6f8fa;padding:22px 26px;margin:24px 0 28px}
+.rd .quote-blk .q{font-family:'Chakra Petch',sans-serif;font-size:18px;line-height:1.4;color:var(--gun);font-weight:500}
+.rd .quote-blk .a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin-top:12px}
+.rd .badges{display:flex;flex-wrap:wrap;gap:12px}
+.rd .badge{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gun);border:1px solid var(--linew);background:#fff;padding:9px 14px;display:flex;align-items:center;gap:9px}
+.rd .badge:before{content:"";width:6px;height:6px;background:var(--blue);border-radius:50%}
+
+/* contact */
+.rd .contact{background:var(--gun);color:var(--off)}
+.rd .contact .sec-hd h2{color:var(--off)}
+.rd .contact .sec-hd .lead{color:#9aa4b4}
+.rd .ct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px}
+.rd form.quote{display:grid;gap:16px}
+.rd .fld{display:flex;flex-direction:column;gap:7px}
+.rd .fld label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f99a9}
+.rd .fld input,.rd .fld textarea{font-family:'IBM Plex Sans',sans-serif;font-size:15px;background:#0f1216;border:1px solid var(--line);color:var(--off);padding:13px 14px;border-radius:3px;width:100%}
+.rd .fld input:focus,.rd .fld textarea:focus{outline:none;border-color:var(--blue)}
+.rd .fld textarea{resize:vertical;min-height:120px}
+.rd form.quote .btn-p{justify-content:center;margin-top:4px;border:none;cursor:pointer;width:100%}
+.rd .ct-info{display:flex;flex-direction:column;gap:2px}
+.rd .ct-info .ci{padding:18px 0;border-bottom:1px solid var(--line)}
+.rd .ct-info .ci:last-child{border-bottom:0}
+.rd .ct-info .ci .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:7px}
+.rd .ct-info .ci .v{font-size:15.5px;color:var(--off);line-height:1.5}
+.rd .ct-info .ci .v a:hover{color:var(--blue)}
+.rd .ct-info .ci .v .mono{font-size:14px;color:#cbd2dd}
+
+/* footer */
+.rd .foot{background:#0d0f13;color:#7f8a9c;padding:30px 56px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.rd .foot .fb-brand{font-family:'Chakra Petch',sans-serif;color:var(--lsteel);font-weight:600;letter-spacing:.03em}
+.rd .foot .fm{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em}
+
+/* responsive */
+@media(max-width:900px){
+  .rd .nav{padding:13px 20px}
+  .rd .navlinks{display:none}
+  .rd .navmob{display:block}
+  .rd .hero{grid-template-columns:1fr}
+  .rd .hero-r{min-height:300px;order:-1}
+  .rd .hero-r .ph{position:relative;height:300px}
+  .rd .hero-l{padding:46px 26px}
+  .rd .sec{padding:56px 26px}
+  .rd .cap-grid{grid-template-columns:1fr 1fr}
+  .rd .results{grid-template-columns:1fr}
+  .rd .fl-grid{grid-template-columns:1fr}
+  .rd .shop-grid{grid-template-columns:1fr}
+  .rd .shop-ph .ph{min-height:260px}
+  .rd .shop-txt{padding:34px 26px}
+  .rd .about-grid{grid-template-columns:1fr;gap:32px}
+  .rd .ct-grid{grid-template-columns:1fr;gap:32px}
+  .rd .foot{padding:26px}
+}
+@media(max-width:520px){
+  .rd .cap-grid{grid-template-columns:1fr}
+  .rd .hero-stats{gap:24px}
+  .rd .sec-hd{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="concept-bar">Redesign concept · not the live site · © DariMoa</div>
+<div class="cmp-intro">
+<h1>A new website concept for Precision Barrel Work</h1>
+<p>Prepared by DariMoa. Below is a respectful look at the current site, then the proposed new design — built from Precision Barrel Work's real capabilities, story, and photos.</p>
+</div>
+<div class="cmp-wrap">
+<div class="cmp-block cmp-before">
+<div class="cmp-label"><span class="dot" style="background:#8f97a8"></span>Your current site today</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<img class="cmp-shot" src="https://image.thum.io/get/width/1200/http://www.precisionbarrelwork.com/" alt="Current Precision Barrel Work website" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=&quot;padding:60px 20px;text-align:center;color:#7c8494;font:400 15px system-ui&quot;>Live screenshot of the current site loads here.</div>')"></div>
+<p class="cmp-note">This is the current Precision Barrel Work website. It has done the job — and there's a real opportunity to modernize it for phones and today's customers.</p>
+</div>
+<div class="cmp-block cmp-after">
+<div class="cmp-label"><span class="dot" style="background:#4a86c5"></span>The proposed new design</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<div class="rd">
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="brand" href="#top">
+    <span class="reticle"></span>
+    <span>
+      <b>PRECISION BARREL WORK</b>
+      <span>Hempstead · Texas</span>
+    </span>
+  </a>
+  <div class="navlinks">
+    <a href="#work">Work</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#proof">Proof</a>
+    <a href="#contact">Contact</a>
+    <a class="navcta" href="#contact">Request a build</a>
+  </div>
+  <span class="navmob">Menu ▾</span>
+</nav>
+
+<!-- HERO — SPLIT -->
+<header class="hero" id="top">
+  <div class="hero-l">
+    <div class="kick">Benchrest-grade rifle work</div>
+    <h1 id="work">Barrels held to <em>minimal tolerance</em> — nothing wider.</h1>
+    <p>Custom benchrest, hunting and varmint rifles built one at a time in Hempstead, Texas. Chamber work, Rem 700 blueprinting, precision fluting and recessed target crowns — cut to the spec that wins on paper.</p>
+    <div class="cta-row">
+      <a class="btn btn-p" href="#contact">Request a build →</a>
+      <a class="btn btn-g" href="#proof">See the targets</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="n">.153"</div><div class="l">5 shots @ 200 yds</div></div>
+      <div><div class="n">±.0005</div><div class="l">Working tolerance</div></div>
+      <div><div class="n">30+ yrs</div><div class="l">Est. early 1990s</div></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="ph">
+      <img src="https://www.precisionbarrelwork.com/photos_5.2.15_lg_opt/DSCN1377.jpg" alt="Remington varmint barrel with helical fluting" loading="lazy" onerror="this.closest('.ph').classList.add('err')">
+      <div class="fb">
+        <div class="fbcap">DSCN1377 · Helical-fluted varmint barrel</div>
+        <div class="fbtol">TOL ±.0005 · HAAS CNC</div>
+      </div>
+    </div>
+    <div class="tag"><b>FEATURE</b> · Remington varmint barrel, helical flute</div>
+  </div>
+</header>
+
+<!-- CAPABILITIES -->
+<section class="sec cap" id="capabilities">
+  <div class="sec-hd">
+    <div>
+      <span class="idx">02 — Capabilities</span>
+      <h2>What we cut, chamber and build.</h2>
+    </div>
+    <p class="lead">A complete precision shop: from a single chamber job to a finished custom rifle, machined on CNC and manual mills.</p>
+  </div>
+  <div class="cap-grid">
+    <div class="cap-cell">
+      <div class="cn">C-01</div>
+      <h3>Custom rifle builds</h3>
+      <p>Benchrest, hunting and varmint rifles assembled complete — action, barrel and chamber matched to your load and discipline.</p>
+      <div class="tol mono">BUILD · COMPLETE</div>
+    </div>
+    <div class="cap-cell">
+      <div class="cn">C-02</div>
+      <h3>Chamber work</h3>
+      <p>Precision chambering to competition and factory reamers, dialed true to the bore for concentric, repeatable ignition.</p>
+      <div class="tol mono">CONCENTRIC · DIALED-IN</div>
+    </div>
+    <div class="cap-cell">
+      <div class="cn">C-03</div>
+      <h3>Rem 700 action blueprinting</h3>
+      <p>Trued receiver faces, lugs and threads. Every reference surface squared so the barrel and bolt seat dead-on.</p>
+      <div class="tol mono">SQUARED · TRUED</div>
+    </div>
+    <div class="cap-cell">
+      <div class="cn">C-04</div>
+      <h3>Barrel &amp; bolt fluting</h3>
+      <p>Helical, high-helix and diamond patterns cut on a HAAS CNC mill — lighter, stiffer, and cleanly finished.</p>
+      <div class="tol mono">HELICAL · DIAMOND</div>
+    </div>
+    <div class="cap-cell">
+      <div class="cn">C-05</div>
+      <h3>Recessed target crowns</h3>
+      <p>Protected, concentric 11° target crowns that guard the muzzle and release the bullet without disturbance.</p>
+      <div class="tol mono">11° · RECESSED</div>
+    </div>
+    <div class="cap-cell">
+      <div class="cn">C-06</div>
+      <h3>Barrel installation</h3>
+      <p>Fit, thread, chamber and headspace new barrels to your action — indicated true from breech to crown.</p>
+      <div class="tol mono">HEADSPACED · FIT</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec proof" id="proof">
+  <div class="proof-inner">
+    <div class="sec-hd">
+      <div>
+        <span class="idx">03 — Proven on paper</span>
+        <h2>The group is the guarantee.</h2>
+      </div>
+      <p class="lead">Real rifles, real shooters, real results. Tolerance you can measure with calipers — and with a group at distance.</p>
+    </div>
+    <div class="results">
+      <div class="res">
+        <div class="big">.153<small>"</small></div>
+        <div class="cap">5 shots · 200 yds</div>
+        <div class="quote">.153" @ 200 yds, 5 shots — shot by Butch Lambert at American Shooting Centers, Houston, TX, July 1996.</div>
+        <div class="by"><b>Butch Lambert</b> · Houston, TX</div>
+      </div>
+      <div class="res">
+        <div class="big">6mm<small> BR</small></div>
+        <div class="cap">Complete custom build</div>
+        <div class="quote">6mm BR built for Bryant Stein of Spring, TX — complete with a nice buck and test targets.</div>
+        <div class="by"><b>Bryant Stein</b> · Spring, TX</div>
+      </div>
+      <div class="res">
+        <div class="big">7mm<small> RM</small></div>
+        <div class="cap">Stolle-actioned custom</div>
+        <div class="quote">Custom Stolle-actioned 7mm Rem. Mag — Darel Sapp of Savannah, GA, with a Wyoming mule deer.</div>
+        <div class="by"><b>Darel Sapp</b> · Savannah, GA</div>
+      </div>
+    </div>
+
+    <div class="flutes">
+      <div class="fl-hd">Fluting patterns · cut in-house</div>
+      <div class="fl-grid">
+        <div class="fl">
+          <div class="ph">
+            <img src="https://www.precisionbarrelwork.com/photos_5.2.15_lg_opt/DSCN1390.jpg" alt="Three bolts: high-helix, standard and diamond flutes" loading="lazy" onerror="this.closest('.ph').classList.add('err')">
+            <div class="fb"><div class="fbcap">DSCN1390 · High-helix / standard / diamond bolts</div><div class="fbtol">HAAS CNC · ±.0005</div></div>
+          </div>
+          <div class="cn"><b>Helical</b><span>Pattern 01</span></div>
+        </div>
+        <div class="fl">
+          <div class="ph">
+            <img src="https://www.precisionbarrelwork.com/photos_5.2.15_lg_opt/DSCN1377.jpg" alt="High-helix fluted barrel" loading="lazy" onerror="this.closest('.ph').classList.add('err')">
+            <div class="fb"><div class="fbcap">DSCN1377 · High-helix flute detail</div><div class="fbtol">HAAS CNC · ±.0005</div></div>
+          </div>
+          <div class="cn"><b>High-helix</b><span>Pattern 02</span></div>
+        </div>
+        <div class="fl">
+          <div class="ph">
+            <img src="https://www.precisionbarrelwork.com/photos_5.2.15_lg_opt/DSCN1398.jpg" alt="Diamond fluting and recessed target crown" loading="lazy" onerror="this.closest('.ph').classList.add('err')">
+            <div class="fb"><div class="fbcap">DSCN1398 · Diamond flute / 11° crown</div><div class="fbtol">HAAS CNC · ±.0005</div></div>
+          </div>
+          <div class="cn"><b>Diamond</b><span>Pattern 03</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="sec shop" id="shop">
+  <div class="sec-hd">
+    <div>
+      <span class="idx">04 — The shop</span>
+      <h2>CNC precision, backed by manual hands.</h2>
+    </div>
+    <p class="lead">Two mills, one standard. Complex fluting and fixturing on CNC; delicate one-off setups on the manual machine.</p>
+  </div>
+  <div class="shop-grid">
+    <div class="shop-txt">
+      <div class="eq">
+        <div class="row">
+          <span class="mch">HAAS CNC mill</span>
+          <span class="desc">Programmed for helical, high-helix and diamond flute patterns with repeatable indexing.</span>
+          <span class="tg">CNC</span>
+        </div>
+        <div class="row">
+          <span class="mch">Acer manual mill</span>
+          <span class="desc">Hands-on setups, custom fixturing and finishing work that reward feel over automation.</span>
+          <span class="tg">MANUAL</span>
+        </div>
+      </div>
+      <p>Every job is indicated true, cut to minimal tolerance and inspected before it leaves the bench. Precision equipment is only as good as the discipline behind it.</p>
+    </div>
+    <div class="shop-ph">
+      <div class="ph">
+        <img src="https://www.precisionbarrelwork.com/photos_5.2.15_lg_opt/DSCN1401.jpg" alt="HAAS CNC mill in the Precision Barrel Work shop" loading="lazy" onerror="this.closest('.ph').classList.add('err')">
+        <div class="fb"><div class="fbcap">DSCN1401 · HAAS CNC mill, shop floor</div><div class="fbtol">TOL ±.0005</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+  <div class="about-grid">
+    <div class="about-ph">
+      <div class="ph">
+        <img src="https://www.precisionbarrelwork.com/photos_5.2.15_lg_opt/DSCN1381.jpg" alt="Remington 700 action blueprinting on the bench" loading="lazy" onerror="this.closest('.ph').classList.add('err')">
+        <div class="fb"><div class="fbcap">DSCN1381 · Rem 700 action blueprinting</div><div class="fbtol">SQUARED · TRUED</div></div>
+      </div>
+    </div>
+    <div class="about-txt">
+      <span class="idx">05 — About</span>
+      <h2>Built by a benchrest competitor.</h2>
+      <p>Precision Barrel Work was founded in the early 1990s by owner Pete Pieper, who came up through benchrest competition — the discipline where a few thousandths of an inch separate winning from watching.</p>
+      <p>That background sets the standard for every rifle and every barrel that leaves the shop. Nothing goes out that Pete wouldn't shoot in a match himself.</p>
+      <div class="quote-blk">
+        <div class="q">"Success in Benchrest Competition necessitates strict adherence to minimal tolerance and painstaking devotion to detail."</div>
+        <div class="a">— Pete Pieper, Owner</div>
+      </div>
+      <div class="badges">
+        <span class="badge">Est. early 1990s</span>
+        <span class="badge">Benchrest-bred</span>
+        <span class="badge">CNC + manual</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="sec-hd">
+    <div>
+      <span class="idx">06 — Contact</span>
+      <h2>Tell me about your build.</h2>
+    </div>
+    <p class="lead">Whether it's a chamber job or a complete competition rifle, start with the details and we'll talk specs.</p>
+  </div>
+  <div class="ct-grid">
+    <form class="quote" onsubmit="return false">
+      <div class="fld">
+        <label for="rd-name">Name</label>
+        <input id="rd-name" type="text" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="fld">
+        <label for="rd-contact">Email / Phone</label>
+        <input id="rd-contact" type="text" placeholder="How can we reach you?" autocomplete="email">
+      </div>
+      <div class="fld">
+        <label for="rd-build">Tell me about your build</label>
+        <textarea id="rd-build" placeholder="Action, caliber, discipline, barrel and any chamber or fluting work you have in mind…"></textarea>
+      </div>
+      <button class="btn btn-p" type="submit">Send request →</button>
+    </form>
+    <div class="ct-info">
+      <div class="ci">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:precisionbarrelwork@gmail.com">precisionbarrelwork@gmail.com</a></div>
+      </div>
+      <div class="ci">
+        <div class="k">Phone</div>
+        <div class="v"><a href="tel:19798262563" class="mono">979-826-2563</a></div>
+      </div>
+      <div class="ci">
+        <div class="k">Shop</div>
+        <div class="v">1610 14th St.<br>Hempstead, Texas 77445</div>
+      </div>
+      <div class="ci">
+        <div class="k">Hours</div>
+        <div class="v mono">Mon–Thu · 8:30 AM–5:30 PM CST</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOT -->
+<div class="foot">
+  <span class="fb-brand">Precision Barrel Work</span>
+  <span class="fm">Hempstead, TX · Est. early 1990s · TOL ±.0005</span>
+</div>
+
+</div></div>
+<p class="cmp-note">A concept only — a starting point we'd tailor with you. Photos and content are pulled from your current site.</p>
+</div>
+</div>
+<footer class="legal">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved. · This is a proposed redesign concept and is not the business's live website.</footer>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Adel Signs — Website Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Work Sans',system-ui,sans-serif;background:#0e0f12;color:#111}
+.concept-bar{position:sticky;top:0;z-index:9999;background:#101322;color:#e8ecf6;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.12)}
+.cmp-intro{max-width:1080px;margin:0 auto;padding:34px 22px 8px;color:#c9cfdd;font:400 16px/1.6 system-ui,sans-serif;text-align:center}
+.cmp-intro h1{font:700 clamp(22px,3vw,30px)/1.2 'Fraunces',serif;color:#f2f5fb;margin:0 0 10px}
+.cmp-wrap{max-width:1180px;margin:0 auto;padding:22px}
+.cmp-block{margin:26px 0 40px}
+.cmp-label{display:flex;align-items:center;gap:10px;font:700 13px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#aeb6c8;margin:0 0 12px}
+.cmp-label .dot{width:9px;height:9px;border-radius:50%}
+.cmp-frame{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#1a1d24;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.cmp-chrome{display:flex;gap:7px;padding:11px 14px;background:#20242c;border-bottom:1px solid rgba(255,255,255,.08)}
+.cmp-chrome i{width:11px;height:11px;border-radius:50%;background:#3a4150;display:block}
+.cmp-shot{display:block;width:100%;height:auto;background:#fff;min-height:200px}
+.cmp-note{color:#8f97a8;font:400 13.5px/1.6 system-ui,sans-serif;margin:10px 2px 0}
+.cmp-after .cmp-frame{background:#fff}
+footer.legal{max-width:1180px;margin:0 auto;padding:26px 22px 60px;color:#7c8494;font:400 12.5px/1.7 system-ui,sans-serif;border-top:1px solid rgba(255,255,255,.08)}
+/* ===== REDESIGN — every selector below is prefixed .rd ===== */
+.rd{font-family:'Work Sans',system-ui,sans-serif;color:#241a10;background:#fbf7ee;line-height:1.6;--walnut:#3a2a1c;--gold:#c19a3d;--cream:#f4ecd8;--forest:#2f4a37;--ink:#241a10;--warm:#fbf7ee}
+.rd *{box-sizing:border-box}
+.rd img{max-width:100%;display:block}
+.rd a{color:inherit;text-decoration:none}
+.rd ::selection{background:#c19a3d;color:#241a10}
+
+/* nav */
+.rd-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 26px;background:rgba(58,42,28,.97);border-bottom:1px solid rgba(193,154,61,.4)}
+.rd-brand{display:flex;align-items:baseline;gap:9px}
+.rd-brand b{font:700 21px/1 'Fraunces',serif;color:#f4ecd8;letter-spacing:.01em}
+.rd-brand span{font:600 10px/1 'Work Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#c19a3d}
+.rd-links{display:flex;gap:26px;flex-wrap:wrap}
+.rd-links a{font:600 13px/1 'Work Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#e8ddc4;transition:color .2s}
+.rd-links a:hover{color:#c19a3d}
+
+/* engraved rule */
+.rd-rule{height:0;border:0;border-top:1px solid rgba(58,42,28,.35);border-bottom:1px solid rgba(255,255,255,.6);margin:0}
+
+/* hero */
+.rd-hero{position:relative;background:linear-gradient(160deg,#3a2a1c 0%,#2a1e13 60%,#241a10 100%);color:#f4ecd8;padding:74px 26px 64px;overflow:hidden}
+.rd-hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 18% 22%,rgba(193,154,61,.16),transparent 40%),radial-gradient(circle at 82% 78%,rgba(193,154,61,.1),transparent 42%);pointer-events:none}
+.rd-hero-in{position:relative;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.25fr .9fr;gap:52px;align-items:center}
+.rd-eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12px/1 'Work Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#c19a3d;margin:0 0 20px}
+.rd-eyebrow:before{content:"";width:34px;height:1px;background:#c19a3d;display:inline-block}
+.rd-hero h1{font:600 clamp(34px,5.4vw,60px)/1.04 'Fraunces',serif;margin:0 0 22px;letter-spacing:-.01em}
+.rd-hero h1 em{font-style:italic;color:#c19a3d}
+.rd-hero p{font:400 clamp(16px,1.9vw,19px)/1.65 'Work Sans',sans-serif;color:#e2d7bf;max-width:34em;margin:0 0 30px}
+.rd-cta{display:inline-flex;align-items:center;gap:11px;background:#c19a3d;color:#241a10;font:700 14px/1 'Work Sans',sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:16px 28px;border-radius:3px;box-shadow:0 10px 26px rgba(193,154,61,.28);transition:transform .18s,box-shadow .18s}
+.rd-cta:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(193,154,61,.4)}
+.rd-cta span{font-size:16px}
+.rd-hero-figure{position:relative}
+.rd-hero-figure .rd-plate{border:6px solid #c19a3d;border-radius:4px;background:#f4ecd8;box-shadow:0 22px 50px rgba(0,0,0,.45);overflow:hidden}
+.rd-hero-figure img{width:100%;height:340px;object-fit:cover}
+.rd-hero-fb{width:100%;height:340px;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;font:italic 500 16px/1.5 'Fraunces',serif;color:#5a4526;background:repeating-linear-gradient(135deg,#f4ecd8,#f4ecd8 14px,#efe4c9 14px,#efe4c9 28px)}
+.rd-hero-tag{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:#2f4a37;color:#f4ecd8;font:700 11px/1 'Work Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:3px;white-space:nowrap;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+
+/* section shell */
+.rd-sec{max-width:1120px;margin:0 auto;padding:76px 26px}
+.rd-kick{font:600 12px/1 'Work Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#c19a3d;margin:0 0 14px}
+.rd-h2{font:600 clamp(28px,4vw,42px)/1.08 'Fraunces',serif;color:#3a2a1c;margin:0 0 16px;letter-spacing:-.01em}
+.rd-lead{font:400 17px/1.65 'Work Sans',sans-serif;color:#5a4b39;max-width:42em;margin:0 0 40px}
+.rd-sec-head{margin-bottom:40px}
+
+/* gallery mosaic — centerpiece */
+.rd-gal{background:#f0e6ce}
+.rd-mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.rd-card{position:relative;border:5px solid #3a2a1c;border-radius:4px;overflow:hidden;background:#f4ecd8;box-shadow:0 10px 26px rgba(58,42,28,.18);transition:transform .2s,box-shadow .2s}
+.rd-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(58,42,28,.3)}
+.rd-card:after{content:"";position:absolute;inset:5px;border:1px solid rgba(193,154,61,.55);border-radius:2px;pointer-events:none;z-index:2}
+.rd-card img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-card-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font:italic 500 15px/1.5 'Fraunces',serif;color:#5a4526;background:repeating-linear-gradient(135deg,#f4ecd8,#f4ecd8 14px,#eadfc2 14px,#eadfc2 28px)}
+.rd-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;background:linear-gradient(0deg,rgba(36,26,16,.92),rgba(36,26,16,0));color:#f4ecd8;font:600 13px/1.3 'Work Sans',sans-serif;letter-spacing:.02em;padding:32px 16px 14px}
+.rd-cap b{display:block;font:600 15px/1.2 'Fraunces',serif;color:#e7c877}
+/* mosaic sizing */
+.rd-m-wide{grid-column:span 4;min-height:300px}
+.rd-m-tall{grid-column:span 2;grid-row:span 2;min-height:300px}
+.rd-m-std{grid-column:span 2;min-height:220px}
+
+/* craft steps */
+.rd-craft{background:#3a2a1c;color:#f4ecd8}
+.rd-craft .rd-h2{color:#f4ecd8}
+.rd-craft .rd-lead{color:#d8cbb0}
+.rd-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:14px}
+.rd-step{position:relative;padding:30px 22px;background:rgba(244,236,216,.05);border:1px solid rgba(193,154,61,.3);border-radius:5px}
+.rd-step .rd-num{font:600 14px/1 'Fraunces',serif;color:#241a10;background:#c19a3d;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 0 18px;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.rd-step h3{font:600 20px/1.2 'Fraunces',serif;color:#f4ecd8;margin:0 0 9px}
+.rd-step p{font:400 14.5px/1.6 'Work Sans',sans-serif;color:#cdbfa3;margin:0}
+
+/* services two-column */
+.rd-svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.rd-svc li{list-style:none;display:flex;align-items:baseline;gap:16px;padding:18px 4px;border-bottom:1px solid rgba(58,42,28,.16)}
+.rd-svc ul{margin:0;padding:0}
+.rd-svc .rd-sv-i{font:600 13px/1 'Fraunces',serif;color:#c19a3d;flex:0 0 auto;min-width:26px}
+.rd-svc .rd-sv-t{font:500 17px/1.4 'Work Sans',sans-serif;color:#3a2a1c}
+.rd-svc .rd-sv-d{display:block;font:400 13.5px/1.4 'Work Sans',sans-serif;color:#7a6a54;margin-top:3px}
+
+/* about / stats */
+.rd-about{background:#2f4a37;color:#f4ecd8}
+.rd-about-in{max-width:1120px;margin:0 auto;padding:76px 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.rd-about .rd-kick{color:#a9c6b1}
+.rd-about h2{font:600 clamp(26px,3.6vw,38px)/1.12 'Fraunces',serif;color:#f4ecd8;margin:0 0 20px}
+.rd-about p{font:400 16px/1.7 'Work Sans',sans-serif;color:#dbe6dd;margin:0 0 16px;max-width:40em}
+.rd-badges{display:grid;grid-template-columns:1fr;gap:16px}
+.rd-badge{background:rgba(244,236,216,.06);border:1px solid rgba(193,154,61,.4);border-radius:5px;padding:22px 24px;display:flex;align-items:center;gap:18px}
+.rd-badge .rd-b-n{font:600 30px/1 'Fraunces',serif;color:#e7c877;flex:0 0 auto}
+.rd-badge .rd-b-l{font:500 14px/1.35 'Work Sans',sans-serif;color:#e8ddc4;letter-spacing:.02em}
+
+/* contact */
+.rd-contact{background:#f4ecd8}
+.rd-contact-in{max-width:1120px;margin:0 auto;padding:76px 26px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.rd-contact .rd-h2{color:#3a2a1c}
+.rd-contact-info p{font:400 16px/1.7 'Work Sans',sans-serif;color:#5a4b39;margin:0 0 22px;max-width:32em}
+.rd-detail{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid rgba(58,42,28,.18)}
+.rd-detail .rd-dl{font:600 11px/1.3 'Work Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#c19a3d;flex:0 0 96px;padding-top:3px}
+.rd-detail .rd-dv{font:500 16px/1.45 'Work Sans',sans-serif;color:#3a2a1c}
+.rd-detail .rd-dv a:hover{color:#c19a3d}
+.rd-form{background:#fbf7ee;border:1px solid rgba(58,42,28,.16);border-radius:6px;padding:32px;box-shadow:0 12px 34px rgba(58,42,28,.1)}
+.rd-form h3{font:600 22px/1.2 'Fraunces',serif;color:#3a2a1c;margin:0 0 6px}
+.rd-form .rd-fsub{font:400 14px/1.5 'Work Sans',sans-serif;color:#7a6a54;margin:0 0 22px}
+.rd-field{margin:0 0 18px}
+.rd-field label{display:block;font:600 12px/1 'Work Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5a4b39;margin:0 0 8px}
+.rd-field input,.rd-field textarea{width:100%;font:400 15px/1.5 'Work Sans',sans-serif;color:#241a10;background:#fff;border:1px solid rgba(58,42,28,.28);border-radius:4px;padding:12px 14px}
+.rd-field input:focus,.rd-field textarea:focus{outline:none;border-color:#c19a3d;box-shadow:0 0 0 3px rgba(193,154,61,.18)}
+.rd-field textarea{resize:vertical;min-height:118px}
+.rd-submit{width:100%;background:#3a2a1c;color:#f4ecd8;font:700 14px/1 'Work Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;border:0;border-radius:4px;padding:16px;cursor:pointer;transition:background .2s}
+.rd-submit:hover{background:#c19a3d;color:#241a10}
+
+/* footer */
+.rd-foot{background:#241a10;color:#cdbfa3;text-align:center;padding:40px 26px}
+.rd-foot b{font:600 18px/1 'Fraunces',serif;color:#f4ecd8}
+.rd-foot p{font:400 13.5px/1.6 'Work Sans',sans-serif;margin:10px 0 0;color:#a89877}
+
+/* responsive */
+@media(max-width:900px){
+ .rd-hero-in{grid-template-columns:1fr;gap:38px}
+ .rd-hero-figure{order:-1}
+ .rd-steps{grid-template-columns:repeat(2,1fr)}
+ .rd-about-in,.rd-contact-in{grid-template-columns:1fr;gap:40px}
+ .rd-m-wide{grid-column:span 6}
+ .rd-m-tall{grid-column:span 3;grid-row:span 1}
+ .rd-m-std{grid-column:span 3}
+}
+@media(max-width:640px){
+ .rd-nav{padding:12px 18px}
+ .rd-links{gap:16px}
+ .rd-sec{padding:54px 20px}
+ .rd-hero{padding:52px 20px 46px}
+ .rd-svc{grid-template-columns:1fr;gap:0}
+ .rd-steps{grid-template-columns:1fr}
+ .rd-mosaic{gap:12px}
+ .rd-m-wide,.rd-m-tall,.rd-m-std{grid-column:span 6;grid-row:auto;min-height:200px}
+ .rd-about-in,.rd-contact-in{padding:54px 20px}
+ .rd-form{padding:24px}
+}
+</style>
+</head>
+<body>
+<div class="concept-bar">Redesign concept · not the live site · © DariMoa</div>
+<div class="cmp-intro">
+<h1>A new website concept for Adel Signs</h1>
+<p>Prepared by DariMoa. Below is a respectful look at the current site, then the proposed new design — built from Adel Signs' real work, story, and photos.</p>
+</div>
+<div class="cmp-wrap">
+<div class="cmp-block cmp-before">
+<div class="cmp-label"><span class="dot" style="background:#8f97a8"></span>Your current site today</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<img class="cmp-shot" src="https://image.thum.io/get/width/1200/http://adelsigns.com/" alt="Current Adel Signs website" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=&quot;padding:60px 20px;text-align:center;color:#7c8494;font:400 15px system-ui&quot;>Live screenshot of the current site loads here.</div>')"></div>
+<p class="cmp-note">This is the current Adel Signs website. It has served the shop well — and there's a real opportunity to modernize it for phones and today's customers.</p>
+</div>
+<div class="cmp-block cmp-after">
+<div class="cmp-label"><span class="dot" style="background:#c19a3d"></span>The proposed new design</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<div class="rd">
+
+<!-- NAV -->
+<nav class="rd-nav">
+  <div class="rd-brand"><b>Adel Signs</b><span>Est. 1978</span></div>
+  <div class="rd-links">
+    <a href="#work">Work</a>
+    <a href="#craft">Craft</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="rd-hero">
+  <div class="rd-hero-in">
+    <div class="rd-hero-copy">
+      <p class="rd-eyebrow">Hand-carved in Laconia, NH · Since 1978</p>
+      <h1>Signs carved by hand, <em>lettered</em> to last a lifetime.</h1>
+      <p>For more than thirty-five years, Adel Signs has carved, painted, and gold-leafed signs for the businesses, taverns, and homes of the Lakes Region. No shortcuts, no mass production — just true craftsmanship in wood and gold.</p>
+      <a class="rd-cta" href="#contact">Request a quote <span>&rarr;</span></a>
+    </div>
+    <div class="rd-hero-figure">
+      <div class="rd-plate">
+        <img src="https://adelsigns.com/carvingmix.jpg" alt="A montage of hand-carved wooden signs by Adel Signs" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=&quot;rd-hero-fb&quot;>A montage of hand-carved wooden signs</div>')">
+      </div>
+      <div class="rd-hero-tag">35+ years of hand craftsmanship</div>
+    </div>
+  </div>
+</header>
+
+<!-- GALLERY (centerpiece) -->
+<section class="rd-gal" id="work">
+  <div class="rd-sec">
+    <div class="rd-sec-head">
+      <p class="rd-kick">The Sign Gallery</p>
+      <h2 class="rd-h2">A wall of work carved one sign at a time</h2>
+      <p class="rd-lead">Every plaque below was designed, carved, and finished by hand in the Adel Signs shop. These are real signs, hanging outside real businesses across New Hampshire.</p>
+    </div>
+    <div class="rd-mosaic">
+
+      <div class="rd-card rd-m-wide">
+        <img src="https://adelsigns.com/friendshipinn.jpg" alt="Hand-carved Friendship Inn sign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-card-fb" style="display:none">Friendship Inn — carved &amp; gold-leaf sign</div>
+        <div class="rd-cap"><b>Friendship Inn</b>Carved &amp; gold-leaf hospitality sign</div>
+      </div>
+
+      <div class="rd-card rd-m-tall">
+        <img src="https://adelsigns.com/fernwood.jpg" alt="Hand-carved Fernwood sign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-card-fb" style="display:none">Fernwood — carved property sign</div>
+        <div class="rd-cap"><b>Fernwood</b>Carved &amp; painted property sign</div>
+      </div>
+
+      <div class="rd-card rd-m-std">
+        <img src="https://adelsigns.com/lakecityauto.jpg" alt="Hand-carved Lake City Auto sign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-card-fb" style="display:none">Lake City Auto — carved business sign</div>
+        <div class="rd-cap"><b>Lake City Auto</b>Carved business sign</div>
+      </div>
+
+      <div class="rd-card rd-m-std">
+        <img src="https://adelsigns.com/savage.jpg" alt="Hand-carved Savage sign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-card-fb" style="display:none">Savage — carved &amp; lettered sign</div>
+        <div class="rd-cap"><b>Savage</b>Carved &amp; hand-lettered sign</div>
+      </div>
+
+      <div class="rd-card rd-m-std">
+        <img src="https://adelsigns.com/rockandtebbetsoffice.jpg" alt="Hand-carved Rock &amp; Tebbets office sign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-card-fb" style="display:none">Rock &amp; Tebbets — carved office sign</div>
+        <div class="rd-cap"><b>Rock &amp; Tebbets</b>Carved office sign</div>
+      </div>
+
+      <div class="rd-card rd-m-wide">
+        <img src="https://adelsigns.com/rockandtebbetsroadsign.jpg" alt="Hand-carved Rock &amp; Tebbets road sign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-card-fb" style="display:none">Rock &amp; Tebbets — roadside directional sign</div>
+        <div class="rd-cap"><b>Rock &amp; Tebbets</b>Roadside directional sign, gold-leaf lettering</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CRAFT -->
+<section class="rd-craft" id="craft">
+  <div class="rd-sec">
+    <div class="rd-sec-head">
+      <p class="rd-kick">The Craft</p>
+      <h2 class="rd-h2">From sketch to gold leaf</h2>
+      <p class="rd-lead">A hand-carved sign is a small commission of its own. Here is how each one comes together in the Adel Signs shop.</p>
+    </div>
+    <div class="rd-steps">
+      <div class="rd-step">
+        <div class="rd-num">1</div>
+        <h3>Design</h3>
+        <p>We draw your sign by hand — lettering, layout, and shape drafted to fit your business and your building.</p>
+      </div>
+      <div class="rd-step">
+        <div class="rd-num">2</div>
+        <h3>Hand-carve</h3>
+        <p>The design is carved into solid wood with hand tools, giving each letter real depth and shadow.</p>
+      </div>
+      <div class="rd-step">
+        <div class="rd-num">3</div>
+        <h3>Gold leaf</h3>
+        <p>Lettering is painted and, where you'd like it, finished in genuine gold leaf that catches the light for years.</p>
+      </div>
+      <div class="rd-step">
+        <div class="rd-num">4</div>
+        <h3>Install</h3>
+        <p>Your finished sign is sealed for the New England weather and ready to hang where the whole town can see it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="rd-sec" id="services">
+  <div class="rd-sec-head">
+    <p class="rd-kick">What We Make</p>
+    <h2 class="rd-h2">A full sign shop, all by hand</h2>
+    <p class="rd-lead">From a carved tavern sign to lettering on your truck, everything is designed and finished in-house.</p>
+  </div>
+  <div class="rd-svc">
+    <ul>
+      <li><span class="rd-sv-i">01</span><span class="rd-sv-t">Hand-carved wood signs<span class="rd-sv-d">Solid, dimensional carving in wood — our signature work.</span></span></li>
+      <li><span class="rd-sv-i">02</span><span class="rd-sv-t">Hand lettering &amp; painted signs<span class="rd-sv-d">Classic brush lettering, drawn and painted by hand.</span></span></li>
+      <li><span class="rd-sv-i">03</span><span class="rd-sv-t">Gold leaf work<span class="rd-sv-d">Genuine gold-leaf lettering and accents.</span></span></li>
+      <li><span class="rd-sv-i">04</span><span class="rd-sv-t">Pub &amp; tavern signs<span class="rd-sv-d">Traditional hanging signs with old-world character.</span></span></li>
+      <li><span class="rd-sv-i">05</span><span class="rd-sv-t">Business &amp; home signs<span class="rd-sv-d">Storefronts, offices, and welcoming signs for the home.</span></span></li>
+    </ul>
+    <ul>
+      <li><span class="rd-sv-i">06</span><span class="rd-sv-t">Truck &amp; boat lettering<span class="rd-sv-d">Names, numbers, and logos applied by hand.</span></span></li>
+      <li><span class="rd-sv-i">07</span><span class="rd-sv-t">Vinyl signs<span class="rd-sv-d">Clean, durable vinyl for windows and panels.</span></span></li>
+      <li><span class="rd-sv-i">08</span><span class="rd-sv-t">Banners<span class="rd-sv-d">Event and promotional banners, made to order.</span></span></li>
+      <li><span class="rd-sv-i">09</span><span class="rd-sv-t">Custom sign design<span class="rd-sv-d">Have an idea? We'll draw it up with you from scratch.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="rd-about">
+  <div class="rd-about-in">
+    <div>
+      <p class="rd-kick">Our Story</p>
+      <h2>A Lakes Region sign shop since 1978</h2>
+      <p>Adel Signs has been carving and painting signs in Laconia, New Hampshire for more than thirty-five years. Over that time we've lettered storefronts, carved tavern signs, and gold-leafed nameplates for neighbors across Laconia, Belmont, Concord, and Gilford.</p>
+      <p>It's a craft that hasn't changed much — and that's the point. When a sign is drawn, carved, and finished by hand, it carries a warmth that machine-cut work never will. That's what we've built our name on, one sign at a time.</p>
+    </div>
+    <div class="rd-badges">
+      <div class="rd-badge"><span class="rd-b-n">1978</span><span class="rd-b-l">In business since — over 35 years of sign making</span></div>
+      <div class="rd-badge"><span class="rd-b-n">Hand</span><span class="rd-b-l">Every sign carved &amp; lettered by hand</span></div>
+      <div class="rd-badge"><span class="rd-b-n">Gold</span><span class="rd-b-l">Genuine gold-leaf finishing available</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="rd-contact" id="contact">
+  <div class="rd-contact-in">
+    <div class="rd-contact-info">
+      <p class="rd-kick">Get In Touch</p>
+      <h2 class="rd-h2">Let's talk about your sign</h2>
+      <p>Tell us what you have in mind — a carved business sign, lettering for your truck, a sign for the house. We'll help you figure out the right size, wood, and finish.</p>
+      <div class="rd-detail"><span class="rd-dl">Email</span><span class="rd-dv"><a href="mailto:dan@adelsigns.com">dan@adelsigns.com</a></span></div>
+      <div class="rd-detail"><span class="rd-dl">Serving</span><span class="rd-dv">Laconia, NH &mdash; and Belmont, Concord &amp; Gilford</span></div>
+      <div class="rd-detail"><span class="rd-dl">Since</span><span class="rd-dv">1978 &mdash; over 35 years of hand-carved signs</span></div>
+    </div>
+    <div class="rd-form">
+      <h3>Request a quote</h3>
+      <p class="rd-fsub">We'll get back to you by email, usually within a day or two.</p>
+      <form onsubmit="return false">
+        <div class="rd-field">
+          <label for="rd-name">Name</label>
+          <input id="rd-name" type="text" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="rd-field">
+          <label for="rd-email">Email</label>
+          <input id="rd-email" type="email" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="rd-field">
+          <label for="rd-msg">Tell me about your sign</label>
+          <textarea id="rd-msg" placeholder="What would you like carved or lettered? Size, wood, gold leaf, timing — anything helps."></textarea>
+        </div>
+        <button class="rd-submit" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="rd-foot">
+  <b>Adel Signs</b>
+  <p>Hand-carved wood signs &amp; sign painting · Laconia, New Hampshire · Since 1978 · dan@adelsigns.com</p>
+</footer>
+
+</div></div>
+<p class="cmp-note">A concept only — a starting point we'd tailor with you. Photos and content are pulled from your current site.</p>
+</div>
+</div>
+<footer class="legal">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved. · This is a proposed redesign concept and is not the business's live website.</footer>
+</body>
+</html>

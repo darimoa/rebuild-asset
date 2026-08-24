@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>All City Garage Door — Website Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#0e0f12;color:#111}
+.concept-bar{position:sticky;top:0;z-index:9999;background:#101322;color:#e8ecf6;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.12)}
+.cmp-intro{max-width:1080px;margin:0 auto;padding:34px 22px 8px;color:#c9cfdd;font:400 16px/1.6 system-ui,sans-serif;text-align:center}
+.cmp-intro h1{font:800 clamp(22px,3vw,30px)/1.2 'Archivo',sans-serif;color:#f2f5fb;margin:0 0 10px}
+.cmp-wrap{max-width:1180px;margin:0 auto;padding:22px}
+.cmp-block{margin:26px 0 40px}
+.cmp-label{display:flex;align-items:center;gap:10px;font:700 13px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#aeb6c8;margin:0 0 12px}
+.cmp-label .dot{width:9px;height:9px;border-radius:50%}
+.cmp-frame{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#1a1d24;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.cmp-chrome{display:flex;gap:7px;padding:11px 14px;background:#20242c;border-bottom:1px solid rgba(255,255,255,.08)}
+.cmp-chrome i{width:11px;height:11px;border-radius:50%;background:#3a4150;display:block}
+.cmp-shot{display:block;width:100%;height:auto;background:#fff;min-height:200px}
+.cmp-note{color:#8f97a8;font:400 13.5px/1.6 system-ui,sans-serif;margin:10px 2px 0}
+.cmp-after .cmp-frame{background:#fff}
+footer.legal{max-width:1180px;margin:0 auto;padding:26px 22px 60px;color:#7c8494;font:400 12.5px/1.7 system-ui,sans-serif;border-top:1px solid rgba(255,255,255,.08)}
+/* ===== REDESIGN — every selector prefixed .rd ===== */
+.rd{font-family:'Inter',system-ui,sans-serif;color:#1e2227;background:#f6f7f9;line-height:1.6;--char:#1e2227;--amber:#f2b100;--steel:#4a515b;--white:#f6f7f9;--red:#d23b2c}
+.rd *{box-sizing:border-box}
+.rd a{color:inherit;text-decoration:none}
+.rd img{max-width:100%;display:block}
+
+/* --- NAV --- */
+.rd .nav{position:sticky;top:0;z-index:50;background:#1e2227;border-bottom:4px solid var(--amber);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px 24px}
+.rd .brand{display:flex;align-items:center;gap:12px;color:#fff}
+.rd .brand .mark{width:34px;height:30px;border-radius:3px;background:repeating-linear-gradient(180deg,var(--amber) 0 5px,#c99400 5px 7px);flex:none;box-shadow:inset 0 0 0 2px rgba(0,0,0,.25)}
+.rd .brand b{font:800 17px/1 'Archivo',sans-serif;letter-spacing:.02em;text-transform:uppercase}
+.rd .brand span{display:block;font:600 9.5px/1.2 'Inter',sans-serif;letter-spacing:.16em;color:var(--amber);text-transform:uppercase;margin-top:3px}
+.rd .navlinks{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.rd .navlinks a{font:700 12.5px/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#c7ccd4}
+.rd .navlinks a:hover{color:var(--amber)}
+.rd .callbtn{background:var(--amber);color:#1e2227;font:800 13px/1 'Archivo',sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:12px 18px;border-radius:4px;white-space:nowrap;box-shadow:0 4px 0 #b98a00}
+.rd .callbtn:hover{background:#ffc422}
+
+/* --- HERO --- */
+.rd .hero{position:relative;background:#1e2227;color:#fff;overflow:hidden;padding:74px 24px 66px}
+.rd .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(255,255,255,.045) 0 2px,transparent 2px 4px,rgba(0,0,0,.28) 44px,rgba(0,0,0,.28) 46px);pointer-events:none}
+.rd .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:repeating-linear-gradient(90deg,var(--amber) 0 40px,#1e2227 40px 46px)}
+.rd .hero-in{position:relative;max-width:1080px;margin:0 auto}
+.rd .est{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 'Inter',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:20px}
+.rd .est::before{content:"";width:34px;height:3px;background:var(--amber)}
+.rd .hero h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(40px,8.2vw,90px);line-height:.94;letter-spacing:.005em;margin:0 0 8px}
+.rd .hero h1 em{font-style:normal;color:var(--amber);display:inline-block}
+.rd .yr{display:block;font-family:'Anton',sans-serif;font-size:clamp(48px,10vw,116px);line-height:.9;color:transparent;-webkit-text-stroke:2px var(--amber);text-stroke:2px var(--amber);margin-top:2px}
+.rd .hero p.sub{max-width:620px;font:400 clamp(15px,2vw,18px)/1.6 'Inter',sans-serif;color:#c7ccd4;margin:22px 0 30px}
+.rd .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.rd .btn-amber{background:var(--amber);color:#1e2227;font:800 16px/1 'Archivo',sans-serif;letter-spacing:.03em;text-transform:uppercase;padding:17px 26px;border-radius:5px;box-shadow:0 5px 0 #b98a00;display:inline-block}
+.rd .btn-amber:hover{background:#ffc422}
+.rd .btn-ghost{border:2px solid #4a515b;color:#fff;font:700 14px/1 'Archivo',sans-serif;letter-spacing:.03em;text-transform:uppercase;padding:15px 22px;border-radius:5px;display:inline-block}
+.rd .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.rd .hero-badges{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.rd .hero-badges span{font:700 12px/1.3 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#aab0ba;display:flex;align-items:center;gap:8px}
+.rd .hero-badges span::before{content:"";width:7px;height:7px;background:var(--amber);border-radius:1px;flex:none}
+
+/* --- SECTION SHELL --- */
+.rd .sec{padding:66px 24px}
+.rd .sec-in{max-width:1080px;margin:0 auto}
+.rd .kicker{display:flex;align-items:center;gap:12px;font:700 12px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin:0 0 12px}
+.rd .kicker::before{content:"";width:28px;height:4px;background:var(--amber)}
+.rd .sec h2{font:900 clamp(26px,4vw,42px)/1.02 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 10px;color:#1e2227}
+.rd .sec .lede{max-width:640px;font:400 16px/1.6 'Inter',sans-serif;color:var(--steel);margin:0 0 34px}
+
+/* --- SERVICES --- */
+.rd .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rd .svc{background:#fff;border:1px solid #e3e6ea;border-top:5px solid var(--char);border-radius:6px;padding:24px 22px 22px;position:relative;overflow:hidden}
+.rd .svc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:repeating-linear-gradient(180deg,#f0f1f3 0 6px,#e7e9ec 6px 8px);opacity:.6}
+.rd .svc .no{font:400 13px/1 'Anton',sans-serif;color:var(--amber);letter-spacing:.05em}
+.rd .svc h3{font:800 17px/1.2 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:10px 0 8px;color:#1e2227}
+.rd .svc p{font:400 14px/1.55 'Inter',sans-serif;color:var(--steel);margin:0;position:relative;z-index:1}
+.rd .svc.hot{border-top-color:var(--amber);background:#1e2227}
+.rd .svc.hot h3,.rd .svc.hot .no{color:#fff}
+.rd .svc.hot .no{color:var(--amber)}
+.rd .svc.hot p{color:#c7ccd4}
+.rd .svc.hot::after{background:repeating-linear-gradient(180deg,#262b31 0 6px,#1a1e23 6px 8px);opacity:1}
+
+/* --- REVIEWS --- */
+.rd .reviews{background:#1e2227;color:#fff;position:relative}
+.rd .reviews::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--amber) 0 40px,#1e2227 40px 46px)}
+.rd .reviews .kicker{color:var(--amber)}
+.rd .reviews .kicker::before{background:var(--amber)}
+.rd .reviews h2{color:#fff}
+.rd .reviews .lede{color:#aab0ba}
+.rd .rating{display:flex;align-items:baseline;gap:14px;margin:-14px 0 30px;flex-wrap:wrap}
+.rd .rating .stars{font-family:'Archivo',sans-serif;color:var(--amber);font-size:26px;letter-spacing:3px}
+.rd .rating small{font:700 12px/1.4 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#aab0ba}
+.rd .rev-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rd .rev{background:#262b31;border:1px solid #333a42;border-left:4px solid var(--amber);border-radius:6px;padding:22px 20px}
+.rd .rev .qt{font-family:'Anton',sans-serif;color:var(--amber);font-size:34px;line-height:.6;display:block;margin-bottom:8px}
+.rd .rev p{font:500 15.5px/1.5 'Inter',sans-serif;color:#eef0f2;margin:0 0 16px}
+.rd .rev .who{font:800 13px/1.2 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.03em;color:#fff}
+.rd .rev .loc{font:600 11.5px/1.2 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-top:3px}
+.rd .rev.wide{grid-column:span 1}
+
+/* --- BRANDS / CREDENTIALS --- */
+.rd .brands{background:#f6f7f9}
+.rd .badge-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.rd .badge{background:#fff;border:2px solid #1e2227;border-radius:5px;padding:14px 18px;font:800 14px/1.1 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.02em;color:#1e2227;display:flex;flex-direction:column;gap:3px}
+.rd .badge small{font:700 10px/1.2 'Inter',sans-serif;letter-spacing:.14em;color:var(--steel)}
+.rd .badge.amber{border-color:var(--amber);background:var(--amber);color:#1e2227}
+.rd .badge.amber small{color:#7a5c00}
+.rd .cred-strip{display:flex;flex-wrap:wrap;gap:10px 26px;background:#1e2227;border-radius:6px;padding:22px 24px}
+.rd .cred-strip .c{font:700 13px/1.3 'Inter',sans-serif;letter-spacing:.04em;color:#eef0f2;display:flex;align-items:center;gap:9px}
+.rd .cred-strip .c::before{content:"✓";color:var(--amber);font-weight:900}
+.rd .cred-strip .c b{color:var(--amber);font-weight:800}
+
+/* --- SERVICE AREA + HOURS --- */
+.rd .area-wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+.rd .area-card,.rd .hours-card{background:#fff;border:1px solid #e3e6ea;border-radius:6px;padding:26px 24px}
+.rd .area-card{border-top:5px solid var(--amber)}
+.rd .area-card h3,.rd .hours-card h3{font:800 15px/1 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.08em;margin:0 0 16px;color:#1e2227}
+.rd .cities{display:flex;flex-wrap:wrap;gap:9px}
+.rd .cities span{font:700 13px/1 'Inter',sans-serif;background:#f0f1f3;border:1px solid #e0e3e7;border-radius:4px;padding:9px 13px;color:#1e2227}
+.rd .cities span:hover{background:var(--amber);border-color:var(--amber)}
+.rd .hours-card{border-top:5px solid var(--char)}
+.rd .hrow{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #e3e6ea;font:600 14px/1.4 'Inter',sans-serif;color:var(--steel)}
+.rd .hrow:last-child{border-bottom:0}
+.rd .hrow b{color:#1e2227;font-weight:800}
+.rd .hrow.closed b{color:var(--red)}
+
+/* --- CONTACT --- */
+.rd .contact{background:#1e2227;color:#fff;position:relative}
+.rd .contact::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--amber) 0 40px,#1e2227 40px 46px)}
+.rd .contact .kicker{color:var(--amber)}
+.rd .contact .kicker::before{background:var(--amber)}
+.rd .contact h2{color:#fff}
+.rd .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.rd .form{background:#262b31;border:1px solid #333a42;border-radius:8px;padding:26px 24px}
+.rd .form label{display:block;font:700 11.5px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#aab0ba;margin:0 0 7px}
+.rd .form .field{margin-bottom:16px}
+.rd .form input,.rd .form textarea{width:100%;background:#1e2227;border:1px solid #3b434c;border-radius:5px;padding:13px 14px;color:#fff;font:400 15px/1.4 'Inter',sans-serif}
+.rd .form input:focus,.rd .form textarea:focus{outline:none;border-color:var(--amber)}
+.rd .form textarea{resize:vertical;min-height:96px}
+.rd .form button{width:100%;background:var(--amber);color:#1e2227;font:800 15px/1 'Archivo',sans-serif;letter-spacing:.03em;text-transform:uppercase;border:0;border-radius:5px;padding:16px;cursor:pointer;box-shadow:0 5px 0 #b98a00}
+.rd .form button:hover{background:#ffc422}
+.rd .form .fine{font:400 11.5px/1.5 'Inter',sans-serif;color:#7f8791;margin:12px 0 0}
+.rd .cinfo h3{font:800 14px/1 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin:0 0 14px}
+.rd .phones{display:flex;flex-direction:column;gap:2px;margin-bottom:26px}
+.rd .phones a{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid #333a42}
+.rd .phones a:hover .num{color:var(--amber)}
+.rd .phones .lbl{font:600 12px/1.3 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#aab0ba}
+.rd .phones .num{font:800 18px/1 'Archivo',sans-serif;color:#fff;white-space:nowrap}
+.rd .phones .tollfree .num{color:var(--amber)}
+.rd .cline{font:400 15px/1.6 'Inter',sans-serif;color:#c7ccd4;margin:0 0 14px}
+.rd .cline b{display:block;font:800 12px/1.4 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-bottom:3px}
+.rd .cline a{color:var(--amber)}
+
+/* --- SITE FOOTER --- */
+.rd .foot{background:#15181c;color:#8b929b;padding:28px 24px;text-align:center;font:400 13px/1.6 'Inter',sans-serif;border-top:4px solid var(--amber)}
+.rd .foot b{color:#fff;font:800 14px/1 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.06em}
+
+/* --- RESPONSIVE --- */
+@media(max-width:900px){
+ .rd .svc-grid,.rd .rev-wall{grid-template-columns:repeat(2,1fr)}
+ .rd .area-wrap,.rd .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+ .rd .nav{padding:12px 16px;gap:12px}
+ .rd .navlinks{display:none}
+ .rd .sec{padding:48px 18px}
+ .rd .hero{padding:52px 18px 48px}
+ .rd .svc-grid,.rd .rev-wall{grid-template-columns:1fr}
+ .rd .phones .num{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="concept-bar">Redesign concept · not the live site · © DariMoa</div>
+<div class="cmp-intro">
+<h1>A new website concept for All City Garage Door</h1>
+<p>Prepared by DariMoa. Below is a respectful look at the current site, then the proposed new design — built from All City's real services, reviews, and credentials.</p>
+</div>
+<div class="cmp-wrap">
+<div class="cmp-block cmp-before">
+<div class="cmp-label"><span class="dot" style="background:#8f97a8"></span>Your current site today</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<img class="cmp-shot" src="https://image.thum.io/get/width/1200/https://www.allcitygaragedoor.net" alt="Current All City Garage Door website" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=&quot;padding:60px 20px;text-align:center;color:#7c8494;font:400 15px system-ui&quot;>Live screenshot of the current site loads here.</div>')"></div>
+<p class="cmp-note">This is the current All City Garage Door website. It has served the business — and there's a real opportunity to modernize it for phones and today's customers.</p>
+</div>
+<div class="cmp-block cmp-after">
+<div class="cmp-label"><span class="dot" style="background:#f2b100"></span>The proposed new design</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<div class="rd">
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="brand" href="#top">
+    <span class="mark"></span>
+    <span><b>All City Garage Door</b><span>Puget Sound · Since 1994</span></span>
+  </a>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#brands">Brands</a>
+    <a href="#area">Service Area</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="callbtn" href="tel:18006167693">Call 800.616.7693</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-in">
+    <div class="est">Family-owned · Puget Sound</div>
+    <h1>Garage doors &amp;<br><em>openers,</em> done right</h1>
+    <span class="yr">Since 1994</span>
+    <p class="sub">All City Garage Door has specialized in garage doors and openers across the Puget Sound for over 30 years. Repairs, springs, new doors and LiftMaster openers — with same-day service and free phone estimates.</p>
+    <div class="hero-cta">
+      <a class="btn-amber" href="tel:18006167693">Call 800.616.7693</a>
+      <a class="btn-ghost" href="#contact">Get a free estimate</a>
+    </div>
+    <div class="hero-badges">
+      <span>Same-day service</span>
+      <span>Licensed · Bonded · Insured</span>
+      <span>Free phone diagnostics</span>
+      <span>Residential &amp; commercial</span>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="sec-in">
+    <p class="kicker">What we do</p>
+    <h2>Every part of the door,<br>every kind of job</h2>
+    <p class="lede">From a snapped spring on a cold morning to a brand-new insulated door, we handle the full range of residential and commercial garage door work across the Puget Sound.</p>
+    <div class="svc-grid">
+      <div class="svc hot"><span class="no">01</span><h3>Garage Door Repair</h3><p>Off-track doors, broken panels, noisy operation and worn hardware — diagnosed and repaired, often same day.</p></div>
+      <div class="svc"><span class="no">02</span><h3>Spring Replacement</h3><p>Torsion and extension spring replacement — the most common failure, done safely with the right parts.</p></div>
+      <div class="svc"><span class="no">03</span><h3>Openers — LiftMaster</h3><p>Opener sales, installation and repair. LiftMaster Authorized Dealer for reliable, quiet operation.</p></div>
+      <div class="svc"><span class="no">04</span><h3>Sales &amp; Installation</h3><p>New residential and commercial doors from Amarr, Wayne Dalton and Northwest Door — measured and installed right.</p></div>
+      <div class="svc"><span class="no">05</span><h3>Rollers, Cables &amp; Hardware</h3><p>Panel and section replacement, rollers, cables, tracks and hinges — the parts that keep a door running smoothly.</p></div>
+      <div class="svc"><span class="no">06</span><h3>Remotes, Keypads &amp; Parts</h3><p>Replacement remotes, keypads and genuine parts — plus free diagnostics and estimates over the phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="sec-in">
+    <p class="kicker">What your neighbors say</p>
+    <h2>Trusted across the<br>Puget Sound</h2>
+    <div class="rating">
+      <span class="stars">★★★★★</span>
+      <small>Real reviews from real customers</small>
+    </div>
+    <div class="rev-wall">
+      <div class="rev"><span class="qt">&ldquo;</span><p>They called, came and did the job we needed very quickly. Very professional and polite. I will definatley recommed this company.</p><div class="who">Stacie G.</div><div class="loc">Burien, WA</div></div>
+      <div class="rev"><span class="qt">&ldquo;</span><p>Great response! On time. Garage door is working great. Thank you</p><div class="who">Vera B.</div><div class="loc">Bellevue, WA</div></div>
+      <div class="rev"><span class="qt">&ldquo;</span><p>Was on time, explained the problem, fixed it, cleaned up after himself and left all in a short period of time. Cost seemed very reasonable.</p><div class="who">Terri T.</div><div class="loc">University Place, WA</div></div>
+      <div class="rev"><span class="qt">&ldquo;</span><p>Did a very good job - very professinal - would recommend</p><div class="who">Curtis B.</div><div class="loc">Kent, WA</div></div>
+      <div class="rev"><span class="qt">&ldquo;</span><p>Great price, service, and quality</p><div class="who">Chung C.</div><div class="loc">Renton, WA</div></div>
+      <div class="rev" style="background:var(--amber);border-left-color:#1e2227"><span class="qt" style="color:#1e2227">★</span><p style="color:#1e2227;font-weight:700">Awarded the 2010 Angie's List Super Service Award — recognition earned directly from customer ratings and reviews.</p><div class="who" style="color:#1e2227">Angie's List</div><div class="loc" style="color:#7a5c00">Super Service Award · 2010</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS / CREDENTIALS -->
+<section class="sec brands" id="brands">
+  <div class="sec-in">
+    <p class="kicker">Brands &amp; credentials</p>
+    <h2>Authorized dealer.<br>Licensed contractor.</h2>
+    <p class="lede">We install and service the brands homeowners and builders trust — and we back it with the licenses, bonding and industry memberships that let you hire with confidence.</p>
+    <div class="badge-row">
+      <div class="badge amber">Amarr<small>Master Dealer</small></div>
+      <div class="badge">Wayne Dalton<small>Doors</small></div>
+      <div class="badge">Northwest Door<small>Doors</small></div>
+      <div class="badge">LiftMaster<small>Authorized Dealer</small></div>
+    </div>
+    <div class="cred-strip">
+      <span class="c">WA Contractor License <b>#ALLCICG857LS</b></span>
+      <span class="c">Licensed · Bonded · Insured</span>
+      <span class="c">2010 <b>Angie's List</b> Super Service Award</span>
+      <span class="c"><b>MBA</b> of King &amp; Snohomish Counties</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA + HOURS -->
+<section class="sec" id="area">
+  <div class="sec-in">
+    <p class="kicker">Service area &amp; hours</p>
+    <h2>Serving the greater<br>Puget Sound</h2>
+    <p class="lede">Based at our Kent showroom, we serve homeowners and businesses throughout South King County and the Eastside.</p>
+    <div class="area-wrap">
+      <div class="area-card">
+        <h3>Cities we serve</h3>
+        <div class="cities">
+          <span>Kent</span><span>Covington</span><span>Auburn</span><span>Federal Way</span><span>Bellevue</span><span>Issaquah</span><span>Burien</span><span>Seattle</span><span>Renton</span><span>University Place</span>
+        </div>
+      </div>
+      <div class="hours-card">
+        <h3>Office hours</h3>
+        <div class="hrow"><span>Mon – Thu</span><b>8:00 AM – 4:30 PM</b></div>
+        <div class="hrow"><span>Friday</span><b>8:00 AM – 4:00 PM</b></div>
+        <div class="hrow closed"><span>Sat – Sun</span><b>Closed</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="sec-in">
+    <p class="kicker">Get in touch</p>
+    <h2>Request a free estimate</h2>
+    <div class="contact-grid">
+      <form class="form" onsubmit="return false">
+        <div class="field"><label for="rdn">Name</label><input id="rdn" type="text" placeholder="Your name"></div>
+        <div class="field"><label for="rdp">Phone or email</label><input id="rdp" type="text" placeholder="Best way to reach you"></div>
+        <div class="field"><label for="rdm">How can we help?</label><textarea id="rdm" placeholder="Tell us about your door or opener — broken spring, new door, opener not working…"></textarea></div>
+        <button type="submit">Send my request</button>
+        <p class="fine">Prefer to talk? Call us for free phone diagnostics and same-day service. This is a concept form for demonstration.</p>
+      </form>
+      <div class="cinfo">
+        <h3>Call us directly</h3>
+        <div class="phones">
+          <a class="tollfree" href="tel:18006167693"><span class="lbl">Toll-free</span><span class="num">800.616.7693</span></a>
+          <a href="tel:12536397693"><span class="lbl">Kent / Covington</span><span class="num">253.639.7693</span></a>
+          <a href="tel:12539464346"><span class="lbl">Auburn / Federal Way</span><span class="num">253.946.4346</span></a>
+          <a href="tel:14252140028"><span class="lbl">Bellevue / Issaquah</span><span class="num">425.214.0028</span></a>
+          <a href="tel:12062419073"><span class="lbl">Burien / Seattle</span><span class="num">206.241.9073</span></a>
+        </div>
+        <p class="cline"><b>Showroom</b>18203 SE 272nd St, Kent, WA 98042</p>
+        <p class="cline"><b>Mailing</b>PO Box 8559, Covington, WA 98042</p>
+        <p class="cline"><b>Email</b><a href="mailto:doors4sale@allcitygaragedoor.net">doors4sale@allcitygaragedoor.net</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITE FOOTER -->
+<div class="foot">
+  <b>All City Garage Door</b><br>
+  Specializing in Garage Doors &amp; Openers since 1994 · Kent, WA · Licensed · Bonded · Insured · WA Lic. #ALLCICG857LS
+</div>
+
+</div></div>
+<p class="cmp-note">A concept only — a starting point we'd tailor with you. Content and reviews are pulled from your current site.</p>
+</div>
+</div>
+<footer class="legal">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved. · This is a proposed redesign concept and is not the business's live website.</footer>
+</body>
+</html>

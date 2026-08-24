@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ray's Radiator Clinic — Website Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Barlow',system-ui,sans-serif;background:#0e0f12;color:#111}
+.concept-bar{position:sticky;top:0;z-index:9999;background:#101322;color:#e8ecf6;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.12)}
+.cmp-intro{max-width:1080px;margin:0 auto;padding:34px 22px 8px;color:#c9cfdd;font:400 16px/1.6 system-ui,sans-serif;text-align:center}
+.cmp-intro h1{font:700 clamp(22px,3vw,30px)/1.2 'Oswald',sans-serif;color:#f2f5fb;margin:0 0 10px}
+.cmp-wrap{max-width:1180px;margin:0 auto;padding:22px}
+.cmp-block{margin:26px 0 40px}
+.cmp-label{display:flex;align-items:center;gap:10px;font:700 13px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#aeb6c8;margin:0 0 12px}
+.cmp-label .dot{width:9px;height:9px;border-radius:50%}
+.cmp-frame{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#1a1d24;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.cmp-chrome{display:flex;gap:7px;padding:11px 14px;background:#20242c;border-bottom:1px solid rgba(255,255,255,.08)}
+.cmp-chrome i{width:11px;height:11px;border-radius:50%;background:#3a4150;display:block}
+.cmp-shot{display:block;width:100%;height:auto;background:#fff;min-height:200px}
+.cmp-note{color:#8f97a8;font:400 13.5px/1.6 system-ui,sans-serif;margin:10px 2px 0}
+.cmp-after .cmp-frame{background:#fff}
+footer.legal{max-width:1180px;margin:0 auto;padding:26px 22px 60px;color:#7c8494;font:400 12.5px/1.7 system-ui,sans-serif;border-top:1px solid rgba(255,255,255,.08)}
+/* ===== REDESIGN — every selector prefixed .rd ===== */
+.rd{font-family:'Barlow',system-ui,sans-serif;color:#17191d;background:#f4f2ee;line-height:1.6;-webkit-font-smoothing:antialiased}
+.rd *{box-sizing:border-box}
+.rd img{max-width:100%;display:block}
+.rd a{color:inherit;text-decoration:none}
+.rd .wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+
+/* nav */
+.rd-nav{position:sticky;top:0;z-index:40;background:#17191d;border-bottom:1px solid rgba(255,255,255,.08)}
+.rd-nav .bar{display:flex;align-items:center;gap:22px;height:66px}
+.rd-brand{display:flex;align-items:center;gap:11px;color:#f4f2ee;font:700 19px/1 'Oswald',sans-serif;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.rd-brand .hex{width:26px;height:26px;flex:none;background:conic-gradient(from 45deg,#c9ced6,#8b929c,#c9ced6,#6d737c,#c9ced6);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);position:relative}
+.rd-brand .hex::after{content:"";position:absolute;inset:34%;border-radius:50%;background:#17191d}
+.rd-brand b{color:#e8892b}
+.rd-links{display:flex;gap:26px;margin-left:auto}
+.rd-links a{color:#c9ced6;font:600 13px/1 'Barlow',sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:6px 0;position:relative}
+.rd-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:#c65a24;transition:right .25s}
+.rd-links a:hover::after{right:0}
+.rd-callnav{display:inline-flex;align-items:center;gap:8px;background:#c65a24;color:#fff;font:700 14px/1 'Oswald',sans-serif;letter-spacing:.04em;padding:12px 18px;border-radius:4px;white-space:nowrap}
+.rd-callnav:hover{background:#e8892b}
+
+/* hero */
+.rd-hero{position:relative;min-height:640px;display:flex;align-items:flex-end;overflow:hidden;background:#0c0d0f}
+.rd-hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.02)}
+.rd-hero .fallbg{position:absolute;inset:0;background:linear-gradient(135deg,#2a2d33 0,#17191d 55%,#0c0d0f 100%);background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.04) 0 2px,transparent 2px 7px),linear-gradient(135deg,#2a2d33,#0c0d0f)}
+.rd-hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,13,15,.92) 0,rgba(12,13,15,.66) 42%,rgba(12,13,15,.28) 100%),linear-gradient(0deg,rgba(12,13,15,.9) 0,rgba(12,13,15,.15) 45%)}
+.rd-hero .inner{position:relative;z-index:2;padding:0 26px 66px;max-width:1140px;margin:0 auto;width:100%}
+.rd-eyebrow{display:inline-flex;align-items:center;gap:10px;color:#e8892b;font:700 13px/1 'Oswald',sans-serif;letter-spacing:.22em;text-transform:uppercase;margin:0 0 18px}
+.rd-eyebrow .slash{width:34px;height:3px;background:#c65a24;transform:skewX(-24deg)}
+.rd-hero h1{font-family:'Anton',sans-serif;font-weight:400;color:#f4f2ee;font-size:clamp(40px,7vw,88px);line-height:.94;letter-spacing:.005em;text-transform:uppercase;margin:0 0 18px;max-width:16ch;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.rd-hero h1 em{font-style:normal;color:#e8892b}
+.rd-hero p.sub{color:#dcdfe4;font:400 clamp(16px,1.7vw,20px)/1.55 'Barlow',sans-serif;max-width:52ch;margin:0 0 30px}
+.rd-hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.rd-btn{display:inline-flex;align-items:center;gap:10px;background:#c65a24;color:#fff;font:700 15px/1 'Oswald',sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:16px 26px;border-radius:5px;border:none;cursor:pointer;transition:transform .15s,background .2s}
+.rd-btn:hover{background:#e8892b;transform:translateY(-2px)}
+.rd-btn.ghost{background:transparent;border:2px solid rgba(201,206,214,.5);color:#f4f2ee;padding:14px 24px}
+.rd-btn.ghost:hover{border-color:#e8892b;background:rgba(232,137,43,.12)}
+.rd-hero .strip{position:relative;z-index:2;background:#c65a24}
+.rd-heritage{position:relative;z-index:2;background:#c65a24;color:#fff}
+.rd-heritage .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 30px;padding-top:16px;padding-bottom:16px}
+.rd-heritage span{font:700 13px/1.2 'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:9px}
+.rd-heritage span b{font-family:'Anton',sans-serif;font-weight:400;font-size:22px;letter-spacing:.02em;line-height:1}
+
+/* section shell */
+.rd-sec{padding:80px 0}
+.rd-sec.dark{background:#17191d;color:#f4f2ee}
+.rd-head{margin:0 0 42px}
+.rd-head .kick{color:#c65a24;font:700 13px/1 'Oswald',sans-serif;letter-spacing:.2em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;margin:0 0 12px}
+.rd-head .kick .slash{width:28px;height:3px;background:#c65a24;transform:skewX(-24deg)}
+.rd-sec.dark .rd-head .kick{color:#e8892b}
+.rd-head h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(30px,4.4vw,50px);line-height:1;letter-spacing:.01em;text-transform:uppercase;margin:0 0 12px}
+.rd-head p{color:#5a5f68;font:400 17px/1.6 'Barlow',sans-serif;max-width:60ch;margin:0}
+.rd-sec.dark .rd-head p{color:#adb3bd}
+
+/* services */
+.rd-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rd-card{background:#fff;border:1px solid #e3ddd2;border-radius:8px;padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+.rd-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#c65a24;transform:scaleY(0);transform-origin:top;transition:transform .22s}
+.rd-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(23,25,29,.12);border-color:#d8cfc0}
+.rd-card:hover::before{transform:scaleY(1)}
+.rd-card .no{font:700 13px/1 'Oswald',sans-serif;letter-spacing:.14em;color:#c65a24;margin:0 0 12px}
+.rd-card h3{font:600 20px/1.2 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0 0 9px;color:#17191d}
+.rd-card p{margin:0;color:#5a5f68;font:400 15px/1.55 'Barlow',sans-serif}
+
+/* estimate form — signature */
+.rd-est{position:relative;overflow:hidden}
+.rd-est .bg-slash{position:absolute;top:-40%;right:-10%;width:60%;height:180%;background:repeating-linear-gradient(115deg,rgba(232,137,43,.08) 0 3px,transparent 3px 26px);transform:skewX(-14deg);pointer-events:none}
+.rd-est .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start;position:relative;z-index:2}
+.rd-est .lead h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(32px,4.6vw,54px);line-height:.98;text-transform:uppercase;margin:0 0 16px}
+.rd-est .lead h2 em{font-style:normal;color:#e8892b}
+.rd-est .lead p{color:#adb3bd;font:400 16.5px/1.65 'Barlow',sans-serif;max-width:42ch;margin:0 0 26px}
+.rd-est .lead .call{display:inline-flex;align-items:center;gap:12px;color:#f4f2ee;font:700 22px/1 'Oswald',sans-serif;letter-spacing:.02em}
+.rd-est .lead .call b{color:#e8892b}
+.rd-est .lead .small{color:#8a909a;font:400 14px/1.5 'Barlow',sans-serif;margin-top:8px}
+.rd-form{background:#fff;border-radius:10px;padding:30px 28px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.rd-form .row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rd-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rd-field{margin:0 0 16px}
+.rd-field label{display:block;font:700 12px/1 'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7a7266;margin:0 0 7px}
+.rd-field input,.rd-field select,.rd-field textarea{width:100%;font:400 15px/1.4 'Barlow',sans-serif;color:#17191d;background:#f6f4f0;border:1px solid #ded7ca;border-radius:5px;padding:12px 13px;outline:none;transition:border-color .15s,box-shadow .15s}
+.rd-field input:focus,.rd-field select:focus,.rd-field textarea:focus{border-color:#c65a24;box-shadow:0 0 0 3px rgba(198,90,36,.14);background:#fff}
+.rd-field textarea{resize:vertical;min-height:82px}
+.rd-form .submit{width:100%;justify-content:center;margin-top:4px}
+.rd-form .disc{color:#9a9488;font:400 12.5px/1.5 'Barlow',sans-serif;text-align:center;margin:14px 0 0}
+
+/* dreams & reality + gallery */
+.rd-dr .intro{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-bottom:46px}
+.rd-dr .badge{display:inline-block;font-family:'Anton',sans-serif;font-weight:400;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#c65a24;border:2px solid #c65a24;border-radius:4px;padding:7px 14px;margin:0 0 18px}
+.rd-dr h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(30px,4.4vw,52px);line-height:.98;text-transform:uppercase;margin:0 0 16px}
+.rd-dr p{color:#5a5f68;font:400 16.5px/1.7 'Barlow',sans-serif;margin:0 0 14px}
+.rd-dr .feat{position:relative;border-radius:10px;overflow:hidden;min-height:300px;background:#22252b}
+.rd-dr .feat img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.rd-gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:14px}
+.rd-shot{position:relative;border-radius:8px;overflow:hidden;background:#22252b}
+.rd-shot img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.rd-shot:hover img{transform:scale(1.06)}
+.rd-shot .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 16px 12px;background:linear-gradient(0deg,rgba(12,13,15,.82),transparent);color:#f4f2ee;font:600 13px/1.2 'Oswald',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.rd-shot.g1{grid-column:span 3;grid-row:span 2}
+.rd-shot.g2{grid-column:span 3;grid-row:span 1}
+.rd-shot.g3{grid-column:span 2;grid-row:span 1}
+.rd-shot.g4{grid-column:span 4;grid-row:span 1}
+/* brushed-metal fallback tile */
+.rd-fallimg{width:100%;height:100%;min-height:150px;display:flex;align-items:flex-end;background:linear-gradient(135deg,#3a3e46,#22252b);background-image:repeating-linear-gradient(118deg,rgba(255,255,255,.05) 0 1px,transparent 1px 5px),linear-gradient(135deg,#3a3e46,#22252b)}
+.rd-fallimg span{padding:14px 16px;color:#c9ced6;font:600 12px/1.3 'Oswald',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.rd-dr .feat .rd-fallimg{min-height:300px}
+
+/* about */
+.rd-about{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.rd-about .txt h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(30px,4.4vw,50px);line-height:1;text-transform:uppercase;margin:0 0 18px}
+.rd-about .txt p{color:#4f545d;font:400 16.5px/1.75 'Barlow',sans-serif;margin:0 0 15px}
+.rd-about .txt p b{color:#17191d}
+.rd-badges{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:26px}
+.rd-badge{background:#fff;border:1px solid #e3ddd2;border-radius:8px;padding:20px 16px;text-align:center}
+.rd-badge b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:26px;color:#c65a24;line-height:1;margin:0 0 6px}
+.rd-badge span{font:600 12px/1.3 'Oswald',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5a5f68}
+.rd-about .photo{position:relative;border-radius:10px;overflow:hidden;min-height:420px;background:#22252b}
+.rd-about .photo img{width:100%;height:100%;min-height:420px;object-fit:cover}
+.rd-about .photo .rd-fallimg{min-height:420px}
+.rd-about .photo .tag{position:absolute;left:20px;bottom:20px;background:#c65a24;color:#fff;font:700 12px/1.3 'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:9px 14px;border-radius:4px}
+
+/* contact */
+.rd-contact .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:44px}
+.rd-cinfo{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+.rd-cblock .lab{color:#e8892b;font:700 12px/1 'Oswald',sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}
+.rd-cblock .val{color:#f4f2ee;font:500 17px/1.5 'Barlow',sans-serif}
+.rd-cblock .val a{color:#f4f2ee}
+.rd-cblock .val a:hover{color:#e8892b}
+.rd-cblock .big{font:700 26px/1.1 'Oswald',sans-serif;letter-spacing:.01em}
+.rd-cblock .big a{color:#f4f2ee}
+.rd-mapcard{background:#20242c;border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:26px;display:flex;flex-direction:column;justify-content:center}
+.rd-mapcard h3{font:600 18px/1.2 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;margin:0 0 10px;color:#f4f2ee}
+.rd-mapcard p{color:#adb3bd;font:400 15px/1.6 'Barlow',sans-serif;margin:0 0 18px}
+.rd-mapcard .rd-btn{align-self:flex-start}
+
+/* footer */
+.rd-foot{background:#0c0d0f;color:#8a909a;padding:30px 0}
+.rd-foot .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+.rd-foot .brand{color:#c9ced6;font:700 15px/1 'Oswald',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.rd-foot .brand b{color:#e8892b}
+.rd-foot small{font:400 13px/1.5 'Barlow',sans-serif}
+
+/* responsive */
+@media(max-width:1000px){
+  .rd-svc{grid-template-columns:repeat(2,1fr)}
+  .rd-est .grid{grid-template-columns:1fr;gap:32px}
+  .rd-dr .intro{grid-template-columns:1fr;gap:26px}
+  .rd-about{grid-template-columns:1fr;gap:34px}
+  .rd-contact .grid{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:760px){
+  .rd-links{display:none}
+  .rd-nav .bar{height:60px}
+  .rd-callnav{margin-left:auto}
+  .rd-hero{min-height:560px}
+  .rd-hero .inner{padding-bottom:44px}
+  .rd-heritage .wrap{gap:12px 22px}
+  .rd-sec{padding:56px 0}
+  .rd-gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
+  .rd-shot.g1,.rd-shot.g2,.rd-shot.g3,.rd-shot.g4{grid-column:span 2;grid-row:span 1}
+  .rd-shot.g1{grid-row:span 2}
+}
+@media(max-width:520px){
+  .rd .wrap{padding:0 18px}
+  .rd-hero .inner{padding-left:18px;padding-right:18px}
+  .rd-svc{grid-template-columns:1fr}
+  .rd-form .row,.rd-form .row2{grid-template-columns:1fr}
+  .rd-cinfo{grid-template-columns:1fr}
+  .rd-badges{grid-template-columns:1fr}
+  .rd-btn{width:100%;justify-content:center}
+  .rd-hero .cta-row{flex-direction:column;align-items:stretch}
+}
+</style>
+</head>
+<body>
+<div class="concept-bar">Redesign concept · not the live site · © DariMoa</div>
+<div class="cmp-intro">
+<h1>A new website concept for Ray's Radiator Clinic</h1>
+<p>Prepared by DariMoa. Below is a respectful look at the current site, then the proposed new design — built from Ray's real services, story, and photos.</p>
+</div>
+<div class="cmp-wrap">
+<div class="cmp-block cmp-before">
+<div class="cmp-label"><span class="dot" style="background:#8f97a8"></span>Your current site today</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<img class="cmp-shot" src="https://image.thum.io/get/width/1200/https://www.raysradiator-hotrodshop.com/" alt="Current Ray's Radiator website" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=&quot;padding:60px 20px;text-align:center;color:#7c8494;font:400 15px system-ui&quot;>Live screenshot of the current site loads here.</div>')"></div>
+<p class="cmp-note">This is the current Ray's Radiator Clinic website. It has served the shop for years — and there's a real opportunity to modernize it for phones and today's customers.</p>
+</div>
+<div class="cmp-block cmp-after">
+<div class="cmp-label"><span class="dot" style="background:#c65a24"></span>The proposed new design</div>
+<div class="cmp-frame"><div class="cmp-chrome"><i></i><i></i><i></i></div>
+<div class="rd">
+
+<!-- NAV -->
+<header class="rd-nav">
+  <div class="wrap">
+    <div class="bar">
+      <a class="rd-brand" href="#top"><span class="hex"></span>Ray's <b>Radiator</b> Clinic</a>
+      <nav class="rd-links">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#estimate">Estimate</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="rd-callnav" href="tel:15867595010">Call (586) 759-5010</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="rd-hero" id="top">
+  <img class="bg" src="https://www.raysradiator-hotrodshop.com/files/117930479.jpg" alt="Custom aluminum radiator project by Ray's Radiator Clinic" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <div class="fallbg" style="display:none"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <p class="rd-eyebrow"><span class="slash"></span>Sterling Heights, Michigan · Est. 1982</p>
+    <h1>Custom cooling, <em>built by hand</em> since 1982</h1>
+    <p class="sub">Hand-fabricated aluminum radiators, fuel cells, fan shrouds and cooling systems for hot rods and classics — designed, welded, powder-coated and blasted under one roof.</p>
+    <div class="cta-row">
+      <a class="rd-btn" href="#estimate">Get a build estimate →</a>
+      <a class="rd-btn ghost" href="#work">See the work</a>
+    </div>
+  </div>
+</section>
+<div class="rd-heritage">
+  <div class="wrap">
+    <span><b>40+</b> Years of experience</span>
+    <span><b>1982</b> Family owned &amp; operated</span>
+    <span><b>100%</b> In-house fab &amp; finishing</span>
+    <span><b>USA</b> Gas Tank Renu authorized</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="rd-sec" id="services">
+  <div class="wrap">
+    <div class="rd-head">
+      <p class="kick"><span class="slash"></span>What we build &amp; repair</p>
+      <h2>Services from the clinic</h2>
+      <p>Four decades of radiator and cooling-system craft — from one-off custom aluminum builds to gas tank relining, recoring and complete in-house finishing.</p>
+    </div>
+    <div class="rd-svc">
+      <div class="rd-card"><p class="no">01</p><h3>Custom Aluminum Radiators</h3><p>One-off hand-built aluminum radiators sized and fitted for hot rods, street rods and classics — engineered to actually cool.</p></div>
+      <div class="rd-card"><p class="no">02</p><h3>Stock Aluminum Radiators</h3><p>Direct-fit aluminum replacements for factory applications, built to outperform and outlast the original.</p></div>
+      <div class="rd-card"><p class="no">03</p><h3>Custom Fan Shrouds</h3><p>Fabricated aluminum shrouds matched to your radiator and fan for maximum airflow and a clean engine-bay look.</p></div>
+      <div class="rd-card"><p class="no">04</p><h3>Engine, Radiator &amp; A/C Fans</h3><p>Specialty electric and mechanical fans specified and installed to keep temperatures in check on any build.</p></div>
+      <div class="rd-card"><p class="no">05</p><h3>Heater Core Recoring</h3><p>Expert recores including double-core Chrysler units — restoring cabin heat on cores others won't touch.</p></div>
+      <div class="rd-card"><p class="no">06</p><h3>Gas Tank Relining</h3><p>Authorized Gas Tank Renu-USA process to seal, restore and warranty rusted or leaking fuel tanks.</p></div>
+      <div class="rd-card"><p class="no">07</p><h3>Rust Repair &amp; Welding</h3><p>Metal spray and wire-feed welding to rebuild corroded tanks, tanks tops and cooling components.</p></div>
+      <div class="rd-card"><p class="no">08</p><h3>In-House Powder Coating</h3><p>Durable powder-coat finishing done on site — consistent color and protection without shipping parts out.</p></div>
+      <div class="rd-card"><p class="no">09</p><h3>Media Blasting</h3><p>Walnut, glass bead, aluminum oxide and plastic media blasting to strip and prep parts the right way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE ESTIMATE FORM -->
+<section class="rd-sec dark rd-est" id="estimate">
+  <div class="bg-slash"></div>
+  <div class="wrap">
+    <div class="grid">
+      <div class="lead">
+        <p class="kick" style="color:#e8892b"><span class="slash"></span>Start your build</p>
+        <h2>Get a <em>build estimate</em></h2>
+        <p>Tell us about the car and the project. We'll review the details and get back to you with a quote for your custom radiator, recore, tank or finish work.</p>
+        <div class="call"><span>Prefer to talk it through?</span></div>
+        <div class="call" style="margin-top:6px"><b>(586) 759-5010</b></div>
+        <p class="small">Mon–Fri, 8:00 AM – 5:00 PM · 6550 Cobb Drive, Sterling Heights, MI</p>
+      </div>
+      <form class="rd-form" onsubmit="return false">
+        <div class="row">
+          <div class="rd-field"><label>Year</label><input type="text" placeholder="1932" inputmode="numeric"></div>
+          <div class="rd-field"><label>Make</label><input type="text" placeholder="Ford"></div>
+          <div class="rd-field"><label>Model</label><input type="text" placeholder="Roadster"></div>
+        </div>
+        <div class="rd-field">
+          <label>Project type</label>
+          <select>
+            <option>Custom aluminum radiator</option>
+            <option>Heater core / radiator recore</option>
+            <option>Gas tank relining</option>
+            <option>Powder coating</option>
+            <option>Automotive A/C repair</option>
+            <option>Other — tell us below</option>
+          </select>
+        </div>
+        <div class="row2">
+          <div class="rd-field"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div class="rd-field"><label>Email or phone</label><input type="text" placeholder="Best way to reach you"></div>
+        </div>
+        <div class="rd-field"><label>Project notes</label><textarea placeholder="Engine, core size, clearances, timeline — anything that helps us quote it right."></textarea></div>
+        <button class="rd-btn submit" type="submit">Request my estimate →</button>
+        <p class="disc">Concept form — a live version would email the shop directly.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- DREAMS & REALITY + GALLERY -->
+<section class="rd-sec" id="work">
+  <div class="wrap">
+    <div class="rd-dr">
+      <div class="intro">
+        <div>
+          <span class="badge">Dreams &amp; Reality</span>
+          <h2>Our signature custom line</h2>
+          <p>Since 1999, "Dreams &amp; Reality" has been the name on our custom aluminum radiators and fuel cells — the pieces builders come to us for when off-the-shelf won't cut it.</p>
+          <p>Every unit is drawn up, TIG-welded and finished by hand to fit your car, your engine and your vision. No two are exactly alike, and that's the point.</p>
+        </div>
+        <div class="feat">
+          <img src="https://www.raysradiator-hotrodshop.com/files/117936139.jpg" alt="Customer hot rod build featuring a Dreams & Reality radiator" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="rd-fallimg" style="display:none"><span>Dreams &amp; Reality · Customer build</span></div>
+        </div>
+      </div>
+      <div class="rd-gal">
+        <div class="rd-shot g1">
+          <img src="https://www.raysradiator-hotrodshop.com/files/117930479.jpg" alt="Custom aluminum radiator install" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="rd-fallimg" style="display:none"><span>Custom radiator install</span></div>
+          <div class="cap">Custom aluminum radiator install</div>
+        </div>
+        <div class="rd-shot g2">
+          <img src="https://www.raysradiator-hotrodshop.com/files/117936221.jpg" alt="Fabricated custom fan shroud" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="rd-fallimg" style="display:none"><span>Custom fan shroud</span></div>
+          <div class="cap">Fabricated fan shroud</div>
+        </div>
+        <div class="rd-shot g3">
+          <img src="https://www.raysradiator-hotrodshop.com/files/117930929.jpg" alt="Restoration and rust repair work" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="rd-fallimg" style="display:none"><span>Restoration / rust repair</span></div>
+          <div class="cap">Restoration &amp; rust repair</div>
+        </div>
+        <div class="rd-shot g4">
+          <img src="https://www.raysradiator-hotrodshop.com/files/117936139.jpg" alt="Completed customer hot rod build" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="rd-fallimg" style="display:none"><span>Customer hot rod build</span></div>
+          <div class="cap">Customer build, cooled by Ray's</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="rd-sec dark">
+  <div class="wrap">
+    <div class="rd-about">
+      <div class="txt">
+        <p class="kick" style="color:#e8892b"><span class="slash"></span>Our story</p>
+        <h2>Built by Ray &amp; Sylvia since 1982</h2>
+        <p>Ray Ruminski apprenticed in the radiator trade for roughly ten years before he and his wife <b>Sylvia</b> opened Ray's Radiator Clinic in <b>1982</b>. Gas-tank relining came in 1988, and in 1999 the shop pivoted to custom aluminum radiators and fuel cells under the <b>"Dreams &amp; Reality"</b> line.</p>
+        <p>A dedicated building followed in 2001, and in 2016 the clinic relocated to its current Sterling Heights home. More than <b>40 years on</b>, it's still a family shop that fabricates, welds, powder-coats and blasts everything in-house.</p>
+        <div class="rd-badges">
+          <div class="rd-badge"><b>1982</b><span>Since</span></div>
+          <div class="rd-badge"><b>40+</b><span>Years</span></div>
+          <div class="rd-badge"><b>In-House</b><span>Coat &amp; blast</span></div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="https://www.raysradiator-hotrodshop.com/files/117930929.jpg" alt="Ray's Radiator Clinic restoration work" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="rd-fallimg" style="display:none"><span>In the shop · Sterling Heights, MI</span></div>
+        <span class="tag">Family owned since 1982</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="rd-sec dark rd-contact" id="contact" style="background:#101115">
+  <div class="wrap">
+    <div class="rd-head">
+      <p class="kick" style="color:#e8892b"><span class="slash"></span>Get in touch</p>
+      <h2>Come see the clinic</h2>
+    </div>
+    <div class="grid">
+      <div class="rd-cinfo">
+        <div class="rd-cblock">
+          <p class="lab">Phone</p>
+          <p class="val big"><a href="tel:15867595010">(586) 759-5010</a></p>
+        </div>
+        <div class="rd-cblock">
+          <p class="lab">Email</p>
+          <p class="val"><a href="mailto:raysradiator@hotmail.com">raysradiator@hotmail.com</a></p>
+        </div>
+        <div class="rd-cblock">
+          <p class="lab">Shop</p>
+          <p class="val">6550 Cobb Drive<br>Sterling Heights, MI 48312</p>
+        </div>
+        <div class="rd-cblock">
+          <p class="lab">Hours</p>
+          <p class="val">Monday – Friday<br>8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+      <div class="rd-mapcard">
+        <h3>Ray's Radiator Clinic, Inc.</h3>
+        <p>Stop in with your project, or call ahead and we'll talk through your build before you make the drive.</p>
+        <a class="rd-btn" href="https://maps.google.com/?q=6550+Cobb+Drive+Sterling+Heights+MI+48312" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="rd-foot">
+  <div class="wrap">
+    <span class="brand">Ray's <b>Radiator</b> Clinic, Inc.</span>
+    <small>6550 Cobb Drive, Sterling Heights, MI 48312 · (586) 759-5010 · Est. 1982</small>
+  </div>
+</footer>
+
+</div></div>
+<p class="cmp-note">A concept only — a starting point we'd tailor with you. Photos and content are pulled from your current site.</p>
+</div>
+</div>
+<footer class="legal">This design concept is the exclusive property of DariMoa. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability. © DariMoa. All rights reserved. · This is a proposed redesign concept and is not the business's live website.</footer>
+</body>
+</html>
