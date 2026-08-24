@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Countertop Factory — Custom Granite, Marble &amp; Quartz | Raleigh, NC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2b2f36;
+  --slate-deep:#23262b;
+  --marble:#f3f1ec;
+  --marble-2:#eae7df;
+  --vein:#c9c6c0;
+  --brass:#9a7b4f;
+  --brass-2:#b08f5f;
+  --ink:#1c1f24;
+  --paper:#ffffff;
+  --muted:#6a6d73;
+  --hair:rgba(43,47,54,.14);
+  --hair-light:rgba(243,241,236,.16);
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --maxw:1240px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--body);
+  color:var(--ink);
+  background:var(--marble);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+#redesign img{max-width:100%;display:block}
+#redesign a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.eyebrow{
+  font-family:var(--display);
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--brass);
+  margin:0 0 14px;
+  display:flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--brass);display:inline-block;flex:0 0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.01em;margin:0}
+p{margin:0 0 1em}
+
+/* ---------- HEADER ---------- */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(35,38,43,.94);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--hair-light);
+}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--marble)}
+.brand-mark{
+  width:34px;height:34px;flex:0 0 auto;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;
+  border:1px solid var(--brass);padding:3px;border-radius:4px;
+}
+.brand-mark span{background:var(--brass);opacity:.85;border-radius:1px}
+.brand-mark span:nth-child(2){opacity:.45}
+.brand-mark span:nth-child(3){opacity:.6}
+.brand-name{font-family:var(--display);font-weight:600;font-size:.98rem;letter-spacing:.01em;line-height:1.1}
+.brand-name small{display:block;font-family:var(--body);font-weight:400;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--vein);margin-top:2px}
+.head-cta{display:flex;align-items:center;gap:18px}
+.head-phone{display:none;color:var(--marble);font-family:var(--display);font-weight:500;font-size:.95rem;letter-spacing:.01em}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--display);font-weight:600;font-size:.9rem;letter-spacing:.01em;
+  padding:12px 20px;border-radius:2px;border:1px solid transparent;
+  cursor:pointer;transition:transform .15s ease,background .2s ease,color .2s ease;
+  white-space:nowrap;
+}
+.btn-brass{background:var(--brass);color:#fff}
+.btn-brass:hover{background:var(--brass-2);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--marble);border-color:var(--hair-light)}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass-2)}
+.btn-dark{background:var(--slate);color:var(--marble)}
+.btn-dark:hover{background:var(--slate-deep);transform:translateY(-1px)}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--slate-deep);color:var(--marble);position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,var(--hair-light) 1px,transparent 1px),
+    linear-gradient(0deg,var(--hair-light) 1px,transparent 1px);
+  background-size:64px 64px;
+  opacity:.35;pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1;padding-top:54px;padding-bottom:54px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px}
+.hero-copy h1{font-size:clamp(2.35rem,8vw,4.6rem);letter-spacing:-.02em}
+.hero-copy h1 em{font-style:normal;color:var(--brass-2)}
+.hero-lede{font-size:clamp(1.02rem,2.6vw,1.2rem);color:var(--vein);max-width:44ch;margin:22px 0 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:34px;padding-top:26px;border-top:1px solid var(--hair-light)}
+.hero-meta div{display:flex;flex-direction:column}
+.hero-meta b{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--marble)}
+.hero-meta span{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--vein)}
+/* hero mosaic */
+.hero-mosaic{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:110px;gap:10px}
+.hero-mosaic figure{margin:0;overflow:hidden;border-radius:3px;background:var(--slate);position:relative;border:1px solid var(--hair-light)}
+.hero-mosaic img{width:100%;height:100%;object-fit:cover;filter:saturate(1.02)}
+.hero-mosaic .t-tall{grid-row:span 2}
+.hero-mosaic .t-wide{grid-column:span 2}
+
+/* ---------- TRUST STRIP ---------- */
+.trust{background:var(--brass);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:1fr;gap:0}
+.trust-item{padding:22px 4px;display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.18)}
+.trust-item:last-child{border-bottom:0}
+.trust-item .ti-k{font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.2}
+.trust-item .ti-d{font-size:.85rem;color:rgba(255,255,255,.82)}
+.trust-num{font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:1;flex:0 0 auto;min-width:1.6em}
+
+/* ---------- SECTION SHELL ---------- */
+.section{padding:64px 0}
+.section-head{max-width:60ch;margin-bottom:40px}
+.section-head h2{font-size:clamp(1.8rem,5vw,2.9rem)}
+.section-head p{color:var(--muted);font-size:1.03rem;margin-top:16px}
+
+/* ---------- STORY ---------- */
+.story{background:var(--marble)}
+.story-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.story-copy h2{font-size:clamp(1.8rem,5vw,2.7rem)}
+.story-copy p{color:#40444a;font-size:1.03rem}
+.story-copy .lead{font-size:1.15rem;color:var(--ink);font-weight:500}
+.story-sign{font-family:var(--display);color:var(--brass);font-weight:600;font-size:1.05rem;margin-top:6px}
+.story-photo{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--hair);aspect-ratio:4/3;background:var(--marble-2)}
+.story-photo img{width:100%;height:100%;object-fit:cover}
+.story-badge{
+  position:absolute;left:18px;bottom:18px;
+  background:var(--slate-deep);color:var(--marble);
+  font-family:var(--display);font-weight:600;font-size:.82rem;letter-spacing:.04em;
+  padding:12px 16px;border-radius:3px;border-left:3px solid var(--brass);
+}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--slate-deep);color:var(--marble)}
+.services .section-head p{color:var(--vein)}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.svc{
+  background:var(--slate);border:1px solid var(--hair-light);border-radius:4px;
+  padding:26px 24px;position:relative;transition:transform .18s ease,border-color .2s ease;
+  overflow:hidden;
+}
+.svc:hover{transform:translateY(-3px);border-color:var(--brass)}
+.svc-no{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.14em;color:var(--brass-2)}
+.svc h3{font-size:1.22rem;margin:14px 0 10px}
+.svc p{color:var(--vein);font-size:.95rem;margin:0}
+.svc::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;
+  background:linear-gradient(135deg,rgba(154,123,79,.25),transparent 70%);border-radius:50%}
+
+/* ---------- CHIP WALL (signature 1) ---------- */
+.chips-sec{background:var(--marble)}
+.chip-groups{display:grid;grid-template-columns:1fr;gap:30px}
+.chip-block h3{font-family:var(--display);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:16px}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px}
+.chip{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--display);font-weight:500;font-size:.92rem;
+  padding:10px 15px;border-radius:2px;
+  background:var(--paper);border:1px solid var(--hair);color:var(--ink);
+  transition:border-color .18s ease,transform .15s ease;
+}
+.chip:hover{border-color:var(--brass);transform:translateY(-2px)}
+.chip .dot{width:12px;height:12px;border-radius:2px;flex:0 0 auto;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.chip.brand{background:var(--slate-deep);color:var(--marble);border-color:transparent}
+.chip.brand:hover{border-color:var(--brass-2)}
+
+/* ---------- GALLERY MOSAIC (signature 2) ---------- */
+.gallery{background:var(--slate-deep);color:var(--marble)}
+.gallery .section-head p{color:var(--vein)}
+.mosaic{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;gap:12px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;border-radius:4px;background:var(--slate);border:1px solid var(--hair-light)}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.mosaic figure:hover img{transform:scale(1.05)}
+.mosaic figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:26px 14px 12px;
+  font-family:var(--display);font-weight:500;font-size:.82rem;letter-spacing:.02em;
+  color:#fff;
+  background:linear-gradient(0deg,rgba(20,22,25,.82),transparent);
+  opacity:0;transform:translateY(6px);transition:opacity .25s ease,transform .25s ease;
+}
+.mosaic figure:hover figcaption{opacity:1;transform:none}
+.m-tall{grid-row:span 2}
+.m-wide{grid-column:span 2}
+
+/* ---------- TESTIMONIALS ---------- */
+.testi{background:var(--marble)}
+.testi-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.quote{
+  background:var(--paper);border:1px solid var(--hair);border-radius:4px;
+  padding:28px 24px;position:relative;border-top:3px solid var(--brass);
+}
+.quote .mark{font-family:var(--display);font-size:2.6rem;line-height:.6;color:var(--vein);height:.5em}
+.quote p{font-size:1.05rem;color:var(--ink);margin:14px 0 18px}
+.quote cite{font-style:normal;font-family:var(--display);font-weight:600;color:var(--brass);font-size:.9rem;letter-spacing:.03em}
+
+/* ---------- CTA / CONTACT ---------- */
+.cta{background:var(--slate);color:var(--marble);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--hair-light) 1px,transparent 1px),linear-gradient(0deg,var(--hair-light) 1px,transparent 1px);
+  background-size:56px 56px;opacity:.3}
+.cta .wrap{position:relative;z-index:1;padding-top:60px;padding-bottom:60px}
+.cta-grid{display:grid;grid-template-columns:1fr;gap:40px}
+.cta h2{font-size:clamp(2rem,6vw,3.2rem);letter-spacing:-.015em}
+.cta h2 em{font-style:normal;color:var(--brass-2)}
+.cta-lede{color:var(--vein);font-size:1.08rem;max-width:42ch;margin:18px 0 28px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px}
+.contact-card{
+  background:var(--slate-deep);border:1px solid var(--hair-light);border-radius:5px;
+  padding:28px 26px;
+}
+.contact-card h3{font-family:var(--display);font-size:1.1rem;margin-bottom:20px;color:var(--marble)}
+.cc-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--hair-light);align-items:flex-start}
+.cc-row:last-child{border-bottom:0;padding-bottom:0}
+.cc-row:first-of-type{padding-top:0}
+.cc-k{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-2);min-width:76px;flex:0 0 auto;padding-top:3px}
+.cc-v{font-size:.98rem;color:var(--marble)}
+.cc-v a{color:var(--marble)}
+.cc-v a:hover{color:var(--brass-2)}
+.cc-v small{display:block;color:var(--vein);font-size:.82rem;margin-top:2px}
+
+/* ---------- FOOTER ---------- */
+.foot{background:var(--slate-deep);color:var(--vein);border-top:1px solid var(--hair-light)}
+.foot .wrap{padding:30px 20px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.foot .brand-name{color:var(--marble)}
+.foot small{font-size:.8rem;letter-spacing:.02em}
+
+/* ---------- RESPONSIVE ---------- */
+@media(min-width:560px){
+  .hero-mosaic{grid-auto-rows:130px}
+  .trust .wrap{grid-template-columns:repeat(2,1fr);gap:0 40px}
+  .trust-item{border-bottom:1px solid rgba(255,255,255,.18)}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:repeat(3,1fr)}
+  .mosaic{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:900px){
+  .wrap{padding:0 32px}
+  .head-phone{display:inline}
+  .section{padding:88px 0}
+  .hero .wrap{padding-top:76px;padding-bottom:76px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hero-mosaic{grid-auto-rows:150px;gap:12px}
+  .trust .wrap{grid-template-columns:repeat(4,1fr);gap:0}
+  .trust-item{border-bottom:0;border-right:1px solid rgba(255,255,255,.18);padding:26px 22px 26px 0}
+  .trust-item:last-child{border-right:0}
+  .story-grid{grid-template-columns:1fr 1fr;gap:54px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .chip-groups{grid-template-columns:1fr}
+  .mosaic{grid-auto-rows:210px}
+  .cta-grid{grid-template-columns:1.15fr .85fr;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+
+<style id="dm-wrap-css">
+:root{--dm-navy:#1f2b52;--dm-amber:#f0a021;}
+html{overflow-x:hidden;} #redesign{overflow-x:clip;} body{overflow-x:hidden;}
+.dm-bar{background:#1f2b52;color:#fff;font:600 13px/1.4 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;}
+.dm-bar b{color:#f0a021;font-weight:800;}
+.dm-compare{background:#f4f2ee;color:#1f2b52;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:clamp(28px,5vw,56px) clamp(16px,4vw,40px);border-bottom:1px solid #e2ddd3;}
+.dm-compare .dm-inner{max-width:1140px;margin:0 auto;}
+.dm-kicker{font:800 12px/1 inherit;letter-spacing:.18em;text-transform:uppercase;color:#f0a021;margin:0 0 10px;}
+.dm-compare h2{font:700 clamp(22px,3.4vw,34px)/1.15 Georgia,'Times New Roman',serif;margin:0 0 8px;color:#1f2b52;}
+.dm-compare p.dm-sub{font:400 15px/1.6 inherit;color:#4a5164;margin:0 0 26px;max-width:660px;}
+.dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,26px);align-items:start;}
+@media(max-width:760px){.dm-grid{grid-template-columns:1fr;}}
+.dm-card{background:#fff;border:1px solid #e2ddd3;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(31,43,82,.07);}
+.dm-card .dm-head{display:flex;align-items:center;gap:8px;padding:11px 15px;border-bottom:1px solid #eee;font:700 13px/1 inherit;}
+.dm-card.before .dm-head{color:#6b7280;} .dm-card.after .dm-head{color:#1f2b52;}
+.dm-dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.dm-card.before .dm-dot{background:#c2c7d0;} .dm-card.after .dm-dot{background:#f0a021;}
+.dm-tag{margin-left:auto;font:700 10px/1 inherit;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;}
+.dm-card.before .dm-tag{background:#eef0f3;color:#6b7280;} .dm-card.after .dm-tag{background:#1f2b52;color:#fff;}
+.dm-frame{height:clamp(300px,48vh,460px);overflow:auto;background:#eceae5;-webkit-overflow-scrolling:touch;}
+.dm-frame img{display:block;width:100%;height:auto;}
+.dm-after-preview{height:clamp(300px,48vh,460px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 22px;background:linear-gradient(160deg,#1f2b52,#2c3a68 55%,#1a2444);color:#fff;}
+.dm-af-badge{font:800 10px/1 inherit;letter-spacing:.16em;text-transform:uppercase;color:#f0a021;border:1px solid rgba(240,160,33,.5);border-radius:999px;padding:6px 12px;margin-bottom:16px;}
+.dm-af-title{font:700 clamp(18px,2.4vw,24px)/1.25 Georgia,serif;margin:0 0 10px;}
+.dm-af-sub{font:400 14px/1.55 inherit;color:#d4dae8;max-width:320px;margin:0 0 20px;}
+.dm-af-cue{font:700 12.5px/1 inherit;color:#fff;letter-spacing:.02em;}
+.dm-af-cue span{color:#f0a021;}
+.dm-cap{font:400 12.5px/1.5 inherit;color:#6b7280;padding:10px 15px 14px;}
+.dm-note{margin-top:22px;font:600 13px/1.5 inherit;color:#1f2b52;text-align:center;}
+.dm-note span{color:#f0a021;}
+.dm-legal{background:#181a1f;color:#9aa0ac;font:400 12px/1.7 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:22px 18px;}
+.dm-legal b{color:#c9ced8;}
+</style>
+
+</head>
+<body>
+
+<div class="dm-bar">Redesign concept &middot; not the live site &middot; <b>&copy; DariMoa</b></div>
+<section class="dm-compare">
+  <div class="dm-inner">
+    <p class="dm-kicker">Before &amp; After</p>
+    <h2>The Countertop Factory, reimagined</h2>
+    <p class="dm-sub">On the left is your current site as it looks today. On the right &mdash; and in full, live and interactive right below &mdash; is a modern, mobile-first concept we built for you.</p>
+    <div class="dm-grid">
+      <div class="dm-card before">
+        <div class="dm-head"><span class="dm-dot"></span> Your current site <span class="dm-tag">Today</span></div>
+        <div class="dm-frame"><img src="https://image.thum.io/get/width/1200/noia/http://www.thecountertopfactory.com/" alt="Current website of The Countertop Factory" loading="lazy" onerror="this.parentNode.innerHTML='&lt;div style='padding:40px;color:#8a8f99;font:14px sans-serif;text-align:center'&gt;Live preview of your current site&lt;br&gt;http://www.thecountertopfactory.com/&lt;/div&gt;'"></div>
+        <div class="dm-cap">A live screenshot of your website as it stands now.</div>
+      </div>
+      <div class="dm-card after">
+        <div class="dm-head"><span class="dm-dot"></span> The new design <span class="dm-tag">Concept</span></div>
+        <div class="dm-after-preview">
+          <div class="dm-af-badge">DariMoa concept</div>
+          <div class="dm-af-title">A modern, mobile-first redesign</div>
+          <div class="dm-af-sub">Your real content, photos and story &mdash; built to load fast and look right on every phone.</div>
+          <div class="dm-af-cue"><span>&darr;</span> Scroll down for the full, live version</div>
+        </div>
+        <div class="dm-cap">The complete, interactive redesign is right below.</div>
+      </div>
+    </div>
+    <p class="dm-note">The full, working redesign is below <span>&darr;</span></p>
+  </div>
+</section>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#redesign" aria-label="The Countertop Factory home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      <span class="brand-name">The Countertop Factory<small>Raleigh · North Carolina</small></span>
+    </a>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:19195109001">919-510-9001</a>
+      <a class="btn btn-brass" href="#estimate">Free In-Home Estimate</a>
+    </div>
+  </div>
+</header>
+
+<main id="redesign">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">One-Stop Shop · Marble &amp; Granite</p>
+          <h1>Custom stone, <em>fabricated on-site</em> in Raleigh.</h1>
+          <p class="hero-lede">Granite, marble and quartz countertops measured, cut, sealed and installed by one of the Triangle's largest certified fabricators. With over 20 years experience, the craftsman you can trust.</p>
+          <div class="hero-actions">
+            <a class="btn btn-brass" href="#estimate">Book a Free In-Home Measure</a>
+            <a class="btn btn-ghost" href="#gallery">View Kitchen Projects</a>
+          </div>
+          <div class="hero-meta">
+            <div><b>20+</b><span>Years Experience</span></div>
+            <div><b>Certified</b><span>Fabricator &amp; Installer</span></div>
+            <div><b>On-Site</b><span>Custom Fabrication</span></div>
+          </div>
+        </div>
+        <div class="hero-mosaic" aria-hidden="false">
+          <figure class="t-tall"><img loading="lazy" alt="Custom granite kitchen island with warm wood cabinetry" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/islandoverallwarm.jpg&w=700&h=900&fit=cover" onerror="this.style.display='none'"></figure>
+          <figure><img loading="lazy" alt="Finished stone countertop range wall and backsplash" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/ovenwallwarm500.jpg&w=700&h=460&fit=cover" onerror="this.style.display='none'"></figure>
+          <figure><img loading="lazy" alt="Undermount sink corner detail in stone countertop" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/sinkcorner.jpg&w=700&h=460&fit=cover" onerror="this.style.display='none'"></figure>
+          <figure class="t-wide"><img loading="lazy" alt="Overall finished custom kitchen with stone countertops" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/overall.jpg&w=1000&h=520&fit=cover" onerror="this.style.display='none'"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust" aria-label="Why choose us">
+    <div class="wrap">
+      <div class="trust-item"><span class="trust-num">20+</span><span><span class="ti-k">Years Experience</span><br><span class="ti-d">Managing countertop businesses</span></span></div>
+      <div class="trust-item"><span class="trust-num">◆</span><span><span class="ti-k">Certified Fabricator</span><br><span class="ti-d">Among Raleigh's largest installers</span></span></div>
+      <div class="trust-item"><span class="trust-num">▦</span><span><span class="ti-k">One-Stop Shop</span><br><span class="ti-d">Measure, fabricate, seal &amp; install</span></span></div>
+      <div class="trust-item"><span class="trust-num">✦</span><span><span class="ti-k">Residential &amp; Commercial</span><br><span class="ti-d">Jobs of any size across the Triangle</span></span></div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section story" aria-label="Our story">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="story-copy">
+          <p class="eyebrow">The Countertop Factory Advantage</p>
+          <h2>Fabricated on-site, right here in Raleigh.</h2>
+          <p class="lead">A one-stop shop for marble &amp; granite countertops, built on over 20 years of experience managing countertop businesses.</p>
+          <p>We custom-manufacture countertops on-site for residential and commercial jobs of any size across central North Carolina. As one of the largest certified fabricators and installers in Raleigh, we handle every step in-house — from your in-home measure and design consultation to fabrication, factory sealing, and professional installation.</p>
+          <p>Granite, marble, quartz, soapstone, solid surface and more — precisely cut, finished and set by a team that takes pride in the details.</p>
+          <p class="story-sign">With over 20 years experience, the craftsman you can trust.</p>
+        </div>
+        <div class="story-photo">
+          <img loading="lazy" alt="Custom fabricated stone kitchen peninsula end detail" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/peninsulaend.jpg&w=900&h=680&fit=cover" onerror="this.style.display='none'">
+          <span class="story-badge">Serving Raleigh · Cary · Durham · The Triangle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" aria-label="Services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What We Do</p>
+        <h2>Everything under one roof.</h2>
+        <p>From the first measurement to the final seal, every stage of your countertop is handled by our own certified team.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc"><div class="svc-no">01</div><h3>In-Home Measure &amp; Consultation</h3><p>Precise on-site measuring and design consultation before fabrication begins.</p></article>
+        <article class="svc"><div class="svc-no">02</div><h3>Custom Countertop Fabrication</h3><p>On-site custom fabrication of granite, marble, quartz, solid surface (Corian), laminate, ceramic tile and soapstone for kitchens, baths and commercial spaces.</p></article>
+        <article class="svc"><div class="svc-no">03</div><h3>Professional Installation</h3><p>Full installation for residential and commercial projects of any size.</p></article>
+        <article class="svc"><div class="svc-no">04</div><h3>Factory Sealing of Granite</h3><p>Granite sealed at the factory as part of the fabrication process for lasting protection.</p></article>
+        <article class="svc"><div class="svc-no">05</div><h3>Green / LEED Materials</h3><p>LEED-certified green surfaces, including recycled-glass options like Vetrazzo and IceStone.</p></article>
+        <article class="svc"><div class="svc-no">06</div><h3>The Countertop Factory Advantage</h3><p>One certified team, one point of contact — measure, fabricate, seal and install without the runaround.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIP WALL (SIGNATURE 1) -->
+  <section class="section chips-sec" aria-label="Materials and brands">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Materials &amp; Brands</p>
+        <h2>A full slab library — surfaces &amp; the brands behind them.</h2>
+        <p>An authorized fabricator of the major stone and quartz names, with natural stone and green materials all under one roof.</p>
+      </div>
+      <div class="chip-groups">
+        <div class="chip-block">
+          <h3>Surfaces</h3>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#8a8f96"></span>Granite</span>
+            <span class="chip"><span class="dot" style="background:#e7e4dd"></span>Marble</span>
+            <span class="chip"><span class="dot" style="background:#d7d3cb"></span>Quartz</span>
+            <span class="chip"><span class="dot" style="background:#3a3d42"></span>Soapstone</span>
+            <span class="chip"><span class="dot" style="background:#7fae8e"></span>Recycled Glass</span>
+            <span class="chip"><span class="dot" style="background:#c9c6c0"></span>Solid Surface</span>
+            <span class="chip"><span class="dot" style="background:#b0b4b9"></span>Ceramic Tile</span>
+          </div>
+        </div>
+        <div class="chip-block">
+          <h3>Authorized Brands</h3>
+          <div class="chip-row">
+            <span class="chip brand">Corian <span style="color:var(--vein)">· DuPont</span></span>
+            <span class="chip brand">Zodiaq <span style="color:var(--vein)">· DuPont</span></span>
+            <span class="chip brand">Silestone</span>
+            <span class="chip brand">Cambria</span>
+            <span class="chip brand">CaesarStone</span>
+            <span class="chip brand">Hanstone</span>
+            <span class="chip brand">Sensa Granite</span>
+            <span class="chip brand">Compac</span>
+          </div>
+        </div>
+        <div class="chip-block">
+          <h3>Green / LEED Surfaces</h3>
+          <div class="chip-row">
+            <span class="chip"><span class="dot" style="background:#6fa3c0"></span>Vetrazzo</span>
+            <span class="chip"><span class="dot" style="background:#8fbf9c"></span>IceStone</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY MOSAIC (SIGNATURE 2) -->
+  <section class="section gallery" id="gallery" aria-label="Kitchen project gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Recent Work</p>
+        <h2>Kitchen project mosaic.</h2>
+        <p>Real countertops we've fabricated and installed across the Triangle — cut, finished and set on-site.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="m-tall"><img loading="lazy" alt="Custom granite kitchen island with warm wood cabinetry" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/islandoverallwarm.jpg&w=800&h=1000&fit=cover" onerror="this.style.display='none'"><figcaption>Custom island · warm wood kitchen</figcaption></figure>
+        <figure class="m-wide"><img loading="lazy" alt="Finished kitchen oven-bank range wall run in stone" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/ovenbankcomplete.jpg&w=1000&h=620&fit=cover" onerror="this.style.display='none'"><figcaption>Oven-bank &amp; range wall run</figcaption></figure>
+        <figure><img loading="lazy" alt="Kitchen peninsula end detail in fabricated stone" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/peninsulaend.jpg&w=800&h=620&fit=cover" onerror="this.style.display='none'"><figcaption>Peninsula end detail</figcaption></figure>
+        <figure><img loading="lazy" alt="Undermount sink corner detail in stone countertop" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/sinkcorner.jpg&w=800&h=620&fit=cover" onerror="this.style.display='none'"><figcaption>Undermount sink corner</figcaption></figure>
+        <figure class="m-wide"><img loading="lazy" alt="Overall finished custom kitchen with stone countertops" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/overall.jpg&w=1000&h=620&fit=cover" onerror="this.style.display='none'"><figcaption>Overall finished kitchen</figcaption></figure>
+        <figure><img loading="lazy" alt="Range and oven wall with tile backsplash" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/ovenwallwarm500.jpg&w=800&h=620&fit=cover" onerror="this.style.display='none'"><figcaption>Range wall &amp; backsplash</figcaption></figure>
+        <figure><img loading="lazy" alt="Countertop installation close-up detail" src="https://images.weserv.nl/?url=www.thecountertopfactory.com/data1/images/img_4183.jpg&w=800&h=620&fit=cover" onerror="this.style.display='none'"><figcaption>Install close-up</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testi" aria-label="Testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">In Their Words</p>
+        <h2>Trusted by Triangle homeowners.</h2>
+      </div>
+      <div class="testi-grid">
+        <blockquote class="quote"><div class="mark">&ldquo;</div><p>The entire experience was exceptional… impressed with the professionalism, expertise and the pride.</p><cite>— Jeannie, Cary, NC</cite></blockquote>
+        <blockquote class="quote"><div class="mark">&ldquo;</div><p>We are so very pleased with the job and every detail involved through the entire process.</p><cite>— Edna, Raleigh, NC</cite></blockquote>
+        <blockquote class="quote"><div class="mark">&ldquo;</div><p>These two gentlemen know service above and beyond their years.</p><cite>— Marianne, Raleigh, NC</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="section cta" id="estimate" aria-label="Get a free estimate">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div>
+          <p class="eyebrow">Free In-Home Estimate</p>
+          <h2>Let's measure your <em>space.</em></h2>
+          <p class="cta-lede">Book a free in-home measure and design consultation. We'll help you choose the right surface and handle fabrication, sealing and installation from start to finish.</p>
+          <div class="cta-actions">
+            <a class="btn btn-brass" href="tel:19195109001">Call 919-510-9001</a>
+            <a class="btn btn-ghost" href="mailto:info@thecountertopfactory.com">Email Us</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>Visit the Factory</h3>
+          <div class="cc-row"><span class="cc-k">Address</span><span class="cc-v">6009 Triangle Drive<br>Raleigh, NC 27617<small>Serving Raleigh, Cary, Durham &amp; the Triangle</small></span></div>
+          <div class="cc-row"><span class="cc-k">Phone</span><span class="cc-v"><a href="tel:19195109001">919-510-9001</a><small>Fax 919-510-9855</small></span></div>
+          <div class="cc-row"><span class="cc-k">Email</span><span class="cc-v"><a href="mailto:info@thecountertopfactory.com">info@thecountertopfactory.com</a></span></div>
+          <div class="cc-row"><span class="cc-k">Hours</span><span class="cc-v">Monday–Friday · 7:00am–5:00pm<small>Closed weekends</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="#redesign" aria-label="The Countertop Factory">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span class="brand-name">The Countertop Factory, Inc.<small>Custom granite · marble · quartz</small></span>
+      </a>
+      <small>6009 Triangle Drive, Raleigh, NC 27617 · 919-510-9001 · One-stop shop for marble &amp; granite countertops</small>
+    </div>
+  </footer>
+
+</main>
+
+<footer class="dm-legal">
+  This design concept is the exclusive property of <b>DariMoa</b>. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability.<br>
+  &copy; DariMoa. All rights reserved. &middot; Englewood, New Jersey &middot; Dari@darimoa.com &middot; darimoa.com
+</footer>
+
+</body>
+</html>

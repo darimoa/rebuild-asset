@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Elegant Touch Bridal &amp; Tuxedo — For the Bride &amp; the Groom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blush:#f3e3df;
+    --blush-2:#f7ece8;
+    --ivory:#faf6f2;
+    --gold:#c8a96a;
+    --gold-deep:#b8934f;
+    --ink:#2c2726;
+    --ink-soft:#5a504c;
+    --line:rgba(184,147,79,.45);
+    --line-soft:rgba(184,147,79,.22);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Jost",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.7;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  #redesign{overflow-x:hidden}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+  .serif-italic{font-family:"Cormorant",Georgia,serif;font-style:italic;font-weight:400}
+  .eyebrow{
+    font-family:"Jost",sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:.42em;
+    font-size:clamp(.62rem,1.6vw,.72rem);
+    color:var(--gold-deep);
+  }
+  a{color:inherit}
+
+  /* ---- gold divider flourish ---- */
+  .flourish{display:flex;align-items:center;justify-content:center;gap:1rem;color:var(--gold)}
+  .flourish .rule{height:1px;width:min(120px,22vw);background:linear-gradient(90deg,transparent,var(--gold))}
+  .flourish .rule.r{background:linear-gradient(90deg,var(--gold),transparent)}
+  .flourish svg{display:block;flex:none}
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(120% 90% at 50% 0%, var(--blush-2) 0%, var(--ivory) 62%),
+      var(--ivory);
+    padding:clamp(2.4rem,7vw,4rem) 0 clamp(2.8rem,8vw,4.5rem);
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero-frame{
+    border:1px solid var(--line-soft);
+    border-radius:2px;
+    padding:clamp(2rem,7vw,4.5rem) clamp(1rem,5vw,3rem);
+    position:relative;
+  }
+  .hero-frame::before,.hero-frame::after{
+    content:"";position:absolute;width:14px;height:14px;
+  }
+  .hero-frame::before{top:-1px;left:-1px;border-top:1.5px solid var(--gold);border-left:1.5px solid var(--gold)}
+  .hero-frame::after{bottom:-1px;right:-1px;border-bottom:1.5px solid var(--gold);border-right:1.5px solid var(--gold)}
+  .brand-mark{
+    font-family:"Cormorant",serif;font-style:italic;
+    font-size:clamp(1rem,3vw,1.3rem);
+    letter-spacing:.05em;color:var(--gold-deep);
+    margin-bottom:1.4rem;
+  }
+  .hero h1{
+    font-size:clamp(2.9rem,12vw,7.5rem);
+    letter-spacing:-.02em;
+    margin:.2rem 0;
+  }
+  .hero h1 .amp{
+    font-family:"Cormorant",serif;font-style:italic;font-weight:400;
+    color:var(--gold-deep);
+  }
+  .hero h1 .line-groom{display:block}
+  .hero-sub{
+    font-family:"Cormorant",serif;font-style:italic;
+    font-size:clamp(1.15rem,3.6vw,1.9rem);
+    color:var(--ink-soft);
+    margin:1.5rem auto 0;
+    max-width:34ch;
+    line-height:1.35;
+  }
+  .hero-tag{
+    margin-top:1.9rem;
+    font-size:clamp(.72rem,2vw,.85rem);
+    letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:2.2rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-family:"Jost",sans-serif;font-weight:400;
+    text-transform:uppercase;letter-spacing:.18em;
+    font-size:.78rem;
+    padding:1rem 1.9rem;
+    text-decoration:none;
+    border:1px solid var(--gold);
+    transition:background .25s,color .25s;
+  }
+  .btn-solid{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+  .btn-solid:hover{background:var(--gold-deep);border-color:var(--gold-deep)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--blush)}
+
+  /* ---------------- TRUST STRIP ---------------- */
+  .trust{background:var(--ink);color:var(--ivory);padding:clamp(2.4rem,7vw,3.6rem) 0}
+  .trust .flourish{color:var(--gold);margin-bottom:1.8rem}
+  .trust .flourish .rule{background:linear-gradient(90deg,transparent,var(--gold))}
+  .trust .flourish .rule.r{background:linear-gradient(90deg,var(--gold),transparent)}
+  .trust-grid{
+    display:grid;grid-template-columns:1fr;gap:0;
+    text-align:center;
+  }
+  .badge{padding:1.5rem .5rem;position:relative}
+  .badge + .badge{border-top:1px solid rgba(200,169,106,.28)}
+  .badge .num{
+    font-family:"Playfair Display",serif;font-weight:500;
+    font-size:clamp(2.1rem,7vw,2.9rem);
+    color:var(--gold);line-height:1;
+  }
+  .badge .lbl{
+    display:block;margin-top:.65rem;
+    text-transform:uppercase;letter-spacing:.24em;
+    font-size:.68rem;color:#e8ddd4;
+  }
+  .badge .sub{display:block;font-family:"Cormorant",serif;font-style:italic;font-size:1.05rem;color:#cbb9a6;margin-top:.2rem;letter-spacing:.01em}
+
+  /* ---------------- STORY ---------------- */
+  .story{padding:clamp(3.5rem,9vw,6rem) 0;text-align:center;background:var(--ivory)}
+  .story .eyebrow{margin-bottom:1.3rem;display:block}
+  .story h2{
+    font-size:clamp(2rem,6.5vw,3.6rem);
+    max-width:16ch;margin:0 auto;
+  }
+  .story h2 em{font-family:"Cormorant",serif;font-style:italic;color:var(--gold-deep);font-weight:400}
+  .story p{
+    max-width:56ch;margin:1.8rem auto 0;
+    font-size:clamp(1rem,2.4vw,1.12rem);
+    color:var(--ink-soft);
+  }
+  .story .flourish{margin-top:2.4rem}
+
+  /* ---------------- SIGNATURE DUALITY ---------------- */
+  .duality{padding:clamp(3rem,8vw,5rem) 0;background:var(--ivory)}
+  .duality-head{text-align:center;margin-bottom:clamp(2rem,6vw,3.2rem)}
+  .duality-head .eyebrow{display:block;margin-bottom:1rem}
+  .duality-head h2{font-size:clamp(2.1rem,7vw,3.8rem)}
+  .duality-head h2 .amp{font-family:"Cormorant",serif;font-style:italic;color:var(--gold-deep);font-weight:400}
+  .split{
+    display:grid;grid-template-columns:1fr;gap:0;
+    border:1px solid var(--line);
+    background:var(--ivory);
+  }
+  .side{padding:clamp(2rem,6vw,3.2rem) clamp(1.5rem,5vw,3rem)}
+  .side.bride{background:linear-gradient(180deg,var(--blush-2),var(--ivory))}
+  .side.groom{background:var(--ivory)}
+  .side + .side{border-top:1px solid var(--line)}
+  .side .side-label{font-family:"Cormorant",serif;font-style:italic;font-size:1.05rem;color:var(--gold-deep);letter-spacing:.03em}
+  .side h3{font-size:clamp(1.9rem,6vw,2.7rem);margin:.35rem 0 1.3rem}
+  .side ul{list-style:none}
+  .side li{
+    padding:.7rem 0;border-bottom:1px solid var(--line-soft);
+    display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    font-size:clamp(.95rem,2.4vw,1.05rem);
+  }
+  .side li:last-child{border-bottom:0}
+  .side li .name{font-weight:400;color:var(--ink)}
+  .side li .meta{font-family:"Cormorant",serif;font-style:italic;color:var(--ink-soft);font-size:.98rem;text-align:right;flex:none}
+  .free-package{
+    margin-top:1.6rem;
+    border:1px solid var(--gold);
+    background:rgba(200,169,106,.1);
+    padding:1.1rem 1.3rem;
+    text-align:center;
+  }
+  .free-package .fp-eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.6rem;color:var(--gold-deep)}
+  .free-package .fp-text{font-family:"Playfair Display",serif;font-style:italic;font-weight:500;font-size:clamp(1.05rem,3.2vw,1.35rem);margin-top:.35rem;line-height:1.25}
+
+  /* ---------------- SERVICES ---------------- */
+  .services{padding:clamp(3.5rem,9vw,6rem) 0;background:var(--blush-2)}
+  .services-head{text-align:center;margin-bottom:clamp(2.2rem,6vw,3.4rem)}
+  .services-head .eyebrow{display:block;margin-bottom:1rem}
+  .services-head h2{font-size:clamp(2rem,7vw,3.6rem)}
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+  .svc{
+    background:var(--ivory);
+    padding:clamp(1.6rem,5vw,2.2rem);
+  }
+  .svc .idx{font-family:"Cormorant",serif;font-style:italic;color:var(--gold);font-size:1.1rem}
+  .svc h3{font-size:clamp(1.3rem,4vw,1.6rem);margin:.4rem 0 .5rem}
+  .svc p{color:var(--ink-soft);font-size:.98rem}
+
+  /* ---------------- VISIT / CTA ---------------- */
+  .visit{padding:clamp(3.5rem,9vw,6rem) 0;background:var(--ink);color:var(--ivory)}
+  .visit .flourish{color:var(--gold);margin-bottom:1.8rem}
+  .visit .flourish .rule{background:linear-gradient(90deg,transparent,var(--gold))}
+  .visit .flourish .rule.r{background:linear-gradient(90deg,var(--gold),transparent)}
+  .visit-head{text-align:center;margin-bottom:clamp(2.2rem,6vw,3.2rem)}
+  .visit-head .eyebrow{color:var(--gold);display:block;margin-bottom:1rem}
+  .visit-head h2{font-size:clamp(2.1rem,7vw,3.6rem);color:var(--ivory)}
+  .visit-head h2 em{font-family:"Cormorant",serif;font-style:italic;color:var(--gold);font-weight:400}
+  .visit-head p{max-width:44ch;margin:1.4rem auto 0;color:#d6c9bd;font-family:"Cormorant",serif;font-style:italic;font-size:clamp(1.05rem,3vw,1.35rem)}
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:0;border:1px solid rgba(200,169,106,.3);margin-top:1rem}
+  .vcell{padding:clamp(1.5rem,5vw,2rem);text-align:center}
+  .vcell + .vcell{border-top:1px solid rgba(200,169,106,.3)}
+  .vcell .vlabel{text-transform:uppercase;letter-spacing:.24em;font-size:.62rem;color:var(--gold)}
+  .vcell .vbody{margin-top:.7rem;font-size:1rem;color:#ece2d8;line-height:1.6}
+  .vcell .vbody a{color:#ece2d8;text-decoration:none;border-bottom:1px solid rgba(200,169,106,.5)}
+  .vcell .vbody strong{font-weight:400;color:var(--ivory)}
+  .visit-cta{text-align:center;margin-top:clamp(2.2rem,6vw,3rem)}
+  .visit-cta .btn-solid{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .visit-cta .btn-solid:hover{background:var(--ivory);border-color:var(--ivory)}
+  .visit-cta .note{margin-top:1rem;font-family:"Cormorant",serif;font-style:italic;color:#cbb9a6;font-size:1.05rem}
+
+  .colophon{background:var(--ivory);text-align:center;padding:clamp(2.4rem,6vw,3.4rem) 0}
+  .colophon .brand-mark{margin-bottom:.6rem}
+  .colophon .addr{font-size:.9rem;color:var(--ink-soft);letter-spacing:.02em}
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media(min-width:720px){
+    .trust-grid{grid-template-columns:repeat(3,1fr)}
+    .badge + .badge{border-top:0;border-left:1px solid rgba(200,169,106,.28)}
+    .split{grid-template-columns:1fr 1fr}
+    .side + .side{border-top:0;border-left:1px solid var(--line)}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .visit-grid{grid-template-columns:repeat(3,1fr)}
+    .vcell + .vcell{border-top:0;border-left:1px solid rgba(200,169,106,.3)}
+  }
+  @media(min-width:1000px){
+    .svc-grid{grid-template-columns:repeat(4,1fr)}
+  }
+</style>
+
+<style id="dm-wrap-css">
+:root{--dm-navy:#1f2b52;--dm-amber:#f0a021;}
+html{overflow-x:hidden;} #redesign{overflow-x:clip;} body{overflow-x:hidden;}
+.dm-bar{background:#1f2b52;color:#fff;font:600 13px/1.4 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;}
+.dm-bar b{color:#f0a021;font-weight:800;}
+.dm-compare{background:#f4f2ee;color:#1f2b52;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:clamp(28px,5vw,56px) clamp(16px,4vw,40px);border-bottom:1px solid #e2ddd3;}
+.dm-compare .dm-inner{max-width:1140px;margin:0 auto;}
+.dm-kicker{font:800 12px/1 inherit;letter-spacing:.18em;text-transform:uppercase;color:#f0a021;margin:0 0 10px;}
+.dm-compare h2{font:700 clamp(22px,3.4vw,34px)/1.15 Georgia,'Times New Roman',serif;margin:0 0 8px;color:#1f2b52;}
+.dm-compare p.dm-sub{font:400 15px/1.6 inherit;color:#4a5164;margin:0 0 26px;max-width:660px;}
+.dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,26px);align-items:start;}
+@media(max-width:760px){.dm-grid{grid-template-columns:1fr;}}
+.dm-card{background:#fff;border:1px solid #e2ddd3;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(31,43,82,.07);}
+.dm-card .dm-head{display:flex;align-items:center;gap:8px;padding:11px 15px;border-bottom:1px solid #eee;font:700 13px/1 inherit;}
+.dm-card.before .dm-head{color:#6b7280;} .dm-card.after .dm-head{color:#1f2b52;}
+.dm-dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.dm-card.before .dm-dot{background:#c2c7d0;} .dm-card.after .dm-dot{background:#f0a021;}
+.dm-tag{margin-left:auto;font:700 10px/1 inherit;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;}
+.dm-card.before .dm-tag{background:#eef0f3;color:#6b7280;} .dm-card.after .dm-tag{background:#1f2b52;color:#fff;}
+.dm-frame{height:clamp(300px,48vh,460px);overflow:auto;background:#eceae5;-webkit-overflow-scrolling:touch;}
+.dm-frame img{display:block;width:100%;height:auto;}
+.dm-after-preview{height:clamp(300px,48vh,460px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 22px;background:linear-gradient(160deg,#1f2b52,#2c3a68 55%,#1a2444);color:#fff;}
+.dm-af-badge{font:800 10px/1 inherit;letter-spacing:.16em;text-transform:uppercase;color:#f0a021;border:1px solid rgba(240,160,33,.5);border-radius:999px;padding:6px 12px;margin-bottom:16px;}
+.dm-af-title{font:700 clamp(18px,2.4vw,24px)/1.25 Georgia,serif;margin:0 0 10px;}
+.dm-af-sub{font:400 14px/1.55 inherit;color:#d4dae8;max-width:320px;margin:0 0 20px;}
+.dm-af-cue{font:700 12.5px/1 inherit;color:#fff;letter-spacing:.02em;}
+.dm-af-cue span{color:#f0a021;}
+.dm-cap{font:400 12.5px/1.5 inherit;color:#6b7280;padding:10px 15px 14px;}
+.dm-note{margin-top:22px;font:600 13px/1.5 inherit;color:#1f2b52;text-align:center;}
+.dm-note span{color:#f0a021;}
+.dm-legal{background:#181a1f;color:#9aa0ac;font:400 12px/1.7 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:22px 18px;}
+.dm-legal b{color:#c9ced8;}
+</style>
+
+</head>
+<body>
+
+<div class="dm-bar">Redesign concept &middot; not the live site &middot; <b>&copy; DariMoa</b></div>
+<section class="dm-compare">
+  <div class="dm-inner">
+    <p class="dm-kicker">Before &amp; After</p>
+    <h2>Elegant Touch Bridal &amp; Tuxedo, reimagined</h2>
+    <p class="dm-sub">On the left is your current site as it looks today. On the right &mdash; and in full, live and interactive right below &mdash; is a modern, mobile-first concept we built for you.</p>
+    <div class="dm-grid">
+      <div class="dm-card before">
+        <div class="dm-head"><span class="dm-dot"></span> Your current site <span class="dm-tag">Today</span></div>
+        <div class="dm-frame"><img src="https://image.thum.io/get/width/1200/noia/http://www.etbridalandtuxedo.com/" alt="Current website of Elegant Touch Bridal &amp; Tuxedo" loading="lazy" onerror="this.parentNode.innerHTML='&lt;div style='padding:40px;color:#8a8f99;font:14px sans-serif;text-align:center'&gt;Live preview of your current site&lt;br&gt;http://www.etbridalandtuxedo.com/&lt;/div&gt;'"></div>
+        <div class="dm-cap">A live screenshot of your website as it stands now.</div>
+      </div>
+      <div class="dm-card after">
+        <div class="dm-head"><span class="dm-dot"></span> The new design <span class="dm-tag">Concept</span></div>
+        <div class="dm-after-preview">
+          <div class="dm-af-badge">DariMoa concept</div>
+          <div class="dm-af-title">A modern, mobile-first redesign</div>
+          <div class="dm-af-sub">Your real content, photos and story &mdash; built to load fast and look right on every phone.</div>
+          <div class="dm-af-cue"><span>&darr;</span> Scroll down for the full, live version</div>
+        </div>
+        <div class="dm-cap">The complete, interactive redesign is right below.</div>
+      </div>
+    </div>
+    <p class="dm-note">The full, working redesign is below <span>&darr;</span></p>
+  </div>
+</section>
+
+<main id="redesign">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-frame">
+        <div class="brand-mark">Elegant Touch Bridal &amp; Tuxedo</div>
+        <h1>
+          For the Bride
+          <span class="line-groom"><span class="amp">&amp;</span> the Groom</span>
+        </h1>
+        <p class="hero-sub">Baltimore&rsquo;s one-stop destination for the whole wedding party.</p>
+        <p class="hero-tag">The one-stop shop for the Bride and the Groom</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="tel:+14102481100">Book a Bridal Appointment</a>
+          <a class="btn btn-ghost" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="flourish" aria-hidden="true">
+        <span class="rule"></span>
+        <svg width="40" height="14" viewBox="0 0 40 14"><path d="M20 1 L27 7 L20 13 L13 7 Z" fill="none" stroke="currentColor" stroke-width="1"/><line x1="0" y1="7" x2="11" y2="7" stroke="currentColor" stroke-width="1"/><line x1="29" y1="7" x2="40" y2="7" stroke="currentColor" stroke-width="1"/></svg>
+        <span class="rule r"></span>
+      </div>
+      <div class="trust-grid">
+        <div class="badge">
+          <span class="num">25+</span>
+          <span class="lbl">Years in Formalwear</span>
+          <span class="sub">a pioneer since the beginning</span>
+        </div>
+        <div class="badge">
+          <span class="num">2023</span>
+          <span class="lbl">WeddingWire Couples&rsquo; Choice</span>
+          <span class="sub">~136 reviews &amp; counting</span>
+        </div>
+        <div class="badge">
+          <span class="num">The Knot</span>
+          <span class="lbl">Featured in the Magazine</span>
+          <span class="sub">family-owned &amp; trusted</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="story">
+    <div class="wrap">
+      <span class="eyebrow">Our Story</span>
+      <h2>Family-owned formalwear for <em>over 25 years</em></h2>
+      <p>Elegant Touch Bridal and Tuxedo is a family-owned, full-service bridal and tuxedo shop &mdash; a pioneer in the formal wear industry for over 25 years, and the Baltimore Metro Area&rsquo;s premier tuxedo shop. From the first gown fitting to the groom&rsquo;s final tux, we are a one-stop destination for the entire wedding party.</p>
+      <div class="flourish" aria-hidden="true">
+        <span class="rule"></span>
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2 L16 12 L12 22 L8 12 Z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>
+        <span class="rule r"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE DUALITY ============ -->
+  <section class="duality">
+    <div class="wrap">
+      <div class="duality-head">
+        <span class="eyebrow">Our Signature</span>
+        <h2>For the Bride <span class="amp">&middot;</span> For the Groom</h2>
+      </div>
+      <div class="split">
+        <div class="side bride">
+          <span class="side-label">For the Bride</span>
+          <h3>The Gown &amp; Every Detail</h3>
+          <ul>
+            <li><span class="name">Bridal Gowns</span><span class="meta">sales &amp; fittings</span></li>
+            <li><span class="name">Bridesmaids &amp; Mothers</span><span class="meta">of bride &amp; groom</span></li>
+            <li><span class="name">Flower Girl Dresses</span><span class="meta">the little ones</span></li>
+            <li><span class="name">Accessories</span><span class="meta">shoes, veils, tiaras</span></li>
+            <li><span class="name">On-site Alterations</span><span class="meta">a perfect fit</span></li>
+          </ul>
+        </div>
+        <div class="side groom">
+          <span class="side-label">For the Groom</span>
+          <h3>The Tuxedo &amp; the Suit</h3>
+          <ul>
+            <li><span class="name">Tuxedo &amp; Suit Rental</span><span class="meta">same-day available</span></li>
+            <li><span class="name">Premier Tux Shop</span><span class="meta">Baltimore Metro</span></li>
+            <li><span class="name">Prom Tuxedos</span><span class="meta">for the big night</span></li>
+            <li><span class="name">On-site Alterations</span><span class="meta">tailored to you</span></li>
+          </ul>
+          <div class="free-package">
+            <span class="fp-eyebrow">A gift to our brides</span>
+            <p class="fp-text">A free groom tuxedo package for our brides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="services-head">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Full-Service Bridal &amp; Formalwear</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc">
+          <span class="idx">i.</span>
+          <h3>Bridal Gowns</h3>
+          <p>Wedding gown sales and fittings. Bridal appointments recommended.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">ii.</span>
+          <h3>Tuxedo &amp; Suit Rental</h3>
+          <p>Tuxedo rentals with same-day service available &mdash; plus a free groom tuxedo package for our brides.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">iii.</span>
+          <h3>Bridesmaids &amp; Mothers</h3>
+          <p>Bridesmaid dresses and mother-of-the-bride &amp; mother-of-the-groom gowns.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">iv.</span>
+          <h3>Prom &amp; Formal</h3>
+          <p>Prom gowns and prom tuxedos for the season&rsquo;s big nights.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">v.</span>
+          <h3>Flower Girl</h3>
+          <p>Flower girl dresses for the youngest members of the party.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">vi.</span>
+          <h3>Alterations</h3>
+          <p>On-site alterations for a flawless, tailored finish.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">vii.</span>
+          <h3>Accessories</h3>
+          <p>Shoes, veils, tiaras and more to complete the look.</p>
+        </div>
+        <div class="svc">
+          <span class="idx">viii.</span>
+          <h3>One-Stop Shop</h3>
+          <p>Everything for the bride and the groom, under one roof.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT / CTA ============ -->
+  <section class="visit">
+    <div class="wrap">
+      <div class="flourish" aria-hidden="true">
+        <span class="rule"></span>
+        <svg width="40" height="14" viewBox="0 0 40 14"><path d="M20 1 L27 7 L20 13 L13 7 Z" fill="none" stroke="currentColor" stroke-width="1"/><line x1="0" y1="7" x2="11" y2="7" stroke="currentColor" stroke-width="1"/><line x1="29" y1="7" x2="40" y2="7" stroke="currentColor" stroke-width="1"/></svg>
+        <span class="rule r"></span>
+      </div>
+      <div class="visit-head">
+        <span class="eyebrow">Visit Us</span>
+        <h2>Begin with an <em>appointment</em></h2>
+        <p>Bridal appointments recommended. Give us a call and let&rsquo;s find your look.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="vcell">
+          <span class="vlabel">Location</span>
+          <p class="vbody"><strong>Elegant Touch Bridal &amp; Tuxedo</strong><br>8711 Belair Road<br>Nottingham, MD 21236</p>
+        </div>
+        <div class="vcell">
+          <span class="vlabel">Hours</span>
+          <p class="vbody">Wed&ndash;Fri&nbsp;11am&ndash;7pm<br>Sat&nbsp;10am&ndash;6pm<br>Closed Sun, Mon, Tue<br><em style="font-family:Cormorant,serif;font-style:italic;color:#cbb9a6">Hours may vary &mdash; please call.</em></p>
+        </div>
+        <div class="vcell">
+          <span class="vlabel">Contact</span>
+          <p class="vbody"><a href="tel:+14102481100">410-248-1100</a><br>Fax 410-248-1102<br><a href="mailto:eleganttouchbridal8711@gmail.com">eleganttouchbridal8711@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="visit-cta">
+        <a class="btn btn-solid" href="tel:+14102481100">Call to Book Your Appointment</a>
+        <p class="note">Bridal is by appointment &mdash; we can&rsquo;t wait to welcome you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLOPHON ============ -->
+  <section class="colophon">
+    <div class="wrap">
+      <div class="brand-mark">Elegant Touch Bridal &amp; Tuxedo</div>
+      <p class="addr">8711 Belair Road, Nottingham, MD 21236 &nbsp;&middot;&nbsp; 410-248-1100 &nbsp;&middot;&nbsp; Baltimore Metro Area&rsquo;s premier tuxedo shop</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dm-legal">
+  This design concept is the exclusive property of <b>DariMoa</b>. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability.<br>
+  &copy; DariMoa. All rights reserved. &middot; Englewood, New Jersey &middot; Dari@darimoa.com &middot; darimoa.com
+</footer>
+
+</body>
+</html>

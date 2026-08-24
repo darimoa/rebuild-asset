@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Arentine Designs — Custom Drapery Workroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#f6f1e7;
+    --greige:#efe7d9;
+    --plum:#4a3b52;
+    --plum-deep:#3c2f44;
+    --brass:#b08d57;
+    --brass-soft:#c8a875;
+    --charcoal:#33302c;
+    --charcoal-soft:#5b554d;
+    --line:#d9cfbd;
+    --white:#fffdf9;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --maxw:1180px;
+    --stitch:repeating-linear-gradient(90deg,var(--brass) 0 10px,transparent 10px 20px);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;}
+  #redesign{
+    font-family:var(--sans);
+    color:var(--charcoal);
+    background:var(--ivory);
+    line-height:1.65;
+    font-size:clamp(1rem,0.96rem + 0.2vw,1.075rem);
+    font-weight:400;
+    overflow-x:hidden;
+  }
+  #redesign img{max-width:100%;display:block;}
+  #redesign a{color:inherit;}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.15rem,4vw,2.75rem);}
+  .eyebrow{
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.72rem;
+    font-weight:700;
+    color:var(--brass);
+    margin:0 0 .85rem;
+  }
+  .eyebrow.on-dark{color:var(--brass-soft);}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;color:var(--plum);letter-spacing:.005em;}
+  h1{font-size:clamp(2.5rem,1.9rem + 3.4vw,4.25rem);font-weight:500;}
+  h2{font-size:clamp(2rem,1.55rem + 2.1vw,3rem);font-weight:500;}
+  h3{font-size:clamp(1.35rem,1.2rem + .7vw,1.7rem);}
+  p{margin:0 0 1.1rem;}
+  .lead{font-size:clamp(1.08rem,1rem + .35vw,1.25rem);color:var(--charcoal-soft);}
+
+  /* stitch divider */
+  .stitch{height:2px;background:var(--stitch);opacity:.55;border:0;margin:0;}
+  .stitch-wrap{padding:clamp(1.5rem,4vw,2.75rem) 0;}
+  .stitch-wrap .stitch{max-width:var(--maxw);margin:0 auto;}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-family:var(--sans);font-weight:700;font-size:.95rem;letter-spacing:.02em;
+    text-decoration:none;cursor:pointer;border:0;
+    padding:.92rem 1.7rem;border-radius:999px;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  }
+  .btn-primary{background:var(--plum);color:var(--ivory);box-shadow:0 8px 22px -12px rgba(74,59,82,.7);}
+  .btn-primary:hover{background:var(--plum-deep);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--plum);border:1.5px solid var(--brass);}
+  .btn-ghost:hover{background:var(--brass);color:var(--white);}
+  .btn-ghost.on-dark{color:var(--ivory);border-color:var(--brass-soft);}
+  .btn-ghost.on-dark:hover{background:var(--brass);border-color:var(--brass);color:var(--white);}
+
+  /* ---------- HERO (split) ---------- */
+  .hero{padding:clamp(2.25rem,5vw,4rem) 0 clamp(1rem,3vw,2rem);}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.75rem,4vw,3rem);align-items:center;}
+  .hero-copy .signature{
+    font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--brass);
+    margin:0 0 1rem;
+  }
+  .hero-copy p.lead{margin-bottom:1.6rem;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:.4rem;}
+  .hero-meta{
+    margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;
+    font-size:.9rem;color:var(--charcoal-soft);
+  }
+  .hero-meta span{display:inline-flex;align-items:center;gap:.5rem;}
+  .hero-meta .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);flex:none;}
+  .hero-figure{position:relative;}
+  .hero-figure .frame{
+    position:relative;border-radius:14px;overflow:hidden;
+    box-shadow:0 26px 55px -30px rgba(60,47,68,.55);
+    max-width:640px;margin:0 auto;
+    background:var(--greige);
+  }
+  .hero-figure img{width:100%;aspect-ratio:4/3.15;object-fit:cover;}
+  .hero-figure .swatches{
+    position:absolute;left:14px;bottom:14px;display:flex;gap:8px;
+    padding:8px 10px;background:rgba(255,253,249,.92);border-radius:10px;
+    box-shadow:0 8px 20px -12px rgba(0,0,0,.4);
+  }
+  .hero-figure .swatches i{width:22px;height:22px;border-radius:5px;display:block;border:1px solid rgba(0,0,0,.06);}
+  .hero-figure .est{
+    position:absolute;top:14px;right:14px;
+    font-family:var(--serif);font-style:italic;
+    background:var(--plum);color:var(--ivory);
+    padding:.5rem .95rem;border-radius:999px;font-size:.95rem;
+    box-shadow:0 8px 20px -10px rgba(0,0,0,.5);
+  }
+
+  /* ---------- credibility strip ---------- */
+  .cred{background:var(--plum);color:var(--ivory);}
+  .cred-inner{display:grid;grid-template-columns:1fr;gap:1.4rem;padding:clamp(2rem,4vw,2.75rem) 0;text-align:center;}
+  .cred-item .num{font-family:var(--serif);font-size:clamp(2rem,1.5rem + 1.6vw,2.7rem);color:var(--brass-soft);line-height:1;font-weight:500;}
+  .cred-item .lbl{font-size:.85rem;letter-spacing:.06em;color:#e8dfcf;margin-top:.45rem;text-transform:uppercase;font-weight:600;}
+
+  /* ---------- story ---------- */
+  .story-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.75rem,4vw,3.25rem);align-items:center;}
+  .story-figure .frame{
+    border-radius:14px;overflow:hidden;max-width:520px;margin:0 auto;
+    box-shadow:0 22px 48px -28px rgba(60,47,68,.5);
+    border:6px solid var(--white);background:var(--greige);
+  }
+  .story-figure img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+  .story-figure .cap{text-align:center;font-family:var(--serif);font-style:italic;color:var(--charcoal-soft);margin-top:.9rem;font-size:1.05rem;}
+  .pull{
+    font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,1.1rem + .8vw,1.65rem);
+    color:var(--plum);border-left:3px solid var(--brass);padding-left:1.1rem;margin:1.6rem 0;line-height:1.35;
+  }
+
+  /* ---------- services ---------- */
+  .services{background:var(--greige);}
+  .services-head{max-width:640px;margin:0 auto clamp(2rem,4vw,2.75rem);text-align:center;}
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:1rem;}
+  .svc{
+    background:var(--white);border:1px solid var(--line);border-radius:12px;
+    padding:1.4rem 1.4rem 1.5rem;position:relative;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .svc:hover{transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(60,47,68,.45);}
+  .svc .svc-top{display:flex;align-items:center;gap:.8rem;margin-bottom:.55rem;}
+  .svc .ic{flex:none;width:38px;height:38px;border-radius:9px;background:var(--ivory);border:1px solid var(--line);display:grid;place-items:center;color:var(--brass);}
+  .svc .ic svg{width:20px;height:20px;}
+  .svc h3{font-size:1.28rem;line-height:1.15;}
+  .svc p{margin:0;font-size:.96rem;color:var(--charcoal-soft);line-height:1.55;}
+
+  /* ---------- gallery ---------- */
+  .gallery-head{text-align:center;max-width:620px;margin:0 auto clamp(1.75rem,4vw,2.5rem);}
+  .gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem;}
+  .gal{position:relative;border-radius:11px;overflow:hidden;background:var(--greige);box-shadow:0 10px 26px -20px rgba(60,47,68,.5);}
+  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .4s ease;}
+  .gal:hover img{transform:scale(1.05);}
+  .gal .tag{
+    position:absolute;left:10px;bottom:10px;
+    background:rgba(60,47,68,.86);color:var(--ivory);
+    font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;
+    padding:.32rem .7rem;border-radius:999px;
+  }
+
+  /* ---------- testimonials wall + process ---------- */
+  .voices{background:var(--plum);color:var(--ivory);}
+  .voices h2{color:var(--ivory);}
+  .voices .voices-head{text-align:center;max-width:660px;margin:0 auto clamp(2rem,4vw,2.9rem);}
+  .voices .voices-head p{color:#e3d9ca;}
+  .wall{columns:1;column-gap:1rem;}
+  .quote{
+    break-inside:avoid;background:rgba(255,253,249,.055);
+    border:1px solid rgba(200,168,117,.28);border-radius:12px;
+    padding:1.35rem 1.4rem 1.3rem;margin:0 0 1rem;
+  }
+  .quote .mark{font-family:var(--serif);font-size:2.4rem;line-height:0;color:var(--brass-soft);display:block;height:1rem;}
+  .quote p{font-family:var(--serif);font-style:italic;font-size:1.16rem;line-height:1.4;color:#f4ecdd;margin:.4rem 0 .9rem;}
+  .quote .who{font-family:var(--sans);font-style:normal;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--brass-soft);}
+  .quote .who small{display:block;text-transform:none;letter-spacing:0;font-weight:400;color:#cbbfa d;color:#c9bda9;font-size:.78rem;margin-top:.2rem;}
+
+  .process{margin-top:clamp(2.25rem,5vw,3.25rem);}
+  .process-card{
+    background:var(--ivory);color:var(--charcoal);border-radius:16px;
+    padding:clamp(1.6rem,4vw,2.5rem);
+  }
+  .process-card h3{color:var(--plum);text-align:center;margin-bottom:.4rem;}
+  .process-card .sub{text-align:center;color:var(--charcoal-soft);max-width:560px;margin:0 auto 2rem;}
+  .steps{display:grid;grid-template-columns:1fr;gap:1.4rem;counter-reset:step;}
+  .step{display:flex;gap:1rem;align-items:flex-start;}
+  .step .n{
+    flex:none;width:44px;height:44px;border-radius:50%;
+    background:var(--plum);color:var(--ivory);font-family:var(--serif);font-size:1.35rem;
+    display:grid;place-items:center;font-weight:500;
+  }
+  .step h4{margin:.1rem 0 .3rem;font-family:var(--serif);font-size:1.25rem;color:var(--plum);font-weight:600;}
+  .step p{margin:0;font-size:.95rem;color:var(--charcoal-soft);}
+  .appt-note{
+    margin-top:1.8rem;text-align:center;font-size:.95rem;color:var(--charcoal-soft);
+    border-top:2px dashed var(--line);padding-top:1.4rem;
+  }
+  .appt-note strong{color:var(--plum);}
+
+  /* ---------- contact / CTA ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.75rem,4vw,3rem);align-items:start;}
+  .contact-copy .lead{margin-bottom:1.5rem;}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:1.2rem;}
+  .contact-card{
+    background:var(--white);border:1px solid var(--line);border-radius:16px;
+    padding:clamp(1.5rem,4vw,2.1rem);box-shadow:0 18px 40px -28px rgba(60,47,68,.4);
+  }
+  .contact-card h3{margin-bottom:1.2rem;font-weight:600;}
+  .cinfo{list-style:none;margin:0;padding:0;display:grid;gap:1.1rem;}
+  .cinfo li{display:flex;gap:.9rem;align-items:flex-start;}
+  .cinfo .ic{flex:none;width:40px;height:40px;border-radius:10px;background:var(--ivory);border:1px solid var(--line);display:grid;place-items:center;color:var(--brass);}
+  .cinfo .ic svg{width:19px;height:19px;}
+  .cinfo .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--brass);font-weight:700;margin-bottom:.15rem;}
+  .cinfo a{color:var(--plum);text-decoration:none;font-weight:600;word-break:break-word;}
+  .cinfo a:hover{text-decoration:underline;}
+  .cinfo .v{color:var(--charcoal-soft);}
+  .appt-badge{
+    display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;
+    background:var(--ivory);border:1px dashed var(--brass);border-radius:999px;
+    padding:.55rem 1rem;font-size:.85rem;color:var(--plum);font-weight:600;
+  }
+
+  /* section rhythm */
+  section{padding-block:clamp(2.75rem,6vw,4.75rem);}
+  section.hero{padding-top:clamp(1.5rem,4vw,2.5rem);}
+  .center-head{text-align:center;}
+
+  /* ---------- responsive ---------- */
+  @media(min-width:620px){
+    .cred-inner{grid-template-columns:repeat(4,1fr);}
+    .svc-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:repeat(2,1fr);gap:1.6rem 2rem;}
+    .gal-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.05fr 1fr;}
+    .story-grid{grid-template-columns:1fr 1.1fr;}
+    .story-grid.reverse .story-figure{order:2;}
+    .svc-grid{grid-template-columns:repeat(3,1fr);}
+    .wall{columns:2;}
+    .gal-grid{grid-template-columns:repeat(4,1fr);}
+    .steps{grid-template-columns:repeat(4,1fr);}
+    .contact-grid{grid-template-columns:1.05fr 1fr;}
+  }
+  @media(min-width:1120px){
+    .wall{columns:3;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;}
+  }
+</style>
+
+<style id="dm-wrap-css">
+:root{--dm-navy:#1f2b52;--dm-amber:#f0a021;}
+html{overflow-x:hidden;} #redesign{overflow-x:clip;} body{overflow-x:hidden;}
+.dm-bar{background:#1f2b52;color:#fff;font:600 13px/1.4 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;}
+.dm-bar b{color:#f0a021;font-weight:800;}
+.dm-compare{background:#f4f2ee;color:#1f2b52;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:clamp(28px,5vw,56px) clamp(16px,4vw,40px);border-bottom:1px solid #e2ddd3;}
+.dm-compare .dm-inner{max-width:1140px;margin:0 auto;}
+.dm-kicker{font:800 12px/1 inherit;letter-spacing:.18em;text-transform:uppercase;color:#f0a021;margin:0 0 10px;}
+.dm-compare h2{font:700 clamp(22px,3.4vw,34px)/1.15 Georgia,'Times New Roman',serif;margin:0 0 8px;color:#1f2b52;}
+.dm-compare p.dm-sub{font:400 15px/1.6 inherit;color:#4a5164;margin:0 0 26px;max-width:660px;}
+.dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,26px);align-items:start;}
+@media(max-width:760px){.dm-grid{grid-template-columns:1fr;}}
+.dm-card{background:#fff;border:1px solid #e2ddd3;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(31,43,82,.07);}
+.dm-card .dm-head{display:flex;align-items:center;gap:8px;padding:11px 15px;border-bottom:1px solid #eee;font:700 13px/1 inherit;}
+.dm-card.before .dm-head{color:#6b7280;} .dm-card.after .dm-head{color:#1f2b52;}
+.dm-dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.dm-card.before .dm-dot{background:#c2c7d0;} .dm-card.after .dm-dot{background:#f0a021;}
+.dm-tag{margin-left:auto;font:700 10px/1 inherit;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;}
+.dm-card.before .dm-tag{background:#eef0f3;color:#6b7280;} .dm-card.after .dm-tag{background:#1f2b52;color:#fff;}
+.dm-frame{height:clamp(300px,48vh,460px);overflow:auto;background:#eceae5;-webkit-overflow-scrolling:touch;}
+.dm-frame img{display:block;width:100%;height:auto;}
+.dm-after-preview{height:clamp(300px,48vh,460px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 22px;background:linear-gradient(160deg,#1f2b52,#2c3a68 55%,#1a2444);color:#fff;}
+.dm-af-badge{font:800 10px/1 inherit;letter-spacing:.16em;text-transform:uppercase;color:#f0a021;border:1px solid rgba(240,160,33,.5);border-radius:999px;padding:6px 12px;margin-bottom:16px;}
+.dm-af-title{font:700 clamp(18px,2.4vw,24px)/1.25 Georgia,serif;margin:0 0 10px;}
+.dm-af-sub{font:400 14px/1.55 inherit;color:#d4dae8;max-width:320px;margin:0 0 20px;}
+.dm-af-cue{font:700 12.5px/1 inherit;color:#fff;letter-spacing:.02em;}
+.dm-af-cue span{color:#f0a021;}
+.dm-cap{font:400 12.5px/1.5 inherit;color:#6b7280;padding:10px 15px 14px;}
+.dm-note{margin-top:22px;font:600 13px/1.5 inherit;color:#1f2b52;text-align:center;}
+.dm-note span{color:#f0a021;}
+.dm-legal{background:#181a1f;color:#9aa0ac;font:400 12px/1.7 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:22px 18px;}
+.dm-legal b{color:#c9ced8;}
+</style>
+
+</head>
+<body>
+
+<div class="dm-bar">Redesign concept &middot; not the live site &middot; <b>&copy; DariMoa</b></div>
+<section class="dm-compare">
+  <div class="dm-inner">
+    <p class="dm-kicker">Before &amp; After</p>
+    <h2>Arentine Designs — Custom Drapery Workroom, reimagined</h2>
+    <p class="dm-sub">On the left is your current site as it looks today. On the right &mdash; and in full, live and interactive right below &mdash; is a modern, mobile-first concept we built for you.</p>
+    <div class="dm-grid">
+      <div class="dm-card before">
+        <div class="dm-head"><span class="dm-dot"></span> Your current site <span class="dm-tag">Today</span></div>
+        <div class="dm-frame"><img src="https://image.thum.io/get/width/1200/noia/https://www.customdraperyworkroom.com/" alt="Current website of Arentine Designs — Custom Drapery Workroom" loading="lazy" onerror="this.parentNode.innerHTML='&lt;div style='padding:40px;color:#8a8f99;font:14px sans-serif;text-align:center'&gt;Live preview of your current site&lt;br&gt;https://www.customdraperyworkroom.com/&lt;/div&gt;'"></div>
+        <div class="dm-cap">A live screenshot of your website as it stands now.</div>
+      </div>
+      <div class="dm-card after">
+        <div class="dm-head"><span class="dm-dot"></span> The new design <span class="dm-tag">Concept</span></div>
+        <div class="dm-after-preview">
+          <div class="dm-af-badge">DariMoa concept</div>
+          <div class="dm-af-title">A modern, mobile-first redesign</div>
+          <div class="dm-af-sub">Your real content, photos and story &mdash; built to load fast and look right on every phone.</div>
+          <div class="dm-af-cue"><span>&darr;</span> Scroll down for the full, live version</div>
+        </div>
+        <div class="dm-cap">The complete, interactive redesign is right below.</div>
+      </div>
+    </div>
+    <p class="dm-note">The full, working redesign is below <span>&darr;</span></p>
+  </div>
+</section>
+
+<main id="redesign">
+
+  <!-- ================= HERO (split) ================= -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Custom Drapery Workroom · Fairview, TX</p>
+          <p class="signature">Perfecting the art of soft treatments since 1989.</p>
+          <h1 id="hero-h">Soft treatments, tailored by hand for your home.</h1>
+          <p class="lead">Arentine Designs is a true full-service custom soft-goods workroom. Every panel, shade and cushion is fabricated in-house by Marie using first-quality linings and interlinings &mdash; we specialize in soft custom fabrication for your home.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="tel:+19725565664">Call 972-556-5664</a>
+            <a class="btn btn-ghost" href="mailto:Info@CustomDraperyWorkroom.com">Schedule a consultation</a>
+          </div>
+          <div class="hero-meta">
+            <span><i class="dot"></i>Independently owned since 1989</span>
+            <span><i class="dot"></i>By appointment only</span>
+            <span><i class="dot"></i>Serving DFW homeowners &amp; designers</span>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <div class="frame">
+            <img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/Tableaux-720x480.jpg" alt="Custom fabricated drapery panels with layered soft treatments by Arentine Designs" onerror="this.style.display='none'">
+            <span class="est">Est. 1989</span>
+            <div class="swatches" aria-hidden="true">
+              <i style="background:#4a3b52"></i>
+              <i style="background:#b08d57"></i>
+              <i style="background:#efe7d9"></i>
+              <i style="background:#8a9a7b"></i>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CREDIBILITY STRIP ================= -->
+  <section class="cred" aria-label="Why Arentine Designs">
+    <div class="wrap">
+      <div class="cred-inner">
+        <div class="cred-item"><div class="num">1989</div><div class="lbl">Independently owned</div></div>
+        <div class="cred-item"><div class="num">35+</div><div class="lbl">Years serving DFW</div></div>
+        <div class="cred-item"><div class="num">100%</div><div class="lbl">Fabricated in-house</div></div>
+        <div class="cred-item"><div class="num">1:1</div><div class="lbl">Marie, on-site daily</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-wrap"><hr class="stitch" aria-hidden="true"></div>
+
+  <!-- ================= STORY ================= -->
+  <section aria-labelledby="story-h">
+    <div class="wrap">
+      <div class="story-grid reverse">
+        <figure class="story-figure">
+          <div class="frame">
+            <img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/marie.jpg" alt="Marie, owner and craftsperson of Arentine Designs custom drapery workroom" onerror="this.style.display='none'">
+          </div>
+          <figcaption class="cap">Marie &mdash; owner, maker, on-site daily since 1989</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">A workroom, not a showroom</p>
+          <h2 id="story-h">Marie has been sewing soft treatments here since 1989.</h2>
+          <p>Arentine Designs is independently owned and operated by Marie, who works on-site every day. This is a genuine custom soft-goods workroom &mdash; drapery, shades, bedding and upholstery are cut, sewn and finished right here using first-quality linings and interlinings.</p>
+          <p class="pull">&ldquo;We&rsquo;re not a franchise or just selling other workroom&rsquo;s work.&rdquo;</p>
+          <p>For more than 35 years she has partnered with Dallas&ndash;Fort Worth homeowners and interior designers to fabricate window treatments made to hang beautifully and last. Because everything is made to order, the workroom is by appointment only &mdash; email or call to schedule.</p>
+          <a class="btn btn-ghost" href="mailto:Info@CustomDraperyWorkroom.com">Start a project with Marie</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="services-head">
+        <p class="eyebrow">What we fabricate</p>
+        <h2 id="svc-h">A full-service soft-treatment workroom</h2>
+        <p class="lead">From first-quality drapery to upholstery, bedding and motorization &mdash; all crafted and installed with a tailor&rsquo;s eye.</p>
+      </div>
+      <div class="svc-grid">
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v18M9 3v18M14 3v18M19 3v18" stroke-linecap="round"/></svg></span>
+            <h3>Custom Drapery &amp; Curtains</h3>
+          </div>
+          <p>In-house fabricated panels, pinch-pleat drapery, swags &amp; cascades, top treatments, cornices and valances using first-quality linings and interlinings &mdash; pattern-placement and design guidance included.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="14" rx="1"/><path d="M4 8h16M4 12h16" opacity=".7"/><path d="M12 17v4M9 21h6" stroke-linecap="round"/></svg></span>
+            <h3>Roman &amp; Soft Shades</h3>
+          </div>
+          <p>Custom fabric roman shades and relaxed / soft shades made to order for a clean, tailored window.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 7h16M4 11h16M4 15h16M4 19h16" opacity=".7"/></svg></span>
+            <h3>Blinds, Shutters &amp; Hard Treatments</h3>
+          </div>
+          <p>Plantation shutters, blinds, roller shades and woven-wood shades to complement your soft treatments.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v5H3z"/><path d="M3 15v3M21 15v3M6 10V7h12v3" stroke-linecap="round"/></svg></span>
+            <h3>Custom Bedding &amp; Pillows</h3>
+          </div>
+          <p>Coverlets, duvets, shams and decorative pillows coordinated to the room for a finished, layered look.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M4 11a2 2 0 0 1 2 2v3h12v-3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5H2v-5a2 2 0 0 1 2-2z"/><path d="M6 21v1M18 21v1" stroke-linecap="round"/></svg></span>
+            <h3>Upholstery &amp; Reupholstery</h3>
+          </div>
+          <p>Furniture, cushions and headboards recovered and rebuilt in the workroom, right down to the trim.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke-linecap="round"/></svg></span>
+            <h3>Outdoor / Patio Treatments</h3>
+          </div>
+          <p>Patio screens and durable outdoor-fabric treatments that carry your style beyond the walls.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18" stroke-linecap="round"/><circle cx="4" cy="6" r="1.6"/><circle cx="20" cy="6" r="1.6"/><path d="M7 6v4M12 6v6M17 6v4" stroke-linecap="round"/></svg></span>
+            <h3>Decorative Hardware &amp; Trimmings</h3>
+          </div>
+          <p>Drapery rods, finials, tapes and trims selected to finish and elevate every treatment.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 6v6l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Motorization</h3>
+          </div>
+          <p>Motorized and automated window-treatment options for effortless, modern control.</p>
+        </article>
+
+        <article class="svc">
+          <div class="svc-top">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18" stroke-linecap="round"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6" /></svg></span>
+            <h3>Full-Service Workroom &amp; Installation</h3>
+          </div>
+          <p>In-home measuring, quoting, fabric consultation, professional installation, and removal of old treatments.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-wrap"><hr class="stitch" aria-hidden="true"></div>
+
+  <!-- ================= GALLERY ================= -->
+  <section aria-labelledby="gal-h">
+    <div class="wrap">
+      <div class="gallery-head">
+        <p class="eyebrow">Recent work</p>
+        <h2 id="gal-h">A glimpse of the workroom&rsquo;s craft</h2>
+        <p class="lead">A small selection of custom pieces &mdash; drapery, bedding, shutters and more &mdash; fabricated in-house.</p>
+      </div>
+      <div class="gal-grid">
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/025.jpg" alt="Installed custom drapery in a residential room" onerror="this.style.display='none'"><figcaption class="tag">Drapery</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/bedding-14.jpg" alt="Custom bedding ensemble with coordinated shams and coverlet" onerror="this.style.display='none'"><figcaption class="tag">Bedding</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/shutters-08.jpg" alt="Plantation shutters on a residential window" onerror="this.style.display='none'"><figcaption class="tag">Shutters</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/cards/upholstery-4.jpg" alt="Reupholstered furniture piece finished in the workroom" onerror="this.style.display='none'"><figcaption class="tag">Upholstery</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/outdoor-17.jpg" alt="Outdoor patio treatment with weather-friendly fabric" onerror="this.style.display='none'"><figcaption class="tag">Outdoor</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/cards/bedding-11.jpg" alt="Detail of custom bedding stitching and trim" onerror="this.style.display='none'"><figcaption class="tag">Detail</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/tabletop-03.jpg" alt="Custom table linens coordinated to a room" onerror="this.style.display='none'"><figcaption class="tag">Linens</figcaption></figure>
+        <figure class="gal"><img loading="lazy" src="https://images.weserv.nl/?url=ssl:www.customdraperyworkroom.com/images/jumbotron-slideshow/Tableaux-720x480.jpg" alt="Layered soft window treatment with swags and panels" onerror="this.style.display='none'"><figcaption class="tag">Soft treatments</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNATURE: VOICES + PROCESS ================= -->
+  <section class="voices" aria-labelledby="voices-h">
+    <div class="wrap">
+      <div class="voices-head">
+        <p class="eyebrow on-dark">Words from her clients</p>
+        <h2 id="voices-h">Homeowners and designers, in their own words</h2>
+        <p>Thirty-five years of relationships built one meticulous treatment at a time.</p>
+      </div>
+
+      <div class="wall">
+        <figure class="quote"><span class="mark">&ldquo;</span><p>Marie effortlessly coordinated with our designer and produced window treatments that are absolutely beautiful.</p><figcaption class="who">Charlotte C.</figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>From blinds to curtains and more &mdash; she has an eye for it all, great communication and is present at the install.</p><figcaption class="who">Tara F.</figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>Marie was very patient and talked us through all options for patterns, lining, and how everything will hang.</p><figcaption class="who">Carrie C.</figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>I have never seen the quality of work anywhere like Marie does. Her work is absolutely perfection.</p><figcaption class="who">Dorma P.</figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>One word sums up my experience: Excellence!! The high quality workmanship is unparalleled.</p><figcaption class="who">Cynthia K.</figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>Arentine Design&rsquo;s draperies are a work of art. Beautiful every time.</p><figcaption class="who">Amy I.</figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>Marie&rsquo;s attention to detail as well as warmth will keep me as a client as long as she&rsquo;s around.</p><figcaption class="who">Kari P.<small>Castle Interiors &mdash; interior designer</small></figcaption></figure>
+        <figure class="quote"><span class="mark">&ldquo;</span><p>All window treatments are meticulously crafted. Clients are NEVER disappointed! A+++</p><figcaption class="who">Beth R.</figcaption></figure>
+      </div>
+
+      <div class="process">
+        <div class="process-card">
+          <p class="eyebrow" style="text-align:center">By appointment &mdash; how we work</p>
+          <h3>A workroom, not a store</h3>
+          <p class="sub">Arentine Designs is by appointment only &mdash; not a retail showroom and not open to the public. Here is how a project comes together.</p>
+          <div class="steps">
+            <div class="step"><span class="n">1</span><div><h4>Consult</h4><p>Email or call to schedule. We discuss your rooms, fabrics, patterns, linings and the look you want.</p></div></div>
+            <div class="step"><span class="n">2</span><div><h4>Measure</h4><p>In-home measuring and a detailed quote, with design and pattern-placement guidance from Marie.</p></div></div>
+            <div class="step"><span class="n">3</span><div><h4>Fabricate in-house</h4><p>Your treatments are cut, sewn and finished here in the workroom using first-quality linings and interlinings.</p></div></div>
+            <div class="step"><span class="n">4</span><div><h4>Install</h4><p>Professional installation &mdash; Marie is present at the install &mdash; plus removal of your old treatments.</p></div></div>
+          </div>
+          <p class="appt-note"><strong>Please note:</strong> we are open by appointment only. Email or call to schedule a consultation &mdash; we look forward to meeting you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / CTA ================= -->
+  <section aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Let&rsquo;s begin</p>
+          <h2 id="contact-h">Schedule your custom consultation</h2>
+          <p class="lead">We specialize in soft custom fabrication for your home. Reach out to Marie by email or phone and we&rsquo;ll set up a time that works &mdash; homeowners and interior designers are equally welcome.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:Info@CustomDraperyWorkroom.com">Email the workroom</a>
+            <a class="btn btn-ghost" href="tel:+19725565664">Call 972-556-5664</a>
+          </div>
+          <span class="appt-badge">By appointment only &mdash; not open to the public</span>
+        </div>
+
+        <div class="contact-card">
+          <h3>Workroom details</h3>
+          <ul class="cinfo">
+            <li>
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><div class="k">Workroom</div><div class="v">80 Seattle Slew Ln., Bldg C<br>Fairview, TX 75069 (Dallas&ndash;Fort Worth)</div></div>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l1 4v3a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg></span>
+              <div><div class="k">Phone</div><a href="tel:+19725565664">972-556-5664</a></div>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <div><div class="k">Email</div><a href="mailto:Info@CustomDraperyWorkroom.com">Info@CustomDraperyWorkroom.com</a></div>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></span>
+              <div><div class="k">Hours</div><div class="v">By appointment only &mdash; email or call to schedule</div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dm-legal">
+  This design concept is the exclusive property of <b>DariMoa</b>. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability.<br>
+  &copy; DariMoa. All rights reserved. &middot; Englewood, New Jersey &middot; Dari@darimoa.com &middot; darimoa.com
+</footer>
+
+</body>
+</html>

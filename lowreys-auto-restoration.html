@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lowrey's Auto Restoration — Hot Rods by Jim Lowrey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#14110f;
+    --char:#1c1917;
+    --char2:#232020;
+    --gun:#2b2825;
+    --gun2:#3a3733;
+    --line:#4b4641;
+    --red:#b1201e;
+    --red-d:#8c1917;
+    --cream:#efeae2;
+    --cream-dim:#c8c2b8;
+    --muted:#9a938a;
+    --shadow:0 24px 60px rgba(0,0,0,.55);
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--black);
+    color:var(--cream);
+    font-family:"Barlow",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    letter-spacing:.1px;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{margin:0;line-height:1.02;font-family:"Oswald",Impact,sans-serif;text-transform:uppercase}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,5vw,44px)}
+
+  /* kicker label */
+  .kicker{
+    display:inline-flex;align-items:center;gap:.7em;
+    font-family:"Oswald",sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.32em;
+    font-size:clamp(11px,2.6vw,13px);color:var(--red);
+    margin:0 0 18px;
+  }
+  .kicker::before{content:"";width:34px;height:2px;background:var(--red);display:inline-block}
+
+  .stripes{height:6px;width:100%;background:
+    linear-gradient(90deg,var(--red) 0 34%,transparent 34% 40%,var(--cream) 40% 44%,transparent 44% 100%);}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero__scrim{position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(180deg,rgba(10,8,7,.55) 0%,rgba(10,8,7,.10) 32%,rgba(10,8,7,.55) 66%,rgba(10,8,7,.95) 100%),
+      linear-gradient(90deg,rgba(10,8,7,.7) 0%,rgba(10,8,7,.15) 55%,transparent 100%);}
+  .hero__inner{position:relative;z-index:2;width:100%;padding-top:clamp(90px,16vh,150px);padding-bottom:clamp(38px,7vh,70px)}
+  .hero h1{
+    font-size:clamp(44px,12vw,132px);font-weight:700;letter-spacing:-.5px;
+    text-shadow:0 6px 40px rgba(0,0,0,.6);max-width:14ch;
+  }
+  .hero h1 .em{color:var(--red)}
+  .hero__sub{
+    margin:18px 0 0;max-width:46ch;color:var(--cream);
+    font-size:clamp(15px,2.6vw,21px);font-weight:400;text-shadow:0 2px 18px rgba(0,0,0,.7);
+  }
+  .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .hero__badge{
+    position:absolute;top:clamp(84px,14vh,120px);right:clamp(18px,5vw,44px);z-index:2;
+    font-family:"Oswald",sans-serif;text-transform:uppercase;text-align:center;
+    border:2px solid rgba(239,234,226,.35);padding:12px 16px;background:rgba(20,17,15,.35);
+    backdrop-filter:blur(2px);
+  }
+  .hero__badge b{display:block;font-size:clamp(20px,4vw,30px);font-weight:700;color:var(--cream);letter-spacing:.02em}
+  .hero__badge span{display:block;font-size:11px;letter-spacing:.28em;color:var(--cream-dim);margin-top:2px}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;
+    font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.14em;
+    font-size:14px;padding:15px 26px;border:2px solid transparent;cursor:pointer;transition:.2s;
+  }
+  .btn--red{background:var(--red);color:#fff;border-color:var(--red)}
+  .btn--red:hover{background:var(--red-d);border-color:var(--red-d)}
+  .btn--ghost{background:transparent;color:var(--cream);border-color:rgba(239,234,226,.5)}
+  .btn--ghost:hover{border-color:var(--cream);background:rgba(239,234,226,.08)}
+
+  /* ---------- STAT BAND ---------- */
+  .stats{background:var(--char);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
+  .stat{background:var(--char);padding:clamp(24px,5vw,40px) clamp(16px,4vw,28px);text-align:center}
+  .stat b{display:block;font-family:"Anton",sans-serif;font-weight:400;color:var(--cream);
+    font-size:clamp(34px,7vw,58px);line-height:1;letter-spacing:.01em}
+  .stat b em{font-style:normal;color:var(--red)}
+  .stat span{display:block;margin-top:10px;font-family:"Oswald",sans-serif;text-transform:uppercase;
+    letter-spacing:.2em;font-size:clamp(10px,2.4vw,12px);color:var(--cream-dim)}
+  @media(min-width:760px){.stats__grid{grid-template-columns:repeat(4,1fr)}}
+
+  /* ---------- STORY ---------- */
+  section{padding:clamp(56px,9vw,110px) 0}
+  .story__grid{display:grid;gap:clamp(28px,5vw,56px);align-items:center}
+  @media(min-width:900px){.story__grid{grid-template-columns:1.05fr 1fr}}
+  .story h2{font-size:clamp(30px,6vw,60px);font-weight:700;letter-spacing:-.5px}
+  .story h2 .em{color:var(--red)}
+  .story p{color:var(--cream-dim);font-size:clamp(15px,2.3vw,17.5px);margin:16px 0 0;max-width:56ch}
+  .story .sign{margin-top:22px;font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.18em;
+    font-size:13px;color:var(--cream)}
+  .story .sign b{color:var(--red);font-weight:600}
+  .frame{position:relative}
+  .frame img{width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .frame::after{content:"";position:absolute;left:-14px;top:-14px;width:56%;height:60%;border-left:3px solid var(--red);border-top:3px solid var(--red);z-index:-0}
+  .frame__cap{position:absolute;left:0;bottom:0;background:var(--red);color:#fff;
+    font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600;padding:8px 14px}
+
+  /* ---------- SERVICES ---------- */
+  .svc{background:var(--char)}
+  .head-block{max-width:640px;margin-bottom:clamp(30px,5vw,52px)}
+  .head-block h2{font-size:clamp(30px,6vw,58px);font-weight:700;letter-spacing:-.5px}
+  .head-block h2 .em{color:var(--red)}
+  .head-block p{color:var(--cream-dim);margin:14px 0 0;font-size:clamp(15px,2.3vw,17px)}
+  .svc__list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+  @media(min-width:720px){.svc__list{grid-template-columns:repeat(2,1fr)}}
+  .svc__item{background:var(--char2);padding:clamp(22px,3.5vw,34px);display:flex;gap:18px;transition:.2s;position:relative}
+  .svc__item:hover{background:var(--gun)}
+  .svc__num{font-family:"Anton",sans-serif;color:var(--gun2);font-size:clamp(26px,4vw,38px);line-height:1;min-width:1.6em;transition:.2s}
+  .svc__item:hover .svc__num{color:var(--red)}
+  .svc__item h3{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;
+    font-size:clamp(17px,2.6vw,21px);color:var(--cream)}
+  .svc__item p{margin:8px 0 0;color:var(--cream-dim);font-size:14.5px;line-height:1.55}
+
+  /* ---------- GALLERY (signature) ---------- */
+  .gal{background:var(--black)}
+  .gal__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media(min-width:820px){.gal__grid{grid-template-columns:repeat(4,1fr);gap:14px}}
+  .tile{position:relative;overflow:hidden;background:var(--gun);aspect-ratio:1/1;border:1px solid var(--line)}
+  .tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .tile:hover img{transform:scale(1.06)}
+  .tile figcaption{position:absolute;left:0;bottom:0;right:0;z-index:2;
+    padding:14px 14px 12px;font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:12px;font-weight:600;color:var(--cream);
+    background:linear-gradient(0deg,rgba(10,8,7,.9),rgba(10,8,7,0));}
+  .tile--wide{grid-column:span 2}
+  .tile--tall{aspect-ratio:1/1}
+  @media(min-width:820px){
+    .tile--tall{grid-row:span 2;aspect-ratio:auto}
+    .tile--wide{grid-column:span 2}
+  }
+
+  /* ---------- PROCESS TIMELINE ---------- */
+  .proc{background:var(--char);border-top:1px solid var(--line)}
+  .proc__steps{display:grid;gap:14px;counter-reset:step}
+  @media(min-width:760px){.proc__steps{grid-template-columns:repeat(5,1fr);gap:0}}
+  .step{position:relative;padding:clamp(20px,3vw,26px);background:var(--char2);border:1px solid var(--line)}
+  @media(min-width:760px){.step{border-right:none}.step:last-child{border-right:1px solid var(--line)}}
+  .step__n{font-family:"Anton",sans-serif;color:var(--red);font-size:clamp(28px,4vw,42px);line-height:1;display:block}
+  .step h3{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+    font-size:clamp(15px,2.3vw,18px);color:var(--cream);margin:12px 0 6px}
+  .step p{color:var(--cream-dim);font-size:13.5px;line-height:1.5;margin:0}
+  .step__bar{position:absolute;left:0;top:0;height:4px;width:100%;background:var(--red);opacity:.85}
+
+  /* ---------- PRESS / CREDIBILITY ---------- */
+  .press{position:relative;background:var(--black);overflow:hidden}
+  .press__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.16;z-index:0}
+  .press__scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--black),rgba(20,17,15,.7),var(--black))}
+  .press .wrap{position:relative;z-index:2}
+  .press__grid{display:grid;gap:14px;margin-top:clamp(28px,4vw,44px)}
+  @media(min-width:820px){.press__grid{grid-template-columns:repeat(3,1fr)}}
+  .cred{border:1px solid var(--line);background:rgba(28,25,23,.72);padding:clamp(24px,3.5vw,34px)}
+  .cred .tag{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--red);font-weight:600}
+  .cred h3{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(19px,2.6vw,23px);color:var(--cream);margin:12px 0 8px;letter-spacing:.02em}
+  .cred p{color:var(--cream-dim);font-size:14.5px;margin:0;line-height:1.55}
+
+  /* ---------- CONTACT / CTA ---------- */
+  .contact{background:var(--char)}
+  .contact__grid{display:grid;gap:clamp(30px,5vw,52px)}
+  @media(min-width:900px){.contact__grid{grid-template-columns:1.1fr 1fr}}
+  .contact h2{font-size:clamp(32px,7vw,66px);font-weight:700;letter-spacing:-.5px;line-height:.98}
+  .contact h2 .em{color:var(--red)}
+  .contact__lead{color:var(--cream-dim);font-size:clamp(15px,2.4vw,18px);margin:16px 0 26px;max-width:46ch}
+  .info{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .info__row{background:var(--char2);padding:20px clamp(18px,3vw,26px);display:flex;flex-direction:column;gap:3px}
+  .info__row .lbl{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--red);font-weight:600}
+  .info__row .val{color:var(--cream);font-size:clamp(15px,2.4vw,18px);font-weight:500}
+  .info__row .val a:hover{color:var(--red)}
+  .info__row small{color:var(--muted);font-size:13px}
+  .contact__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+
+  .foot-brand{border-top:1px solid var(--line);padding:clamp(28px,4vw,40px) 0}
+  .foot-brand .wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .foot-brand b{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(18px,3vw,24px);color:var(--cream);font-weight:700}
+  .foot-brand b em{color:var(--red);font-style:normal}
+  .foot-brand span{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--muted)}
+</style>
+
+<style id="dm-wrap-css">
+:root{--dm-navy:#1f2b52;--dm-amber:#f0a021;}
+html{overflow-x:hidden;} #redesign{overflow-x:clip;} body{overflow-x:hidden;}
+.dm-bar{background:#1f2b52;color:#fff;font:600 13px/1.4 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:9px 14px;letter-spacing:.02em;}
+.dm-bar b{color:#f0a021;font-weight:800;}
+.dm-compare{background:#f4f2ee;color:#1f2b52;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:clamp(28px,5vw,56px) clamp(16px,4vw,40px);border-bottom:1px solid #e2ddd3;}
+.dm-compare .dm-inner{max-width:1140px;margin:0 auto;}
+.dm-kicker{font:800 12px/1 inherit;letter-spacing:.18em;text-transform:uppercase;color:#f0a021;margin:0 0 10px;}
+.dm-compare h2{font:700 clamp(22px,3.4vw,34px)/1.15 Georgia,'Times New Roman',serif;margin:0 0 8px;color:#1f2b52;}
+.dm-compare p.dm-sub{font:400 15px/1.6 inherit;color:#4a5164;margin:0 0 26px;max-width:660px;}
+.dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,26px);align-items:start;}
+@media(max-width:760px){.dm-grid{grid-template-columns:1fr;}}
+.dm-card{background:#fff;border:1px solid #e2ddd3;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(31,43,82,.07);}
+.dm-card .dm-head{display:flex;align-items:center;gap:8px;padding:11px 15px;border-bottom:1px solid #eee;font:700 13px/1 inherit;}
+.dm-card.before .dm-head{color:#6b7280;} .dm-card.after .dm-head{color:#1f2b52;}
+.dm-dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.dm-card.before .dm-dot{background:#c2c7d0;} .dm-card.after .dm-dot{background:#f0a021;}
+.dm-tag{margin-left:auto;font:700 10px/1 inherit;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;}
+.dm-card.before .dm-tag{background:#eef0f3;color:#6b7280;} .dm-card.after .dm-tag{background:#1f2b52;color:#fff;}
+.dm-frame{height:clamp(300px,48vh,460px);overflow:auto;background:#eceae5;-webkit-overflow-scrolling:touch;}
+.dm-frame img{display:block;width:100%;height:auto;}
+.dm-after-preview{height:clamp(300px,48vh,460px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 22px;background:linear-gradient(160deg,#1f2b52,#2c3a68 55%,#1a2444);color:#fff;}
+.dm-af-badge{font:800 10px/1 inherit;letter-spacing:.16em;text-transform:uppercase;color:#f0a021;border:1px solid rgba(240,160,33,.5);border-radius:999px;padding:6px 12px;margin-bottom:16px;}
+.dm-af-title{font:700 clamp(18px,2.4vw,24px)/1.25 Georgia,serif;margin:0 0 10px;}
+.dm-af-sub{font:400 14px/1.55 inherit;color:#d4dae8;max-width:320px;margin:0 0 20px;}
+.dm-af-cue{font:700 12.5px/1 inherit;color:#fff;letter-spacing:.02em;}
+.dm-af-cue span{color:#f0a021;}
+.dm-cap{font:400 12.5px/1.5 inherit;color:#6b7280;padding:10px 15px 14px;}
+.dm-note{margin-top:22px;font:600 13px/1.5 inherit;color:#1f2b52;text-align:center;}
+.dm-note span{color:#f0a021;}
+.dm-legal{background:#181a1f;color:#9aa0ac;font:400 12px/1.7 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;text-align:center;padding:22px 18px;}
+.dm-legal b{color:#c9ced8;}
+</style>
+
+</head>
+<body>
+
+<div class="dm-bar">Redesign concept &middot; not the live site &middot; <b>&copy; DariMoa</b></div>
+<section class="dm-compare">
+  <div class="dm-inner">
+    <p class="dm-kicker">Before &amp; After</p>
+    <h2>Lowrey&#x27;s Auto Restoration, reimagined</h2>
+    <p class="dm-sub">On the left is your current site as it looks today. On the right &mdash; and in full, live and interactive right below &mdash; is a modern, mobile-first concept we built for you.</p>
+    <div class="dm-grid">
+      <div class="dm-card before">
+        <div class="dm-head"><span class="dm-dot"></span> Your current site <span class="dm-tag">Today</span></div>
+        <div class="dm-frame"><img src="https://image.thum.io/get/width/1200/noia/http://lowreysautorestoration.com/" alt="Current website of Lowrey&#x27;s Auto Restoration" loading="lazy" onerror="this.parentNode.innerHTML='&lt;div style='padding:40px;color:#8a8f99;font:14px sans-serif;text-align:center'&gt;Live preview of your current site&lt;br&gt;http://lowreysautorestoration.com/&lt;/div&gt;'"></div>
+        <div class="dm-cap">A live screenshot of your website as it stands now.</div>
+      </div>
+      <div class="dm-card after">
+        <div class="dm-head"><span class="dm-dot"></span> The new design <span class="dm-tag">Concept</span></div>
+        <div class="dm-after-preview">
+          <div class="dm-af-badge">DariMoa concept</div>
+          <div class="dm-af-title">A modern, mobile-first redesign</div>
+          <div class="dm-af-sub">Your real content, photos and story &mdash; built to load fast and look right on every phone.</div>
+          <div class="dm-af-cue"><span>&darr;</span> Scroll down for the full, live version</div>
+        </div>
+        <div class="dm-cap">The complete, interactive redesign is right below.</div>
+      </div>
+    </div>
+    <p class="dm-note">The full, working redesign is below <span>&darr;</span></p>
+  </div>
+</section>
+
+<main id="redesign">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <img class="hero__img" loading="eager"
+      src="https://images.weserv.nl/?url=lowreysautorestoration.com/pairof32s.jpg&w=1800&fit=cover&h=1200"
+      alt="A matched pair of finished 1932 Ford roadsters built by Lowrey's Auto Restoration"
+      onerror="this.style.display='none'">
+    <div class="hero__scrim"></div>
+    <div class="hero__badge">
+      <b>EST. 1960</b><span>Tilton · NH</span>
+    </div>
+    <div class="hero__inner wrap">
+      <span class="kicker">Hot Rods by Jim Lowrey</span>
+      <h1>Award-Winning Hot Rods.<br><span class="em">Restored</span> Classics.</h1>
+      <p class="hero__sub">Designing and building award-winning hot rods and restoring classic antiques — three generations of hand-built craft on a former dairy farm in New Hampshire.</p>
+      <div class="hero__cta">
+        <a class="btn btn--red" href="tel:16032867488">Call 603-286-7488</a>
+        <a class="btn btn--ghost" href="#work">See the Builds</a>
+      </div>
+    </div>
+  </header>
+  <div class="stripes"></div>
+
+  <!-- ===== STAT BAND ===== -->
+  <div class="stats">
+    <div class="wrap" style="padding:0">
+      <div class="stats__grid">
+        <div class="stat"><b>Est.&nbsp;<em>1960</em></b><span>Founded by Jim Lowrey Sr.</span></div>
+        <div class="stat"><b>3<em>&nbsp;Gen.</em></b><span>Family-run &amp; hands-on</span></div>
+        <div class="stat"><b>65<em>+</em></b><span>Years of restoration</span></div>
+        <div class="stat"><b>1<em>&nbsp;of&nbsp;1</em></b><span>In the Petersen Museum</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STORY ===== -->
+  <section class="story">
+    <div class="wrap story__grid">
+      <div>
+        <span class="kicker">Three Generations in Tilton</span>
+        <h2>A Shop Built On <span class="em">Steel &amp; Family</span></h2>
+        <p>It started in 1960, when Jim Lowrey Sr. began working from home before opening a collision shop in Chelmsford, Massachusetts. His son, Jim Lowrey Jr., picked up a wrench at fourteen and took over in 1987 — refocusing the shop entirely on antique restoration and award-winning hot rod construction.</p>
+        <p>Today the shop sits on a former dairy farm in Tilton, New Hampshire: a three-level barn for storage alongside dedicated buildings for fabrication, paint and final assembly. Jim Sr. still rebuilds flathead Ford motors. It stays a small, tight crew — Jim, Dave, Joe, Joe N., and Debbie running the office.</p>
+        <p class="sign">Owner &amp; Lead Fabricator — <b>Jim Lowrey Jr.</b></p>
+      </div>
+      <div class="frame">
+        <img loading="lazy"
+          src="https://images.weserv.nl/?url=lowreysautorestoration.com/aerial.jpg&w=1000&fit=cover&h=1150"
+          alt="Aerial view of the Lowrey's Auto Restoration shop on a former dairy farm in Tilton, New Hampshire"
+          onerror="this.style.display='none'">
+        <span class="frame__cap">The Tilton, NH Shop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="svc">
+    <div class="wrap">
+      <div class="head-block">
+        <span class="kicker">What We Do</span>
+        <h2>From Bare Chassis to <span class="em">Finished Runner</span></h2>
+        <p>Every stage of a build happens under one roof — fabrication, bodywork, paint and assembly — by the same hands, start to finish.</p>
+      </div>
+      <div class="svc__list">
+        <div class="svc__item"><span class="svc__num">01</span><div><h3>Frame-Off / Turn-Key Restoration</h3><p>Complete ground-up restoration of antiques and classics, from bare chassis to a finished, running vehicle.</p></div></div>
+        <div class="svc__item"><span class="svc__num">02</span><div><h3>Custom Hot Rod Design &amp; Build</h3><p>Full custom hot rod and street rod design and fabrication, including complete build-ups.</p></div></div>
+        <div class="svc__item"><span class="svc__num">03</span><div><h3>Precision Metal Fabrication</h3><p>Hand metal repair and fabrication, roof chops, and custom sheet-metal work.</p></div></div>
+        <div class="svc__item"><span class="svc__num">04</span><div><h3>Custom Hood Louvering</h3><p>In-house hood and panel louvering for that unmistakable period-correct detail.</p></div></div>
+        <div class="svc__item"><span class="svc__num">05</span><div><h3>Body Work &amp; Paint</h3><p>Bodywork and refinishing in a dedicated in-house spray booth.</p></div></div>
+        <div class="svc__item"><span class="svc__num">06</span><div><h3>Flathead Engine Rebuilding</h3><p>Flathead Ford motor rebuilds — Jim Sr.'s lifelong specialty.</p></div></div>
+        <div class="svc__item"><span class="svc__num">07</span><div><h3>Final Assembly</h3><p>Complete final vehicle assembly in a dedicated assembly area.</p></div></div>
+        <div class="svc__item" style="align-items:center">
+          <span class="svc__num" style="color:var(--red)">→</span>
+          <div><h3>Have a Project in Mind?</h3><p><a href="mailto:jim@lowreysautorestoration.com" style="color:var(--cream);border-bottom:1px solid var(--red)">Tell us about your car</a> — every build starts with a conversation.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIGNATURE GALLERY ===== -->
+  <section class="gal" id="work">
+    <div class="wrap">
+      <div class="head-block">
+        <span class="kicker">In the Shop</span>
+        <h2>The <span class="em">Builds</span> &amp; Restorations</h2>
+        <p>Real cars, finished and photographed — from '32 Fords to Cobras, Cadillacs and Packards.</p>
+      </div>
+    </div>
+    <div class="wrap" style="padding-left:clamp(10px,3vw,24px);padding-right:clamp(10px,3vw,24px)">
+      <div class="gal__grid">
+        <figure class="tile tile--wide"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/jims32.jpg&w=1000&fit=cover&h=800" alt="Jim Lowrey's own 1932 Ford hot rod" onerror="this.style.display='none'"><figcaption>Jim's '32 Ford</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/68shelby.jpg&w=700&fit=cover&h=700" alt="1968 Shelby Mustang restoration" onerror="this.style.display='none'"><figcaption>1968 Shelby Mustang</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/cobra1.jpg&w=700&fit=cover&h=700" alt="Shelby Cobra" onerror="this.style.display='none'"><figcaption>Shelby Cobra</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/41caddy_1.jpg&w=700&fit=cover&h=700" alt="1941 Cadillac restoration" onerror="this.style.display='none'"><figcaption>1941 Cadillac</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/35roadster.jpg&w=700&fit=cover&h=700" alt="1935 Ford roadster" onerror="this.style.display='none'"><figcaption>1935 Ford Roadster</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/hiboy32.jpg&w=700&fit=cover&h=700" alt="1932 Ford Hiboy hot rod" onerror="this.style.display='none'"><figcaption>'32 Hiboy Hot Rod</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/37packvict.jpg&w=700&fit=cover&h=700" alt="1937 Packard Victoria" onerror="this.style.display='none'"><figcaption>1937 Packard Victoria</figcaption></figure>
+        <figure class="tile tile--wide"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/39dlx.jpg&w=1000&fit=cover&h=800" alt="1939 Ford Deluxe restoration" onerror="this.style.display='none'"><figcaption>1939 Ford Deluxe</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/alfa.jpg&w=700&fit=cover&h=700" alt="Alfa Romeo restoration" onerror="this.style.display='none'"><figcaption>Alfa Romeo</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/ghia_1.jpg&w=700&fit=cover&h=700" alt="Volkswagen Karmann Ghia restoration" onerror="this.style.display='none'"><figcaption>Karmann Ghia</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/shoptour/jim.jpg&w=700&fit=cover&h=700" alt="Owner Jim Lowrey Jr. at work in the shop" onerror="this.style.display='none'"><figcaption>Jim Jr. at Work</figcaption></figure>
+        <figure class="tile"><img loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/shoptour/shop.jpg&w=700&fit=cover&h=700" alt="The Lowrey's Auto Restoration shop building" onerror="this.style.display='none'"><figcaption>The Shop</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS TIMELINE ===== -->
+  <section class="proc">
+    <div class="wrap">
+      <div class="head-block">
+        <span class="kicker">The Process</span>
+        <h2>How a Restoration <span class="em">Comes Together</span></h2>
+      </div>
+      <div class="proc__steps">
+        <div class="step"><span class="step__bar"></span><span class="step__n">01</span><h3>Assessment</h3><p>We evaluate the car, plan the scope, and map the build with you before a single panel comes off.</p></div>
+        <div class="step"><span class="step__bar"></span><span class="step__n">02</span><h3>Fabrication</h3><p>Hand metalwork, roof chops, louvering and chassis work in our dedicated fab shop.</p></div>
+        <div class="step"><span class="step__bar"></span><span class="step__n">03</span><h3>Bodywork &amp; Paint</h3><p>Panel work and refinishing in our in-house spray booth for a flawless finish.</p></div>
+        <div class="step"><span class="step__bar"></span><span class="step__n">04</span><h3>Assembly</h3><p>Every component brought together in the dedicated assembly building.</p></div>
+        <div class="step"><span class="step__bar"></span><span class="step__n">05</span><h3>Shakedown</h3><p>Sorted, tuned and turned over — delivered as a finished, running vehicle.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRESS / CREDIBILITY ===== -->
+  <section class="press">
+    <img class="press__bg" loading="lazy" src="https://images.weserv.nl/?url=lowreysautorestoration.com/hiboy32.jpg&w=1800&fit=cover&h=900" alt="" aria-hidden="true" onerror="this.style.display='none'">
+    <div class="press__scrim"></div>
+    <div class="wrap">
+      <div class="head-block">
+        <span class="kicker">Proven Work</span>
+        <h2>Recognized by the <span class="em">People Who Know</span></h2>
+      </div>
+      <div class="press__grid">
+        <div class="cred">
+          <span class="tag">Museum Piece</span>
+          <h3>Petersen Automotive Museum</h3>
+          <p>We restored two historic Dry Lakes roadsters for Kirk White — the Bob Schaeneman Deuce and the Ray Brown 99C, a "Past Presidents Cup" winner at Hershey now residing in the Petersen Automotive Museum.</p>
+        </div>
+        <div class="cred">
+          <span class="tag">In Print</span>
+          <h3>Featured in the Magazines</h3>
+          <p>Our builds have appeared in hot rod magazines and been photographed by noted automotive photographer Chuck Vranas.</p>
+        </div>
+        <div class="cred">
+          <span class="tag">On the Field</span>
+          <h3>Shows &amp; Racing Heritage</h3>
+          <p>Regular entries at the Grand National Roadster Show, award wins at Hershey, and a 30-plus-year family racing history in Midgets, Super Modifieds and Dirt Modifieds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section class="contact">
+    <div class="wrap contact__grid">
+      <div>
+        <span class="kicker">Start Your Build</span>
+        <h2>Let's Build <span class="em">Something</span> Worth Keeping.</h2>
+        <p class="contact__lead">Restoring an antique or dreaming up a custom hot rod? We work by appointment — call or email Jim and tell us about your car.</p>
+        <div class="contact__cta">
+          <a class="btn btn--red" href="tel:16032867488">Call 603-286-7488</a>
+          <a class="btn btn--ghost" href="mailto:jim@lowreysautorestoration.com">Email the Shop</a>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info__row"><span class="lbl">Shop Address</span><span class="val">183 School Street<br>Tilton, NH 03276</span></div>
+        <div class="info__row"><span class="lbl">Phone</span><span class="val"><a href="tel:16032867488">603-286-7488</a></span><small>Fax 603-286-3356</small></div>
+        <div class="info__row"><span class="lbl">Email</span><span class="val"><a href="mailto:jim@lowreysautorestoration.com">jim@lowreysautorestoration.com</a></span></div>
+        <div class="info__row"><span class="lbl">Hours</span><span class="val">By appointment — call or email</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripes"></div>
+  <div class="foot-brand">
+    <div class="wrap">
+      <b>Lowrey's Auto Restoration — Hot Rods by <em>Jim Lowrey</em></b>
+      <span>Est. 1960 · Tilton, New Hampshire</span>
+    </div>
+  </div>
+
+</main>
+
+<footer class="dm-legal">
+  This design concept is the exclusive property of <b>DariMoa</b>. Unauthorized reproduction, distribution, or use is prohibited and will be subject to legal liability.<br>
+  &copy; DariMoa. All rights reserved. &middot; Englewood, New Jersey &middot; Dari@darimoa.com &middot; darimoa.com
+</footer>
+
+</body>
+</html>
