@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Boudreaux&#x27;s Iron Shop — website redesign concept · DariMoa</title>
+<style>
+  :root{--navy:#1f2b52;--amber:#f0a021;--ink:#1c2430;--mut:#5c6672;--line:#e4e7ec;--bg:#eef1f5;--card:#ffffff;}
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .notice{background:var(--navy);color:#fff;text-align:center;font-size:13px;letter-spacing:.02em;padding:9px 16px;}
+  .notice b{color:var(--amber);font-weight:700;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px;}
+  header.brand{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;}
+  .logo{display:flex;align-items:center;gap:11px;}
+  .logo .mark{width:40px;height:40px;border-radius:11px;background:var(--navy);position:relative;flex:0 0 auto;}
+  .logo .mark:before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:8px;height:8px;border-radius:50%;background:var(--amber);}
+  .logo .mark:after{content:"";position:absolute;bottom:9px;left:50%;transform:translateX(-50%);width:20px;height:9px;background:#fff;border-radius:6px 6px 0 0;box-shadow:-7px 0 0 -2px #fff,7px 0 0 -2px #fff;}
+  .logo .wm{font-weight:800;font-size:22px;letter-spacing:-.01em;}
+  .logo .wm .m{color:var(--amber);}
+  .logo .wm .d{color:var(--navy);}
+  .intro{padding:34px 0 8px;}
+  .intro h1{font-size:clamp(24px,4vw,34px);line-height:1.15;margin:0 0 12px;letter-spacing:-.02em;}
+  .intro p{font-size:16px;color:var(--mut);max-width:760px;margin:0;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:26px 0 40px;align-items:start;}
+  @media(max-width:860px){.grid{grid-template-columns:1fr;}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(20,30,50,.05),0 12px 30px -18px rgba(20,30,50,.25);}
+  .phead{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;border-bottom:1px solid var(--line);}
+  .tag{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;padding:4px 10px;border-radius:999px;}
+  .tag.before{background:#f1f3f6;color:#6b7480;}
+  .tag.after{background:var(--navy);color:#fff;}
+  .phead .sub{font-size:12.5px;color:var(--mut);}
+  .frame{background:#f5f6f8;}
+  .chrome{display:flex;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);background:#fbfbfc;}
+  .chrome i{width:10px;height:10px;border-radius:50%;background:#dfe3e8;display:inline-block;}
+  .before-img{display:block;width:100%;height:auto;background:#f5f6f8;min-height:220px;}
+  .noimg{display:none;padding:40px 20px;text-align:center;color:var(--mut);font-size:13px;}
+  iframe.after{width:100%;border:0;display:block;background:#fff;height:1400px;}
+  .cap{padding:11px 16px;font-size:12.5px;color:var(--mut);border-top:1px solid var(--line);background:#fbfbfc;}
+  .cap a{color:var(--navy);}
+  footer{border-top:1px solid var(--line);background:#fff;padding:22px 0 30px;text-align:center;color:var(--mut);font-size:12.5px;}
+  footer .cr{margin-top:6px;color:#8a929c;}
+</style>
+</head>
+<body>
+  <div class="notice">Redesign concept · not the live site · <b>© DariMoa</b></div>
+  <header class="brand"><div class="wrap"><div class="logo"><span class="mark"></span><span class="wm"><span class="d">Dari</span><span class="m">Moa</span></span></div></div></header>
+  <div class="wrap">
+    <div class="intro">
+      <h1>Boudreaux&#x27;s Iron Shop — a website concept</h1>
+      <p>35 years of custom ironwork in Charlotte — here&#x27;s how the shop could come across online, gates and railings up front.</p>
+    </div>
+    <div class="grid">
+      <div class="panel">
+        <div class="phead"><span class="tag before">Your current site</span><span class="sub">live screenshot</span></div>
+        <div class="chrome"><i></i><i></i><i></i></div>
+        <div class="frame">
+          <img class="before-img" src="https://image.thum.io/get/width/1200/http://www.boudreauxsironshop.com/" alt="Current website of Boudreaux&#x27;s Iron Shop" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <div class="noimg">Live preview of your current site loads here.</div>
+        </div>
+        <div class="cap">Current site: <a href="http://www.boudreauxsironshop.com/" target="_blank" rel="noopener nofollow">www.boudreauxsironshop.com</a></div>
+      </div>
+      <div class="panel">
+        <div class="phead"><span class="tag after">DariMoa redesign concept</span><span class="sub">live preview · scroll to explore</span></div>
+        <div class="chrome"><i></i><i></i><i></i></div>
+        <iframe class="after" title="Boudreaux&#x27;s Iron Shop redesign concept" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Boudreaux&#x27;s Iron Shop — Simply The Best&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+  :root{
+    --char:#14161A;
+    --char2:#1E2126;
+    --iron:#3A3F47;
+    --off:#ECE9E4;
+    --brass:#C9A24B;
+    --brass-dim:#9c7c37;
+    --disp:&#x27;Oswald&#x27;,&#x27;Arial Narrow&#x27;,&#x27;Impact&#x27;,&#x27;Arial&#x27;,sans-serif;
+    --body:&#x27;Inter&#x27;,-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Arial,sans-serif;
+    --metal:linear-gradient(135deg,#23262c 0%,#191b20 25%,#2a2e35 50%,#15171b 75%,#26292f 100%);
+    --hair:rgba(201,162,75,.55);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{
+    font-family:var(--body);
+    background:var(--char);
+    color:var(--off);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+
+  /* diagonal brushed-metal texture util */
+  .metal-bg{
+    background:var(--metal);
+    background-size:200% 200%;
+    position:relative;
+  }
+  .metal-bg::after{
+    content:&quot;&quot;;position:absolute;inset:0;pointer-events:none;
+    background:
+      repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0px,rgba(255,255,255,.025) 1px,transparent 1px,transparent 5px),
+      radial-gradient(120% 90% at 20% 0%,rgba(201,162,75,.06),transparent 60%);
+  }
+
+  /* hairline rule */
+  .hair{height:1px;background:linear-gradient(90deg,transparent,var(--hair),transparent);border:0}
+  .brass-txt{color:var(--brass)}
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{
+    background:var(--char2);
+    border-bottom:1px solid rgba(201,162,75,.25);
+    font-size:.82rem;
+    letter-spacing:.04em;
+  }
+  .topbar .wrap{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;
+    padding-top:10px;padding-bottom:10px;
+  }
+  .topbar .simply{
+    font-family:var(--disp);text-transform:uppercase;font-weight:600;
+    letter-spacing:.18em;color:var(--brass);font-size:.9rem;
+  }
+  .topbar .tb-item{color:#b9bcc2;display:flex;align-items:center;gap:8px}
+  .topbar .tb-item strong{color:var(--off);font-weight:600}
+  .topbar .spacer{flex:1 1 auto}
+  .topbar a.tb-phone{color:var(--off);font-weight:600}
+  .topbar a.tb-phone:hover{color:var(--brass)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;background:var(--char)}
+  .hero-media{position:absolute;inset:0;z-index:0}
+  .hero-media .metal-bg{position:absolute;inset:0}
+  .hero-media img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    opacity:.22;filter:grayscale(.4) contrast(1.05) brightness(.7);
+  }
+  .hero-media::before{
+    content:&quot;&quot;;position:absolute;inset:0;z-index:2;
+    background:linear-gradient(90deg,var(--char) 8%,rgba(20,22,26,.72) 45%,rgba(20,22,26,.55) 100%);
+  }
+  .hero-inner{position:relative;z-index:3;padding-top:clamp(64px,11vw,140px);padding-bottom:clamp(56px,9vw,120px)}
+  .eyebrow{
+    font-family:var(--disp);text-transform:uppercase;font-weight:500;
+    letter-spacing:.32em;font-size:clamp(.72rem,1.4vw,.9rem);color:var(--brass);
+    margin-bottom:26px;display:flex;align-items:center;gap:14px;
+  }
+  .eyebrow .line{height:1px;width:clamp(34px,7vw,72px);background:var(--brass-dim)}
+  h1.hero-h{
+    font-family:var(--disp);font-weight:700;text-transform:uppercase;
+    font-size:clamp(2.7rem,9.2vw,7.3rem);
+    line-height:.94;letter-spacing:.005em;color:var(--off);
+    max-width:15ch;
+  }
+  h1.hero-h .amp{color:var(--brass);font-weight:600}
+  .hero-sub{
+    margin-top:30px;font-size:clamp(1rem,1.9vw,1.28rem);color:#c8cbd1;
+    max-width:44ch;line-height:1.55;
+  }
+  .hero-sub b{color:var(--off);font-weight:600}
+  .hero-cta{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center}
+  .btn{
+    font-family:var(--disp);text-transform:uppercase;letter-spacing:.1em;
+    font-weight:600;font-size:1rem;padding:15px 30px;display:inline-block;
+    border:1px solid var(--brass);transition:.2s;
+  }
+  .btn-primary{background:var(--brass);color:var(--char)}
+  .btn-primary:hover{background:#d9b25e;border-color:#d9b25e}
+  .btn-ghost{color:var(--off);border-color:rgba(236,233,228,.4)}
+  .btn-ghost:hover{border-color:var(--brass);color:var(--brass)}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{background:var(--char2);border-top:1px solid rgba(201,162,75,.22);border-bottom:1px solid rgba(201,162,75,.22)}
+  .trust .wrap{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    padding-top:clamp(30px,4vw,44px);padding-bottom:clamp(30px,4vw,44px);
+  }
+  .trust .cell{padding:6px clamp(10px,3vw,30px);text-align:center;position:relative}
+  .trust .cell + .cell::before{
+    content:&quot;&quot;;position:absolute;left:0;top:12%;height:76%;width:1px;
+    background:linear-gradient(180deg,transparent,rgba(201,162,75,.4),transparent);
+  }
+  .trust .big{font-family:var(--disp);font-weight:700;text-transform:uppercase;
+    font-size:clamp(1.7rem,4vw,2.7rem);line-height:1;color:var(--brass)}
+  .trust .lbl{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;
+    font-size:clamp(.72rem,1.5vw,.9rem);color:#c8cbd1;margin-top:10px}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{position:relative}
+  .sec-pad{padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px)}
+  .kicker{
+    font-family:var(--disp);text-transform:uppercase;letter-spacing:.28em;
+    font-size:clamp(.72rem,1.4vw,.86rem);color:var(--brass);margin-bottom:18px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .kicker .line{height:1px;width:44px;background:var(--brass-dim)}
+  h2.sec-h{
+    font-family:var(--disp);font-weight:700;text-transform:uppercase;
+    font-size:clamp(2.1rem,6vw,4.4rem);line-height:.98;letter-spacing:.01em;
+  }
+
+  /* ---------- WHAT WE FORGE ---------- */
+  .forge{background:var(--char)}
+  .forge-head{max-width:52ch}
+  .forge-head p{margin-top:20px;color:#c1c4ca;font-size:clamp(1rem,1.7vw,1.12rem);max-width:46ch}
+  .pillars{margin-top:clamp(40px,6vw,68px);display:flex;flex-direction:column}
+  .pillar{
+    border-top:1px solid rgba(236,233,228,.12);
+    padding:clamp(30px,4.5vw,48px) 0;
+    display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,52px);
+    align-items:start;transition:.25s;
+  }
+  .pillar:last-child{border-bottom:1px solid rgba(236,233,228,.12)}
+  .pillar:hover{background:linear-gradient(90deg,rgba(201,162,75,.05),transparent 60%)}
+  .pillar .num{
+    font-family:var(--disp);font-weight:600;font-size:clamp(1rem,2vw,1.15rem);
+    color:var(--brass);letter-spacing:.1em;padding-top:.55em;min-width:2.4em;
+    display:flex;align-items:flex-start;gap:12px;
+  }
+  .scroll-svg{width:26px;height:26px;flex:none;color:var(--brass)}
+  .pillar-body h3{
+    font-family:var(--disp);font-weight:700;text-transform:uppercase;
+    font-size:clamp(1.9rem,5vw,3.4rem);line-height:1;letter-spacing:.01em;color:var(--off);
+  }
+  .pillar-body .desc{margin-top:16px;color:#c1c4ca;font-size:clamp(.98rem,1.6vw,1.1rem);max-width:56ch}
+  .pillar-body .desc b{color:var(--off);font-weight:600}
+  .tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:9px}
+  .tag{
+    font-family:var(--disp);text-transform:uppercase;letter-spacing:.09em;font-weight:500;
+    font-size:.78rem;color:#d5d7dc;border:1px solid rgba(201,162,75,.35);
+    padding:6px 13px;background:rgba(201,162,75,.04);
+  }
+  .callout{
+    margin-top:20px;border-left:2px solid var(--brass);padding:6px 0 6px 18px;
+    color:var(--brass);font-family:var(--disp);text-transform:uppercase;
+    letter-spacing:.06em;font-weight:500;font-size:clamp(.85rem,1.5vw,1rem);line-height:1.4;
+  }
+  .callout span{color:#d5d7dc;font-family:var(--body);text-transform:none;letter-spacing:0;font-weight:400;display:block;margin-top:4px;font-size:.95rem}
+
+  .more-work{margin-top:clamp(36px,5vw,56px)}
+  .more-work .mw-label{font-family:var(--disp);text-transform:uppercase;letter-spacing:.16em;
+    font-size:.82rem;color:var(--brass);margin-bottom:16px}
+  .mw-list{display:flex;flex-wrap:wrap;gap:10px}
+  .mw-list .tag{border-color:rgba(236,233,228,.2);background:transparent}
+
+  /* photo band */
+  .band{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:clamp(40px,6vw,64px)}
+  .band .frame{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .band .frame .metal-bg{position:absolute;inset:0}
+  .band .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.35) contrast(1.05) brightness(.72);}
+  .band .frame::after{content:&quot;&quot;;position:absolute;inset:0;
+    box-shadow:inset 0 0 0 1px rgba(201,162,75,.18);pointer-events:none}
+  .band .frame .cap{position:absolute;left:14px;bottom:12px;z-index:2;
+    font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;
+    color:var(--off);background:rgba(20,22,26,.55);padding:5px 10px;backdrop-filter:blur(2px)}
+
+  /* ---------- SERVICE AREA ---------- */
+  .area{background:var(--char2)}
+  .area-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,72px);align-items:center}
+  .area-cities{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .city{
+    font-family:var(--disp);text-transform:uppercase;font-weight:600;letter-spacing:.06em;
+    font-size:clamp(1.05rem,2.4vw,1.6rem);color:var(--off);
+    padding:6px 0;position:relative;
+  }
+  .city::after{content:&quot;·&quot;;color:var(--brass);margin-left:12px;font-weight:700}
+  .city:last-child::after{content:&quot;&quot;}
+  .area p.note{color:#c1c4ca;font-size:clamp(.98rem,1.6vw,1.08rem);max-width:40ch}
+  .area p.note b{color:var(--off)}
+
+  /* ---------- REVIEWS ---------- */
+  .reviews{background:var(--off);color:var(--char)}
+  .reviews .kicker{color:var(--brass-dim)}
+  .reviews .kicker .line{background:var(--brass-dim)}
+  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);margin-top:clamp(36px,5vw,56px)}
+  .quote{position:relative;padding-top:14px}
+  .quote .mark{font-family:var(--disp);font-weight:700;font-size:5rem;line-height:.6;color:var(--brass);display:block}
+  .quote blockquote{
+    font-family:var(--disp);font-weight:500;text-transform:none;
+    font-size:clamp(1.4rem,3vw,2rem);line-height:1.15;color:var(--char);margin-top:6px;
+  }
+  .quote cite{
+    display:block;margin-top:20px;font-style:normal;font-family:var(--body);font-weight:600;
+    color:var(--iron);font-size:.95rem;letter-spacing:.02em;
+  }
+  .quote cite::before{content:&quot;— &quot;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--char)}
+  .contact .metal-bg{position:absolute;inset:0;z-index:0;opacity:.5}
+  .contact .wrap{position:relative;z-index:2}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,72px);margin-top:clamp(36px,5vw,52px)}
+  .info-block{margin-bottom:26px}
+  .info-block .il{font-family:var(--disp);text-transform:uppercase;letter-spacing:.18em;
+    font-size:.78rem;color:var(--brass);margin-bottom:8px}
+  .info-block .iv{font-size:1.05rem;color:var(--off);line-height:1.5}
+  .info-block .iv a:hover{color:var(--brass)}
+  .info-block .iv .lang{color:#9aa0a8;font-size:.85rem}
+
+  form.quote-form{display:flex;flex-direction:column;gap:14px}
+  .quote-form .fld{display:flex;flex-direction:column;gap:7px}
+  .quote-form label{font-family:var(--disp);text-transform:uppercase;letter-spacing:.12em;
+    font-size:.74rem;color:#b9bcc2}
+  .quote-form input,.quote-form textarea,.quote-form select{
+    background:var(--char2);border:1px solid rgba(236,233,228,.16);color:var(--off);
+    padding:13px 15px;font-family:var(--body);font-size:.98rem;border-radius:0;
+  }
+  .quote-form input:focus,.quote-form textarea:focus,.quote-form select:focus{
+    outline:none;border-color:var(--brass);background:#22262d}
+  .quote-form textarea{resize:vertical;min-height:96px}
+  .quote-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .quote-form button{margin-top:6px;cursor:pointer}
+  .form-note{font-size:.8rem;color:#8b9098;margin-top:2px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--char2);border-top:1px solid rgba(201,162,75,.22)}
+  footer .wrap{padding-top:34px;padding-bottom:34px;display:flex;flex-wrap:wrap;
+    gap:16px 30px;align-items:center;justify-content:space-between}
+  .brandmark{font-family:var(--disp);text-transform:uppercase;font-weight:700;letter-spacing:.08em;
+    font-size:1.25rem;color:var(--off)}
+  .brandmark .brass-txt{font-weight:600}
+  footer .fmeta{font-size:.85rem;color:#9aa0a8;letter-spacing:.02em}
+  footer .fmeta .simply{color:var(--brass);font-family:var(--disp);text-transform:uppercase;letter-spacing:.16em}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:860px){
+    .area-grid,.rev-grid,.contact-grid{grid-template-columns:1fr}
+    .band{grid-template-columns:1fr 1fr}
+    .trust .wrap{grid-template-columns:1fr;gap:0}
+    .trust .cell{padding:20px 10px;border-bottom:1px solid rgba(201,162,75,.14)}
+    .trust .cell:last-child{border-bottom:0}
+    .trust .cell + .cell::before{display:none}
+  }
+  @media (max-width:560px){
+    .band{grid-template-columns:1fr}
+    .pillar{grid-template-columns:1fr;gap:14px}
+    .pillar .num{padding-top:0}
+    .quote-form .row2{grid-template-columns:1fr}
+    .topbar{font-size:.76rem}
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- (1) TOP BAR --&gt;
+&lt;div class=&quot;topbar&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;span class=&quot;simply&quot;&gt;Simply The Best&lt;/span&gt;
+    &lt;span class=&quot;tb-item&quot;&gt;&lt;span&gt;📞&lt;/span&gt; &lt;a class=&quot;tb-phone&quot; href=&quot;tel:17044884464&quot;&gt;704-488-4464&lt;/a&gt; &lt;span style=&quot;color:#7d828a&quot;&gt;English&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;tb-item&quot;&gt;&lt;a class=&quot;tb-phone&quot; href=&quot;tel:17044492003&quot;&gt;704-449-2003&lt;/a&gt; &lt;span style=&quot;color:#7d828a&quot;&gt;Español&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;spacer&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tb-item&quot;&gt;Mon–Fri &lt;strong&gt;7:00a–3:30p&lt;/strong&gt; · Sat–Sun Closed&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- (2) HERO --&gt;
+&lt;header class=&quot;hero&quot;&gt;
+  &lt;div class=&quot;hero-media&quot;&gt;
+    &lt;div class=&quot;metal-bg&quot;&gt;&lt;/div&gt;
+    &lt;img src=&quot;https://www.boudreauxsironshop.com/_fileUploads/portfolio/drivewaygate1.jpg&quot; alt=&quot;Custom wrought iron driveway gate&quot; onerror=&quot;this.style.display=&#x27;none&#x27;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;wrap hero-inner&quot;&gt;
+    &lt;div class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;Boudreaux&#x27;s Iron Shop · Charlotte, NC&lt;/div&gt;
+    &lt;h1 class=&quot;hero-h&quot;&gt;Custom Wrought Iron, Forged &lt;span class=&quot;amp&quot;&gt;in&lt;/span&gt; Charlotte&lt;/h1&gt;
+    &lt;p class=&quot;hero-sub&quot;&gt;&lt;b&gt;Gates · Railings · Fences&lt;/b&gt; — designed &amp;amp; fabricated in-house since 1991. Everything drawn, cut, and welded under one roof by our own craftsmen.&lt;/p&gt;
+    &lt;div class=&quot;hero-cta&quot;&gt;
+      &lt;a class=&quot;btn btn-primary&quot; href=&quot;#contact&quot;&gt;Request a Quote&lt;/a&gt;
+      &lt;a class=&quot;btn btn-ghost&quot; href=&quot;#forge&quot;&gt;See What We Forge&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- (3) TRUST STRIP --&gt;
+&lt;section class=&quot;trust&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;cell&quot;&gt;&lt;div class=&quot;big&quot;&gt;35 Years&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;Family Shop Since 1991&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;cell&quot;&gt;&lt;div class=&quot;big&quot;&gt;In-House&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;Designed &amp;amp; Fabricated Under One Roof&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;cell&quot;&gt;&lt;div class=&quot;big&quot;&gt;Ameristar&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;Full Line of Ornamental Fence&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- (4) WHAT WE FORGE --&gt;
+&lt;section class=&quot;forge sec-pad&quot; id=&quot;forge&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;forge-head&quot;&gt;
+      &lt;div class=&quot;kicker&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;What We Forge&lt;/div&gt;
+      &lt;h2 class=&quot;sec-h&quot;&gt;Three Pillars,&lt;br&gt;One Iron Shop&lt;/h2&gt;
+      &lt;p&gt;Custom ornamental wrought-iron and aluminum work for homes and businesses across greater Charlotte — matched to any style, from contemporary to old world.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;pillars&quot;&gt;
+      &lt;!-- Gates --&gt;
+      &lt;div class=&quot;pillar&quot;&gt;
+        &lt;div class=&quot;num&quot;&gt;
+          &lt;svg class=&quot;scroll-svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;M12 21V9c0-3 2-5 4.5-5S21 6 19.5 8 15 9 15 6&quot;/&gt;&lt;path d=&quot;M12 21V9c0-3-2-5-4.5-5S3 6 4.5 8 9 9 9 6&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;21&quot; r=&quot;1&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot;/&gt;&lt;/svg&gt;
+          01
+        &lt;/div&gt;
+        &lt;div class=&quot;pillar-body&quot;&gt;
+          &lt;h3&gt;Iron Gates&lt;/h3&gt;
+          &lt;p class=&quot;desc&quot;&gt;Wrought iron gates add style to any driveway or garden while enhancing privacy and security. &lt;b&gt;Custom made to match any style of design — from contemporary to old world.&lt;/b&gt;&lt;/p&gt;
+          &lt;div class=&quot;tags&quot;&gt;
+            &lt;span class=&quot;tag&quot;&gt;Driveway Gates&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Walking Gates&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Wine-Cellar Gates&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Garden Gates&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Doggie Gates&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Automatic Openers&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;callout&quot;&gt;Your initials, forged into the gate.
+            &lt;span&gt;We&#x27;ll incorporate a customer&#x27;s initials into residential gates, plus automatic driveway gate openers for residential &amp;amp; commercial.&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Railings --&gt;
+      &lt;div class=&quot;pillar&quot;&gt;
+        &lt;div class=&quot;num&quot;&gt;
+          &lt;svg class=&quot;scroll-svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;M12 21V9c0-3 2-5 4.5-5S21 6 19.5 8 15 9 15 6&quot;/&gt;&lt;path d=&quot;M12 21V9c0-3-2-5-4.5-5S3 6 4.5 8 9 9 9 6&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;21&quot; r=&quot;1&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot;/&gt;&lt;/svg&gt;
+          02
+        &lt;/div&gt;
+        &lt;div class=&quot;pillar-body&quot;&gt;
+          &lt;h3&gt;Railings&lt;/h3&gt;
+          &lt;p class=&quot;desc&quot;&gt;Our custom wrought iron and aluminum railings are all designed and fabricated in house — &lt;b&gt;from the ornately decorative to simple, more contemporary.&lt;/b&gt; Can be paired with wood, glass or other materials.&lt;/p&gt;
+          &lt;div class=&quot;tags&quot;&gt;
+            &lt;span class=&quot;tag&quot;&gt;Exterior Railings&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Interior Railings&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Stair Railings&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Wood / Glass Pairings&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;callout&quot;&gt;We field-measure at your home or business.
+            &lt;span&gt;Every railing is measured on site, then drawn and built to fit the space exactly.&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Fencing --&gt;
+      &lt;div class=&quot;pillar&quot;&gt;
+        &lt;div class=&quot;num&quot;&gt;
+          &lt;svg class=&quot;scroll-svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;M12 21V9c0-3 2-5 4.5-5S21 6 19.5 8 15 9 15 6&quot;/&gt;&lt;path d=&quot;M12 21V9c0-3-2-5-4.5-5S3 6 4.5 8 9 9 9 6&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;21&quot; r=&quot;1&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot;/&gt;&lt;/svg&gt;
+          03
+        &lt;/div&gt;
+        &lt;div class=&quot;pillar-body&quot;&gt;
+          &lt;h3&gt;Fencing&lt;/h3&gt;
+          &lt;p class=&quot;desc&quot;&gt;Wrought iron fencing adds style to any home or business while enhancing privacy and security. &lt;b&gt;Our residential wrought iron fence features the superior quality of iron construction that surpasses both aluminum and PVC fence.&lt;/b&gt;&lt;/p&gt;
+          &lt;div class=&quot;tags&quot;&gt;
+            &lt;span class=&quot;tag&quot;&gt;Pool Fence&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Perimeter Fence&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Custom Ornamental Fence&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;Aluminum Fence&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;callout&quot;&gt;A full line from Ameristar Fencing.
+            &lt;span&gt;The world&#x27;s largest ornamental fence manufacturer — available through our shop.&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- more work --&gt;
+    &lt;div class=&quot;more-work&quot;&gt;
+      &lt;div class=&quot;mw-label&quot;&gt;Also fabricated in-house&lt;/div&gt;
+      &lt;div class=&quot;mw-list&quot;&gt;
+        &lt;span class=&quot;tag&quot;&gt;Interior &amp;amp; Exterior Staircases&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;Balconies&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;Commercial Work&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;Custom Kitchen Corbels&lt;/span&gt;
+        &lt;span class=&quot;tag&quot;&gt;Custom Ironwork&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- thin gate-work photo band --&gt;
+    &lt;div class=&quot;band&quot;&gt;
+      &lt;div class=&quot;frame&quot;&gt;&lt;div class=&quot;metal-bg&quot;&gt;&lt;/div&gt;
+        &lt;img src=&quot;https://www.boudreauxsironshop.com/_fileUploads/portfolio/exteriorrailings3.jpg&quot; alt=&quot;Exterior wrought iron railings&quot; onerror=&quot;this.style.display=&#x27;none&#x27;&quot;&gt;
+        &lt;span class=&quot;cap&quot;&gt;Exterior Railings&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;frame&quot;&gt;&lt;div class=&quot;metal-bg&quot;&gt;&lt;/div&gt;
+        &lt;img src=&quot;https://www.boudreauxsironshop.com/_fileUploads/portfolio/switchback5.jpg&quot; alt=&quot;Switchback iron staircase&quot; onerror=&quot;this.style.display=&#x27;none&#x27;&quot;&gt;
+        &lt;span class=&quot;cap&quot;&gt;Stair Work&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;frame&quot;&gt;&lt;div class=&quot;metal-bg&quot;&gt;&lt;/div&gt;
+        &lt;img src=&quot;https://www.boudreauxsironshop.com/_fileUploads/portfolio/finalstonebridge004Copy.jpg&quot; alt=&quot;Custom ornamental ironwork&quot; onerror=&quot;this.style.display=&#x27;none&#x27;&quot;&gt;
+        &lt;span class=&quot;cap&quot;&gt;Custom Ironwork&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- (5) SERVICE AREA --&gt;
+&lt;section class=&quot;area sec-pad&quot;&gt;
+  &lt;div class=&quot;wrap area-grid&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;kicker&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;Service Area&lt;/div&gt;
+      &lt;h2 class=&quot;sec-h&quot;&gt;Greater&lt;br&gt;Charlotte, NC&lt;/h2&gt;
+      &lt;p class=&quot;note&quot; style=&quot;margin-top:22px&quot;&gt;Based at our shop on Worth Place, we serve &lt;b&gt;Charlotte and the North Carolina cities surrounding it.&lt;/b&gt; We come to your home or business to field measure.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;area-cities&quot;&gt;
+        &lt;span class=&quot;city&quot;&gt;Charlotte&lt;/span&gt;
+        &lt;span class=&quot;city&quot;&gt;Gastonia&lt;/span&gt;
+        &lt;span class=&quot;city&quot;&gt;Concord&lt;/span&gt;
+        &lt;span class=&quot;city&quot;&gt;Salisbury&lt;/span&gt;
+        &lt;span class=&quot;city&quot;&gt;Monroe&lt;/span&gt;
+        &lt;span class=&quot;city&quot;&gt;&amp;amp; surrounding NC cities&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- (6) REVIEWS --&gt;
+&lt;section class=&quot;reviews sec-pad&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;kicker&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;In Their Words&lt;/div&gt;
+    &lt;h2 class=&quot;sec-h&quot; style=&quot;color:var(--char)&quot;&gt;What Customers Say&lt;/h2&gt;
+    &lt;div class=&quot;rev-grid&quot;&gt;
+      &lt;div class=&quot;quote&quot;&gt;
+        &lt;span class=&quot;mark&quot;&gt;&amp;ldquo;&lt;/span&gt;
+        &lt;blockquote&gt;Great overall experience. They made it easy for my wife and I.&lt;/blockquote&gt;
+        &lt;cite&gt;Brian Frey&lt;/cite&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;quote&quot;&gt;
+        &lt;span class=&quot;mark&quot;&gt;&amp;ldquo;&lt;/span&gt;
+        &lt;blockquote&gt;Great company. Just had some custom made corbels for our kitchen. They worked with our budget. I use them again and again.&lt;/blockquote&gt;
+        &lt;cite&gt;Daniel Mills Johnson&lt;/cite&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- (7) CONTACT --&gt;
+&lt;section class=&quot;contact sec-pad&quot; id=&quot;contact&quot;&gt;
+  &lt;div class=&quot;metal-bg&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;kicker&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;Get In Touch&lt;/div&gt;
+    &lt;h2 class=&quot;sec-h&quot;&gt;Request a Quote&lt;/h2&gt;
+    &lt;div class=&quot;contact-grid&quot;&gt;
+      &lt;!-- info --&gt;
+      &lt;div&gt;
+        &lt;div class=&quot;info-block&quot;&gt;
+          &lt;div class=&quot;il&quot;&gt;Shop Address&lt;/div&gt;
+          &lt;div class=&quot;iv&quot;&gt;Boudreaux&#x27;s Iron Shop, Inc.&lt;br&gt;4816 Worth Pl, Charlotte, NC 28216&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;info-block&quot;&gt;
+          &lt;div class=&quot;il&quot;&gt;Phone&lt;/div&gt;
+          &lt;div class=&quot;iv&quot;&gt;
+            &lt;a href=&quot;tel:17044884464&quot;&gt;704-488-4464&lt;/a&gt; &lt;span class=&quot;lang&quot;&gt;English&lt;/span&gt;&lt;br&gt;
+            &lt;a href=&quot;tel:17044492003&quot;&gt;704-449-2003&lt;/a&gt; &lt;span class=&quot;lang&quot;&gt;Español&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;info-block&quot;&gt;
+          &lt;div class=&quot;il&quot;&gt;Email&lt;/div&gt;
+          &lt;div class=&quot;iv&quot;&gt;
+            &lt;a href=&quot;mailto:glen@boudreauxsironshop.com&quot;&gt;glen@boudreauxsironshop.com&lt;/a&gt;&lt;br&gt;
+            &lt;a href=&quot;mailto:ironinfo@boudreauxsironshop.com&quot;&gt;ironinfo@boudreauxsironshop.com&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;info-block&quot;&gt;
+          &lt;div class=&quot;il&quot;&gt;Hours&lt;/div&gt;
+          &lt;div class=&quot;iv&quot;&gt;Monday–Friday · 7:00am – 3:30pm&lt;br&gt;&lt;span class=&quot;lang&quot;&gt;Saturday &amp;amp; Sunday · Closed&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;info-block&quot;&gt;
+          &lt;div class=&quot;il&quot;&gt;Owner&lt;/div&gt;
+          &lt;div class=&quot;iv&quot;&gt;Glenn A. Boudreaux, President&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- form --&gt;
+      &lt;div&gt;
+        &lt;hr class=&quot;hair&quot; style=&quot;margin-bottom:26px&quot;&gt;
+        &lt;form class=&quot;quote-form&quot; onsubmit=&quot;return false&quot;&gt;
+          &lt;div class=&quot;row2&quot;&gt;
+            &lt;div class=&quot;fld&quot;&gt;&lt;label for=&quot;nm&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;nm&quot; type=&quot;text&quot; autocomplete=&quot;name&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;fld&quot;&gt;&lt;label for=&quot;ph&quot;&gt;Phone&lt;/label&gt;&lt;input id=&quot;ph&quot; type=&quot;tel&quot; autocomplete=&quot;tel&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;fld&quot;&gt;&lt;label for=&quot;em&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;em&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;fld&quot;&gt;&lt;label for=&quot;pr&quot;&gt;Project&lt;/label&gt;
+            &lt;select id=&quot;pr&quot;&gt;
+              &lt;option&gt;Iron Gates&lt;/option&gt;
+              &lt;option&gt;Railings&lt;/option&gt;
+              &lt;option&gt;Fencing&lt;/option&gt;
+              &lt;option&gt;Staircase / Balcony&lt;/option&gt;
+              &lt;option&gt;Custom Ironwork&lt;/option&gt;
+              &lt;option&gt;Commercial&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;fld&quot;&gt;&lt;label for=&quot;ms&quot;&gt;Tell us about your project&lt;/label&gt;&lt;textarea id=&quot;ms&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Send Request&lt;/button&gt;
+          &lt;p class=&quot;form-note&quot;&gt;This form is illustrative. To reach the shop, call 704-488-4464 or email ironinfo@boudreauxsironshop.com.&lt;/p&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- FOOTER --&gt;
+&lt;footer&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;brandmark&quot;&gt;Boudreaux&#x27;s &lt;span class=&quot;brass-txt&quot;&gt;Iron Shop&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fmeta&quot;&gt;&lt;span class=&quot;simply&quot;&gt;Simply The Best&lt;/span&gt; · Custom ornamental iron since 1991 · Charlotte, NC&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="wrap">
+      <div>This is a design concept for Boudreaux&#x27;s Iron Shop, prepared by DariMoa. It is not the live website.</div>
+      <div class="cr">© DariMoa. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>
+    function fit(f){try{var d=f.contentWindow.document;var h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight);if(h>200)f.style.height=h+'px';}catch(e){}}
+    function fitAll(){document.querySelectorAll('iframe.after').forEach(fit);}
+    window.addEventListener('load',function(){fitAll();[300,900,1800,3500].forEach(function(t){setTimeout(fitAll,t);});});
+    window.addEventListener('resize',function(){clearTimeout(window.__rt);window.__rt=setTimeout(fitAll,150);});
+  </script>
+</body>
+</html>
