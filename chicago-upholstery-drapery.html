@@ -1,0 +1,278 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Chicago Upholstery &amp; Drapery — Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#3a1f38; --plum2:#52294d; --brass:#b08d3f; --brass2:#c9a85a; --brass-lite:#d8bd83;
+    --ivory:#f6efe6; --ivory2:#efe6d8; --ink:#241521; --muted:#7a6a74;
+    --wine:#6d2540;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .concept-banner{position:sticky;top:0;z-index:60;background:#241521;color:#e9dcc6;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 14px;font-weight:600}
+  .before-wrap{background:#2b1a28;color:#e9dcc6;padding:30px 20px 38px}
+  .before-inner{max-width:1080px;margin:0 auto}
+  .before-inner h2{font-family:Playfair Display,Georgia,serif;font-weight:500;font-size:20px;margin:0 0 4px;color:#e6c98a}
+  .before-inner p{margin:0 0 18px;color:#c8b3bf;font-size:13.5px}
+  .before-shot{border:1px solid #5a3f52;border-radius:6px;overflow:hidden;background:#12080f;min-height:220px}
+  .before-shot img{width:100%}
+
+  /* ===== Redesign (archetype E: sticky side-nav story) ===== */
+  .rd{--pad:clamp(22px,5vw,64px);background:var(--ivory);color:var(--ink);display:grid;grid-template-columns:262px 1fr;min-height:100vh}
+  .rd-side{background:linear-gradient(170deg,#3a1f38,#2a1526);color:var(--ivory);padding:38px 26px;position:sticky;top:0;align-self:start;height:100vh;display:flex;flex-direction:column}
+  .rd-brand{font-family:Playfair Display,Georgia,serif;font-size:23px;line-height:1.15;font-weight:700;color:#fff}
+  .rd-brand b{color:var(--brass-lite);font-weight:700}
+  .rd-tag{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#c6a9be;margin-top:10px}
+  .rd-nav{margin-top:34px;display:flex;flex-direction:column;gap:2px}
+  .rd-nav a{font-size:14px;color:#e7d6e2;text-decoration:none;padding:9px 0;border-bottom:1px dashed rgba(216,189,131,.28);letter-spacing:.02em}
+  .rd-nav a:hover{color:var(--brass-lite)}
+  .rd-side .rd-contactbox{margin-top:auto;font-size:12.5px;color:#d8c4d2;line-height:1.7}
+  .rd-side .rd-contactbox b{color:#fff;display:block;font-size:13px;letter-spacing:.04em}
+  .rd-main{min-width:0}
+  section.blk{padding:clamp(46px,6vw,84px) var(--pad)}
+  .kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600;margin:0 0 14px}
+  h1.hero-h{font-family:Playfair Display,Georgia,serif;font-weight:700;font-size:clamp(34px,5vw,58px);line-height:1.05;margin:0 0 18px;color:var(--plum)}
+  h2.sec-h{font-family:Playfair Display,Georgia,serif;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.12;margin:0 0 16px;color:var(--plum)}
+  p.lead{font-size:clamp(16px,1.5vw,19px);color:#4a3543;max-width:60ch}
+  .stitch{height:1px;border:0;border-top:2px dashed var(--brass);opacity:.5;margin:30px 0;max-width:120px}
+  /* hero */
+  .hero{background:
+      radial-gradient(1100px 420px at 82% -8%,rgba(176,141,63,.18),transparent 60%),
+      var(--ivory)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,54px);align-items:center}
+  .hero-photo{position:relative;border-radius:8px;overflow:hidden;min-height:340px;
+     background:linear-gradient(135deg,#52294d,#3a1f38 55%,#6d2540);
+     box-shadow:0 30px 60px -30px rgba(58,31,56,.6)}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:
+     repeating-linear-gradient(135deg,rgba(216,189,131,.10) 0 2px,transparent 2px 16px);pointer-events:none}
+  .hero-photo img{width:100%;height:100%;min-height:340px;object-fit:cover}
+  .hero-badge{position:absolute;left:18px;bottom:18px;background:rgba(36,21,33,.82);color:#e9d3ae;
+     font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:8px 13px;border-radius:20px;backdrop-filter:blur(3px)}
+  .btn{display:inline-block;background:var(--plum);color:#fff;text-decoration:none;font-weight:600;
+     font-size:14.5px;letter-spacing:.03em;padding:15px 28px;border-radius:4px;border:1px solid var(--plum);transition:.2s}
+  .btn:hover{background:#52294d}
+  .btn.ghost{background:transparent;color:var(--plum);border:1px solid rgba(58,31,56,.35)}
+  .btn.ghost:hover{border-color:var(--plum)}
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+  .trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid rgba(58,31,56,.14)}
+  .trust div{min-width:96px}
+  .trust b{font-family:Playfair Display,serif;font-size:26px;color:var(--wine);display:block;line-height:1}
+  .trust span{font-size:12px;color:var(--muted);letter-spacing:.04em}
+  /* services */
+  .svc-alt{background:var(--ivory2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px;margin-top:30px;
+     background:rgba(58,31,56,.14);border:1px solid rgba(58,31,56,.14)}
+  .svc{background:var(--ivory);padding:26px 24px}
+  .svc h3{font-family:Playfair Display,serif;font-size:19px;margin:0 0 8px;color:var(--plum)}
+  .svc p{margin:0;font-size:13.5px;color:#5c4854}
+  .svc .no{font-size:12px;color:var(--brass);font-weight:600;letter-spacing:.1em}
+  /* story split */
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+  .story-photo{border-radius:8px;overflow:hidden;min-height:320px;background:linear-gradient(160deg,#6d2540,#3a1f38);position:relative}
+  .story-photo img{width:100%;height:100%;min-height:320px;object-fit:cover}
+  blockquote.pull{font-family:Playfair Display,serif;font-style:italic;font-size:22px;line-height:1.4;color:var(--plum);border-left:3px solid var(--brass);padding-left:20px;margin:24px 0}
+  /* signature: fabric library */
+  .fabrics{background:linear-gradient(180deg,#2a1526,#3a1f38);color:var(--ivory)}
+  .fabrics .kicker{color:var(--brass-lite)}
+  .fabrics h2{color:#fff}
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+  .sw{border-radius:6px;padding:20px 16px;min-height:104px;display:flex;flex-direction:column;justify-content:flex-end;
+      color:#fff;font-weight:600;letter-spacing:.03em;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.09)}
+  .sw span{font-size:15px}.sw small{font-weight:400;font-size:11.5px;opacity:.8;letter-spacing:.08em;text-transform:uppercase}
+  .sw::before{content:"";position:absolute;inset:0;opacity:.85}
+  .sw.s1::before{background:repeating-linear-gradient(45deg,#6d2540,#6d2540 8px,#7d2f4a 8px 16px)}
+  .sw.s2::before{background:radial-gradient(circle at 30% 30%,#7a6a44,#4f4127)}
+  .sw.s3::before{background:repeating-linear-gradient(0deg,#3f5d55,#3f5d55 6px,#48685f 6px 12px)}
+  .sw.s4::before{background:linear-gradient(135deg,#8a6d3b,#b08d3f)}
+  .sw.s5::before{background:repeating-linear-gradient(90deg,#4a2f52,#4a2f52 10px,#5a3a63 10px 20px)}
+  .sw.s6::before{background:radial-gradient(circle at 70% 20%,#9a4258,#5c2438)}
+  .sw>*{position:relative;z-index:1}
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+  .gal .cell{border-radius:6px;overflow:hidden;min-height:180px;position:relative;
+     background:linear-gradient(135deg,#52294d,#2a1526)}
+  .gal .cell.tall{grid-row:span 2;min-height:372px}
+  .gal .cell img{width:100%;height:100%;object-fit:cover;min-height:180px}
+  .gal .cap{position:absolute;left:0;bottom:0;right:0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+     color:#eeddc9;background:linear-gradient(0deg,rgba(30,15,25,.8),transparent);padding:18px 12px 9px}
+  /* reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
+  .rev{background:var(--ivory);border:1px solid rgba(58,31,56,.16);border-radius:8px;padding:24px}
+  .rev p{font-size:14.5px;color:#3f2c39;margin:0 0 14px}
+  .rev .stars{color:var(--brass);letter-spacing:2px;font-size:13px}
+  .rev b{font-size:13px;color:var(--plum)}
+  /* contact */
+  .contact{background:linear-gradient(160deg,#3a1f38,#241521);color:var(--ivory)}
+  .contact .kicker{color:var(--brass-lite)}
+  .contact h2{color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,50px);margin-top:24px}
+  .cinfo div{margin-bottom:16px}
+  .cinfo b{display:block;color:var(--brass-lite);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px}
+  .cinfo a{color:#fff;text-decoration:none}
+  .form label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#cbb2c4;margin:0 0 5px}
+  .form input,.form textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(216,189,131,.3);
+     border-radius:4px;color:#fff;padding:11px 13px;margin-bottom:14px;font-family:inherit;font-size:14px}
+  .dm-foot{background:#1a0e16;color:#9c8593;text-align:center;font-size:12px;padding:26px 20px}
+  @media(max-width:860px){
+    .rd{grid-template-columns:1fr}
+    .rd-side{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 20px;padding:20px}
+    .rd-nav{flex-direction:row;flex-wrap:wrap;margin-top:0;gap:2px 16px;flex:1 1 100%}
+    .rd-nav a{border-bottom:none;padding:4px 0;font-size:13px}
+    .rd-side .rd-contactbox{margin:0}
+    .hero-grid,.story-grid,.contact-grid{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr 1fr}.gal .cell.tall{grid-row:auto;min-height:180px}
+  }
+</style>
+
+<div class="concept-banner">Redesign concept · not the live site · © DariMoa</div>
+
+<div class="before-wrap">
+  <div class="before-inner">
+    <h2>Before — the current chicagoupholsterycompany.com</h2>
+    <p>A respectful snapshot of the site as it stands today. Scroll past it to see a concept for what it could become.</p>
+    <div class="before-shot">
+      <img src="https://image.thum.io/get/width/1200/https://chicagoupholsterycompany.com/" alt="Current Chicago Upholstery website screenshot" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div class="rd">
+  <aside class="rd-side">
+    <div>
+      <div class="rd-brand">Chicago<br>Upholstery <b>&amp;</b><br>Drapery Co.</div>
+      <div class="rd-tag">Rogers Park · Since the workroom opened</div>
+    </div>
+    <nav class="rd-nav">
+      <a href="#story">The workroom</a>
+      <a href="#services">What we make</a>
+      <a href="#fabrics">Fabric library</a>
+      <a href="#work">Our work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Visit / quote</a>
+    </nav>
+    <div class="rd-contactbox">
+      <b>7101 N Ridge Blvd</b>
+      Chicago, IL 60645<br>
+      773-663-3261<br>
+      Tue–Fri 10–5 · Sat 10–3
+    </div>
+  </aside>
+
+  <main class="rd-main">
+    <section class="blk hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Reupholstery · Drapery · Slipcovers</p>
+          <h1 class="hero-h">The furniture you love, made to live another lifetime.</h1>
+          <p class="lead">A full-service upholstery and drapery workroom on the North Side of Chicago — where a worn frame, the right fabric, and real hand-work turn a tired piece back into the best seat in the house.</p>
+          <div class="btn-row">
+            <a class="btn" href="#contact">Request a quote</a>
+            <a class="btn ghost" href="#work">See our work</a>
+          </div>
+          <div class="trust">
+            <div><b>Best of</b><span>Chicago — Reupholstery, 2015 &amp; 2016</span></div>
+            <div><b>50+</b><span>Reviews across the neighborhood</span></div>
+            <div><b>Full</b><span>Upholstery &amp; drapery under one roof</span></div>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="https://chicagoupholsterycompany.com/Chicasgo_Upholstery_Website_2015/Graphics/yellow-tufted-sofa.jpg" alt="Freshly reupholstered yellow tufted sofa" onerror="this.style.display='none'">
+          <div class="hero-badge">Hand-tufted · from our workroom</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blk" id="story">
+      <div class="story-grid">
+        <div>
+          <p class="kicker">The workroom</p>
+          <h2 class="sec-h">Started with a needle at twelve. Built into a Chicago institution.</h2>
+          <p class="lead">The shop grew out of a hands-on love of the craft — an engineer's precision brought to the patience of upholstery. Today the workroom takes on everything from a single dining chair to a full room of custom drapery, all finished in-house by people who do this every day.</p>
+          <blockquote class="pull">"Their craftsmanship and attention to detail brought new life to furniture our parents loved."</blockquote>
+          <p style="font-size:13px;color:var(--muted)">— Richard Clegg, customer review</p>
+        </div>
+        <div class="story-photo">
+          <img src="https://chicagoupholsterycompany.com/Pictures/Room_Drapes.jpg" alt="Room with custom drapery" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <section class="blk svc-alt" id="services">
+      <p class="kicker">What we make</p>
+      <h2 class="sec-h">One workroom, every part of the job.</h2>
+      <hr class="stitch">
+      <div class="svc-grid">
+        <div class="svc"><div class="no">01</div><h3>Custom Upholstery &amp; Reupholstery</h3><p>Frames stripped, rebuilt and re-covered — sofas, chairs, benches, headboards — in the fabric you choose.</p></div>
+        <div class="svc"><div class="no">02</div><h3>Custom Drapery</h3><p>Fine drapery made to measure for the window, from panels to full treatments.</p></div>
+        <div class="svc"><div class="no">03</div><h3>Custom Slipcovers</h3><p>Tailored, removable covers that fit like they were sewn on — because they were.</p></div>
+        <div class="svc"><div class="no">04</div><h3>Custom Furniture</h3><p>Built-to-order pieces designed around your room and your fabric.</p></div>
+        <div class="svc"><div class="no">05</div><h3>Pillows &amp; Trim</h3><p>Cushions, bolsters and decorative pillows finished with cording, tassels and trim.</p></div>
+        <div class="svc"><div class="no">06</div><h3>Refinishing</h3><p>Wood frames and exposed legs refinished so the whole piece looks new again.</p></div>
+      </div>
+    </section>
+
+    <section class="blk fabrics" id="fabrics">
+      <p class="kicker">Signature — the fabric library</p>
+      <h2 class="sec-h">Bring a room. Leave with the fabric that fits it.</h2>
+      <p class="lead" style="color:#d7c2d1">We carry lines you can actually put your hands on — durable, beautiful goods for real households, kids and pets included.</p>
+      <div class="swatches">
+        <div class="sw s1"><span>Robert Allen</span><small>Upholstery</small></div>
+        <div class="sw s2"><span>Maxwell</span><small>Textiles</small></div>
+        <div class="sw s3"><span>Sunbrella</span><small>Performance</small></div>
+        <div class="sw s4"><span>Charlotte</span><small>Drapery</small></div>
+        <div class="sw s5"><span>Novel</span><small>Upholstery</small></div>
+        <div class="sw s6"><span>Gabe Humphries</span><small>Fine goods</small></div>
+      </div>
+    </section>
+
+    <section class="blk" id="work">
+      <p class="kicker">Our work</p>
+      <h2 class="sec-h">A look inside the workroom.</h2>
+      <div class="gal">
+        <div class="cell tall"><img src="https://chicagoupholsterycompany.com/Chicasgo_Upholstery_Website_2015/Graphics/yellow-tufted-sofa.jpg" alt="Reupholstered tufted sofa" onerror="this.style.display='none'"><div class="cap">Hand-tufted sofa</div></div>
+        <div class="cell"><img src="https://chicagoupholsterycompany.com/Julian_Marc_Website_2014/Drape_Tassel.jpg" alt="Custom drapery with tassel" onerror="this.style.display='none'"><div class="cap">Drapery &amp; tassel</div></div>
+        <div class="cell"><img src="https://chicagoupholsterycompany.com/Chicasgo_Upholstery_Website_2015/Graphics/group_tassels.jpg" alt="Trim and tassels" onerror="this.style.display='none'"><div class="cap">Trim &amp; tassels</div></div>
+        <div class="cell"><img src="https://chicagoupholsterycompany.com/GRaphics/trim.jpg" alt="Trimmed pillows" onerror="this.style.display='none'"><div class="cap">Cushions &amp; cording</div></div>
+        <div class="cell"><img src="https://chicagoupholsterycompany.com/Pictures/image1.JPG" alt="Workroom interior" onerror="this.style.display='none'"><div class="cap">Inside the shop</div></div>
+      </div>
+    </section>
+
+    <section class="blk svc-alt" id="reviews">
+      <p class="kicker">Reviews</p>
+      <h2 class="sec-h">The neighborhood keeps coming back.</h2>
+      <div class="rev-grid">
+        <div class="rev"><div class="stars">★★★★★</div><p>"Their craftsmanship and attention to detail brought new life to furniture our parents loved."</p><b>Richard Clegg</b></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>"Dale, Julian and the team reupholstered an old couch for us. We are very pleased with the results."</p><b>Jenny Gaw</b></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>"Amazing! Very pleasant customer service and superior craftsmanship."</p><b>Gulpana Dhan</b></div>
+      </div>
+    </section>
+
+    <section class="blk contact" id="contact">
+      <p class="kicker">Visit / quote</p>
+      <h2 class="sec-h">Bring in a piece — or a photo — and let's talk.</h2>
+      <div class="contact-grid">
+        <div class="cinfo">
+          <div><b>Workroom</b>7101 N Ridge Blvd, Chicago, IL 60645</div>
+          <div><b>Phone</b><a href="tel:+17736633261">773-663-3261</a></div>
+          <div><b>Email</b><a href="mailto:contactus@chicagoupholsterycompany.com">contactus@chicagoupholsterycompany.com</a></div>
+          <div><b>Hours</b>Tue–Fri 10–5 · Sat 10–3 · Sun &amp; Mon closed</div>
+        </div>
+        <form class="form" onsubmit="return false">
+          <label>Name</label><input type="text" placeholder="Your name">
+          <label>Email or phone</label><input type="text" placeholder="How we reach you">
+          <label>What needs new life?</label><textarea rows="3" placeholder="A chair, a sofa, a room of drapery…"></textarea>
+          <button class="btn" type="submit" style="background:var(--brass);border-color:var(--brass);color:#241521">Request a quote</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="dm-foot">This is a design concept, not the live site. © DariMoa. All rights reserved.</div>

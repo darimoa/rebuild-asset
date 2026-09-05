@@ -1,0 +1,226 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Design Glass &amp; Mirror — Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0e7c86; --teal2:#0b626b; --aqua:#3fb0bd; --deep:#122a2e; --deep2:#0d1f22;
+    --paper:#f2f6f6; --paper2:#e6eeee; --ink:#152528; --mute:#5f7377; --glass:#cfe6e8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,Arial,sans-serif;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .concept-banner{position:sticky;top:0;z-index:60;background:var(--deep);color:#dff0f1;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 14px;font-weight:700}
+  .before-wrap{background:#0f2427;color:#d6e7e8;padding:30px 20px 38px}
+  .before-inner{max-width:1120px;margin:0 auto}
+  .before-inner h2{font-size:19px;margin:0 0 4px;color:#7fd4dd;font-weight:700}
+  .before-inner p{margin:0 0 18px;color:#9dbabd;font-size:13.5px}
+  .before-shot{border:1px solid #2a4548;border-radius:6px;overflow:hidden;background:#08181a;min-height:220px}
+  .before-shot img{width:100%}
+
+  /* ===== Redesign A: full-bleed image hero ===== */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;
+     padding:20px clamp(18px,4vw,48px)}
+  .nav .logo{color:#fff;font-weight:800;font-size:21px;letter-spacing:-.01em}
+  .nav .logo b{color:var(--aqua)}
+  .nav .logo small{display:block;font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#bcd8da}
+  .nav nav{display:flex;gap:26px;align-items:center}
+  .nav nav a{color:#eaf4f4;text-decoration:none;font-weight:500;font-size:14px}
+  .nav nav a:hover{color:var(--aqua)}
+  .nav .navcta{background:#fff;color:var(--deep);padding:9px 18px;border-radius:40px;font-weight:700;font-size:13.5px}
+  .hero{position:relative;min-height:clamp(500px,88vh,760px);display:flex;align-items:flex-end;overflow:hidden;
+     background:linear-gradient(150deg,#0e7c86,#122a2e 70%)}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;
+     background:linear-gradient(180deg,rgba(10,25,27,.55) 0%,rgba(10,25,27,.15) 40%,rgba(10,25,27,.82) 100%)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+     background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.14) 47%,transparent 54%)}
+  .hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:0 clamp(18px,4vw,48px) clamp(40px,6vw,72px)}
+  .hero .eyebrow{color:var(--aqua);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;margin:0 0 16px}
+  .hero h1{color:#fff;font-weight:800;font-size:clamp(38px,6vw,72px);line-height:1.02;letter-spacing:-.02em;margin:0 0 18px;max-width:16ch}
+  .hero p{color:#dbeced;font-size:clamp(16px,1.6vw,20px);max-width:52ch;margin:0 0 28px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:15px 30px;border-radius:44px}
+  .btn.fill{background:var(--aqua);color:var(--deep)}.btn.fill:hover{background:#5fc3ce}
+  .btn.ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff;margin-left:12px}.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+  .hero-strip{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px 30px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.2)}
+  .hero-strip span{color:#cfe6e8;font-size:14px;font-weight:600}
+  .hero-strip b{color:var(--aqua)}
+  /* section */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+  .sec{padding:clamp(48px,6vw,90px) 0}
+  .kick{color:var(--teal);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:12.5px;margin:0 0 12px}
+  h2.sh{font-weight:800;font-size:clamp(28px,4vw,46px);line-height:1.06;letter-spacing:-.02em;margin:0 0 14px;color:var(--deep)}
+  .lead{color:#3f5457;font-size:clamp(16px,1.5vw,19px);max-width:56ch}
+  /* intro split */
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,58px);align-items:center}
+  .intro-photo{border-radius:14px;overflow:hidden;min-height:340px;position:relative;
+     background:linear-gradient(150deg,#3fb0bd,#0b626b);box-shadow:0 30px 60px -34px rgba(11,98,107,.6)}
+  .intro-photo img{width:100%;height:100%;min-height:340px;object-fit:cover}
+  .quote{margin-top:22px;padding:22px 24px;background:#fff;border-radius:12px;border:1px solid var(--paper2);box-shadow:0 20px 40px -30px rgba(18,42,46,.4)}
+  .quote p{margin:0 0 8px;font-size:16px;color:#25393c}
+  .quote b{color:var(--teal);font-weight:700}
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:36px}
+  .svc{background:#fff;border-radius:14px;padding:28px 24px;border:1px solid var(--paper2);transition:.2s}
+  .svc:hover{transform:translateY(-3px);box-shadow:0 24px 44px -30px rgba(14,124,134,.5)}
+  .svc .dot{width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,var(--aqua),var(--teal));margin-bottom:16px;
+     position:relative;overflow:hidden}
+  .svc .dot::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 45%,rgba(255,255,255,.55) 50%,transparent 55%)}
+  .svc h3{font-weight:700;font-size:18px;margin:0 0 7px;color:var(--deep)}
+  .svc p{margin:0;font-size:14px;color:#546a6d}
+  /* signature: mirror & shower gallery */
+  .gallery{background:linear-gradient(180deg,#122a2e,#0d1f22);color:#fff}
+  .gallery .kick{color:var(--aqua)}.gallery h2{color:#fff}
+  .gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:200px;gap:14px;margin-top:34px}
+  .g{position:relative;overflow:hidden;border-radius:14px;background:linear-gradient(150deg,#0e7c86,#0d1f22)}
+  .g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .g::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 55%,rgba(255,255,255,.12) 60%,transparent 66%)}
+  .g .cap{position:absolute;left:0;bottom:0;right:0;z-index:2;padding:24px 16px 13px;color:#fff;font-weight:600;font-size:14px;
+     background:linear-gradient(0deg,rgba(8,20,22,.82),transparent)}
+  .g.big{grid-column:span 1;grid-row:span 2}
+  .g.wide{grid-column:span 2}
+  /* trust band */
+  .band{background:var(--teal);color:#fff}
+  .band .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:center;padding-top:34px;padding-bottom:34px}
+  .band .item b{display:block;font-size:30px;font-weight:800;line-height:1}
+  .band .item span{font-size:13px;color:#cdeaed}
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,54px);align-items:center}
+  .cinfo div{margin-bottom:16px}
+  .cinfo b{display:block;color:var(--teal);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
+  .cinfo a{color:var(--deep);text-decoration:none;font-weight:600}
+  .form{background:#fff;border-radius:16px;padding:28px;border:1px solid var(--paper2);box-shadow:0 30px 60px -40px rgba(18,42,46,.5)}
+  .form label{display:block;font-size:12.5px;font-weight:600;color:var(--mute);margin:0 0 5px}
+  .form input,.form textarea{width:100%;background:var(--paper);border:1px solid var(--paper2);border-radius:9px;
+     padding:12px 14px;margin-bottom:14px;font-family:inherit;font-size:14px;color:var(--ink)}
+  .dm-foot{background:var(--deep2);color:#7fa0a3;text-align:center;font-size:12px;padding:26px 20px}
+  @media(max-width:900px){
+    .nav nav{display:none}
+    .intro-grid,.contact-grid{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}.g.big,.g.wide{grid-column:span 2;grid-row:auto}
+  }
+</style>
+
+<div class="concept-banner">Redesign concept · not the live site · © DariMoa</div>
+
+<div class="before-wrap">
+  <div class="before-inner">
+    <h2>Before — the current designglassmirror.com</h2>
+    <p>A respectful snapshot of the site as it stands today. Scroll past it for a concept of what it could become.</p>
+    <div class="before-shot">
+      <img src="https://image.thum.io/get/width/1200/https://designglassmirror.com/" alt="Current Design Glass and Mirror website screenshot" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <img src="https://designglassmirror.com/images/glass-shower1.jpg" alt="Frameless glass shower enclosure" onerror="this.style.display='none'">
+  <div class="nav">
+    <div class="logo">Design <b>Glass</b> &amp; Mirror<small>Gaithersburg, Maryland</small></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a class="navcta" href="#contact">Free quote</a>
+    </nav>
+  </div>
+  <div class="hero-inner">
+    <p class="eyebrow">Custom glass · Frameless showers · Mirrors</p>
+    <h1>Glass, cut and set to fit the space you actually have.</h1>
+    <p>Frameless shower enclosures, custom mirrors, table tops and partitions — measured, made and installed by a Montgomery County shop with 25+ years behind the glass.</p>
+    <div>
+      <a class="btn fill" href="#contact">Get a free quote</a>
+      <a class="btn ghost" href="#gallery">See the work</a>
+    </div>
+    <div class="hero-strip">
+      <span><b>25+</b> years of glass experience</span>
+      <span><b>Frameless</b> shower specialists</span>
+      <span><b>Custom</b> mirrors &amp; table tops</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap intro-grid">
+    <div>
+      <p class="kick">The shop</p>
+      <h2 class="sh">The awkward bathroom nobody else wants to measure? That's our favorite job.</h2>
+      <p class="lead">Locally owned and run by Edwin, Design Glass &amp; Mirror has spent 25+ years fabricating and installing custom glass across the Gaithersburg area — the unusual shower, the wall of antiqued mirror, the table top cut to an odd radius. If it's glass, and it has to fit exactly, it's the work we're built for.</p>
+      <div class="quote">
+        <p>"I was referred to Edwin by a drapery designer — what a great referral it turned out to be. He and his men did a great job to ensure level and precise placement of the mirror. Highly recommended."</p>
+        <b>Richard Brandys</b> <span style="color:var(--mute);font-size:13px">· recent review</span>
+      </div>
+    </div>
+    <div class="intro-photo">
+      <img src="https://designglassmirror.com/images/glass-partition1.jpg" alt="Custom glass partition" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="background:var(--paper2)">
+  <div class="wrap">
+    <p class="kick">What we make &amp; install</p>
+    <h2 class="sh">From a frameless shower to a dining-room table top.</h2>
+    <p class="lead">Residential and commercial glass, fabricated and installed.</p>
+    <div class="svc-grid">
+      <div class="svc"><div class="dot"></div><h3>Frameless Shower Enclosures</h3><p>Custom frameless and semi-frameless enclosures measured to your bathroom.</p></div>
+      <div class="svc"><div class="dot"></div><h3>Custom Mirrors</h3><p>Wall mirrors, vanity and antiqued mirror cut and set to size.</p></div>
+      <div class="svc"><div class="dot"></div><h3>Glass Table Tops &amp; Furniture</h3><p>Protective and custom-shaped table tops and glass for furniture.</p></div>
+      <div class="svc"><div class="dot"></div><h3>Partitions &amp; Rail Systems</h3><p>Glass partitions and railing systems for home and office.</p></div>
+      <div class="svc"><div class="dot"></div><h3>Commercial &amp; Storefronts</h3><p>Office glass and storefront glazing for local businesses.</p></div>
+      <div class="svc"><div class="dot"></div><h3>Glass Repair</h3><p>Repair and replacement when a piece breaks or fogs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gallery" id="gallery">
+  <div class="wrap">
+    <p class="kick">Recent work</p>
+    <h2 class="sh">Clean lines, exact fit, real installs.</h2>
+    <div class="gal-grid">
+      <div class="g big"><img src="https://designglassmirror.com/images/framless-shower-stole.jpg" alt="Frameless shower enclosure" onerror="this.style.display='none'"><div class="cap">Frameless shower enclosure</div></div>
+      <div class="g"><img src="https://designglassmirror.com/images/a-shower.jpg" alt="Glass shower install" onerror="this.style.display='none'"><div class="cap">Custom shower glass</div></div>
+      <div class="g"><img src="https://designglassmirror.com/images/b-wine-cab.jpg" alt="Glass wine cabinet" onerror="this.style.display='none'"><div class="cap">Glass wine cabinet</div></div>
+      <div class="g wide"><img src="https://designglassmirror.com/images/b-shower.jpg" alt="Frameless glass shower" onerror="this.style.display='none'"><div class="cap">Frameless glass, exact fit</div></div>
+      <div class="g"><img src="https://designglassmirror.com/images/bath1.jpg" alt="Bathroom mirror and glass" onerror="this.style.display='none'"><div class="cap">Vanity mirror &amp; glass</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="item"><b>25+</b><span>Years of glass experience</span></div>
+    <div class="item"><b>4.3★</b><span>21 reviews · Gaithersburg</span></div>
+    <div class="item"><b>Free</b><span>In-home measure &amp; quote</span></div>
+    <div class="item"><b>Res + Com</b><span>Homes &amp; businesses</span></div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="kick">Free quote</p>
+      <h2 class="sh">Tell us the space. We'll measure the glass.</h2>
+      <p class="lead" style="margin-bottom:22px">Serving Gaithersburg and Montgomery County. Send a photo and rough measurements, or set up an in-home measure.</p>
+      <div class="cinfo">
+        <div><b>Shop</b>18761 N Frederick Rd, Suite HH, Gaithersburg, MD 20879</div>
+        <div><b>Phone</b><a href="tel:+13017402999">301-740-2999</a> · fax 301-740-2998</div>
+        <div><b>Email</b><a href="mailto:info@designglassmirror.com">info@designglassmirror.com</a></div>
+        <div><b>Hours</b>Mon–Fri 8–5 · Sat by appointment</div>
+      </div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Email or phone</label><input type="text" placeholder="How we reach you">
+      <label>What do you need in glass?</label><textarea rows="3" placeholder="Frameless shower, mirror wall, table top…"></textarea>
+      <button class="btn fill" type="submit" style="border:0;cursor:pointer">Request a free quote</button>
+    </form>
+  </div>
+</section>
+
+<div class="dm-foot">This is a design concept, not the live site. © DariMoa. All rights reserved.</div>

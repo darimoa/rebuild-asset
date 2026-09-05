@@ -1,0 +1,231 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ace Radiator — Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#1f3a52; --steel2:#274a68; --graphite:#20242a; --graphite2:#2c313a;
+    --amber:#f2a41c; --amber2:#e08a0a; --paper:#eef1f4; --paper2:#e2e7ec; --ink:#1a1e24; --mute:#63707d;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.55}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .osw{font-family:Oswald,Arial,sans-serif}
+  .concept-banner{position:sticky;top:0;z-index:60;background:var(--graphite);color:#eef1f4;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 14px;font-weight:600}
+  .before-wrap{background:#161a20;color:#d7dde3;padding:30px 20px 38px}
+  .before-inner{max-width:1120px;margin:0 auto}
+  .before-inner h2{font-size:19px;margin:0 0 4px;color:var(--amber);font-weight:600;font-family:Oswald}
+  .before-inner p{margin:0 0 18px;color:#9fabb6;font-size:13.5px}
+  .before-shot{border:1px solid #333a44;border-radius:4px;overflow:hidden;background:#0c0e12;min-height:220px}
+  .before-shot img{width:100%}
+
+  /* ===== Redesign B: split hero ===== */
+  .hazard{height:10px;background:repeating-linear-gradient(45deg,var(--amber) 0 16px,var(--graphite) 16px 32px)}
+  .topbar{background:var(--graphite);color:#fff}
+  .topwrap{max-width:1180px;margin:0 auto;padding:14px clamp(18px,4vw,44px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .logo{font-family:Oswald;font-weight:700;font-size:23px;letter-spacing:.04em;text-transform:uppercase}
+  .logo b{color:var(--amber)}
+  .logo small{display:block;font-family:Inter;font-weight:400;font-size:10.5px;letter-spacing:.2em;color:#9fabb6}
+  .topbar nav{display:flex;gap:22px;font-family:Oswald;font-size:15px;letter-spacing:.05em;text-transform:uppercase}
+  .topbar nav a{color:#d7dde3;text-decoration:none}.topbar nav a:hover{color:var(--amber)}
+  .topcall{font-family:Oswald;font-size:18px;color:var(--amber);text-decoration:none;letter-spacing:.03em}
+  /* split hero */
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(420px,58vh,560px)}
+  .hero-l{background:
+     radial-gradient(600px 300px at 20% 10%,rgba(242,164,28,.14),transparent 60%),
+     linear-gradient(160deg,#1f3a52,#152b3d);color:#fff;
+     padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;justify-content:center}
+  .est{display:inline-flex;align-items:center;gap:10px;font-family:Oswald;letter-spacing:.14em;text-transform:uppercase;
+     font-size:13px;color:var(--amber);margin-bottom:18px}
+  .est::before{content:"";width:34px;height:2px;background:var(--amber)}
+  h1.hh{font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(38px,5.2vw,66px);line-height:.98;letter-spacing:.01em;margin:0 0 16px}
+  h1.hh em{color:var(--amber);font-style:normal}
+  .hero-l p{color:#c4d0da;font-size:clamp(15px,1.5vw,18px);max-width:42ch;margin:0 0 26px}
+  .btn{display:inline-block;text-decoration:none;font-family:Oswald;font-weight:600;font-size:17px;letter-spacing:.05em;text-transform:uppercase;padding:14px 28px}
+  .btn.amber{background:var(--amber);color:var(--graphite)}.btn.amber:hover{background:var(--amber2)}
+  .btn.line{border:2px solid rgba(255,255,255,.4);color:#fff}.btn.line:hover{border-color:var(--amber);color:var(--amber)}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-r{position:relative;background:linear-gradient(150deg,#2c313a,#20242a);overflow:hidden}
+  .hero-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-r::after{content:"";position:absolute;inset:0;background:
+     repeating-linear-gradient(45deg,rgba(0,0,0,.16) 0 3px,transparent 3px 22px)}
+  .gauge{position:absolute;right:22px;bottom:22px;z-index:2;width:118px;height:118px;border-radius:50%;
+     background:radial-gradient(circle at 50% 45%,#2c313a,#14171c);border:3px solid var(--amber);
+     display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,.6)}
+  .gauge b{font-family:Oswald;font-size:34px;line-height:1;color:var(--amber)}
+  .gauge span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#c4d0da;margin-top:2px}
+  /* trust strip */
+  .trust{background:var(--steel);color:#fff}
+  .trustwrap{max-width:1180px;margin:0 auto;padding:16px clamp(18px,4vw,44px);display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;
+     font-family:Oswald;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+  .trust b{color:var(--amber)}
+  /* section */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+  .sec{padding:clamp(44px,6vw,82px) 0}
+  .kick{font-family:Oswald;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber2);margin:0 0 10px}
+  h2.sh{font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(28px,4vw,46px);line-height:1;margin:0 0 8px;color:var(--steel)}
+  .sublead{color:var(--mute);max-width:56ch;font-size:15.5px}
+  /* services grid */
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
+  .svc{background:#fff;border:1px solid #d6dee4;border-top:4px solid var(--amber);padding:24px}
+  .svc h3{font-family:Oswald;font-weight:600;text-transform:uppercase;font-size:19px;margin:0 0 8px;color:var(--steel);letter-spacing:.02em}
+  .svc p{margin:0;font-size:14px;color:#4c5964}
+  /* signature: since 1947 / capabilities */
+  .cap{background:linear-gradient(160deg,#20242a,#171a1f);color:#fff}
+  .cap-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,54px);align-items:center}
+  .cap .kick{color:var(--amber)}
+  .cap h2{color:#fff}
+  .cap p{color:#c4d0da;font-size:15.5px;max-width:44ch}
+  .caprows{border-top:1px solid rgba(255,255,255,.18)}
+  .caprow{display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .caprow .ic{font-family:Oswald;color:var(--amber);font-size:15px;min-width:30px}
+  .caprow b{font-family:Oswald;text-transform:uppercase;letter-spacing:.03em;font-size:18px}
+  .caprow span{margin-left:auto;color:#9fabb6;font-size:13px;text-align:right}
+  .yearbadge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:150px;height:150px;border-radius:50%;
+     border:3px solid var(--amber);background:rgba(242,164,28,.06);margin-bottom:22px}
+  .yearbadge b{font-family:Oswald;font-size:46px;line-height:1;color:var(--amber)}
+  .yearbadge span{font-family:Oswald;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:#c4d0da}
+  /* reviews */
+  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+  .rev{background:#fff;border:1px solid #d6dee4;border-radius:8px;padding:26px}
+  .rev .stars{color:var(--amber2);letter-spacing:2px}
+  .rev p{font-size:16px;color:#2c343c;margin:8px 0 12px}
+  .rev b{font-family:Oswald;text-transform:uppercase;letter-spacing:.03em;color:var(--steel)}
+  .rev small{color:var(--mute)}
+  /* contact */
+  .contact{background:var(--steel);color:#fff;padding:clamp(42px,6vw,84px) 0}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,50px);align-items:center}
+  .contact h2{font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(32px,5vw,56px);line-height:.98;margin:0 0 12px}
+  .contact p.l{color:#c4d0da;font-size:16px;max-width:40ch}
+  .cbox{background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.16);padding:26px}
+  .cbox div{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .cbox div:last-child{border:0}
+  .cbox small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--amber);margin-bottom:3px;font-family:Oswald}
+  .cbox a{color:#fff;text-decoration:none;font-size:16px}
+  .dm-foot{background:var(--graphite);color:#7c8894;text-align:center;font-size:12px;padding:26px 20px}
+  @media(max-width:900px){
+    .topbar nav{display:none}
+    .hero{grid-template-columns:1fr}
+    .hero-r{min-height:280px}
+    .cap-grid,.contact-grid,.rev-grid{grid-template-columns:1fr}
+    .capleft{text-align:center}
+  }
+</style>
+
+<div class="concept-banner">Redesign concept · not the live site · © DariMoa</div>
+
+<div class="before-wrap">
+  <div class="before-inner">
+    <h2>Before — the current aceradiatorinc.com</h2>
+    <p>A respectful snapshot of the site as it stands today. Scroll past it for a concept of what it could become.</p>
+    <div class="before-shot">
+      <img src="https://image.thum.io/get/width/1200/https://aceradiatorinc.com/" alt="Current Ace Radiator website screenshot" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div class="hazard"></div>
+<header class="topbar">
+  <div class="topwrap">
+    <div class="logo">ACE <b>RADIATOR</b><small>Fort Wayne, Indiana · Since 1947</small></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="topcall" href="tel:+12604840441">260-484-0441</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-l">
+    <span class="est">Serving IN · OH · MI · IL · KY</span>
+    <h1 class="hh">Cooling systems <em>done right</em> since 1947.</h1>
+    <p>Radiators, heaters, coolers and A/C — for cars, trucks and heavy-duty equipment. Three generations of the same specialty done by ASE- and NARSA-certified techs.</p>
+    <div class="hero-cta">
+      <a class="btn amber" href="#contact">Request service</a>
+      <a class="btn line" href="#services">What we fix</a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <img src="http://www.aceradiatorinc.com/userfiles/images/hd-rad-service.jpg" alt="Heavy-duty radiator service" onerror="this.style.display='none'">
+    <div class="gauge"><b>79</b><span>Years</span></div>
+  </div>
+</section>
+<div class="trust">
+  <div class="trustwrap">
+    <span><b>ASE</b> Certified</span>
+    <span><b>NARSA</b> Heavy-Duty</span>
+    <span><b>MACS</b> A/C</span>
+    <span><b>NAPA</b> AutoCare</span>
+    <span><b>BBB</b> Accredited</span>
+  </div>
+</div>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <p class="kick">What we fix</p>
+    <h2 class="sh">Repair, recore, rebuild.</h2>
+    <p class="sublead">From a leaking car radiator to a charge-air cooler off a semi, cooling and heat-exchange work is the whole job here — not a sideline.</p>
+    <div class="svc-grid">
+      <div class="svc"><h3>Radiators &amp; Heaters</h3><p>Repair, recore, and replacement for automotive, truck and heavy-duty radiators and heater cores.</p></div>
+      <div class="svc"><h3>Coolers &amp; Heat Exchangers</h3><p>Oil coolers, heat exchangers and steam units cleaned, tested and repaired.</p></div>
+      <div class="svc"><h3>Charge Air Coolers</h3><p>Charge-air cooler service and pressure testing for diesel and heavy-duty applications.</p></div>
+      <div class="svc"><h3>Air Conditioner Repair</h3><p>MACS-certified A/C diagnosis and repair — condensers, lines and full systems.</p></div>
+      <div class="svc"><h3>Fuel Tanks &amp; Straps</h3><p>Fuel tank service, cleaning and straps to get the whole system sound.</p></div>
+      <div class="svc"><h3>General Auto Service</h3><p>As a NAPA AutoCare shop, we back everyday repairs with a nationwide warranty.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cap sec" id="capabilities">
+  <div class="wrap cap-grid">
+    <div class="capleft">
+      <div class="yearbadge"><b>1947</b><span>Established</span></div>
+      <p class="kick">Built for heavy-duty</p>
+      <h2 class="sh">Nearly eight decades, four states, two distribution centers.</h2>
+      <p>What started as a Fort Wayne radiator shop now supplies and services cooling systems across the region — with distribution centers in Cincinnati and Columbus keeping the parts moving.</p>
+    </div>
+    <div class="caprows">
+      <div class="caprow"><span class="ic">01</span><b>Automotive &amp; light truck</b><span>cars, pickups, vans</span></div>
+      <div class="caprow"><span class="ic">02</span><b>Heavy-duty &amp; fleet</b><span>semi, ag, industrial</span></div>
+      <div class="caprow"><span class="ic">03</span><b>Pressure &amp; flow testing</b><span>find the leak first</span></div>
+      <div class="caprow"><span class="ic">04</span><b>Parts &amp; distribution</b><span>Cincinnati · Columbus OH</span></div>
+      <div class="caprow"><span class="ic">05</span><b>Regional service</b><span>IN · OH · MI · IL · KY</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <p class="kick">Reviews</p>
+    <h2 class="sh">Customers who don't go anywhere else.</h2>
+    <div class="rev-grid">
+      <div class="rev"><div class="stars">★★★★★</div><p>"I will never go anywhere else. Stellar people and experts too — can't beat that!"</p><b>Margo B.</b> <small>· July 2026</small></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"Ace Radiator is great! Reasonable and very fair."</p><b>Susan D.</b> <small>· 2023</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Bring it in<br>or call ahead.</h2>
+      <p class="l">Drop off the vehicle or the part, or call and describe what's overheating. We'll test it, tell you straight, and get it cooling again.</p>
+    </div>
+    <div class="cbox">
+      <div><small>Shop</small><span>2319 W Coliseum Blvd, Fort Wayne, IN 46808</span></div>
+      <div><small>Phone</small><a href="tel:+12604840441">260-484-0441</a> · <a href="tel:+18002887964">800-288-7964</a></div>
+      <div><small>Email</small><a href="mailto:bheath@aceradiatorinc.com">bheath@aceradiatorinc.com</a></div>
+      <div><small>Hours</small><span>Monday–Friday 8:00–5:00</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="dm-foot">This is a design concept, not the live site. © DariMoa. All rights reserved.</div>

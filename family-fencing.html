@@ -1,0 +1,259 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Family Fencing — Redesign Concept · DariMoa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --redwood:#a6472a; --redwood2:#8a3a22; --iron:#2b2f31; --iron2:#3c4245;
+    --sage:#6f7d54; --cream:#f3efe6; --cream2:#e8e2d4; --ink:#221f1c; --mute:#726a60;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:Barlow,system-ui,Arial,sans-serif;line-height:1.55}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .cond{font-family:"Barlow Condensed",Arial,sans-serif}
+  .concept-banner{position:sticky;top:0;z-index:60;background:var(--iron);color:#e8e2d4;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 14px;font-weight:600}
+  .before-wrap{background:#20140f;color:#e7d9cf;padding:30px 20px 38px}
+  .before-inner{max-width:1120px;margin:0 auto}
+  .before-inner h2{font-size:19px;margin:0 0 4px;color:#f0c3ab;font-weight:600}
+  .before-inner p{margin:0 0 18px;color:#c3b0a4;font-size:13.5px}
+  .before-shot{border:1px solid #4b352b;border-radius:4px;overflow:hidden;background:#0e0806;min-height:220px}
+  .before-shot img{width:100%}
+
+  /* ===== Redesign D: magazine asymmetric grid ===== */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+  .rd{background:var(--cream);
+      background-image:repeating-linear-gradient(90deg,rgba(34,31,28,.05) 0 2px,transparent 2px 26px)}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:3px solid var(--iron)}
+  .logo{font-family:"Barlow Condensed";font-weight:700;font-size:26px;letter-spacing:.02em;text-transform:uppercase}
+  .logo b{color:var(--redwood)}
+  .topbar .r{display:flex;align-items:center;gap:22px}
+  .topbar nav{display:flex;gap:20px;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  .topbar nav a{text-decoration:none;color:var(--ink);opacity:.8}
+  .topbar nav a:hover{color:var(--redwood)}
+  .callbtn{background:var(--redwood);color:#fff;text-decoration:none;font-family:"Barlow Condensed";font-weight:600;
+     font-size:16px;letter-spacing:.04em;text-transform:uppercase;padding:9px 18px}
+  /* hero magazine */
+  .hero{padding:clamp(30px,4vw,54px) 0 0}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:0;border:3px solid var(--iron)}
+  .hero-left{padding:clamp(26px,4vw,48px);border-right:3px solid var(--iron);display:flex;flex-direction:column;justify-content:center;background:var(--cream)}
+  .ey{font-family:"Barlow Condensed";font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--redwood);font-weight:600;margin:0 0 14px}
+  h1.hh{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;font-size:clamp(44px,6.4vw,86px);line-height:.92;letter-spacing:.01em;margin:0 0 18px;color:var(--iron)}
+  h1.hh em{color:var(--redwood);font-style:normal}
+  .hero-left p{font-size:clamp(15px,1.5vw,18px);color:#4a433c;max-width:44ch;margin:0 0 22px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-family:"Barlow Condensed";font-weight:600;font-size:17px;
+     letter-spacing:.05em;text-transform:uppercase;padding:13px 26px}
+  .btn.solid{background:var(--iron);color:#fff}.btn.solid:hover{background:var(--redwood)}
+  .btn.out{border:2px solid var(--iron);color:var(--iron)}.btn.out:hover{border-color:var(--redwood);color:var(--redwood)}
+  .hero-right{position:relative;min-height:340px;background:linear-gradient(150deg,#8a3a22,#a6472a 60%,#6f7d54)}
+  .hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-right .ribbon{position:absolute;top:16px;right:0;background:var(--iron);color:#fff;font-family:"Barlow Condensed";
+     text-transform:uppercase;letter-spacing:.06em;font-size:13px;padding:7px 16px}
+  .stripm{height:8px;background:repeating-linear-gradient(90deg,var(--redwood) 0 20px,var(--iron) 20px 40px)}
+  /* stats bar */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:3px solid var(--iron);border-top:0}
+  .stat{padding:22px;border-right:3px solid var(--iron);text-align:center}
+  .stat:last-child{border-right:0}
+  .stat b{font-family:"Barlow Condensed";font-size:34px;color:var(--redwood);display:block;line-height:1}
+  .stat span{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+  /* section head */
+  .sec{padding:clamp(44px,6vw,80px) 0}
+  .sechead{display:flex;align-items:flex-end;gap:16px;margin-bottom:30px;border-bottom:2px solid var(--iron);padding-bottom:14px}
+  .sechead .n{font-family:"Barlow Condensed";font-size:15px;color:var(--redwood);font-weight:700;letter-spacing:.1em}
+  .sechead h2{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;font-size:clamp(28px,4vw,46px);
+     line-height:.95;margin:0;color:var(--iron)}
+  .sechead p{margin:0 0 3px auto;font-size:14px;color:var(--mute);max-width:34ch;text-align:right}
+  /* signature: fence-types magazine mosaic */
+  .types{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px}
+  .type{position:relative;overflow:hidden;background:linear-gradient(150deg,#3c4245,#2b2f31);border:1px solid var(--iron)}
+  .type img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .type .lbl{position:absolute;left:0;bottom:0;right:0;z-index:2;padding:26px 16px 12px;color:#fff;
+     background:linear-gradient(0deg,rgba(20,15,12,.85),transparent);font-family:"Barlow Condensed";text-transform:uppercase}
+  .type .lbl b{font-size:21px;letter-spacing:.02em;display:block;line-height:1}
+  .type .lbl small{font-size:11px;letter-spacing:.1em;color:#e2c7b8}
+  .type.big{grid-column:span 3;grid-row:span 2}
+  .type.wide{grid-column:span 3}
+  .type.tall{grid-column:span 2;grid-row:span 2}
+  .type.sm{grid-column:span 2}
+  .type.pat1::after,.type.pat2::after{content:"";position:absolute;inset:0;opacity:.9}
+  .type.pat1::after{background:repeating-linear-gradient(90deg,#7a5a3a 0 12px,#8a6642 12px 24px)}
+  .type.pat2::after{background:repeating-linear-gradient(90deg,#2b2f31 0 4px,#3c4245 4px 9px)}
+  .type .lbl{z-index:3}
+  /* services list */
+  .svc-sec{background:var(--iron);color:var(--cream)}
+  .svc-sec .sechead{border-color:rgba(243,239,230,.3)}
+  .svc-sec .sechead h2{color:#fff}.svc-sec .sechead .n{color:#e79b7f}
+  .svc-cols{columns:3;column-gap:34px}
+  .svc-cols div{break-inside:avoid;padding:11px 0;border-bottom:1px solid rgba(243,239,230,.16);font-family:"Barlow Condensed";
+     font-size:20px;text-transform:uppercase;letter-spacing:.03em;display:flex;gap:10px;align-items:baseline}
+  .svc-cols div i{color:var(--redwood);font-style:normal;font-size:14px}
+  /* editorial split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:3px solid var(--iron)}
+  .split-img{min-height:320px;position:relative;background:linear-gradient(150deg,#6f7d54,#4d5a38)}
+  .split-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .split-txt{padding:clamp(26px,4vw,48px);border-left:3px solid var(--iron);display:flex;flex-direction:column;justify-content:center}
+  .split-txt blockquote{font-family:"Barlow Condensed";font-size:clamp(24px,3vw,34px);line-height:1.1;text-transform:uppercase;
+     color:var(--iron);margin:0 0 14px}
+  .split-txt .who{color:var(--mute);font-size:14px;letter-spacing:.04em}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .badge{background:var(--sage);color:#fff;font-family:"Barlow Condensed";text-transform:uppercase;font-size:14px;
+     letter-spacing:.05em;padding:6px 14px}
+  /* contact */
+  .contact{background:linear-gradient(160deg,#a6472a,#8a3a22);color:#fff;padding:clamp(42px,6vw,84px) 0}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,50px);align-items:center}
+  .contact h2{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;font-size:clamp(34px,5vw,60px);line-height:.95;margin:0 0 12px}
+  .contact p.l{font-size:16px;color:#ffe1d6;max-width:38ch}
+  .cbox{background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.2);padding:26px}
+  .cbox div{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .cbox div:last-child{border:0}
+  .cbox small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#ffcdbf;margin-bottom:3px}
+  .cbox a{color:#fff;text-decoration:none;font-family:"Barlow Condensed";font-size:20px;letter-spacing:.02em}
+  .dm-foot{background:#1a120e;color:#a08b80;text-align:center;font-size:12px;padding:26px 20px}
+  @media(max-width:900px){
+    .topbar nav{display:none}
+    .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
+    .hero-left{border-right:0;border-bottom:3px solid var(--iron)}
+    .split-txt{border-left:0;border-top:3px solid var(--iron)}
+    .stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}
+    .types{grid-template-columns:repeat(2,1fr)}
+    .type.big,.type.wide,.type.tall,.type.sm{grid-column:span 2;grid-row:auto}
+    .svc-cols{columns:2}
+  }
+  @media(max-width:520px){.svc-cols{columns:1}.stats{grid-template-columns:1fr}.stat{border-right:0}}
+</style>
+
+<div class="concept-banner">Redesign concept · not the live site · © DariMoa</div>
+
+<div class="before-wrap">
+  <div class="before-inner">
+    <h2>Before — the current familyfencing.net</h2>
+    <p>A respectful snapshot of the site as it stands today. Scroll past it for a concept of what it could become.</p>
+    <div class="before-shot">
+      <img src="https://image.thum.io/get/width/1200/https://www.familyfencing.net/" alt="Current Family Fencing website screenshot" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div class="rd">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="logo">Family <b>Fencing</b></div>
+      <div class="r">
+        <nav>
+          <a href="#types">Fence types</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Free estimate</a>
+        </nav>
+        <a class="callbtn" href="tel:+19162718194">916-271-8194</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="ey">Greater Sacramento · Lic. #1009485</p>
+          <h1 class="hh">Built on trust,<br>quality &amp; <em>family values.</em></h1>
+          <p>Redwood, wrought iron, chain link, ranch and privacy fencing — designed, built and stood behind by a local, family-owned crew that shows up on time and does it right.</p>
+          <div class="hero-cta">
+            <a class="btn solid" href="#contact">Get a free estimate</a>
+            <a class="btn out" href="#types">See fence types</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="ribbon">Voted Best 2023 · 2024 · 2025</div>
+          <img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/custom-horizontal-fencing-3_orig.jpg" alt="Custom horizontal redwood fencing" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="stripm"></div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>3×</b><span>Voted best fence co.</span></div>
+      <div class="stat"><b>4.5★</b><span>37 reviews · 238 photos</span></div>
+      <div class="stat"><b>15+</b><span>Fence types &amp; styles</span></div>
+      <div class="stat"><b>Local</b><span>Family owned &amp; operated</span></div>
+    </div>
+
+    <section class="sec" id="types">
+      <div class="sechead">
+        <span class="n">01</span>
+        <h2>Fence types<br>we build</h2>
+        <p>One crew, the full range — from ranch rail to custom wrought iron and everything between.</p>
+      </div>
+      <div class="types">
+        <div class="type big"><img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/16ft-redwood-trellis_orig.jpg" alt="Redwood fence with trellis" onerror="this.style.display='none'"><div class="lbl"><b>Redwood &amp; Privacy</b><small>Trellis tops · caps · custom heights</small></div></div>
+        <div class="type tall pat2"><img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/black-flat-top-wrought-iron-fencing-15_orig.jpg" alt="Black flat-top wrought iron fencing" onerror="this.style.display='none'"><div class="lbl"><b>Wrought Iron</b><small>Flat-top · security</small></div></div>
+        <div class="type sm pat1"><div class="lbl"><b>Chain Link</b><small>Residential &amp; commercial</small></div></div>
+        <div class="type wide"><img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/2355531_orig.jpg" alt="Viewguard Plus privacy fencing" onerror="this.style.display='none'"><div class="lbl"><b>Viewguard Privacy</b><small>Low-maintenance panels</small></div></div>
+        <div class="type sm"><img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/20220310-113201-2_orig.jpg" alt="Custom wrought iron gates" onerror="this.style.display='none'"><div class="lbl"><b>Gates &amp; Automation</b><small>Custom · powered</small></div></div>
+        <div class="type sm pat1"><img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/3371135_orig.jpg" alt="Redwood fence with top cap and post caps" onerror="this.style.display='none'"><div class="lbl"><b>Ranch &amp; Farm</b><small>Rail · snake · security</small></div></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="svc-sec sec">
+    <div class="wrap">
+      <div class="sechead">
+        <span class="n">02</span>
+        <h2>Everything<br>we do</h2>
+        <p>Whole yard or a single repair — it all comes off the same truck.</p>
+      </div>
+      <div class="svc-cols">
+        <div><i>›</i>Redwood fencing</div>
+        <div><i>›</i>Wrought iron</div>
+        <div><i>›</i>Chain link</div>
+        <div><i>›</i>Farm fencing</div>
+        <div><i>›</i>Ranch fencing</div>
+        <div><i>›</i>Privacy fencing</div>
+        <div><i>›</i>Gates</div>
+        <div><i>›</i>Retaining walls</div>
+        <div><i>›</i>Mow strips</div>
+        <div><i>›</i>Automation</div>
+        <div><i>›</i>Snake fencing</div>
+        <div><i>›</i>Security fencing</div>
+        <div><i>›</i>Repairs</div>
+        <div><i>›</i>Custom projects</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="sec" id="work">
+      <div class="split">
+        <div class="split-img"><img src="http://www.familyfencing.net/uploads/7/0/7/1/70711459/2355531_orig.jpg" alt="Completed privacy fence" onerror="this.style.display='none'"></div>
+        <div class="split-txt">
+          <blockquote>"The excellent workmanship of the fence is remarkable."</blockquote>
+          <div class="who">Their pricing is very reasonable for the quality of work, and they're very punctual. — Yelp review, 4.5★</div>
+          <div class="badges"><span class="badge">Licensed #1009485</span><span class="badge">Family owned</span><span class="badge">Free estimates</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Get a free<br>estimate</h2>
+        <p class="l">Tell us what you're fencing — a backyard, a ranch line, a gate that needs to work again. Serving the greater Sacramento area, Monday through Friday, with weekend emergency service.</p>
+      </div>
+      <div class="cbox">
+        <div><small>Call / text</small><a href="tel:+19162718194">916-271-8194</a></div>
+        <div><small>Email</small><a href="mailto:familyfencing.net@gmail.com">familyfencing.net@gmail.com</a></div>
+        <div><small>Serving</small><span style="font-family:Barlow;font-size:14px">Rio Linda &amp; the greater Sacramento area</span></div>
+        <div><small>Hours</small><span style="font-family:Barlow;font-size:14px">Mon–Fri 8–5 · weekends: emergencies</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="dm-foot">This is a design concept, not the live site. © DariMoa. All rights reserved.</div>
